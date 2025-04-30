@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.center {
+@apply align-middle justify-center items-center content-center;
+}
+.justified {
+@apply justify-center;
+}
+.aligned {
+@apply align-middle items-center content-center;
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../public/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: MontserratDemi;
+  src: url(../public/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: MontserratExtraBold;
+  src: url(../public/fonts/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: MontserratBold;
+  src: url(../public/fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: MontesseratBoldItalic;
+  src: url(../public/fonts/Montserrat-BoldItalic.ttf);
+}
+
+/* Entrée depuis la droite */
+.slide-in-right {
+  animation: slideInRight 3s ease forwards;
+}
+
+/* Sortie vers la gauche */
+.slide-out-left {
+  animation: slideOutLeft 3s ease forwards;
+}
+
+/* Entrée depuis la gauche */
+.slide-in-left {
+  animation: slideInLeft 3s ease forwards;
+}
+
+/* Sortie vers la droite */
+.slide-out-right {
+  animation: slideOutRight 3s ease forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+}
