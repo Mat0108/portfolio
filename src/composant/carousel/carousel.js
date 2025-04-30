@@ -119,7 +119,7 @@ const Carousel =({props})=>{
         }
     }
     useEffect(()=>{
-        if(props.items){
+        if(props.items ){
             const timeline = createTimeline({defaults:{duration:props.animatedDuration,sync:true,onComplete:()=>{
                 setTimeout(()=>{
                     if(animatedDirection === 'next'){
@@ -192,10 +192,10 @@ const Carousel =({props})=>{
                 {!props.disableClic && <p className="text-5xl z-20" onClick={()=>{Back()}}>{"<"}</p>}
      
                 </div>
-                <div className={`relative flex flex-row ${getW(100-2*Mratio,true)} sm:${getW(100-2*ratio,true)}  h-full ${props.nbShow === 1 ? "center":"center space-x-4"}`}>
+                <div className={`relative flex flex-row ${getW(100-2*Mratio,true)} sm:${getW(100-2*ratio,true)}  h-full ${props.nbShow === 1 ? "":"center space-x-4"}`}>
                     {!animated && items}
                     {animated && <>
-                    <div className={`absolute top-0 left-0 flex flex-row z-0 ${props.nbShow === 1 ? "":" space-x-4"}`}>{animatedItems}</div>
+                    <div className={`absolute top-0 left-0 w- overflow-auto flex flex-row z-0 ${props.nbShow === 1 ? "":" space-x-4"}`}>{animatedItems}</div>
                     {props.hiddendiv}
                     </>}
                 </div>

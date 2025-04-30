@@ -30,9 +30,11 @@ const GridItem = ({ id, isActive, onClick,frontContent,backContent }: GridItemPr
 
 type GridProps = {
     frontItems: Array<ReactNode>;
-    backItems: Array<ReactNode>;
+    backItems: Array<ReactNode>;  
+    onlyArrow: boolean;
+    background: string;
 }
-export default function ExpandingGrid({frontItems,backItems}:GridProps) {
+export default function ExpandingGrid({frontItems,backItems,onlyArrow,background}:GridProps) {
   const [active, setActive] = useState<number | null>(null);
   const [oldActive,setOldActive] = useState<number | null>(null);
   const [newActive,setNewActive] = useState<number | null>(null);
@@ -42,29 +44,38 @@ export default function ExpandingGrid({frontItems,backItems}:GridProps) {
   
 
   const handleClick = (index: number) => {
-    console.log(active,index)
-    if(active !== index){
+    console.log(active,index,active !== index)
+    if(active && active !== index){
         setOldActive(active);
         setNewActive(index);
 
-    }else{    
-        setActive(active === index ? null : index);
+    }else{
+        if(onlyArrow){
+          if(active !== index){
+            setActive(index);
+          }
+        }else{
+          setActive(active === index ? null : index);
+        }    
+        
     }
   };
+  const handleOnlyArrow = ()=>{
+    setActive(null);
+  }
   const cardItems = useMemo(()=>{
     const list = new Array<ReactNode>();
-    console.log('active : ', active)
     if(frontItems && backItems && frontItems.length && backItems.length){
         frontItems.forEach((item,i) => {
             list.push(<div
               key={i}
               ref={(el) => (itemRefs.current[i] = el)}
-              className="transition-all"
-              style={{ flexGrow: active === i ? 6 : 1 , transformStyle: 'preserve-3d'}}
+              className={`transition-all ${background}`}
+              style={{ flexGrow: active === i ? 10 : 0.5 , flexShrink: active !== i ? 3 : 1,  transformStyle: 'preserve-3d'}}
               onClick={()=>{handleClick(i)}}
               
             >
-                <Card props={{frontContent:item,backContent:backItems[i],unflipped:oldActive === i ? true:null,onComplete:()=>{if(newActive){setActive(newActive);setNewActive(null);}}}}/>
+                <Card props={{frontContent:item,backContent:backItems[i],unflipped:oldActive === i ? true:null,onComplete:()=>{if(newActive){setActive(newActive);setNewActive(null);}},onlyArrow:onlyArrow, onlyArrowHandle:()=>handleOnlyArrow()}}/>
     
             </div>)
     })}
@@ -73,7 +84,7 @@ export default function ExpandingGrid({frontItems,backItems}:GridProps) {
    
   },[active,oldActive,newActive])
   return (
-    <div className="flex w-full  mx-auto">
+    <div className={`flex w-full  mx-auto `}>
         {cardItems}
 
     </div>

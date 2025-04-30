@@ -3,8 +3,6 @@ import { EllisCar, Randstad, Veolia4, Veolia6 } from "./work";
 import Carousel2 from "./composant/carousel/carousel";
 import Carousel from "./composant/carousel/carousel";
 import { ReactCard } from "./competence";
-import { ExempleGrid } from "./composant/grid/grid.tsx";
-import ExpandingGrid from "./composant/grid/grid2.tsx";
 
 const Home = () => {
 

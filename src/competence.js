@@ -2,8 +2,9 @@
 import { Card } from "./composant/card/card.js"
 import Carousel from "./composant/carousel/carousel"
 import ExpandingGrid from "./composant/grid/grid2.tsx"
-const size = "w-[300px] h-[300px] "
-const size2 = "w-full h-[300px]"
+const size = "w-[330px] h-[330px] "
+const size2 = "w-full h-[330px]"
+const size3 = "w-[690px] h-[240px]"
 const competence = ()=>{
 
 }
@@ -24,20 +25,18 @@ function FrontCard(LogoUrl,LogoAlt, Name,Background){
 function BackCard(experience,Background,tag){
         
         return (
-            <div className={`relative ${size2} flex flex-col align-middle items-center  text-center ${Background} rounded-[40px]`}>
+            <div className={`${size2} flex flex-col align-middle items-center  text-center ${Background} rounded-[40px] p-4`}>
             
                 {experience.length === 1 && experience[0]}
-                {experience.length !== 1 && <Carousel props={{items:experience,nbShow:1,ratio:5,showPoint:true,tag:tag,hiddendiv:<div className={size}></div>,animatedDuration:800}}/>}
-               <div className="absolute bottom-2 right-5">
-                    <img src={"/images/retour.png"} alt={"retour"} className="w-8"/>
-                </div>
+                {experience.length !== 1 && <div className="w-full h-min"><Carousel props={{items:experience,nbShow:1,ratio:5,showPoint:true,tag:tag,hiddendiv:<div className={size3}></div>,animatedDuration:600}}/></div>}
+   
             </div>
         )
 
 }
 
 function ItemCarousel(LinkTo,Tag,Id,Title,Entreprise,Periode,Resume1,Resume2,LogosTech,Logo){
-    return <div className={`${Tag}-${Id} h-full text-left bg-black p-4 rounded-3xl`}>
+    return <div className={`${Tag}-${Id} ${size3} text-left bg-black p-4 rounded-3xl`}>
         <p className="text-lg">{Title}</p>
         <div className="text-md flex justify-between">
             <p>{Entreprise}</p>
@@ -66,7 +65,7 @@ function ItemCarousel(LinkTo,Tag,Id,Title,Entreprise,Periode,Resume1,Resume2,Log
 const Randstad = ItemCarousel("/","Card-React","0","Développeur full stack dans le service Mobilité","Randstad","nov. 2023 - sept. 2024 ","Le service Mobilité de Randstad développe des solutions qui permettent aux collaborateurs de travailler à distance.","Développement d'une fonctionnalité de matching de compétences entre intérimaires et offres d'emploi, accompagnée d'améliorations UX/UI et de composants internes.")
 const Randstad2 = ItemCarousel("/","Card-React","1","Développeur full stack dans le service Mobilité","Randstad","nov. 2023 - sept. 2024 ","Le service Mobilité de Randstad développe des solutions qui permettent aux collaborateurs de travailler à distance.","Développement d'une fonctionnalité de matching de compétences entre intérimaires et offres d'emploi, accompagnée d'améliorations UX/UI et de composants internes.")
 const ReactItem = FrontCard("/images/tech/r.png","react","React","bg-blue_dark");
-const BackItem = BackCard([Randstad],[],"bg-blue_grey")
+const BackItem = BackCard([Randstad,Randstad2],"bg-blue_grey","react")
 export const ReactCard = ()=>{
     function B(){
         return (
@@ -90,7 +89,7 @@ export const ReactCard = ()=>{
         <Card props={{frontContent:FrontCard("/images/tech/r.png","react","React","bg-blue_dark"),backContent:BackCard([Randstad],[],"bg-blue_grey")}} />
         <Card props={{frontContent:FrontCard("/images/tech/r.png","react","React","bg-blue_dark"),backContent:BackCard([Randstad],[],"bg-blue_grey")}} />
      */}
-            {<ExpandingGrid frontItems={[ReactItem,ReactItem,ReactItem,ReactItem]} backItems={[BackItem,BackItem,BackItem,BackItem]}/>}
+            {<ExpandingGrid frontItems={[ReactItem,ReactItem,ReactItem,ReactItem]} backItems={[BackItem,BackItem,BackItem,BackItem]} onlyArrow={true} background={"bg-black_grey"} />}
             </div>
         
     )
