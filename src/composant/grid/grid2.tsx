@@ -1,6 +1,6 @@
 import React,{ useState, useRef, useEffect, ReactNode, useMemo } from "react";
 import  {  createTimeline } from "animejs";
-import { Card } from "../composant/card/card";
+import { Card } from "../card/card";
 
 type GridItemProps = {
   id: number;

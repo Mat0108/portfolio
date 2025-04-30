@@ -1,7 +1,7 @@
 
 import { Card } from "./composant/card/card.js"
 import Carousel from "./composant/carousel/carousel"
-import ExpandingGrid from "./grid/grid2.tsx"
+import ExpandingGrid from "./composant/grid/grid2.tsx"
 const size = "w-[300px] h-[300px] "
 const size2 = "w-full h-[300px]"
 const competence = ()=>{
