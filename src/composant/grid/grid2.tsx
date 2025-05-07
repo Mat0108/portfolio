@@ -1,40 +1,19 @@
 import React,{ useState, useRef, useEffect, ReactNode, useMemo } from "react";
 import  {  createTimeline } from "animejs";
-import { Card } from "../card/card";
+import { Card } from "../card/card.tsx";
 
-type GridItemProps = {
-  id: number;
-  isActive: boolean;
-  onClick: () => void;
-  frontContent: ReactNode;
-  backContent: ReactNode;
-};
-
-const GridItem = ({ id, isActive, onClick,frontContent,backContent }: GridItemProps) => {
-  return (
-    <div
-      onClick={onClick}
-      className={``}
-    >
-        <div className="front flex flex-col center backface-hidden" style={{transform:''}} >
-            {frontContent}
-        </div>
-
-        {/* Face arrière de la carte */}
-        <div className="back absolute top-0 left-0 flex flex-col center " style={{transform: 'rotateY(180deg)',backfaceVisibility:"hidden",flexGrow: isActive ? 5 : 1 , transformStyle: 'preserve-3d'}}>
-            {backContent}
-        </div>
-    </div>
-  );
-};
 
 type GridProps = {
     frontItems: Array<ReactNode>;
     backItems: Array<ReactNode>;  
-    onlyArrow: boolean;
+    onlyArrow: Array<number>;
     background: string;
-}
-export default function ExpandingGrid({frontItems,backItems,onlyArrow,background}:GridProps) {
+    hiddendiv: string;
+    hiddendivgrow: string;
+    isGrow: Array<number>;
+    
+  }
+export default function ExpandingGrid({frontItems,backItems,onlyArrow,background,hiddendiv,hiddendivgrow,isGrow}:GridProps) {
   const [active, setActive] = useState<number | null>(null);
   const [oldActive,setOldActive] = useState<number | null>(null);
   const [newActive,setNewActive] = useState<number | null>(null);
@@ -44,47 +23,52 @@ export default function ExpandingGrid({frontItems,backItems,onlyArrow,background
   
 
   const handleClick = (index: number) => {
-    console.log(active,index,active !== index)
     if(active && active !== index){
         setOldActive(active);
         setNewActive(index);
 
     }else{
-        if(onlyArrow){
+        if(onlyArrow && onlyArrow[index] === 1){
           if(active !== index){
-            setActive(index);
+            setNewActive(index);
           }
         }else{
-          setActive(active === index ? null : index);
+          setNewActive(active === index ? -1 : index);
         }    
         
     }
   };
   const handleOnlyArrow = ()=>{
-    setActive(null);
+    setNewActive(-1);
+  }
+  const handleOnComplete = ()=>{
+    if(newActive === -1){setActive(null)}
+    else if(newActive){setActive(newActive);setNewActive(null);}
   }
   const cardItems = useMemo(()=>{
     const list = new Array<ReactNode>();
     if(frontItems && backItems && frontItems.length && backItems.length){
         frontItems.forEach((item,i) => {
+            const hiddiv = isGrow[i] === 1 ? `${hiddendivgrow} grow` : `${hiddendiv} flex-none`
+            const isActive = active === i ? hiddiv : "flex-none";
             list.push(<div
               key={i}
               ref={(el) => (itemRefs.current[i] = el)}
-              className={`transition-all ${background}`}
-              style={{ flexGrow: active === i ? 10 : 0.5 , flexShrink: active !== i ? 3 : 1,  transformStyle: 'preserve-3d'}}
+              className={` ${background} ${isActive} `}
+              style={{ transformStyle: 'preserve-3d'}}
               onClick={()=>{handleClick(i)}}
               
             >
-                <Card props={{frontContent:item,backContent:backItems[i],unflipped:oldActive === i ? true:null,onComplete:()=>{if(newActive){setActive(newActive);setNewActive(null);}},onlyArrow:onlyArrow, onlyArrowHandle:()=>handleOnlyArrow()}}/>
+                <Card frontContent={item} backContent={backItems[i]} unflipped={oldActive === i } onComplete={()=>handleOnComplete()} onlyArrow={onlyArrow[i] === 1}  onlyArrowHandle={()=>handleOnlyArrow()} hiddendiv={hiddendiv} animatedDuration={600} />
     
             </div>)
     })}
     return list;
    
    
-  },[active,oldActive,newActive])
+  },[frontItems, backItems, background, active, oldActive, onlyArrow, newActive])
   return (
-    <div className={`flex w-full  mx-auto `}>
+    <div className={`flex flex-row flex-wrap justify-around w-full gap-4   `}>
         {cardItems}
 
     </div>

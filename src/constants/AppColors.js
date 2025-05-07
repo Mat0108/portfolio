@@ -1,8 +1,6 @@
 const Colors = {
   "dark_blue":"#31344e", //darkblue
   "light_blue":"#4c75ff", //lightblue
-  "grey": "#4e4b31", //grey
-  "dark_grey":"#33323a", //darkgrey
   "black_darked":"#201F25", //black
   "black_med":"",
   "gray_black":"##535252", //grey
@@ -13,9 +11,7 @@ const Colors = {
   "black":"#201f25",
   "black_grey":"#2C2D33",
   "dark_grey":"#535252",
-  "grey":"#86857f",
   "light_gray":"#b8b7ab",
-  "white":"#ebead8",
   "blue_dark":"#31344e",
   "blue_grey":"#46485A",
   "blue":"#4C75FF",

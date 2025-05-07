@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { EllisCar, Randstad, Veolia4, Veolia6 } from "./work";
-import Carousel2 from "./composant/carousel/carousel";
-import Carousel from "./composant/carousel/carousel";
+import Carousel from "./composant/carousel/carousel.tsx";
 import { ReactCard } from "./competence";
 
 const Home = () => {
@@ -41,7 +40,7 @@ const Home = () => {
             <div className="w-full h-fit flex center bg-black_grey p-2">
                 <div className="w-full flex flex-col">
                     <p className="ml-[5%] text-[36px] font-mt-bold" >Derniere expériences professionnelles</p>
-                        <Carousel props={{items:[Randstad(),EllisCar(),Veolia6(),Veolia4()],nbShow:1,ratio:5,showPoint:true,start:0,tag:"work",hiddendiv:<div className="w-4 h-[414px]"></div>,animatedDuration:800}}/>  
+                        <Carousel elems={[Randstad(),EllisCar(),Veolia6(),Veolia4()]} nbShow={1} display={5} showPoint={true} start={0} tag={"work"} hiddendiv={<div className="w-4 h-[430px]"></div>} animatedDuration={800}/>  
                 </div>
             </div>
 
@@ -54,7 +53,7 @@ const Home = () => {
             <div className="w-full h-[1000px] flex bg-black_grey p-2">
                 <div className="w-full flex flex-col">
                         <p className="ml-[5%] text-[36px] font-mt-bold" >Compétences</p>
-                        <div className="w-full h-fit">
+                        <div className="w-full h-fit pt-4">
                             <ReactCard />
                         </div>
                         {/* <ExpandingGrid /> */}
