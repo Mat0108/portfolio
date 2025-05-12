@@ -4,6 +4,7 @@ const Colors = {
   "black_darked":"#201F25", //black
   "black_med":"",
   "gray_black":"##535252", //grey
+  "true_white":"#ffffff",
   "white":"#ebead8", //white
   "white_blue":"#b8c6f5", //whiteblue
   "dark_green":"#072e2d",

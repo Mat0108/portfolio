@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { EllisCar, Randstad, Veolia4, Veolia6 } from "./work";
+import { EllisCar, Randstad, Veolia4, Veolia6 } from "./composant/work.js";
 import Carousel from "./composant/carousel/carousel.tsx";
-import { ReactCard } from "./competence";
+import { Compétence } from "./composant/competence.js";
+import Projet from "./composant/projet.js";
 
 const Home = () => {
 
@@ -47,14 +48,14 @@ const Home = () => {
             <div className="w-full h-[500px] flex bg-blue_dark p-2">
                 <div className="w-full flex flex-col">
                         <p className="ml-[5%] text-[36px] font-mt-bold" >Projet</p>
-                        
+                        <Projet />
                 </div>
             </div>
             <div className="w-full h-[1000px] flex bg-black_grey p-2">
                 <div className="w-full flex flex-col">
                         <p className="ml-[5%] text-[36px] font-mt-bold" >Compétences</p>
                         <div className="w-full h-fit pt-4">
-                            <ReactCard />
+                            <Compétence />
                         </div>
                         {/* <ExpandingGrid /> */}
                 </div>

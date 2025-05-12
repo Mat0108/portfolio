@@ -5,6 +5,7 @@ import {Route,Routes} from 'react-router';
 import "./index.css"
 import Home from './Home';
 import Navbar from './Navbar';
+import Memoire44Presentation from './projet/Memoire44/presentation';
 
 const App = ()=>{
     return (
@@ -16,6 +17,7 @@ const App = ()=>{
         </div>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
+          <Route path="/memoire44" element={<Memoire44Presentation/>}></Route>
         </Routes>
  
       </Router>   

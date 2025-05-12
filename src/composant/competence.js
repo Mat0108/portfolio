@@ -1,6 +1,7 @@
 
-import Carousel from "./composant/carousel/carousel.tsx"
-import ExpandingGrid from "./composant/grid/grid2.tsx"
+import { Link } from "react-router-dom"
+import Carousel from "./carousel/carousel.tsx"
+import ExpandingGrid from "./grid/grid2.tsx"
 const size = "w-[350px] h-[350px] "
 const size2 = "w-[60vw] lg:w-[60vw] 2xl:w-[60vw] h-[350px]"
 const size3 = "w-[60vw] lg:w-[calc(60vh - 110px)] 2xl:w-[calc(60vh - 110px)]] h-[290px]"
@@ -82,8 +83,8 @@ function Veolia4(Tag){
 
 
 
-function Memoire44Card(Tag){
-    return <div className={`${Tag} ${size3}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
+export function Memoire44Card(Tag,size){
+    return <div className={`${Tag} ${size ?? size3}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
         <div className="relative  w-full h-full flex flex-col p-4 ">
             <p className="text-lg">Projet d'un fan game d'un jeu de société</p>
             <div className="text-md flex justify-between">
@@ -97,16 +98,16 @@ function Memoire44Card(Tag){
                 </div>
             </div>
             <div className="absolute right-10 top-0 h-full flex center">
-                <img src={"/images/memoire44_2.png"} alt={"memoire44"} className="h-8"/>
+                <img src={"/images/memoire44/memoire44_2.png"} alt={"memoire44"} className="h-8"/>
             </div>
             <div className="absolute right-10 bottom-4 ">
-                <div className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold">En savoir plus</div>
+                <Link to="/memoire44" className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold">En savoir plus</Link>
             </div>
     </div>
 </div>
 }
-function PoSkinCard(Tag,Size){
-    return <div className={`${Tag} ${Size}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
+export function PoSkinCard(Tag,size){
+    return <div className={`${Tag} ${size}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
         <div className="relative  w-full h-full flex flex-col p-4 ">
 
        
@@ -132,8 +133,8 @@ function PoSkinCard(Tag,Size){
         </div>
     </div>
 }
-function SpaceXCard(Tag){
-    return <div className={`${Tag} ${size3}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
+export function SpaceXCard(Tag,size){
+    return <div className={`${Tag} ${size ?? size3}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
         <div className="relative  w-full h-full flex flex-col p-4 ">
 
        
@@ -160,30 +161,27 @@ function SpaceXCard(Tag){
     </div>
 }
 
-function PortfolioCard(Tag){
-    return <div className={`${Tag} ${size3}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
+export function PortfolioCard(Tag,size){
+    return <div className={`${Tag} ${size ?? size3}  text-left bg-dark_grey  font-mt-demi rounded-3xl`}>
         <div className="relative  w-full h-full flex flex-col p-4 ">
 
        
-        <p className="text-lg">Portfolio personnel</p>
-        <div className="text-md flex justify-between">
-            <p></p>
-            <p>oct. 2022</p>
-        </div>
+        <p className="text-lg">Mon portfolio </p>
+        
         <div className="w-full flex flex-row pt-2 ">
             <div className="flex flex-col w-full text-justify gap-2">
-                <p>technologies utilisées :</p>
-                <div className="w-full">
-                   <img src="/images/tech/r.png" alt="logo_react" className="w-8"/>
-                   <img src="/images/tech/t.png" alt="logo_typescript" className="w-8"/>
-                   <img src="/images/tech/ta.png" alt="logo_tailwind" className="w-8"/>
+                <p>Les technologies que j'ai utilisées :</p>
+                <div className="w-full flex flex-row gap-8">
+                   <img src="/images/tech/r.png" alt="logo_react" className="w-16"/>
+                   <img src="/images/tech/ta.png" alt="logo_tailwind" className="w-16"/>
+                   <img src="/images/tech/t.png" alt="logo_typescript" className="w-16"/>
             
                 </div>
                     
             </div>
         </div>
-        <div className="absolute right-10 bottom-2 ">
-            <div className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold">github</div>
+        <div className="absolute right-10 bottom-4 ">
+            <Link to={"https://github.com/Mat0108/portfolio/"} target="_blank" rel="noopener noreferrer" className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold">github</Link>
         </div>
         </div>
     </div> 
@@ -232,7 +230,7 @@ const AngularItem = FrontCard("/images/tech/a.png","angular","Angular","bg-blue_
 const AngularBackItem = BackCard([Veolia6("Card-Angular-0"),Veolia4("Card-Angular-1")],"bg-blue_grey","Card-React")
 
 const JavaScriptItem = FrontCard("/images/tech/j.png","javascript","JavaScript","bg-blue_dark");
-const JavaScriptBackItem = BackCard([RandstadCard("Card-JavaScript-0"),EllisCarCard("Card-JavaScript-1"),Veolia6("Card-JavaScript-2"),Veolia4("Card-JavaScript-3"),Memoire44Card("Card-JavaScript-4"),PoSkinCard("Card-JavaScript-5"),SpaceXCard("Card-JavaScript-6")],"bg-blue_grey","Card-React")
+const JavaScriptBackItem = BackCard([RandstadCard("Card-JavaScript-0"),EllisCarCard("Card-JavaScript-1"),Veolia6("Card-JavaScript-2"),Veolia4("Card-JavaScript-3"),Memoire44Card("Card-JavaScript-4"),PoSkinCard("Card-JavaScript-5",size3),SpaceXCard("Card-JavaScript-6")],"bg-blue_grey","Card-React")
 
 const TypeScriptItem = FrontCard('/images/tech/t.png',"typecript","Typescript","bg-blue_dark");
 const TypeScriptBackItem = BackCard([EllisCarCard("Card-typescript-0"),PortfolioCard("Card-typescript-1")],"bg-blue_grey","Card-typescript");
@@ -251,7 +249,7 @@ const NextBackItem = BackCard([RandstadCard("Card-Next-0"),EllisCarCard("Card-Ne
 
 const MongoDBItem = FrontCard("/images/tech/md.png","MongoDB","MongoDB","bg-blue_dark")
 const MongoDBBackItem = BackCard([RandstadCard("Card-MongoDB-0"),EllisCarCard("Card-MongoDB-1")],"bg-blue_grey","Card-MongoDB")
-export const ReactCard = ()=>{
+export const Compétence = ()=>{
     
       return (
         <div className="flex flex-row ">
