@@ -2,8 +2,8 @@ const Colors = {
   "dark_blue":"#31344e", //darkblue
   "light_blue":"#4c75ff", //lightblue
   "black_darked":"#201F25", //black
-  "black_med":"",
-  "gray_black":"##535252", //grey
+  "black_true":"#000000",
+  "gray_black":"#535252", //grey
   "true_white":"#ffffff",
   "white":"#ebead8", //white
   "white_blue":"#b8c6f5", //whiteblue
@@ -28,6 +28,7 @@ const Colors = {
   "yellow":"#FFD64C",
   "yellow_light":"#F5E092",
   "red_dark":"#9C2525",
+  "red_dark2":"#5e0e0e",
   "red":"#BD2D2D",
   "red_light":"#CC6C66",
   "rose":"#DCAB9F"

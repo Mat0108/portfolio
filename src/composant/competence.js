@@ -101,7 +101,7 @@ export function Memoire44Card(Tag,size){
                 <img src={"/images/memoire44/memoire44_2.png"} alt={"memoire44"} className="h-8"/>
             </div>
             <div className="absolute right-10 bottom-4 ">
-                <Link to="/memoire44" className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold">En savoir plus</Link>
+                <Link to="/Memoire44" className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold hover:cursor-pointer">En savoir plus</Link>
             </div>
     </div>
 </div>
@@ -128,7 +128,7 @@ export function PoSkinCard(Tag,size){
             <img src={"/images/po.png"} alt={"po"} className="h-16"/>
         </div>
         <div className="absolute right-10 bottom-2 ">
-            <div className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold">En savoir plus</div>
+            <Link to="/PoSkin" className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold hover:cursor-pointer">En savoir plus</Link>
         </div>
         </div>
     </div>

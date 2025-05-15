@@ -1,6 +1,8 @@
 // import { useEffect } from "react";
 // import { useLocation } from "react-router";
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     // const location = useLocation();
     // useEffect(()=>{
@@ -8,7 +10,7 @@ const Navbar = () => {
     // },[location])
     return <div className="w-full flex center bg-black_grey">
         <div className="flex flex-row justify-between p-2 w-[90%] ">
-            <div className="text-xl font-mt-bold">{true ? "Matthieu Barnabé":""}</div>
+            <Link to="/"  className="text-xl font-mt-bold">{true ? "Matthieu Barnabé":""}</Link>
             <div className="flex flex-row gap-8">
                 <div className="text-lg font-mt-demi">Expériences professionnelles</div>
                 <div className="text-lg font-mt-demi">Projets</div>
