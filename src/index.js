@@ -7,6 +7,7 @@ import Home from './Home';
 import Navbar from './Navbar';
 import Memoire44Presentation from './projet/Memoire44/presentation';
 import PoSkinPresentation from './projet/PoSkin/presentation';
+import { SpaceXPresentation } from './projet/SpaceX/presentation';
 
 const App = ()=>{
     return (
@@ -20,6 +21,7 @@ const App = ()=>{
           <Route path="/" element={<Home/>}></Route>
           <Route path="/Memoire44" element={<Memoire44Presentation/>}></Route>
           <Route path="/PoSkin" element={<PoSkinPresentation/>}></Route>
+          <Route path="/SpaceX" element={<SpaceXPresentation/>}></Route>
         </Routes>
  
       </Router>   

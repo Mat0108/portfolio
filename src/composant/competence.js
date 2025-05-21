@@ -154,9 +154,9 @@ export function SpaceXCard(Tag,size){
         <div className="absolute right-10 top-0 h-full flex center">
             <img src={"/images/spacex.png"} alt={"spacex"} style={{width:"72px"}}/>
         </div>
-        <div className="absolute right-10 bottom-2 ">
-            <div className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold">En savoir plus</div>
-        </div>
+            <div className="absolute right-10 bottom-4 ">
+                <Link to="/SpaceX" className="bg-green_dark rounded-2xl p-2 text-white font-mt-bold hover:cursor-pointer">En savoir plus</Link>
+            </div>
         </div>
     </div>
 }

@@ -7,7 +7,7 @@ const PoSkinPresentation = ()=>{
                 <p className="text-justify mt-4">Le projet a été développé dans le cadre d’un projet scolaire de longue durée (18 mois) réunissant plusieurs classes aux compétences complémentaires (développement, design UX/UI, marketing). Des journées de travail en présentiel, organisées toutes les 4 à 8 semaines selon les rythmes d’alternance, ont permis une réelle coordination interdisciplinaire.</p>
             </div>
             <div className="w-[60%] relative">
-                <img src={"/images/PoSkin/PoSkin_01.png"} alt={"poskin"} className="rounded-[30px]"/>
+                <img src={"/images/PoSkin/PoSkin_01.png"} alt={"poskin"} className="rounded-[30px] w-full h-full"/>
                 <div className="absolute top-0 left-0 w-full h-full flex center">
                     <img src={"/images/PoSkin/PoSkin_logo.png"} alt={"poskin"} />
                 </div>
