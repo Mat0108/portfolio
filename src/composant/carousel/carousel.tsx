@@ -34,6 +34,7 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
     const [animated,setAnimated]=useState(false);    
     const [Mratio,setMRatio] = useState(10);
     const [itemsLenght,setItemsLenght] =useState(0);
+    const isMobile = window.screen.width < 600;
     useEffect(()=>{if(start){setShow(start);setPos(start%3)}},[start])
     useEffect(() => {
         if(elems){
@@ -140,7 +141,7 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
                         setAnimated(false);
                         setAnimatedDirection('');
                     }
-                },50)
+                },isMobile ? 0 : 50)
 
                     
             }}});
