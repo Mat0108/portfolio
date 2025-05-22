@@ -1,8 +1,8 @@
 const Memoire44Presentation = ()=>{
-    return <div className="flex flex-col h-full bg-black_darked p-8 gap-8 overflow-auto text-xl">
+    return <div className="flex flex-col h-full bg-black_darked p-8 gap-8 overflow-auto text-md">
         <div className="w-full flex gap-8">
             <div className="w-[40%] h-full bg-blue_dark rounded-[30px] p-4 flex flex-col center relative">
-                <p className="absolute top-0 w-full p-4 text-4xl font-mt-bold">Memoire 44</p>
+                <p className="absolute top-0 w-full p-4 text-3xl font-mt-bold">Memoire 44</p>
                 <p className="mt-2 text-justify ">Lorsque le jeu vidéo officiel adapté du jeu de plateau est devenu indisponible, j'ai souhaité développer ma propre version. </p>
                 <p className="mt-2 text-justify ">Après un an de développement, j'ai réalisé des avancées significatives dans plusieurs domaines clés : <span className="font-mt-bold">gestion du plateau de jeu </span> ainsi que des unités de base, mise en place d'un <span className="font-mt-bold">algorithme de pathfinding</span>, intégration de plusieurs scénarios, et création d'un outil graphique pour l'ajout de scénarios. </p>
                 <p className="mt-2 text-justify ">Les prochaines étapes incluent l'intégration des environnements hivernaux et désertiques, l'ajout d'unités spéciales, et une meilleure gestion des cartes de commandement. </p>
@@ -17,7 +17,7 @@ const Memoire44Presentation = ()=>{
             <p className="text-xl font-mt-bold mb-2 mb-[-2rem]"> Comment s'est realisé le developpement ? </p>
             <div className="w-full h-full flex flex-row gap-8">
                 <div className="w-[35%] h-full bg-blue_dark rounded-[30px] p-4 flex flex-col relative">
-                    <p className=" p-4 text-4xl font-mt-bold ">Etape 1</p>
+                    <p className=" p-4 text-3xl font-mt-bold ">Etape 1</p>
                     <p className="mt-4 ">- <span className="font-mt-bold">génération du plateau de jeu</span> à travers l'ajout des unités (soltat, tank, artillerie ), ajout des différents types de tuiles (forets, villages, collines ...)  </p>
                     <p className="mt-4 ">- Intégration de la <span className="font-mt-bold">phase de deplacement d'une unité</span> :  </p>
                     <p className="ml-4 text-justify -indent-3"> • Calcul du coût de déplacement avec un dégradé de vert indiquant les possibilités d’attaque après le déplacement. </p>
@@ -37,7 +37,7 @@ const Memoire44Presentation = ()=>{
                 </div>
                 <div className="w-[35%] h-full bg-black_true rounded-[30px] p-4 flex flex-col relative">
                     
-                    <p className=" p-4 text-4xl font-mt-bold ">Etape 2</p>
+                    <p className=" p-4 text-3xl font-mt-bold ">Etape 2</p>
                     
                     <p> - Intégration des différents <span className="font-mt-bold">cartes de commandements</span></p>
                     <p className="ml-4 ">- Intégration des <span className="font-mt-bold">cartes de commandements basique</span> (fond vert) :</p>
@@ -53,7 +53,7 @@ const Memoire44Presentation = ()=>{
             </div>
             <div className="w-full h-full flex flex-row gap-8">
                 <div className="w-[30%] h-full bg-gray_black rounded-[30px] p-4 flex flex-col relative">
-                    <p className=" p-4 text-4xl font-mt-bold ">Etape 3</p>
+                    <p className=" p-4 text-3xl font-mt-bold ">Etape 3</p>
                     <p className="mt-2 text-justify -indent-4"> - Correction de divers bugs liés au placement des unités, au calcul du nombre de dés appliqués à l’ennemi, ainsi qu’à la détection des déplacements possibles, grâce à l’intégration d’un algorithme de pathfinding. </p>
                     <p className="mt-2 text-justify -indent-4"> - <span className="font-mt-bold">Ajout d’un éditeur graphique de scénario </span>permettant de sélectionner, pour chaque case, son type d’hexagone, son item de défense, son unité et sa médaille. </p>
                     <p className="ml-4 mt-2 text-justify -indent-3"> • Cet éditeur prend en charge les environnements de plaine et hivernal ; il est prévu d’y ajouter ultérieurement les environnements désertique et pacifique. </p>
@@ -83,3 +83,4 @@ const Memoire44Presentation = ()=>{
     </div>
 }
 export default Memoire44Presentation
+

@@ -66,7 +66,7 @@ export const Card = ({frontContent,backContent,onlyArrow,onlyArrowHandle,unflipp
       return   <div className="perspective">
       <div
         ref={cardRef}
-        className={`relative ${isFlipped ? "":""} w-full h-full cursor-pointer transition-transform duration-800 transform-3d`}
+        className={`relative w-full h-full cursor-pointer transition-transform duration-800 transform-3d`}
         onClick={handleFlip}
         style={{transformStyle: 'preserve-3d'}}
       >
@@ -75,8 +75,7 @@ export const Card = ({frontContent,backContent,onlyArrow,onlyArrowHandle,unflipp
             {props.frontContent}
         </div> */}
         <div className="front flex flex-col center backface-hidden " style={{transform:''}} >
-            {/* {isFlipped ? <div className={`${hiddendiv} flex center`}>{frontContent}</div> : frontContent} */}
-            {frontContent}
+           {frontContent}
         </div>
 
         {/* Face arrière de la carte */}

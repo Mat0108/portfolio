@@ -17,13 +17,15 @@ export default function ExpandingGrid({frontItems,backItems,onlyArrow,background
   const [active, setActive] = useState<number | null>(null);
   const [oldActive,setOldActive] = useState<number | null>(null);
   const [newActive,setNewActive] = useState<number | null>(null);
+  const [flipActive,setFlipActive] = useState<number | null>(null);
 
   
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   
 
   const handleClick = (index: number) => {
-    if(active && active !== index){
+    // setFlipActive(flipActive !== index ? index : -1);
+    if(!!active && active && active !== index){
         setOldActive(active);
         setNewActive(index);
 
@@ -33,15 +35,17 @@ export default function ExpandingGrid({frontItems,backItems,onlyArrow,background
             setNewActive(index);
           }
         }else{
-          setNewActive(active === index ? -1 : index);
+          setNewActive(active && active === index ? -1 : index);
         }    
         
     }
   };
   const handleOnlyArrow = ()=>{
     setNewActive(-1);
+    setFlipActive(-1);
   }
   const handleOnComplete = ()=>{
+    
     if(newActive === -1){setActive(null)}
     else if(newActive){setActive(newActive);setNewActive(null);}
   }
@@ -49,26 +53,30 @@ export default function ExpandingGrid({frontItems,backItems,onlyArrow,background
     const list = new Array<ReactNode>();
     if(frontItems && backItems && frontItems.length && backItems.length){
         frontItems.forEach((item,i) => {
-            const hiddiv = isGrow[i] === 1 ? `${hiddendivgrow} grow` : `${hiddendiv} flex-none`
-            const isActive = active === i ? hiddiv : "flex-none";
-            list.push(<div
-              key={i}
-              ref={(el) => (itemRefs.current[i] = el)}
-              className={` ${background} ${isActive} `}
-              style={{ transformStyle: 'preserve-3d'}}
-              onClick={()=>{handleClick(i)}}
-              
-            >
+            if(i === 0){
+              list.push(item)
+            }else{
+              const hiddiv = isGrow[i] === 1 ? `${hiddendivgrow} grow` : `${hiddendiv} flex-none`
+              const isActive = active === i ? hiddiv : "flex-none";
+              list.push(<div
+                key={i}
+                ref={(el) => (itemRefs.current[i] = el)}
+                className={` ${background} ${isActive} mb-4`}
+                style={{ transformStyle: 'preserve-3d'}}
+                onClick={()=>{handleClick(i)}}
+                
+              >
                 <Card frontContent={item} backContent={backItems[i]} unflipped={oldActive === i } onComplete={()=>handleOnComplete()} onlyArrow={onlyArrow[i] === 1}  onlyArrowHandle={()=>handleOnlyArrow()} hiddendiv={hiddendiv} animatedDuration={600} />
-    
-            </div>)
+              </div>)
+            }
+            
     })}
     return list;
    
    
   },[frontItems, backItems, background, active, oldActive, onlyArrow, newActive])
   return (
-    <div className={`flex flex-row flex-wrap justify-around w-full gap-4   `}>
+    <div className={`flex flex-row flex-wrap justify-around w-full `}>
         {cardItems}
 
     </div>

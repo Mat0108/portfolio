@@ -8,8 +8,9 @@ const Home = () => {
 
     
     return <div>
+                   {/* main */}
         <div className="w-full h-full flex flex-row bg-dark-blue">
-            {/* main */}
+ 
             <div className="w-1/2 flex flex-col gap-2 center text-6xl text-white font-mt-bold">
                 <div className="w-[70%] flex"><p className="w-1/2 text-left">Frontend</p></div>
                 <div className="w-[70%] flex -mt-8"><p className="w-[440px]">Developper</p></div>
@@ -40,20 +41,20 @@ const Home = () => {
             {/* expérience  */}
             <div className="w-full h-fit flex center bg-black_grey p-2">
                 <div className="w-full flex flex-col">
-                    <p className="ml-[5%] text-[36px] font-mt-bold" >Derniere expériences professionnelles</p>
+                    <p className="ml-[5%] text-[36px] font-mt-bold" >Mes derniere expériences professionnelles</p>
                         <Carousel elems={[Randstad(),EllisCar(),Veolia6(),Veolia4()]} nbShow={1} display={5} showPoint={true} start={0} tag={"work"} hiddendiv={<div className="w-4 h-[430px]"></div>} animatedDuration={800}/>  
                 </div>
             </div>
 
             <div className="w-full h-[500px] flex bg-blue_dark p-2">
                 <div className="w-full flex flex-col">
-                        <p className="ml-[5%] text-[36px] font-mt-bold" >Projet</p>
+                        <p className="ml-[5%] text-[36px] font-mt-bold" >Mes projets</p>
                         <Projet />
                 </div>
             </div>
-            <div className="w-full h-[1000px] flex bg-black_grey p-2">
+            <div className="w-full h-fit flex bg-black_grey p-2">
                 <div className="w-full flex flex-col">
-                        <p className="ml-[5%] text-[36px] font-mt-bold" >Compétences</p>
+                        <p className="ml-[5%] text-[36px] font-mt-bold" >Mes compétences</p>
                         <div className="w-full h-fit pt-4">
                             <Compétence />
                         </div>

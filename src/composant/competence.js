@@ -2,9 +2,10 @@
 import { Link } from "react-router-dom"
 import Carousel from "./carousel/carousel.tsx"
 import ExpandingGrid from "./grid/grid2.tsx"
+import { getRandomColor } from "./RandomColor.js"
 const size = "w-[350px] h-[350px] "
 const size2 = "w-[60vw] lg:w-[60vw] 2xl:w-[60vw] h-[350px]"
-const size3 = "w-[60vw] lg:w-[calc(60vh - 110px)] 2xl:w-[calc(60vh - 110px)]] h-[290px]"
+const size3 = "w-[60vw] lg:w-[calc(60vw - 110px)] 2xl:w-[calc(60vw - 110px)]] h-[290px]"
 const size4 = "w-[60vw] lg:w-[60vw] 2xl:w-[60vw] h-[350px]"
 
 
@@ -195,7 +196,7 @@ function BootStapCard(Background){
     </div>
 }
 function FrontCard(LogoUrl,LogoAlt, Name,Background){
-    return <div className={`relative ${size} flex flex-col gap-0 center ${Background} rounded-[40px]`}>
+    return <div className={`relative ${size} flex flex-col gap-0 center  rounded-[40px]`} style={{backgroundColor:Background}}>
         <div className="h-[80%] w-full flex center rounded-t-[15%]">
             <img src={LogoUrl} alt={LogoAlt} className="h-1/2"/>
         </div>
@@ -211,7 +212,7 @@ function FrontCard(LogoUrl,LogoAlt, Name,Background){
 function BackCard(experience,Background,tag){
         
         return (
-            <div className={`${size2} flex flex-col align-middle items-center  text-center ${Background} rounded-[40px] p-4 `}>
+            <div className={`${size2} flex flex-col align-middle items-center  text-center rounded-[40px] p-4 `} style={{backgroundColor:Background}}>
             
                 {experience.length === 1 && experience[0]}
                 {experience.length !== 1 && <div className="w-full h-min"><Carousel elems={experience} nbShow={1} display={5} start={0} showPoint={true} tag={tag} hiddendiv={<div className={size3}></div>} animatedDuration={600}/></div>}
@@ -222,38 +223,49 @@ function BackCard(experience,Background,tag){
 }
 
 
+let color = getRandomColor();
+const ReactItem = FrontCard("/images/tech/r.png","react","React",color);
+const ReactBackItem = BackCard([RandstadCard("Card-React-0"),EllisCarCard("Card-React-1"),Memoire44Card("Card-React-2"),PoSkinCard("Card-React-3",size3),SpaceXCard("Card-React-4"),PortfolioCard("Card-React-5")],color,"Card-React")
 
-const ReactItem = FrontCard("/images/tech/r.png","react","React","bg-blue_dark");
-const ReactBackItem = BackCard([RandstadCard("Card-React-0"),EllisCarCard("Card-React-1"),Memoire44Card("Card-React-2"),PoSkinCard("Card-React-3",size3),SpaceXCard("Card-React-4"),PortfolioCard("Card-React-5")],"bg-blue_grey","Card-React")
+color = getRandomColor();
+const AngularItem = FrontCard("/images/tech/a.png","angular","Angular",color);
+const AngularBackItem = BackCard([Veolia6("Card-Angular-0"),Veolia4("Card-Angular-1")],color,"Card-React")
 
-const AngularItem = FrontCard("/images/tech/a.png","angular","Angular","bg-blue_dark");
-const AngularBackItem = BackCard([Veolia6("Card-Angular-0"),Veolia4("Card-Angular-1")],"bg-blue_grey","Card-React")
 
-const JavaScriptItem = FrontCard("/images/tech/j.png","javascript","JavaScript","bg-blue_dark");
-const JavaScriptBackItem = BackCard([RandstadCard("Card-JavaScript-0"),EllisCarCard("Card-JavaScript-1"),Veolia6("Card-JavaScript-2"),Veolia4("Card-JavaScript-3"),Memoire44Card("Card-JavaScript-4"),PoSkinCard("Card-JavaScript-5",size3),SpaceXCard("Card-JavaScript-6")],"bg-blue_grey","Card-React")
+color = getRandomColor();
+const JavaScriptItem = FrontCard("/images/tech/j.png","javascript","JavaScript",color);
+const JavaScriptBackItem = BackCard([RandstadCard("Card-JavaScript-0"),EllisCarCard("Card-JavaScript-1"),Veolia6("Card-JavaScript-2"),Veolia4("Card-JavaScript-3"),Memoire44Card("Card-JavaScript-4"),PoSkinCard("Card-JavaScript-5",size3),SpaceXCard("Card-JavaScript-6")],color,"Card-React")
 
-const TypeScriptItem = FrontCard('/images/tech/t.png',"typecript","Typescript","bg-blue_dark");
-const TypeScriptBackItem = BackCard([EllisCarCard("Card-typescript-0"),PortfolioCard("Card-typescript-1")],"bg-blue_grey","Card-typescript");
 
-const TailwindItem = FrontCard('/images/tech/ta.png',"tailwind","TailwindCss","bg-blue_dark");
-const TailwindBackItem = BackCard([EllisCarCard("Card-tailwind-0"),Memoire44Card("Card-tailwind-1"),PoSkinCard("Card-tailwind-2",size3),SpaceXCard("Card-tailwind-3"),PortfolioCard("Card-tailwind-4")],"bg-blue_grey","Card-tailwind")
+color = getRandomColor();
+const TypeScriptItem = FrontCard('/images/tech/t.png',"typecript","Typescript",color);
+const TypeScriptBackItem = BackCard([EllisCarCard("Card-typescript-0"),PortfolioCard("Card-typescript-1")],color,"Card-typescript");
 
-const BootstrapItem = FrontCard('/images/tech/b.png',"bootstrap","Bootstrap","bg-blue_dark");
-const BootstrapBackItem = BootStapCard("bg-blue_grey");
+color = getRandomColor();
+const TailwindItem = FrontCard('/images/tech/ta.png',"tailwind","TailwindCss",color);
+const TailwindBackItem = BackCard([EllisCarCard("Card-tailwind-0"),Memoire44Card("Card-tailwind-1"),PoSkinCard("Card-tailwind-2",size3),SpaceXCard("Card-tailwind-3"),PortfolioCard("Card-tailwind-4")],color,"Card-tailwind")
 
-const NodeItem = FrontCard("/images/tech/node.png","node","Node","bg-blue_dark");
-const NodeBackItem = BackCard([PoSkinCard("Card-node-0","h-[90%]")],"bg-blue_grey","Card-node")
+color = getRandomColor();
+const BootstrapItem = FrontCard('/images/tech/b.png',"bootstrap","Bootstrap",color);
+const BootstrapBackItem = BootStapCard(color);
 
-const NextItem = FrontCard("/images/tech/nx.png","nx","NextJs","bg-blue_dark")
-const NextBackItem = BackCard([RandstadCard("Card-Next-0"),EllisCarCard("Card-Next-1")],"bg-blue_grey","Card-Next")
+color = getRandomColor();
+const NodeItem = FrontCard("/images/tech/node.png","node","Node",color);
+const NodeBackItem = BackCard([PoSkinCard("Card-node-0","h-[90%]")],color,"Card-node")
 
-const MongoDBItem = FrontCard("/images/tech/md.png","MongoDB","MongoDB","bg-blue_dark")
-const MongoDBBackItem = BackCard([RandstadCard("Card-MongoDB-0"),EllisCarCard("Card-MongoDB-1")],"bg-blue_grey","Card-MongoDB")
+color = getRandomColor();
+const NextItem = FrontCard("/images/tech/nx.png","nx","NextJs",color)
+const NextBackItem = BackCard([RandstadCard("Card-Next-0"),EllisCarCard("Card-Next-1")],color,"Card-Next")
+
+color = getRandomColor();
+const MongoDBItem = FrontCard("/images/tech/md.png","MongoDB","MongoDB",color)
+const MongoDBBackItem = BackCard([RandstadCard("Card-MongoDB-0"),EllisCarCard("Card-MongoDB-1")],color,"Card-MongoDB")
+const div = ""
 export const Compétence = ()=>{
     
       return (
-        <div className="flex flex-row ">
-            {<ExpandingGrid frontItems={[ReactItem,AngularItem,JavaScriptItem,TypeScriptItem,TailwindItem,BootstrapItem,NodeItem,NextItem,MongoDBItem,ReactItem]} backItems={[ReactBackItem,AngularBackItem,JavaScriptBackItem,TypeScriptBackItem,TailwindBackItem,BootstrapBackItem,NodeBackItem,NextBackItem,MongoDBBackItem,ReactBackItem]} onlyArrow={[1,1,1,1,1,0,0,1,1]} background={"bg-black_grey"} hiddendiv={size} hiddendivgrow={size4} isGrow={[1,1,1,1,1,0,1,1,1]}/>}
+        <div className="flex flex-row w-fit ">
+            {<ExpandingGrid frontItems={[div,ReactItem,AngularItem,JavaScriptItem,TypeScriptItem,TailwindItem,BootstrapItem,NodeItem,NextItem,MongoDBItem,ReactItem]} backItems={[div,ReactBackItem,AngularBackItem,JavaScriptBackItem,TypeScriptBackItem,TailwindBackItem,BootstrapBackItem,NodeBackItem,NextBackItem,MongoDBBackItem,ReactBackItem]} onlyArrow={[0,1,1,1,1,1,0,0,1,1]} background={"bg-black_grey"} hiddendiv={size} hiddendivgrow={size4} isGrow={[0,1,1,1,1,1,0,1,1,1]}/>}
             </div>
         
     )

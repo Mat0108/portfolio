@@ -1,5 +1,5 @@
 const PoSkinPresentation = ()=>{
-    return <div className="flex flex-col h-full bg-black_darked p-8 gap-16 overflow-auto text-xl">
+    return <div className="flex flex-col h-full bg-black_darked p-8 gap-16 overflow-auto text-md">
         <div className="w-full flex gap-8">
             <div className="w-[40%] h-full bg-blue_dark rounded-[30px] p-4 flex flex-col center relative ">
                 <p className="absolute top-4 left-4 text-5xl font-mt-bold w-full">Po.</p>
