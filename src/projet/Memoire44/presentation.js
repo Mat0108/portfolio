@@ -1,7 +1,7 @@
 const Memoire44Presentation = ()=>{
-    return <div className="flex flex-col h-full bg-black_darked p-8 gap-8 overflow-auto text-md">
-        <div className="w-full flex gap-8">
-            <div className="w-[40%] h-full bg-blue_dark rounded-[30px] p-4 flex flex-col center relative">
+    return <div className="flex flex-col h-full bg-black_darked p-8 gap-8  text-md">
+        <div className="w-full h-full flex flex-row gap-8">
+            <div className="w-[40%] bg-blue_dark rounded-[30px] p-4 flex flex-col center relative">
                 <p className="absolute top-0 w-full p-4 text-3xl font-mt-bold">Memoire 44</p>
                 <p className="mt-2 text-justify ">Lorsque le jeu vidéo officiel adapté du jeu de plateau est devenu indisponible, j'ai souhaité développer ma propre version. </p>
                 <p className="mt-2 text-justify ">Après un an de développement, j'ai réalisé des avancées significatives dans plusieurs domaines clés : <span className="font-mt-bold">gestion du plateau de jeu </span> ainsi que des unités de base, mise en place d'un <span className="font-mt-bold">algorithme de pathfinding</span>, intégration de plusieurs scénarios, et création d'un outil graphique pour l'ajout de scénarios. </p>
@@ -16,7 +16,7 @@ const Memoire44Presentation = ()=>{
         <div className="w-full h-fit relative flex flex-col gap-16 bg-dark_green p-4 rounded-[30px] ">
             <p className="text-xl font-mt-bold mb-2 mb-[-2rem]"> Comment s'est realisé le developpement ? </p>
             <div className="w-full h-full flex flex-row gap-8">
-                <div className="w-[35%] h-full bg-blue_dark rounded-[30px] p-4 flex flex-col relative">
+                <div className="w-[35%] bg-blue_dark rounded-[30px] p-4 flex flex-col relative">
                     <p className=" p-4 text-3xl font-mt-bold ">Etape 1</p>
                     <p className="mt-4 ">- <span className="font-mt-bold">génération du plateau de jeu</span> à travers l'ajout des unités (soltat, tank, artillerie ), ajout des différents types de tuiles (forets, villages, collines ...)  </p>
                     <p className="mt-4 ">- Intégration de la <span className="font-mt-bold">phase de deplacement d'une unité</span> :  </p>
@@ -26,16 +26,16 @@ const Memoire44Presentation = ()=>{
                     <p className="ml-8 -indent-3"> • Détermination de la <span className="font-mt-bold">ligne de mire</span> selon les règles du jeu.</p>
                     <p className="ml-8 -indent-3"> • Calcul du nombre de dés à lancer en fonction de la distance, de la position (ex. : ennemi dans une foret), etc..</p>
                 </div>
-                <div className="w-[65%] h-full bg-light_gray rounded-[30px] flex center relative p-2 ">
+                <div className="w-[65%]  bg-light_gray rounded-[30px] flex center relative p-2 ">
                     <img src={"/images/memoire44/memoire44_4.png"} alt="memoire 44" className="w-4/5" />
                 </div>
                 
             </div>
             <div className="w-full h-full flex flex-row gap-8">
-                <div className="w-[65%] h-full bg-brown_dark rounded-[30px] flex center relative p-4 ">
+                <div className="w-[65%] bg-brown_dark rounded-[30px] flex center relative p-4 ">
                     <img src={"/images/memoire44/memoire44_6.5.png"} alt="memoire 44" className="" />
                 </div>
-                <div className="w-[35%] h-full bg-black_true rounded-[30px] p-4 flex flex-col relative">
+                <div className="w-[35%] bg-black_true rounded-[30px] p-4 flex flex-col relative">
                     
                     <p className=" p-4 text-3xl font-mt-bold ">Etape 2</p>
                     
@@ -52,22 +52,22 @@ const Memoire44Presentation = ()=>{
                 </div>               
             </div>
             <div className="w-full h-full flex flex-row gap-8">
-                <div className="w-[30%] h-full bg-gray_black rounded-[30px] p-4 flex flex-col relative">
+                <div className="w-[30%] bg-gray_black rounded-[30px] p-4 flex flex-col relative">
                     <p className=" p-4 text-3xl font-mt-bold ">Etape 3</p>
                     <p className="mt-2 text-justify -indent-4"> - Correction de divers bugs liés au placement des unités, au calcul du nombre de dés appliqués à l’ennemi, ainsi qu’à la détection des déplacements possibles, grâce à l’intégration d’un algorithme de pathfinding. </p>
                     <p className="mt-2 text-justify -indent-4"> - <span className="font-mt-bold">Ajout d’un éditeur graphique de scénario </span>permettant de sélectionner, pour chaque case, son type d’hexagone, son item de défense, son unité et sa médaille. </p>
                     <p className="ml-4 mt-2 text-justify -indent-3"> • Cet éditeur prend en charge les environnements de plaine et hivernal ; il est prévu d’y ajouter ultérieurement les environnements désertique et pacifique. </p>
                     <p className="ml-4 mt-2 text-justify -indent-3"> • Une refonte complète de l’éditeur est planifiée : au lieu de naviguer hexagone par hexagone pour effectuer des modifications, il sera possible de sélectionner un ensemble d’éléments, puis de cliquer directement sur les hexagones à modifier.  </p>
                 </div>
-                <div className="w-[70%] h-full bg-black_grey rounded-[30px] flex center relative p-8 ">
+                <div className="w-[70%] bg-black_grey rounded-[30px] flex center relative p-8 ">
                     <img src={"/images/memoire44/memoire44_7.png"} alt="memoire 44" className="" />
                 </div>
             </div>
             <div className="w-full h-full flex flex-row gap-8 mb-[2rem]">
-                <div className="w-[40%] h-full bg-blue_grey rounded-[30px] flex center relative p-2 ">
+                <div className="w-[40%] bg-blue_grey rounded-[30px] flex center relative p-2 ">
                     <img src={"/images/memoire44/memoire44_8.png"} alt="memoire 44" className="" />
                 </div>
-                <div className="w-[20%] h-full bg-blue_dark rounded-[30px] p-4 flex flex-col relative">
+                <div className="w-[20%] bg-blue_dark rounded-[30px] p-4 flex flex-col relative">
                     <p className=" p-4 text-3xl font-mt-bold ">Les prochaines etapes :</p>
                     <p className="mt-2 font-mt-bold">- Nouvelle version de l'editeur graphique </p>
                     <p className="mt-2 font-mt-bold">- Gestion des campagnes : </p>
@@ -75,7 +75,7 @@ const Memoire44Presentation = ()=>{
                     <p className="mt-2 font-mt-bold">- Implémentation des unités spéciales et Implémentation des leurs régles associées </p>
                     <p className="mt-2 font-mt-bold">- Implémentation de nouveaux scenarios </p>
                 </div>
-                <div className="w-[40%] h-full bg-blue_grey rounded-[30px] flex center relative p-2 ">
+                <div className="w-[40%] bg-blue_grey rounded-[30px] flex center relative p-2 ">
                     <img src={"/images/memoire44/memoire44_9.png"} alt="memoire 44" className="" />
                 </div>
             </div>

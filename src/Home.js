@@ -4,7 +4,7 @@ import Carousel from "./composant/carousel/carousel.tsx";
 import { Compétence } from "./composant/competence.js";
 import Projet from "./composant/projet.js";
 
-const Home = () => {
+const Home = ({workRef,projetRef,techRef}) => {
 
     
     return <div>
@@ -39,20 +39,20 @@ const Home = () => {
                 </div>
             </div>
             {/* expérience  */}
-            <div className="w-full h-fit flex center bg-black_grey p-2">
+            <div className="w-full h-fit flex center bg-black_grey p-2" ref={workRef}>
                 <div className="w-full flex flex-col">
                     <p className="ml-[5%] text-[36px] font-mt-bold" >Mes derniere expériences professionnelles</p>
                         <Carousel elems={[Randstad(),EllisCar(),Veolia6(),Veolia4()]} nbShow={1} display={5} showPoint={true} start={0} tag={"work"} hiddendiv={<div className="w-4 h-[430px]"></div>} animatedDuration={800}/>  
                 </div>
             </div>
 
-            <div className="w-full h-[500px] flex bg-blue_dark p-2">
+            <div className="w-full h-[500px] flex bg-blue_dark p-2" ref={projetRef}>
                 <div className="w-full flex flex-col">
                         <p className="ml-[5%] text-[36px] font-mt-bold" >Mes projets</p>
                         <Projet />
                 </div>
             </div>
-            <div className="w-full h-fit flex bg-black_grey p-2">
+            <div className="w-full h-fit flex bg-black_grey p-2" ref={techRef}>
                 <div className="w-full flex flex-col">
                         <p className="ml-[5%] text-[36px] font-mt-bold" >Mes compétences</p>
                         <div className="w-full h-fit pt-4">

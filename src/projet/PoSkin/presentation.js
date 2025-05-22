@@ -1,7 +1,7 @@
 const PoSkinPresentation = ()=>{
-    return <div className="flex flex-col h-full bg-black_darked p-8 gap-16 overflow-auto text-md">
-        <div className="w-full flex gap-8">
-            <div className="w-[40%] h-full bg-blue_dark rounded-[30px] p-4 flex flex-col center relative ">
+    return <div className="flex flex-col h-full bg-black_darked p-8 gap-16 text-md">
+        <div className="w-full h-full flex gap-8">
+            <div className="w-[40%] bg-blue_dark rounded-[30px] p-4 flex flex-col center relative ">
                 <p className="absolute top-4 left-4 text-5xl font-mt-bold w-full">Po.</p>
                 <p className="text-justify">PO est une plateforme dédiée à la connexion entre individus confrontés à des problèmes de peau mineurs et des spécialistes qualifiés en soins faciaux. Notre interface utilisateur est conçue pour être intuitive et conviviale, permettant à nos utilisateurs de naviguer facilement à travers les services disponibles.</p>
                 <p className="text-justify mt-4">Le projet a été développé dans le cadre d’un projet scolaire de longue durée (18 mois) réunissant plusieurs classes aux compétences complémentaires (développement, design UX/UI, marketing). Des journées de travail en présentiel, organisées toutes les 4 à 8 semaines selon les rythmes d’alternance, ont permis une réelle coordination interdisciplinaire.</p>
@@ -19,7 +19,7 @@ const PoSkinPresentation = ()=>{
                 <img src={"/images/PoSkin/PoSkin_02.png"} alt={"poskin"} className="rounded-[30px] w-full h-full"/>
                 <div className="absolute bottom-0 w-full text-center text-black font-mt-bold text-2xl"> image provenant du site web Po.</div>
             </div>
-            <div className="w-[40%] h-full bg-blue_grey rounded-[30px] p-4 flex flex-col relative ">
+            <div className="w-[40%] bg-blue_grey rounded-[30px] p-4 flex flex-col relative ">
                 
                 <p className=" p-4 text-xl font-mt-bold">Étape 1 : Création d’une landing page – Phase de validation initiale</p> 
                 <p className="px-4 text-lg font-mt-demi"><span className="font-mt-bold">Objectif :</span> Valider l’intérêt du projet auprès d’un premier public.</p>
@@ -33,7 +33,7 @@ const PoSkinPresentation = ()=>{
             </div>
         </div>
         <div className="w-full flex gap-8">
-            <div className="w-[40%] h-full bg-dark_green rounded-[30px] p-4 flex flex-col relative ">
+            <div className="w-[40%] bg-dark_green rounded-[30px] p-4 flex flex-col relative ">
                 <p className=" p-4 text-xl font-mt-bold">Étape 2 : Développement du premier prototype – Exploration fonctionnelle</p> 
                 <p className="px-4 text-lg font-mt-demi"><span className="font-mt-bold">Objectif :</span> Explorer les pistes de développement et identifier la direction prioritaire.</p>
                 <p className="mt-4">- Réalisation d’un premier prototype interactif incluant :</p>
@@ -57,7 +57,7 @@ const PoSkinPresentation = ()=>{
                 <img src={"/images/PoSkin/PoSkin_04.png"} alt={"poskin"} className="rounded-[30px] w-full h-full"/>
                 <div className="absolute bottom-0 w-full text-center text-black font-mt-bold text-2xl"> image provenant du site web Po.</div>
             </div>
-            <div className="w-[35%] h-full bg-black_grey rounded-[30px] p-4 flex flex-col relative ">
+            <div className="w-[35%] bg-black_grey rounded-[30px] p-4 flex flex-col relative ">
                 <p className=" p-4 text-xl font-mt-bold"> Étape 3 : Lancement de la version 1.0 – Première mise en service réelle</p> 
                 <p className="px-4 text-lg font-mt-demi"><span className="font-mt-bold">Objectif :</span> Explorer les pistes de développement et identifier la direction prioritaire.</p>
                 <p className="mt-4">- Développement et mise en ligne de la version 1.0 de Po., centrée sur :</p>
