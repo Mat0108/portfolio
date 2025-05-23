@@ -30,10 +30,10 @@ const Home = ({workRef,projetRef,techRef}) => {
                 <img src={"/images/background1.jpg"} alt={"starsky"} className="w-full h-[120px] lg:h-[75%] z-0"/>
                 <div className="absolute top-1 lg:top-1/3 left-5 lg:left-20 w-3/5 lg:w-1/2 lg:h-[300px] z-10 ">
                     <p className="text-lg lg:text-2xl font-mt-bold">Matthieu Barnabé</p>
-                    <p className="text-xxs md:text-md lg:text-base test-justify mt-2 lg:mt-10 font-mt-bold-italic">Développeur frontend React avec 2 ans d’alternance et plusieurs stages. Passionné depuis mon plus jeune âge, j’ai mené des projets ambitieux, dont la digitalisation d’un jeu de société. Solide en React, TypeScript et JS, je maîtrise tout le cycle de développement front, de la compréhension des besoins au déploiement.</p>           
+                    <p className="text-3xs md:text-md lg:text-base test-justify mt-2 lg:mt-10 font-mt-bold-italic">Développeur frontend React avec 2 ans d’alternance et plusieurs stages. Passionné depuis mon plus jeune âge, j’ai mené des projets ambitieux, dont la digitalisation d’un jeu de société. Solide en React, TypeScript et JS, je maîtrise tout le cycle de développement front, de la compréhension des besoins au déploiement.</p>           
                     
                 </div>
-                <div className="absolute bottom-2 right-5 text-center text-xxs lg:text-base">
+                <div className="absolute bottom-2 right-5 text-center text-3xs lg:text-base">
                 <p>Ciel étoilé de la Corse du Sud </p>
                 <p>Photographies réalisées et assemblées par mes soins.</p>  
                 </div>
@@ -41,12 +41,12 @@ const Home = ({workRef,projetRef,techRef}) => {
             {/* expérience  */}
             <div className="w-full h-fit flex center bg-black_grey p-2" ref={workRef}>
                 <div className="w-full flex flex-col">
-                    <p className="ml-[5%] text-base lg:text-4xl font-mt-bold" >Mes derniere expériences professionnelles</p>
+                    <p className="ml-[5%] text-base lg:text-4xl font-mt-bold" >Mes dernières expériences professionnelles</p>
                         <Carousel elems={[Randstad(),EllisCar(),Veolia6(),Veolia4()]} nbShow={1} display={5} showPoint={true} start={0} tag={"work"} hiddendiv={<div className="w-4 h-[235px] lg:h-[430px]"></div>} animatedDuration={800}/>  
                 </div>
             </div>
 
-            <div className="w-full h-[500px] flex bg-blue_dark p-2" ref={projetRef}>
+            <div className="w-full h-fit flex bg-blue_dark p-2" ref={projetRef}>
                 <div className="w-full flex flex-col">
                         <p className="ml-[5%] text-base lg:text-4xl font-mt-bold" >Mes projets</p>
                         <Projet />

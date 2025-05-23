@@ -5,13 +5,13 @@ export function Randstad(){
     return  <div key="work-0" className="work-0 w-[calc(100vw-48px)] lg:w-[calc(100vw-188px)] h-[220px] lg:h-[414px] relative mt-4 bg-blue_dark rounded-[30px] p-6">
         <div className="flex justify-between  ">
             <p className="font-mt-bold text-xs lg:text-md w-[70%] lg:w-fit">Développeur full stack dans le service Mobilité</p>
-            <p className="font-mt-demi text-xxs lg:text-lg text-white_blue  w-fit">nov. 2023 - sept. 2024 </p>
+            <p className="font-mt-demi text-3xs lg:text-lg text-white_blue  w-fit">nov. 2023 - sept. 2024 </p>
         </div>
-        <div className="flex justify-between text-xxs lg:text-md">
+        <div className="flex justify-between text-3xs lg:text-md">
             <p className="font-mt-bold ">Randstad</p>
             <p className="font-mt-demi text-white_blue">Paris </p>
         </div>
-        <div className="flex flex-col mt-2 lg:mt-4 w-[90%] lg:w-[70%] text-justify text-xxs lg:text-base">
+        <div className="flex flex-col mt-2 lg:mt-4 w-[90%] lg:w-[70%] text-justify text-3xs lg:text-base">
             <p>Le service Mobilité de Randstad développe des solutions qui permettent aux collaborateurs de travailler à distance</p>
             <p className="mt-2">J’ai développé plusieurs fonctionnalités du spring backlog dans ces applications, notamment :  </p> 
             <p>- Une fonctionnalité <span className="font-mt-bold text-white_blue">« matching de compétences »</span>  permettant de mettre en correspondance les compétences d’un intérimaire avec les offres d’emploi disponibles. </p>
@@ -41,13 +41,13 @@ export function EllisCar(){
     return <div key="work-1" className="work-1 w-[calc(100vw-48px)] lg:w-[calc(100vw-188px)] h-[220px] lg:h-[414px] relative mt-4 bg-blue_dark rounded-[30px] p-6  ">
         <div className="flex justify-between ">
             <p className="font-mt-bold text-xs lg:text-lg">Développeur full stack</p>
-            <p className="font-mt-demi text-xxs lg:text-lg">sept. 2022 - sept. 2023 </p>
+            <p className="font-mt-demi text-3xs lg:text-lg">sept. 2022 - sept. 2023 </p>
         </div>
-        <div className="flex justify-between text-xxxs lg:text-md">
+        <div className="flex justify-between text-4xs lg:text-md">
             <p className="font-mt-bold ">Startup EllisCar</p>
             <p className="font-mt-demi text-white_blue">Paris </p>
         </div>
-        <div className="flex flex-col mt-4 w-[90%] lg:w-[70%] text-justify text-xxs lg:text-base">
+        <div className="flex flex-col mt-4 w-[90%] lg:w-[70%] text-justify text-3xs lg:text-base">
             <p>Ellis car est une startup composé de 5 personnes proposant une solution de gestion de flotte de voitures. </p>
             
             <p className="mt-2">J’ai effectué le développement de plusieurs pages entières :</p> 
@@ -73,13 +73,13 @@ export function Veolia6(){
     return <div key="work-2" className="work-2 w-[calc(100vw-48px)] lg:w-[calc(100vw-188px)] h-[220px] lg:h-[414px] relative mt-4 bg-blue_dark rounded-[30px] p-6  ">
         <div className="flex justify-between  ">
             <p className="font-mt-bold text-xs lg:text-lg">Stage de 6 mois dans l’équipe Digital Factory</p>
-            <p className="font-mt-demi text-xxs lg:text-lg text-white_blue">mars. 2022 - aout. 2022 </p>
+            <p className="font-mt-demi text-3xs lg:text-lg text-white_blue">mars. 2022 - aout. 2022 </p>
         </div>
-        <div className="flex justify-between text-xxxs lg:text-md">
+        <div className="flex justify-between text-4xs lg:text-md">
             <p className="font-mt-bold">Veolia</p>
             <p className="font-mt-demi text-white_blue">Paris </p>
         </div>
-        <div className="flex flex-col mt-4 w-[90%] lg:w-[70%] text-justify text-xxs lg:text-base">
+        <div className="flex flex-col mt-4 w-[90%] lg:w-[70%] text-justify text-3xs lg:text-base">
             <p >J'ai participé au développement des solutions <span className="font-mt-bold text-white_blue"> EdgetoCloud </span> ainsi que de la <span className="font-mt-bold text-white_blue">TimeSeriesEngine </span>, en réalisant les tâches prévues par le spring backlog. </p>
             <p className="mt-2">La solution <span className="font-mt-bold text-white_blue">Edge to Cloud</span> est un logiciel installé automatiquement dans une usine ou dans un bâtiment pour extraire les données d'automates, de systèmes Scada, de BMS, ... afin de les envoyer dans le cloud de manière sécurisée </p>
             <p>J'ai effectué différents modifications dont la corrections des filtres, refonte graphique ainsi que correction d'un bug lié au Lambda metrics d'AWS </p>
@@ -102,13 +102,13 @@ export function Veolia4(){
     return <div key="work-3" className="work-3 w-[calc(100vw-48px)] lg:w-[calc(100vw-188px)] h-[220px] lg:h-[414px] relative mt-4 bg-blue_dark rounded-[30px] p-6  ">
         <div className="flex justify-between ">
             <p className="font-mt-bold text-xs lg:text-lg">Stage de 4 mois dans l’équipe Digital Factory</p>
-            <p className="font-mt-demi text-xxs lg:text-lg text-white_blue">mars. 2021 - juin. 2021 </p>
+            <p className="font-mt-demi text-3xs lg:text-lg text-white_blue">mars. 2021 - juin. 2021 </p>
         </div>
-        <div className="flex justify-between text-xxxs lg:text-md">
+        <div className="flex justify-between text-4xs lg:text-md">
             <p className="font-mt-bold ">Veolia</p>
             <p className="font-mt-demi text-white_blue">Paris </p>
         </div>
-        <div className="flex flex-col mt-2 lg:mt-4 w-[90%] lg:w-[70%] text-justify text-xxs lg:text-base">
+        <div className="flex flex-col mt-2 lg:mt-4 w-[90%] lg:w-[70%] text-justify text-3xs lg:text-base">
             <p>Participation au développement de la solution <span className="font-mt-bold text-white_blue">EdgetoCloud</span>, principalement par la réalisant des taches sur le monitoring des services d'AWS, la récupération de leurs états ainsi que les envois par le service AWS CloudWatch pour le monitoring </p>
             <p className="mt-2">La solution <span className="font-mt-bold text-white_blue">Edge to Cloud</span> est un logiciel installé automatiquement dans une usine ou dans un bâtiment pour extraire les données d'automates, de systèmes Scada, de BMS, ... afin de les envoyer dans le cloud de manière sécurisée </p>
             <p>J'ai effectué différents modifications dont la corrections des filtres, refonte graphique ainsi que correction d'un bug lié au Lambda metrics d'AWS </p>

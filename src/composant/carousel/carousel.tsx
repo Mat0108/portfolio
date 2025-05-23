@@ -204,7 +204,7 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
         <div className="w-full flex flex-col">       
             <div className="flex flex-row w-full">
                 <div className={`relative ${getW(Mratio,true)} sm:${getW(ratio,true)} flex center z-10`}>
-                {!disableClic && <p className="text-5xl z-20" onClick={()=>{Back()}}>{"<"}</p>}
+                {!disableClic && <p className="text-xl lg:text-5xl z-20 mr-[2px] " onClick={()=>{Back()}}>{"<"}</p>}
      
                 </div>
                 <div className={`relative flex flex-row ${getW(100-2*Mratio,true)} sm:${getW(100-2*ratio,true)}  h-full ${nbShow === 1 ? "":"center space-x-4"}`}>
@@ -214,12 +214,12 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
                     
                 </div>
                 <div className={`relative ${getW(Mratio,true)} sm:${getW(ratio,true)} flex center z-10`}>
-                    {!disableClic &&<p className="text-5xl" onClick={()=>{Next()}}>{">"}</p>}
+                    {!disableClic &&<p className="text-xl lg:text-5xl ml-[2px]" onClick={()=>{Next()}}>{">"}</p>}
                     {/* <div className="absolute pl-1/4 w-3/4 h-full bg-bg-gray-dark"></div> */}
                 </div>
 
             </div>
-            {showPoint && <div className="w-full flex flex-col center mt-[20px]">
+            {showPoint && <div className="w-full flex flex-col center mt-[5px] lg:mt-[20px]">
                 <div className={`w-fit flex flex-row space-x-2 ${animatedDirection === 'next' ? 'pr-[1.6rem]':'pl-[1.55rem]'}`}>
                     
                     {animated && animatedPoint}
