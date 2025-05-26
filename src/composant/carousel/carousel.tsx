@@ -199,9 +199,60 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
         }
         setAnimatedItems(list);
     }
-    
+    if (isMobile) {
+    let startX = 0;
+    let endX = 0;
+    const swipeThreshold = 50; // distance minimale en px pour valider un slide
+    let e1 = document.getElementById(`carousel-${tag}`);
+
+    e1?.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    e1?.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const deltaX = endX - startX;
+        if (Math.abs(deltaX) > swipeThreshold) {
+        if (deltaX < 0) {
+            Next(); // swipe gauche → droite vers gauche
+        } else {
+            Back(); // swipe droite → gauche vers droite
+        }
+        }
+    }
+    }
+
+        useEffect(() => {
+            if(!isMobile){
+                const scrollZone = document.getElementById(`carousel-${tag}`);
+                if (!scrollZone) return;
+
+                let lastScrollTime = 0;
+                const throttleDuration = 1000;
+
+                const handleWheel = (event) => {
+                    event.preventDefault();
+                    const now = Date.now();
+
+                    if (now - lastScrollTime < throttleDuration) return;
+
+                    if (event.deltaY > 0) Next();
+                    else if (event.deltaY < 0) Back();
+
+                    lastScrollTime = now;
+                };
+
+                scrollZone.addEventListener("wheel", handleWheel, { passive: false });
+                return () => scrollZone.removeEventListener("wheel", handleWheel);
+            }
+
+    }, [tag,items]);
     return (
-        <div className="w-full flex flex-col">       
+        <div className="w-full flex flex-col" id={`carousel-${tag}`}>       
             <div className="flex flex-row w-full">
                 <div className={`relative ${getW(Mratio,true)} sm:${getW(ratio,true)} flex center z-10`}>
                 {!disableClic && <p className="text-xl lg:text-5xl z-20 mr-[2px] " onClick={()=>{Back()}}>{"<"}</p>}

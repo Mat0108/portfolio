@@ -14,7 +14,7 @@ const Home = ({workRef,projetRef,techRef}) => {
             <div className="w-1/2 flex flex-col gap-2 center text-lg lg:text-6xl text-white font-mt-bold">
                 <div className="mt-10 lg:mt-0 ml-[5%] w-[90%] sm:w-[70%] flex"><p className="w-1/2 text-left">Frontend</p></div>
                 <div className="ml-[5%] w-[90%] sm:w-[70%] flex -mt-2 lg:-mt-8"><p className="w-1/2">Developper</p></div>
-                <p className="ml-[5%] w-[90%] sm:w-[70%] text-sm lg:text-lg font-mt ">Créer des expériences web esthétiques et fonctionnelles à l'aide de technologies modernes.</p>
+                <p className="ml-[5%] w-[90%] sm:w-[70%] text-sm lg:text-lg font-mt text-justify ">Créer des expériences web esthétiques et fonctionnelles à l'aide de technologies modernes.</p>
                 <div className="ml-[5%] w-[90%] sm:w-[70%] flex mt-4">
                     <Link to="/contact" className="text-sm lg:text-lg font-mt px-2 lg:px-8 py-1 lg:py-4 rounded-2xl bg-brown_dark text-white border-2 border-blue_dark hover:text-blue hover:border-blue hover:cursor-pointer mb-4">Get in touch</Link>
                 </div>

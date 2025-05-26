@@ -18,13 +18,13 @@ const App = ()=>{
     const techRef = useRef(null);
 
     return (
-    <div className="bg-blue_dark font-mt text-white_blue " key="main" >
+    <div className="fixed w-screen h-screen bg-blue_dark font-mt text-white_blue " key="main" >
       <Router>
         <div className='sticky top-0 z-50'>
           <Navbar workRef={workRef} projetRef={projetRef} techRef={techRef}/>
         </div>
         <ScrollToTop />
-        <div className="bg-blue_dark relative h-full overflow-auto sm:overflow-auto" id={"Scrollref"}>
+        <div className="bg-blue_dark relative h-full overflow-y-auto overflow-x-hidden " id={"Scrollref"}>
           <Routes>
             <Route path="/" element={<Home workRef={workRef} projetRef={projetRef} techRef={techRef}/>}></Route>
             <Route path="/Memoire44" element={<Memoire44Presentation/>}></Route>

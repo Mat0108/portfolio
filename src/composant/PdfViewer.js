@@ -6,6 +6,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 export const PdfViewer = ({title}) => {
     const [pageNumber, setPageNumber] = useState(1);
 
+    const isMobile = window.screen.width < 600;
 
     const element = useMemo(() => {
 
@@ -24,13 +25,13 @@ export const PdfViewer = ({title}) => {
                 renderTextLayer={false}
                 renderAnnotationLayer={true}
                 pageNumber={pageNumber} 
-                scale={1}/>
+                scale={isMobile ? 0.6 : 1}/>
         </Document>
        
     </div>
     }, [pageNumber,title])
     return (
-        <div className='w-full h-full flex center mt-4'>
+        <div className='w-full h-full flex center mt-0 lg:mt-4'>
             <div className='bg-black p-4 rounded-3xl w-fit h-fit '>
                 {element}
             </div>
