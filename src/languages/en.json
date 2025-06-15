@@ -1,0 +1,408 @@
+{
+    "Home": {
+        "Title": "DISCOVER YOUR SKIN",
+        "Conseil": "Our advice",
+        "key1": "And reveal your natural beauty",
+        "key2": "Take my diagnosis"
+    },
+    "Compte": {
+        "Nom": "Last name",
+        "VNom": "Your last name",
+        "Prenom": "First name",
+        "VPrenom": "Your first name",
+        "Email": "E-mail",
+        "VEmail": "Your email",
+        "Suivi": "My follow-up",
+        "Compte": "My account",
+        "Diagnostics": "My diagnostics",
+        "Info": "Edit my information",
+        "Motdepasse": "Reset password",
+        "Telephone":"Telephone",
+        "VTelephone":"Your telephone",
+        "Adresse":"Address",
+        "VAdresse":"Your address",
+        "Sexe":"Gender",
+        "VSexe":"Your gender",
+        "Ville":"City",
+        "VVille":"Your city",
+        "Codepostal":"postal code",
+        "VCodepostal":"your postal code"
+    },
+    "MoreInfo":{
+        "show_dermato":"HAVE YOU EVER SEEN A DERMATOLOGIST?",
+        "allergies":"DO YOU HAVE ALLERGIES ?",
+        "ifyes":"If yes, which ones ? :"
+    },
+    "RdvConfirm": {
+        "Confirm": "APPOINTMENT CONFIRMED",
+        "Reservation": "Po. thanks you for your reservation.",
+        "Info": "Your information",
+        "Genre": "Gender",
+        "Motif": "Reason",
+        "Expert": "Expert",
+        "RdvNotConfirm": "THE APPOINTMENT COULD NOT BE CONFIRMED",
+        "error_payement": "We respectfully inform you that payment was not successful.",
+        "check_payement": "Please check your information and try again. We remain at your disposal for any necessary assistance.",
+        "payement": "Proceed to payment"
+    },
+    "Diagnostic": {
+        "Diagnostic": "Take my diagnosis",
+        "Go": "Let's go!",
+        "Info1": "By completing this form, you authorize Po. to use your personal data, to send you",
+        "Info2": "offers and communications by email or SMS. Learn more",
+        "Po": "Po. for beautiful skin",
+        "Info3": "At Po., we are convinced that taking care of your skin should be accessible to everyone. That's why we want to make care, advice, and expertise accessible.",
+        "Info4": "We are proud to provide you with clean skincare formulas and to connect you with our expert partners in skin problems.",
+        "Info5": "Your diagnosis of"
+    },
+    "DiagnosticStart": {
+        "copie": "You will receive a copy of your skin diagnosis soon",
+        "connect": "You also have the option to log in or register to save your skin diagnosis and thus benefit from additional features.",
+        "save": "Save diagnosis",
+        "rdv": "Create an appointment",
+        "trace":"To keep track of your diagnosis:"
+    },
+    "Login": {
+        "mouvement": "Join the movement and discover",
+        "peau": "your new skin",
+        "inscription": "Registration",
+        "registered": "Already registered",
+        "connect": "Log in",
+        "password": "Password",
+        "confirmpassword": "Confirm your password"
+    },
+    "Rdv": {
+        "recap": "Summary of your previous appointment",
+        "suivi": "Follow-up consultation with your expert.",
+        "first_suivi": "First consultation with an expert.",
+        "next": "Your next appointment",
+        "mon_suivi": "My follow-up",
+        "motif": "Choose your reason for consultation",
+        "choose_expert": "Choose your expert",
+        "confirm1": "YOUR APPOINTMENT HAS BEEN REGISTERED SUCCESSFULLY",
+        "confirm2": "Po. thanks you for your reservation.",
+        "confirm3": "To confirm your appointment, please proceed with payment. Thank you very much for your understanding and cooperation.",
+        "rdv": "Appointment booking",
+        "mois_suivant": "Next month",
+        "mois_precedent": "Previous month",
+        "date": "Choose the date"
+    },
+    "Password": {
+        "edit": "Password modification",
+        "password": "Enter your password",
+        "not_valide": "Your validation link is no longer valid",
+        "new_request": "Make a new request for",
+        "rejoignez": "Join the movement and discover",
+        "email": "Enter your email address",
+        "ask": "Request a reset link"
+    },
+    "Week": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+    },
+    "Month": {
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+    },
+    "Navbar": {
+        "logout": "Log out",
+        "login": "Log in",
+        "account": "My account",
+        "diagnostic": "My diagnosis",
+        "take_rdv": "Make an appointment",
+        "take_diagnostic":"Make a diagnosis",
+        "rdv": "My appointments",
+        "qsm": "Who are we",
+        "expertise":"Our expertise",
+        "b2b":"Become a Po expert."
+
+    },
+    "TextDivers": {
+        "presentation": {
+            "po": "Po.",
+            "peau": "For beautiful skin",
+            "slogan": "At Po., we are convinced that taking care of your skin should be within everyone's reach.",
+            "accessibilite": "That's why we want to make skincare, advice, and expertise accessible.",
+            "formules": "We are proud to offer you clean skincare formulas and to connect you with our expert partners in skin issues.",
+            "newsletter": "Subscribe to the newsletter"
+        },
+        "apropos": {
+            "titre": "About...",
+            "collaborer": "We have chosen to collaborate with facialist experts for YOU!",
+            "diagnostic": "So that you can benefit from a reliable and personalized diagnosis.",
+            "orientation": "You will be able to find what you really need.",
+            "en_savoir_plus": "Learn more"
+        },
+        "Apropos2": {
+            "paragraphe1": "In addition to benefiting from exceptional expertise, also enjoy outstanding technology!",
+            "paragraphe2": "Artificial Intelligence will perfect your diagnosis to make it even more precise! A simple selfie will determine the guideline of your diagnosis.",
+            "enSavoirPlus": "Learn more"
+        },
+        "Produittitre": {
+            "titre": "The iconic ones",
+            "description": "Discover our 'Iconic' range with our essential products, recommended by our loyal community."
+        },
+        "Produitcol1": {
+            "title": "Eye Serum",
+            "subtitle": "Caffeine 5% + Niacinamide 5%",
+            "description": "Promotes blood and lymphatic microcirculation to reduce dark circles.",
+            "buttonText": "Discover"
+        },
+        "Produitcol2": {
+            "title": "Botanical Blend",
+            "subtitle": "Nopal Tightening",
+            "description": "7 botanical extracts to tone and regenerate the skin overnight. Face and neck night serum.",
+            "buttonText": "Discover"
+        },
+        "Produitcol3": {
+            "title": "Exfoliating Cleansing Gel",
+            "subtitle": "PHA 5% + Aloe Vera",
+            "description": "Micro-exfoliates the skin and stimulates cellular renewal to unclog pores and even out the complexion.",
+            "buttonText": "Discover"
+        },
+        "Quisommesnous": {
+            "key1": "Our story",
+            "key2": "and your story",
+            "key3": "At Po., we strive to offer you an exceptional skincare experience. Our dedicated team of skincare experts is here to accompany you every step of the way. Whether you're looking to address specific skin concerns, enhance your existing routine, or discover new products, we're here to guide you.",
+            "key4": "With our expertise and passion for skin, we provide personalized advice, product recommendations tailored to your skin type, and quality information based on scientific research. We believe in the importance of transparency and education, which is why we share useful resources and detailed buying guides to help you make informed decisions.",
+            "key5": "By joining us, you will also gain access to our community of facialist experts and other skincare enthusiasts. You can exchange advice, share your experiences, and find support throughout your skincare journey.",
+            "key6": "At Po., we are here to help you achieve healthy, balanced, and radiant skin."
+        },
+        "Quisommesnous2": {
+            "key1": "OUR CONCEPT & OUR TEAM"
+        },
+        "Quisommesnous3": {
+            "key1": "CONCEPT",
+            "key2": "Po. is more than just a skincare application; it's a comprehensive solution to guide you through your beauty journey. With Po., you have access to a multitude of tools and resources for personalized and effective skincare."
+        },
+        "Quisommesnous4": {
+            "key1": "TEAM",
+            "key2": "We are a passionate and dedicated team, composed of skincare experts, technology specialists, and marketing professionals. Our main goal is to provide you with a personalized and high-quality experience, offering the best advice, products, and services to take care of your skin."
+        },
+        "carousel1": {
+            "key": "4 skin types, 4 types of care",
+            "subKey1": "Which cleanser to choose? Which serum suits you?",
+            "subKey2": "Understand and accept your skin's nature through our targeted advice for you."
+        },
+        "carousel2": {
+            "key": "Choosing the right mask",
+            "subKey": "Masks have become an essential part of our skincare routines, offering indulgent experiences and immediate benefits. Whether you're looking for intense hydration, deep purification, or instant radiance, there's a mask tailored to your specific needs."
+        },
+        "carousel3": {
+            "key": "A solution for acne?",
+            "subKey": "Acne is a common skin problem that can affect our self-confidence. But did you know that there are natural solutions to treat acne and regain healthy, balanced skin? We will explore the most effective natural remedies for acne, focusing on natural ingredients and gentle methods to soothe and reduce skin imperfections."
+        },
+        "NotreHistoire": {
+            "NosExperts": "Our experts",
+            "PlongezDansLUnivers": "Dive into the world of our passionate facialist experts, dedicated to improving your skin. Their in-depth expertise and skill allow them to offer personalized care tailored to your specific needs. Through a combination of advanced techniques and quality products, our facialists will work with you to reveal your skin's natural glow. Whether you're looking for intense hydration, wrinkle reduction, or a solution for specific skin issues, our experts will guide you with professionalism and care. In addition to their technical expertise, our facialists create a warm and welcoming environment to provide you with a relaxing and revitalizing skincare experience. Trust our facialist experts to accompany you on your journey to healthy, radiant, and fulfilled skin."
+        },
+        "ExpertisePassion": {
+            "UneExpertiseUnePassion": "Expertise, passion",
+            "NosExpertsFacialistes": "Our facialist experts are highly qualified and experienced professionals in the field of skincare. Their expertise is based on rigorous training and a deep understanding of techniques and products suitable for every skin type.",
+            "GrâceÀLeurExpérience": "Thanks to their practical experience and sensitivity to individual needs, our facialist experts can provide personalized and effective care to improve the health and appearance of your skin. Their passion for skincare is reflected in their attentive approach and their commitment to providing you with an exceptional skincare experience.",
+            "FaitesConfianceÀNosExperts": "Trust our facialist experts to guide you towards healthy, radiant, and glowing skin."
+        },
+        "EcoleDelphine": {
+            "EcoleDelphineLanglois": "Delphine Langlois School -",
+            "FacialisteParis": "Facialist Paris",
+            "NosExpertsEnSoinsDeLaPeau": "Our skincare experts are all graduates of the Delphine Langlois School - Facialist Paris, a reference in the field of aesthetics and skincare. This internationally renowned training ensures that our clients benefit from the sharpest skills and knowledge in skincare.",
+            "EnCollaborantAvecDesExperts": "By collaborating with experts trained by this prestigious school, we ensure that you receive quality advice and treatments tailored to your specific needs. Trust our team of qualified experts to take care of your skin and provide you with an exceptional skincare experience.",
+            "EnSavoirPlus": "Learn more"
+        },
+        "Commu": {
+            "key": "Our community is a space dedicated to skincare enthusiasts looking for beauty and skincare advice, where you can share your experiences, ask questions, exchange tips, and find inspiration to take care of your skin and accept yourselves. Here, we encourage open-mindedness, mutual respect, and mutual support.",
+            "key2": "You are welcome to contribute to growing our community."
+        },
+        "Commu1": {
+            "key": "Building self-confidence despite your acne",
+            "key2": "Your beauty is not defined by your skin alone. Acne can be a challenge, but you are much more than that. Learn to love yourself and embrace your uniqueness. Self-confidence does not depend on your appearance, but on how you perceive and assert yourself."
+        },
+        "Expertise1": {
+            "key1": "Personalized",
+            "key2": "At Po., we understand that every skin is unique. That's why we offer personalized recommendations based on your skin type, concerns, and goals. Our tailored approach allows you to achieve the best results for your skin."
+        },
+        "Expertise2": {
+            "key1": "Guidance",
+            "key2": "We provide personalized guidance to help you regain healthy and radiant skin. Our team of experts is here to listen, advise, and support you throughout your skincare journey, so you can regain confidence and feel good in your skin."
+        },
+        "Expertise3": {
+            "key1": "Follow-up",
+            "key2": "Your progress is important to us. We stay in regular contact with you to track the evolution of your skin. We adjust your routine as needed, provide personalized advice, and ensure that you achieve your beauty and skincare goals."
+        },
+        "ConseilCarousel4Image1": {
+            "key": "Marie ROBERT",
+            "key2": "My experience with Po. is the best of my life. A brand that cares about your skin, your well-being by giving you appropriate advice."
+        },
+        "ConseilCarousel4Image2": {
+            "key": "Dr Agathe AOUN",
+            "key2": "Located in Fort-de-France, Martinique, Dr. Agathe, a dermatologist, wanted to learn about the specificities of black skin."
+        },
+        "ConseilCarousel4Image3": {
+            "key": "Augustinus Bader",
+            "key2": "Interview with a professor revolutionizing skincare with his cosmetics brand tailored for the skin."
+        },
+        "VitamineC": {
+            "key": "Vitamin C",
+            "key2": "Discover the incredible benefits of vitamin C for your health, beauty, and well-being. This article explores the sources, benefits, and best ways to incorporate this essential vitamin into your daily life. Dive into the world of vitamin C and learn how it can strengthen your immune system, improve the appearance of your skin, and much more."
+        },
+        "CremeSolaire": {
+            "key": "Sunscreen: A must-have for your skincare routine",
+            "key2": "You can further develop by discussing the benefits of sun protection, types of sunscreens, common mistakes to avoid, and providing tips for effective application. If you need help writing the content of the article or other information, feel free to ask."
+        },
+        "AvoirUneBellePeau": {
+            "key": "Avoiding Mistakes for Beautiful Skin",
+            "key2": "Having beautiful skin is the goal of many of us. Yet, it is sometimes more difficult to know what to avoid than what to do to achieve radiant skin. In this article, we will review the gestures to absolutely avoid to preserve the health and beauty of your skin."
+        },
+        "PeauParfaite": {
+            "key": "The 10 Steps of a Skincare Routine for Perfect Skin",
+            "key2": "Taking care of your skin is an act of self-love. A well-established skincare routine can help you maintain healthy, luminous, and beautiful skin. For an effective skincare routine, there are a few rules and steps to follow. Steps that are sometimes forgotten, neglected, or simply unknown. Here, we reveal the different steps to have healthy and radiant skin!"
+        }
+    },
+    "Toast": {
+        "logout": "You are logged out!",
+        "login": "You are logged in!",
+        "first_login": "Please log in first!",
+        "newsletter": "Email subscribed to the newsletter",
+        "reset_password": "Password reset email sent",
+        "modif_password": "Password successfully changed!",
+        "different_password": "Passwords do not match",
+        "info_modif": "Your information has been successfully modified!",
+        "required_field": "Please modify at least one of the fields!",
+        "required_field_all": "Please fill in all fields!",
+        "required_answer": "Please select an answer",
+        "save_diagnostic": "Diagnostic saved",
+        "save_info": "Your information has been successfully saved",
+        "send_mail": "Email sent",
+        "send_confirm_mail": "Confirmation email sent!",
+        "error_api": "API Error",
+        "confirm_account": "Your account has been confirmed!",
+        "account_not_exist": "Account does not exist!",
+        "created_rdv": "Appointment successfully created!",
+        "selected_motif": "Please select an appointment reason!",
+        "selected_date": "Please select a date!",
+        "selected_rdv": "Please select a time slot!",
+        "selected_expert": "Please select an expert!"
+    },
+    "NewsLetter": {
+        "info": "Follow our news and don't miss any of our updates by subscribing to our newsletter",
+        "mail": "Your email address:",
+        "placeholder": "     Your email address"
+    },
+    "Footer":{
+        "peau":"Discover your skin.",
+        "menu":"Menu",
+        "expert":"Skincare Expert",
+        "soins":"Treatments",
+        "conseil":"Advice",
+        "Po":"Discover Po.",
+        "histoire":"Our Story",
+        "charte":"Training Charter",
+        "avis":"Reviews and Ratings",
+        "expertise":"Expertise",
+        "avis2":"Customer Reviews",
+        "rejoindre":"Join Us",
+        "equipe":"Join the Team",
+        "affiliation":"Affiliation",
+        "communauté":"Community",
+        "rejoindrepo":"JOIN PO. ON:"
+    },
+    "Expertise":{
+        "expertise":"OUR EXPERTISE",
+        "domain":"Our partners are graduates and recognized as experts in their field, ensuring honest and thoughtful care.",
+        "academie":"Certification - Facialists Academy - Paris",
+        "ecole":"Certification - Delphine Langlois School - Facialist Paris",
+        "produit":"All our products are tested and certified cruelty free"
+    },  
+    "B2B":{
+        "rdv":"YOUR APPOINTMENT ",
+        "with":"WITH",
+        "total":"TOTAL",
+        "TTC":"€ TTC",
+        "HT":"€ HT",
+        "prestations":"SERVICES",
+        "add":"ADD A SERVICE",
+        "more":"SEE MORE",
+        "discover":"DISCOVER YOUR SKIN THANKS TO OUR EXPERTS",
+        "discover2":"Discover bookings with an expert facialist",
+        "Po":"PO. the benchmark in beauty care",
+        "presentation1":"At Po. we are convinced that taking care of your skin should be within everyone's reach.",
+        "presentation2":"This is why we want to make care, advice and expertise accessible.",
+        "presentation3":"We are proud to provide you with clean care formulas and to put you in contact with our expert partners in skin problems.",
+        "contact":"CONTACT US",
+        "contactplaceholder":"Join our network of experts:",
+        "offre":{
+            "offre1":"Sweet offers await you at PO.",
+            "offre2":"Discover our exclusive offers now and book your session last minute or during off-peak hours to experience an unparalleled moment of care. Give your skin the special attention it deserves and discover all the other offers we have at your disposal.",
+            "offre3":"DISCOVER OUR OFFERS"
+        },
+        "reserver":{
+            "reserver1":"Book 24/7 with PO.",
+            "reserver2":"Tired of skin problems and looking for the perfect routine? Now, simply book your consultation with our expert facialists at PO. Take control of your skin, at your own pace and without waiting.",
+            "reserver3":"RESERVE NOW"
+        },
+        "discoverhs":{
+            "discover1":"Discover our selection of expert facialists at PO.",
+            "discover2":"With a multitude of certified experts at PO, find the one that perfectly suits your needs. Book now and take control of your beauty with confidence.",
+            "discover3":"DISCOVER NOW"
+        },
+        "expert":{
+            "expert1":"Are you a facial care expert or consultant? Boost your online business with PO!",
+            "expert2":"PO Partenaire, our management software dedicated to professionals, boosts the development of your business and your customers. We offer you a range of tools to simplify the management of online reservations in one click:",
+            "expert3":"Digital calendar and online appointments",
+            "expert4":"Promotions and marketing strategies",
+            "expert5":"Detailed reports and analyzes",
+            "expert6":"Integrated cash register, billing and payment system",
+            "expert7":"Access the Po Store to market your products ",
+            "expert8":"Membership in the Po expert community",
+            "expert9":"Become a PO partner now!"
+        },
+        "leader":{
+            "leader1":"Undisputed leader in connecting patients with facial care experts.",
+            "leader2":"We have chosen to collaborate with expert facialists for YOU! So that you can benefit from a reliable and personalized diagnosis. You will therefore be able to focus on what you really need.",
+            "leader3":"In addition to benefiting from unparalleled know-how, you can also benefit from unparalleled technology!",
+            "leader4":"Artificial Intelligence will be able to perfect your diagnosis to make it even more precise! A simple selfie will be used to determine the guideline of your diagnosis."
+        }
+    },
+    "Valeur": {
+        "key0": "OUR VALUES",
+        "key1": "PERSONALIZATION",
+        "key1_text": "At Po., we believe that every individual is unique. Our approach is therefore tailored to your specific needs. We are dedicated to understanding your expectations and creating personalized solutions that reflect your individuality.",
+        "key2": "SUPPORT",
+        "key2_text": "Your journey toward well-being is our priority. Our experts accompany you every step of the way, offering professional advice and unwavering support. We are here to guide you through your care journey with empathy and expertise.",
+        "key3": "FOLLOW-UP",
+        "key3_text": "Our commitment to you goes well beyond our sessions. We offer ongoing follow-up to ensure you fully benefit from our services. We are committed to building a lasting, evolving, and enriching relationship with you."
+    },
+    "week": "Week",
+    "month": "Month",
+    "votre": "your",
+    "rdv": "Appointment",
+    "send": "Send",
+    "register": "Register",
+    "connect": "Log in",
+    "passwordforgot": "Forgot password",
+    "next": "Next",
+    "previous": "Previous",
+    "diagnostic": "your diagnostics",
+    "date": "Date",
+    "heure": "Time",
+    "expert": "Expert",
+    "motif": "Reason",
+    "observations": "Observations",
+    "oui":"Yes",
+    "non":"No"
+}

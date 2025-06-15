@@ -1,0 +1,409 @@
+{
+    "Home": {
+        "Title": "DÉCOUVREZ VOTRE PEAU",
+        "Conseil": "Nos conseils",
+        "key1": "Et révélez votre beauté naturelle",
+        "key2": "Faire mon diagnostic"
+    },
+    "Compte": {
+        "Nom": "Nom",
+        "VNom": "Votre nom",
+        "Prenom": "Prénom",
+        "VPrenom": "Votre prénom",
+        "Email": "E-mail",
+        "VEmail": "Votre email",
+        "Suivi": "Mon suivi",
+        "Compte": "Mon compte",
+        "Diagnostics": "Mes diagnostics",
+        "Info": "Modifier mes informations",
+        "Motdepasse": "Réinitialisation du mot de passe",
+        "Telephone":"Telephone",
+        "VTelephone":"Votre telephone",
+        "Adresse":"Adresse",
+        "VAdresse":"Votre adresse",
+        "Sexe":"Sexe",
+        "VSexe":"Votre sexe",
+        "Ville":"Ville",
+        "VVille":"Votre ville",
+        "Codepostal":"Code postal",
+        "VCodepostal":"Votre code postal"
+    },
+    "MoreInfo":{
+        "show_dermato":"AVEZ-VOUS DÉJÀ VU UN DERMATOLOQUE ?",
+        "allergies":"AVEZ-VOUS DES ALLERGIES ?",
+        "ifyes":"Si oui, lesquels ? :"
+    },
+    "RdvConfirm": {
+        "Confirm": "RENDEZ-VOUS CONFIRMÉ",
+        "Reservation": "Po. vous remercie pour votre réservation.",
+        "Info": "Votre information",
+        "Genre": "Genre",
+        "Motif": "Motif",
+        "Expert": "Expert",
+        "RdvNotConfirm": "LE RENDEZ-VOUS N'A PAS PU ÊTRE CONFIRMÉ",
+        "error_payement": "Nous vous informons respectueusement que le paiement n'a pas été effectué avec succès.",
+        "check_payement": "Merci de vérifier vos informations et de réessayer. Nous restons à votre disposition pour toute assistance nécessaire.",
+        "payement": "Procéder au paiement"
+    },
+    "Diagnostic": {
+        "Diagnostic": "Faire mon diagnostic",
+        "Go": "C'est parti !",
+        "Info1": "En complétant ce formulaire, vous autorisez Po. à utiliser vos données personnelles, à vous adresser des",
+        "Info2": "offres et communications par email ou par SMS. En savoir plus",
+        "Po": "Po. pour une belle peau",
+        "Info3": "Chez Po. nous sommes convaincus que prendre soin de sa peau devrait être à la portée de tous et de toutes. C’est pour cela que nous voulons rendre accessible les soins, les conseils, les expertises.",
+        "Info4": "Nous sommes fiers de mettre à votre disposition des formules de soins cleans et de vous mettre en contact avec nos partenaires experts dans les problèmes de peaux.",
+        "Info5": "Votre diagnostic du"
+    },
+    "DiagnosticStart": {
+        "copie": "Vous recevrez une copie de votre diagnostic de peau prochainement",
+        "connect": "Vous avez également la possibilité de vous connecter ou de vous inscrire pour sauvegarder votre diagnostic de la peau et ainsi profiter de fonctionnalités supplémentaires.",
+        "save": "Sauvegarder le diagnostic",
+        "rdv": "Créer un rendez-vous",
+        "trace":"Pour garder une trace de votre diagnostic :"
+    },
+    "Login": {
+        "mouvement": "Rejoignez le mouvement et découvrez",
+        "peau": "votre nouvelle peau",
+        "inscription": "Inscription",
+        "registered": "Déjà inscrit",
+        "connect": "Connexion",
+        "password": "Password",
+        "confirmpassword": "Confirmer votre mot de passe",
+        "create_account":"Créer un compte"
+    },
+    "Rdv": {
+        "recap": "Récapitulatif de votre précédent rendez-vous",
+        "suivi": "Consultation de suivi avec votre expert.",
+        "first_suivi": "Première consultation avec un expert.",
+        "next": "Votre prochain rendez-vous",
+        "mon_suivi": "Mon suivi",
+        "motif": "Choisissez votre motif de consultation",
+        "choose_expert": "Choisissez votre expert",
+        "confirm1": "VOTRE RENDEZ-VOUS A BIEN ÉTÉ ENREGISTRÉ",
+        "confirm2": "Po. vous remercie pour votre réservation.",
+        "confirm3": "Afin de confirmer votre rendez-vous, nous vous prions de bien vouloir procéder au paiement. Merci infiniment pour votre compréhension et votre collaboration",
+        "rdv": "Prise de rendez-vous",
+        "mois_suivant": "Mois suivant",
+        "mois_precedent": "Mois précédent",
+        "date": "Choisissez la date"
+    },
+    "Password": {
+        "edit": "Modification de mot de passe",
+        "password": "Entrer votre mot de passe",
+        "not_valide": "Votre lien de validation n'est plus valide",
+        "new_request": "Faire une nouvelle demande de",
+        "rejoignez": "Rejoignez le mouvement et découvrez",
+        "email": "Entrez votre adresse e-mail",
+        "ask": "Demander un lien de réinitialisation"
+    },
+    "Week": {
+        "monday": "Lundi",
+        "tuesday": "Mardi",
+        "wednesday": "Mercredi",
+        "thursday": "Jeudi",
+        "friday": "Vendredi",
+        "saturday": "Samedi",
+        "sunday": "Dimanche"
+    },
+
+    "Month": {
+        "january": "Janvier",
+        "february": "Février",
+        "march": "Mars",
+        "april": "Avril",
+        "may": "Mai",
+        "june": "Juin",
+        "july": "Juillet",
+        "august": "Août",
+        "september": "Septembre",
+        "october": "Octobre",
+        "november": "Novembre",
+        "december": "Décembre"
+    },
+    "Navbar": {
+        "logout": "Se déconnecter",
+        "login": "Se connecter",
+        "account": "Mon compte",
+        "diagnostic": "Mon diagnostic",
+        "take_rdv": "Prendre rendez-vous",
+        "take_diagnostic":"Faire un diagnostic",
+        "rdv": "Mes rendez-vous",
+        "qsm": "Qui sommes-nous",
+        "expertise":"Notre expertise",
+        "b2b":"Devenir expert Po."
+    },
+    "TextDivers": {
+        "presentation": {
+            "po": "Po.",
+            "peau": "Pour une belle peau",
+            "slogan": "Chez Po. nous sommes convaincus que prendre soin de sa peau devrait être à la portée de tous et de toutes.",
+            "accessibilite": "C’est pour cela que nous voulons rendre accessible les soins, les conseils, les expertises.",
+            "formules": "Nous sommes fiers de mettre à votre disposition des formules de soins clean et de vous mettre en contact avec nos partenaires experts dans les problèmes de peaux.",
+            "newsletter": "S'inscrire à la newsletter"
+        },
+        "apropos": {
+            "titre": "À propos...",
+            "collaborer": "Nous avons choisi de collaborer avec des experts facialistes pour VOUS !",
+            "diagnostic": "Pour que vous puissiez bénéficier d’un diagnostic fiable et personnalisé.",
+            "orientation": "Vous pourrez donc vous orienter vers ce dont vous avez réellement besoin.",
+            "en_savoir_plus": "En savoir plus"
+        },
+        "Apropos2": {
+            "paragraphe1": "En plus de pouvoir bénéficier d’un savoir-faire hors pair, profitez également d’une technologie hors pair !",
+            "paragraphe2": "L’Intelligence Artificielle saura parfaire votre diagnostic afin de le rendre encore plus précis ! Un simple selfie servira à déterminer la ligne directrice de votre diagnostic.",
+            "enSavoirPlus": "En savoir plus"
+        },
+        "Produittitre": {
+            "titre": "Les iconiques",
+            "description": "Découvrez notre gamme “Iconiques” avec nos produits incontournables, recommandés par notre fidèle communauté"
+        },
+        "Produitcol1": {
+            "title": "Sérum Yeux",
+            "subtitle": "Caféine 5% + Niacinamide 5%",
+            "description": "Favorise la microcirculation sanguine et lymphatique pour atténuer les cernes.",
+            "buttonText": "Je découvre"
+        },
+        "Produitcol2": {
+            "title": "Assemblage botanique",
+            "subtitle": "Tenseur au nopal",
+            "description": "7 extraits botaniques pour tonifier et régénérer la peau pendant la nuit. Sérum de nuit visage et cou.",
+            "buttonText": "Je découvre"
+        },
+        "Produitcol3": {
+            "title": "Gel nettoyant exfoliant",
+            "subtitle": "PHA 5% + aloe vera",
+            "description": "Micro-exfolie la peau et stimule le renouvellement cellulaire pour désincruster les pores et unifier le teint.",
+            "buttonText": "Je découvre"
+        },
+        "Quisommesnous": {
+            "key1": "Notre histoire",
+            "key2": "et votre histoire",
+            "key3": "Po. aspire à devenir une référence dans le domaine de la dermatologie esthétique en ligne, en offrant une expérience utilisateur optimale et en répondant aux besoins spécifiques des individus soucieux de leur apparence et de leur bien-être cutané.",
+            "key4": "Chez Po, nous nous engageons à vous offrir une expérience de soin de peau personnalisée, accompagnée d'un suivi attentif à chaque étape de votre parcours. Notre équipe dévouée d'experts en skincare est là pour répondre à vos besoins spécifiques et pour vous guider dans le traitement des problèmes mineurs de votre visage.",
+            "key5": "En rejoignant Po, vous bénéficierez d'une attention personnalisée, d'un accompagnement dédié et d'un suivi régulier pour garantir votre satisfaction et le succès de votre parcours de soin de peau. Chez Po, nous sommes là pour vous aider à atteindre une peau saine, équilibrée et rayonnante."
+        },
+        "Quisommesnous2": {
+            "key1": "NOTRE CONCEPT & NOTRE TEAM"
+        },
+        "Quisommesnous3": {
+            "key1": "CONCEPT",
+            "key2": "Po. est bien plus qu'une simple application de soins de la peau, c'est une véritable solution complète pour vous accompagner dans votre parcours de beauté. Avec Po, vous avez accès à une multitude d'outils et de ressources pour prendre soin de votre peau de manière personnalisée et efficace."
+        },
+        "Quisommesnous4": {
+            "key1": "TEAM",
+            "key2": "Nous sommes une équipe passionnée et dévouée, composée d'experts en soins de la peau, de spécialistes en technologie et de professionnels du marketing. Notre objectif principal est de vous offrir une expérience personnalisée et de haute qualité, en vous proposant les meilleurs conseils, produits et services pour prendre soin de votre peau."
+        },
+        "carousel1": {
+            "key": "4 types de peau, 4 types de soins",
+            "subKey1": "Quel nettoyant choisir ? Quel sérum vous correspond ?",
+            "subKey2": "Comprenez et acceptez la nature de votre peau grâce à nos conseils ciblés pour vous."
+        },
+        "carousel2": {
+            "key": "Bien choisir son masque",
+            "subKey": "Les masques sont devenus un incontournable de nos routines de soins de la peau, offrant une expérience indulgente et des bienfaits immédiats. Que vous recherchiez une hydratation intense, une purification en profondeur ou un éclat instantané, il existe un masque adapté à vos besoins spécifiques."
+        },
+        "carousel3": {
+            "key": "Une solution contre l'acné ?",
+            "subKey": "L'acné est un problème de peau courant qui peut affecter notre confiance en nous. Mais saviez-vous qu'il existe des solutions naturelles pour traiter l'acné et retrouver une peau saine et équilibrée ? Nous allons explorer les remèdes naturels les plus efficaces pour lutter contre l'acné, en mettant l'accent sur des ingrédients naturels et des méthodes douces pour apaiser et réduire les imperfections cutanées."
+        },
+        "NotreHistoire": {
+            "NosExperts": "Nos experts",
+            "PlongezDansLUnivers": "Plongez dans l'univers de nos experts facialistes passionnés, dévoués à l'amélioration de votre peau. Leur expertise approfondie et leur savoir-faire leur permettent de vous offrir des soins personnalisés, adaptés à vos besoins spécifiques. Grâce à une combinaison de techniques avancées et de produits de qualité, nos facialistes travailleront avec vous pour révéler l'éclat naturel de votre peau. Que vous recherchiez une hydratation intense, une réduction des rides ou une solution pour les problèmes de peau spécifiques, nos experts sauront vous guider avec professionnalisme et attention. En plus de leur expertise technique, nos facialistes créent un environnement chaleureux et accueillant pour vous offrir une expérience de soin relaxante et revitalisante. Faites confiance à nos experts facialistes pour vous accompagner dans votre voyage vers une peau saine, radieuse et épanouie."
+        },
+        "ExpertisePassion": {
+            "UneExpertiseUnePassion": "Une expertise, une passion",
+            "NosExpertsFacialistes": "Nos experts facialistes sont des professionnels hautement qualifiés et expérimentés dans le domaine des soins de la peau. Leur expertise repose sur une formation rigoureuse et une connaissance approfondie des techniques et des produits adaptés à chaque type de peau.",
+            "GrâceÀLeurExpérience": "Grâce à leur expérience pratique et à leur sensibilité aux besoins individuels, nos experts facialistes sont en mesure de proposer des soins personnalisés et efficaces pour améliorer la santé et l'apparence de votre peau. Leur passion pour les soins de la peau se reflète dans leur approche attentionnée et leur volonté de vous offrir une expérience de soin exceptionnelle.",
+            "FaitesConfianceÀNosExperts": "Faites confiance à nos experts facialistes pour vous guider vers une peau saine, éclatante et radieuse."
+        },
+        "EcoleDelphine": {
+            "EcoleDelphineLanglois": "École Delphine Langlois -",
+            "FacialisteParis": "Facialiste Paris",
+            "NosExpertsEnSoinsDeLaPeau": "Nos experts en soins de la peau sont tous diplômés de l'École Delphine Langlois - Facialiste Paris, une référence dans le domaine de l'esthétique et des soins de la peau. Cette formation de renommée internationale garantit que nos clients bénéficient des compétences et des connaissances les plus pointues en matière de soins de la peau.",
+            "EnCollaborantAvecDesExperts": "En collaborant avec des experts formés par cette prestigieuse école, nous nous assurons de vous offrir des conseils et des traitements de qualité, adaptés à vos besoins spécifiques. Faites confiance à notre équipe d'experts qualifiés pour prendre soin de votre peau et vous offrir une expérience de soin exceptionnelle.",
+            "EnSavoirPlus": "En savoir plus"
+        },
+        "Commu": {
+            "key": "Notre communauté est un espace dédié aux passionnés de soins de la peau qui voudraient des conseils beauté et skincare, où vous pouvez partager vos expériences, poser des questions, échanger des conseils et trouver une source d'inspiration pour prendre soin de votre peau et vous accepter vous-mêmes. Ici, nous encourageons l'ouverture d'esprit, le respect mutuel et l'entraide.",
+            "key2": "Vous êtes le bienvenu pour contribuer à agrandir notre communauté."
+        },
+        "Commu1": {
+            "key": "Gagnez de la confiance en soi malgré votre acné",
+            "key2": "Votre beauté ne se résume pas à votre peau. L'acné peut être un défi, mais vous êtes bien plus que cela. Apprenez à vous aimer et à embrasser votre individualité. La confiance en soi ne dépend pas de votre apparence, mais de la façon dont vous vous percevez et vous affirmez."
+        },
+        "Expertise1": {
+            "key1": "Personnalisé",
+            "key2": "Chez Po, nous comprenons que chaque peau est unique. C'est pourquoi nous vous offrons des recommandations personnalisées en fonction de votre type de peau, de vos préoccupations et de vos objectifs. Notre approche sur mesure vous permet d'obtenir les meilleurs résultats pour votre peau."
+        },
+        "Expertise2": {
+            "key1": "Accompagnement",
+            "key2": "Nous offrons un accompagnement personnalisé pour vous aider à retrouver une peau saine et éclatante. Notre équipe d'experts est là pour vous écouter, vous conseiller et vous soutenir tout au long de votre parcours de soins de la peau, afin que vous puissiez retrouver confiance en vous et vous sentir bien dans votre peau."
+        },
+        "Expertise3": {
+            "key1": "Suivi",
+            "key2": "Votre progression est importante pour nous. Nous restons en contact régulier avec vous pour suivre l'évolution de votre peau. Nous ajustons votre routine au besoin, vous offrons des conseils personnalisés et nous assurons que vous atteignez vos objectifs de beauté et de santé de la peau."
+        },
+        "ConseilCarousel4Image1": {
+            "key": "Marie ROBERT",
+            "key2": "Mon expérience avec Po. est la meilleure de ma vie. Une marque qui se soucie de votre peau, de votre bien-être en vous donnant des conseils appropriés."
+        },
+        "ConseilCarousel4Image2": {
+            "key": "Dr Agathe AOUN",
+            "key2": "Situé à Fort-de-France en Martinique, le Dr Agathe, dermatologue a voulu apprendre les spécificités des peaux noires."
+        },
+        "ConseilCarousel4Image3": {
+            "key": "Augustinus Bader",
+            "key2": "Interview d’un professeur qui révolutionne la skincare avec sa marque de cosmétiques adaptée pour les peaux."
+        },
+        "VitamineC": {
+            "key": "La vitamine C",
+            "key2": "Découvrez les bienfaits incroyables de la vitamine C pour votre santé, votre beauté et votre bien-être. Cet article explore les sources, les avantages et les meilleures façons d'intégrer cette vitamine essentielle dans votre quotidien. Plongez dans le monde de la vitamine C et apprenez comment elle peut renforcer votre système immunitaire, améliorer l'apparence de votre peau et bien plus encore."
+        },
+        "CremeSolaire": {
+            "key": "La crème solaire : un indispensable pour votre routine skincare",
+            "key2": "Vous pouvez développer davantage en parlant des avantages de la protection solaire, des types de crèmes solaires, des erreurs courantes à éviter et donner des conseils pour une application efficace. Si vous avez besoin d'aide pour écrire le contenu de l'article ou d'autres informations, n'hésitez pas à demander."
+        },
+        "AvoirUneBellePeau": {
+            "key": "Les gestes à éviter pour avoir une belle peau",
+            "key2": "Avoir une belle peau, c'est l’objectif de beaucoup d'entre nous. Pourtant, il est parfois plus difficile de savoir ce qu'il faut éviter que ce qu'il faut faire pour obtenir une peau radieuse. Dans cet article, nous allons passer en revue les gestes à éviter absolument pour préserver la santé et la beauté de votre peau."
+        },
+        "PeauParfaite": {
+            "key": "Les 10 étapes d'une routine de soin pour une peau parfaite",
+            "key2": "Prendre soin de sa peau est un acte d'amour envers soi-même. Une routine de soin de la peau bien établie peut vous aider à maintenir une peau saine, lumineuse et belle. Pour qu’une routine visage soit efficace, il y a quelques règles et étapes à respecter. Des étapes que l’on oublie, que l’on néglige, ou simplement que l’on ne connaît pas parfois. On vous dévoile ici les différentes étapes pour avoir une peau saine et éclatante !"
+        }
+    },
+    "Toast":{
+        "logout":"Vous êtes déconnecté !",
+        "login":"Vous êtes connecté !",
+        "first_login":"Merci de vous connecter d'abord !",
+        "newsletter":"Email inscrit pour la newsletter",
+        "reset_password":"Mail de réinitialisation de mot de passe envoyé",
+        "modif_password":"Mot de passe modifié avec succès ! ",
+        "different_password":"Les mots de passe sont différents",
+        "info_modif":"Vos informations ont bien été modifiées !",
+        "required_field":"Merci de modifier au moins un des champs !",
+        "required_field_all":"Merci de remplir tous les champs !",
+        "required_answer":"Merci de sélectionner une réponse",
+        "save_diagnostic":"Diagnostic sauvegardé",
+        "save_info":"Vos informations ont bien été sauvegardées",
+        "send_mail":"Mail envoyé",
+        "send_confirm_mail":"Mail de confirmation envoyé !",
+        "error_api":"Erreur API",
+        "confirm_account":"Votre compte a bien été confirmé !",
+        "account_not_exist":"Le compte n'existe pas ! ",
+        "created_rdv":"Le rendez-vous a bien été créé !",
+        "selected_motif":"Merci de sélectionner un motif de rendez-vous !",
+        "selected_date":"Merci de sélectionner une date !",
+        "selected_rdv":"Merci de sélectionner un créneau !",
+        "selected_expert":"Merci de sélectionner un expert !",
+        "newsletter_expert":"Nous avons bien reçu votre mail, nous allons bientot vous contacter"
+    },
+    "NewsLetter":{
+        "info":"Suivez notre actualité et ne manquez aucune de nos nouveautés en vous inscrivant à notre newsletter",
+        "mail":"Votre adresse e-mail :",
+        "placeholder":"     Votre adresse e-mail"
+    },
+    "Footer":{
+        "peau":"Découvrez votre peau.",
+        "menu":"Menu",
+        "expert":"Expert facialiste",
+        "soins":"Soins",
+        "conseil":"Conseils",
+        "Po":"Découvrir Po.",
+        "histoire":"Notre histoire",
+        "charte":"Charte de formation",
+        "avis":"Avis et évaluations",
+        "expertise":"Expertise",
+        "avis2":"Avis clients",
+        "rejoindre":"Nous rejoindre",
+        "equipe":"Rejoindre l'équipe",
+        "affiliation":"Affiliation",
+        "communauté":"Communauté",
+        "rejoindrepo":"REJOIGNEZ PO. SUR :"
+    },
+    "Expertise":{
+        "expertise":"NOTRE EXPERTISE",
+        "domain":"Nos partenaires sont diplômés et reconnus comme des experts dans leur domaine et garantissent une prise en charge honnête et réfléchie.",
+        "academie":"Certification - Académie des Facialistes - Paris",
+        "ecole":"Certification - École Delphine Langlois - Facialiste Paris",
+        "produit":"Tous nos produits sont testés et certifiés cruelty free"
+    },   
+    "B2B":{
+        "rdv":"VOTRE RDV DU ",
+        "with":"AVEC",
+        "total":"TOTAL",
+        "TTC":"€ TTC",
+        "HT":"€ HT",
+        "prestations":"PRESTATIONS",
+        "add":"AJOUTER UNE PRESTATION",
+        "more":"VOIR PLUS",
+        "discover":"DÉCOUVRIR VOTRE PEAU GRÂCE À NOS EXPERTS",
+        "discover2":"Découvrez les réservations avec un expert facialiste ",
+        "Po":"PO. la référence en matière de soins beauté",
+        "presentation1":"Chez Po. nous sommes convaincus que prendre soin de sa peau devrait être à la portée de tous et de toutes.",
+        "presentation2":"C’est pour cela que nous voulons rendre accessibles les soins, les conseils, les expertises.",
+        "presentation3":"Nous sommes fiers de mettre à votre disposition des formules de soins clean et de vous mettre en contact avec nos partenaires expert dans les problèmes de peaux.",
+        "contact":"NOUS CONTACTER",
+        "contactplaceholder":"Rejoignez notre réseau d'experts :",
+        "offre":{
+            "offre1":"Des offres toutes douces vous attendent chez PO.",
+            "offre2":"Découvrez dès maintenant nos offres exclusives et réservez votre séance de dernière minute ou durant les heures creuses pour vivre un moment de soin inégalé. Offrez à votre peau l'attention spéciale qu'elle mérite et découvrez toutes les autres offres que nous mettons à votre disposition.",
+            "offre3":"DÉCOUVRIR NOS OFFRES"
+        },
+        "reserver":{
+            "reserver1":"Réservez 24h/24 et 7j/7 avec PO.",
+            "reserver2":"Fatigué(e) des problèmes de peau et en quête de la routine parfaite ? Désormais, réservez simplement votre consultation avec nos experts facialistes chez PO. Prenez le contrôle de votre peau, à votre rythme et sans attente.",
+            "reserver3":"RÉSERVER MAINTENANT"
+        },
+        "discoverhs":{
+            "discover1":"Découvrez notre sélection d'expert facialiste chez PO.",
+            "discover2":"Avec une multitude d'experts certifiés chez PO, trouvez celui qui correspond parfaitement à vos besoins. Réservez dès maintenant et prenez le contrôle de votre beauté avec confiance.",
+            "discover3":"DÉCOUVRIR MAINTENANT"
+        },
+        "expert":{
+            "expert1":"Êtes-vous un expert en soins du visage ou un consultant ? Propulsez votre activité en ligne avec PO !",
+            "expert2":"PO Partenaire, notre logiciel de gestion dédié aux professionnels,  booste le développement de votre entreprise et de votre clientèle. Nous vous offrons une gamme d'outils pour simplifier la gestion des réservations en ligne en un clic :",
+            "expert3":"Agenda digital et rendez-vous en ligne",
+            "expert4":"Promotions et stratégies marketing",
+            "expert5":"Rapports et analyses détaillés",
+            "expert6":"Système de caisse, facturation et paiement intégré",
+            "expert7":"Accédez au Po Store pour commercialiser vos produits ",
+            "expert8":"Adhésion à la communauté des experts Po",
+            "expert9":"Devenez partenaire de PO dès maintenant !"
+        },
+        "leader":{
+            "leader1":"Leader incontesté de la mise en relation entre les patients et les experts en soins du visage.",
+            "leader2":"Nous avons choisi de collaborer avec des experts facialistes pour VOUS ! Pour que vous puissiez bénéficier d’un diagnostic fiable et personnalisé. Vous pourrez donc vous orienter vers ce dont vous avez réellement besoin.",
+            "leader3":"En plus de pouvoir bénéficier d’un savoir-faire hors pair, profitez également d’une technologie hors pair !",
+            "leader4":"L’Intelligence Artificielle saura parfaire votre diagnostic afin de le rendre encore plus précis !Un simple selfie servira à déterminer la ligne directrice de votre diagnostic."
+        }
+    },
+    "Valeur":{
+        "key0":"NOS VALEURS",
+        "key1":"PERSONNALISATION",
+        "key1_text":"Chez Po., nous croyons que chaque individu est unique. Notre approche est donc sur mesure, adaptée à vos besoins spécifiques. Nous nous consacrons à comprendre vos attentes et à élaborer des solutions personnalisées qui reflètent votre individualité.",
+        "key2":"ACCOMPAGNEMENT",
+        "key2_text":"Votre voyage vers le bien-être est notre priorité. Nos experts vous accompagnent à chaque étape, offrant des conseils professionnels et un soutien inébranlable. Nous sommes à vos côtés pour vous guider dans votre parcours de soins avec empathie et expertise.",
+        "key3":"SUIVI",
+        "key3_text":"Notre engagement envers vous se prolonge bien au-delà de nos sessions. Nous offrons un suivi continu pour garantir que vous bénéficiez pleinement de nos services. Nous nous engageons à entretenir une relation durable, évolutive et enrichissante avec vous."
+    },
+    "week": "Semaine",
+    "month": "Mois",
+    "votre": "votre",
+    "rdv": "Rendez-vous",
+    "send": "Envoyer",
+    "register": "S'inscrire",
+    "connect": "Se connecter",
+    "passwordforgot": "Mot de passe oublié",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "diagnostic": "vos diagnostics",
+    "date": "Date",
+    "heure": "Heure",
+    "expert": "Expert",
+    "motif": "Motif",
+    "observations": "Observations",
+    "oui":"Oui",
+    "non":"Non"
+}

@@ -1,5 +1,17 @@
+import { Link } from "react-router-dom"
+import { toast } from "react-toastify";
+
 export const SpaceXPresentation = ()=>{
- return <div className="flex flex-col h-full bg-blue_dark p-2 lg:p-8 gap-2 lg:gap-8 text-2xs lg:text-md">
+    
+const isMobile = window.screen.width < 600;
+ return <div className="w-full h-full relative">
+             <div className="absolute top-0 right-0 flex flex-row gap-4 z-10 p-4">
+                 <Link to="https://github.com/Mat0108/Space-X/" target="_blank" rel="noopener noreferrer" className="p-2 bg-black_darked rounded-[10px] ">Github</Link>
+                 {!isMobile && <Link to="/SpaceX/Home"  className="p-2 bg-black_darked rounded-[10px] ">Parcourir le projet</Link>}
+                {isMobile && <div className="p-2 bg-black_darked rounded-[10px] " onClick={()=>toast.info("Merci d'utiliser un ordinateur pour parcourir le projet")}>Parcourir le projet</div>}
+            
+             </div>
+             <div className="bg-blue_dark relative h-full overflow-y-auto overflow-x-hidden custom-scrollbar" id={"Scrollref"}><div className="flex flex-col h-full bg-blue_dark p-2 lg:p-8 gap-2 lg:gap-8 text-2xs lg:text-md">
         <div className="w-full flex gap-2 lg:gap-8">
             <div className="w-[60%] lg:w-[20%] bg-black_darked rounded-[15px] lg:rounded-[30px] p-4 flex flex-col center relative">
                 <p className="p-4 text-xs lg:text-3xl font-mt-bold ">Wiki SpaceX</p>
@@ -44,4 +56,7 @@ export const SpaceXPresentation = ()=>{
                     </div>
             </div>
     </div>
+            </div>
+
+        </div>
 }
