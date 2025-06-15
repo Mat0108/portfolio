@@ -1,0 +1,531 @@
+[{
+  "_id": {
+    "$oid": "6532751c00e8d50017861f2a"
+  },
+  "DateDebut": {
+    "$date": "2023-12-10T10:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-10T10:30:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0,
+  "Observation": "La patiente présente une peau délicate et des signes de vieillissement cutané modérés. Le spécialiste facialiste a noté une légère déshydratation et recommande un régime de soins adapté. La consultation initiale a permis d'établir un plan personnalisé pour restaurer l'éclat et la fermeté de la peau"
+},
+{
+  "_id": {
+    "$oid": "6580cb5fd7b803000df57b30"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2023-12-27T10:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-27T10:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65808dbe147acb00124792ce"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2023-12-04T10:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-04T10:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0,
+  "Observation": "\nLors de la consultation, le médecin a noté une amélioration significative de l'élasticité cutanée chez la patiente, soulignant les résultats positifs du traitement facialiste. L'expertise approfondie de l'esthéticienne a été saluée, et la patiente a exprimé sa satisfaction quant à la résolution des préoccupations esthétiques discutées lors de la séance. L'évaluation médicale conclut à une réponse favorable au protocole de soins recommandé."
+},
+{
+  "_id": {
+    "$oid": "6581620c8d3e90b3bea841ab"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2023-12-13T10:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-13T10:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0,
+  "Observation": "\nLors de la consultation, le médecin a noté une amélioration significative de l'élasticité cutanée chez la patiente, soulignant les résultats positifs du traitement facialiste. L'expertise approfondie de l'esthéticienne a été saluée, et la patiente a exprimé sa satisfaction quant à la résolution des préoccupations esthétiques discutées lors de la séance. L'évaluation médicale conclut à une réponse favorable au protocole de soins recommandé."
+},
+{
+  "_id": {
+    "$oid": "6581c0e24e874f000d292017"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2023-12-06T10:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-06T10:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658563093047ef000d5c72e6"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2023-12-28T14:20:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-28T14:40:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658563423047ef000d5c72f6"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2023-12-28T14:20:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-28T14:40:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65856c1c3047ef000d5c74fa"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-02-08T14:20:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-02-08T14:40:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "658571dde6a9b1000dd9777b"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-01-19T14:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-01-19T14:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65859cf9bde5ca000d4db91e"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-03-08T14:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-03-08T14:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6585abc7bde5ca000d4db958"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2023-12-27T14:20:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2023-12-27T14:40:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65e9c62350bf60000df38e4b"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-03-13T14:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-03-13T14:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6602e3b980fcdc000d27b8d4"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-03-28T10:40:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-03-28T11:00:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660544a49020fd000d70ca7a"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-03-29T13:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-03-29T13:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66215038d2f01b000de03293"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-23T08:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-23T08:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662150a5d2f01b000de032ae"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-23T07:40:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-23T08:00:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66215267d2f01b000de03303"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-23T07:40:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-23T08:00:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+"_id": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+    "firstname":"Murielle",
+    "lastname":"FROIDEFOND"
+},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "662169f2a22006000dfabdce"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-23T08:20:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-23T08:40:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66216a26a22006000dfabde8"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-22T07:40:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-22T08:00:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "655139396c7c63000d0097ce"
+  },
+  "CompteExpert": {
+"_id": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+    "firstname":"Murielle",
+    "lastname":"FROIDEFOND"
+},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66216e41a4f2ab000dfd19bb"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-24T08:20:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-24T08:40:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "66216c735e2946000dc7bb0f"
+  },
+  "CompteExpert": {
+"_id": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+    "firstname":"Murielle",
+    "lastname":"FROIDEFOND"
+},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6621761b1094b2000d6f9df4"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-24T08:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-24T08:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "66216c735e2946000dc7bb0f"
+  },
+  "CompteExpert": {
+"_id": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+    "firstname":"Murielle",
+    "lastname":"FROIDEFOND"
+},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6621775f1094b2000d6f9e23"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-30T08:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-30T08:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "66216c735e2946000dc7bb0f"
+  },
+  "CompteExpert": {
+"_id": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+    "firstname":"Murielle",
+    "lastname":"FROIDEFOND"
+},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6622337d1094b2000d6f9e49"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-04-25T11:40:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-04-25T12:00:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "66216c735e2946000dc7bb0f"
+  },
+  "CompteExpert": {
+"_id": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+    "firstname":"Murielle",
+    "lastname":"FROIDEFOND"
+},
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634a2091094b2000d6f9eb8"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2025-05-06T07:00:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2025-05-06T07:20:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "6634a0aa1094b2000d6f9e9b"
+  },
+  "CompteExpert": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6634a2241094b2000d6f9edd"
+  },
+  "Type": true,
+  "DateDebut": {
+    "$date": "2026-05-09T08:40:00.000Z"
+  },
+  "DateFin": {
+    "$date": "2026-05-09T09:00:00.000Z"
+  },
+  "Confirmation": true,
+  "CompteClient": {
+    "$oid": "66216c735e2946000dc7bb0f"
+  },
+  "CompteExpert": {
+"_id": {
+    "$oid": "6563b09a9254d30012e0e035"
+  },
+    "firstname":"Murielle",
+    "lastname":"FROIDEFOND"
+  },
+  
+  "__v": 0
+}]
