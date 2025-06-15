@@ -14,9 +14,10 @@ type CarouselProps = {
   hiddendiv:ReactNode;
   animatedDuration: number;
   disableClic: boolean;
+  darkPoint:boolean;
 
 }
-const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,animatedDuration,disableClic}:CarouselProps)=>{
+const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,animatedDuration,disableClic,darkPoint}:CarouselProps)=>{
     // props : items:[],nbShow:number,start:number,showPoint:boolean,ratio:number,tag:string
     /* exemple d'utilisations 
     const list = [<div className={`test-0 w-[200px] h-[200px] bg-red`}>{`test-0`}</div>,<div className={`test-1 w-[200px] h-[200px] bg-red`}>{`test-1`}</div>]
@@ -73,12 +74,12 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
         let listpoint = new Array<React.JSX.Element>();
         let more = direction === 'next' ? 1:0;
         if(direction === 'next'){
-            listpoint.push(<div style={{opacity:0}} className={`point-${tag}-0  w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={show === itemsLenght ? "/images/pointbig.png" : "/images/pointlow.png"} alt={"point"}/></div>)
+            listpoint.push(<div style={{opacity:0}} className={`point-${tag}-0  w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={show === itemsLenght ? `/images/pointbig${darkPoint ? "b":""}.png` :`/images/pointlow${darkPoint ? "b":""}.png`} alt={"point"}/></div>)
         }
-        if(elems){elems.map((e,pos)=>{listpoint.push(<div className={`point-${tag}-${pos+more}  w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={pos===show ? "/images/pointbig.png" : "/images/pointlow.png"} alt={"point"}/></div>)})
+        if(elems){elems.map((e,pos)=>{listpoint.push(<div className={`point-${tag}-${pos+more}  w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={pos===show ? `/images/pointbig${darkPoint ? "b":""}.png` :`/images/pointlow${darkPoint ? "b":""}.png`} alt={"point"}/></div>)})
         }
             if(direction === 'back'){
-            listpoint.push(<div style={{opacity:0}} className={`point-${tag}-${itemsLenght+1}  w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={show === 0 ? "/images/pointbig.png" : "/images/pointlow.png"} alt={"point"}/></div>)
+            listpoint.push(<div style={{opacity:0}} className={`point-${tag}-${itemsLenght+1}  w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={show === 0 ? `/images/pointbig${darkPoint ? "b":""}.png` :`/images/pointlow${darkPoint ? "b":""}.png`} alt={"point"}/></div>)
         
         }        
         setAnimatedPoints(listpoint);
@@ -147,10 +148,10 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
             }}});
             
             if(animatedDirection === 'next'){
-                AnimationPoint(timeline,'25px');
+                if(showPoint){AnimationPoint(timeline,'25px');}
                 Animation(timeline,'-100%');    
             }else if (animatedDirection === 'back' && !!animatedItems && Object.keys(animatedItems).length){                
-                    AnimationPoint(timeline,"-25px");
+                    if(showPoint){AnimationPoint(timeline,"-25px");}
                     animatedItems.forEach((item,pos)=>{
               
                         if(item && item.props){
@@ -228,9 +229,12 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
 
         useEffect(() => {
             if(!isMobile){
+                
+                const verticalScrollZone = document.getElementById('Scrollref');
                 const scrollZone = document.getElementById(`carousel-${tag}`);
-                if (!scrollZone) return;
-
+                
+                if (!scrollZone || !verticalScrollZone) return
+                
                 let lastScrollTime = 0;
                 const throttleDuration = 1000;
 
@@ -277,7 +281,7 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
                 </div>
                 <div className="w-fit flex flex-row space-x-2">
                     {/* {point} */}
-                    {!animated && elems && elems.map((e,pos)=>{return <div className={`w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={pos === show ? "/images/pointbig.png" : "/images/pointlow.png"} alt={"point"}/></div>})}        
+                    {!animated && elems && elems.map((e,pos)=>{return <div className={`w-[9px] sm:w-[18px] h-[10px] sm:h-[21px]`}><img src={pos === show ? `/images/pointbig${darkPoint ? "b":""}.png` :`/images/pointlow${darkPoint ? "b":""}.png`} alt={"point"}/></div>})}        
                 </div>
                 
             </div>}

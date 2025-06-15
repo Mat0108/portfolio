@@ -59,10 +59,10 @@ const MenuSelector = ({title,options}:MenuSelectorProps) => {
         <div
           onMouseEnter={onMouseEnterMenu}
           onMouseLeave={onMouseLeaveMenu}
-          className="absolute right-0 mt-2 rounded-2xl bg-black_grey text-white z-[1000] p-2 drop-shadow-2xl h-fit overflow-auto"
+          className="absolute right-0 rounded-2xl bg-black_grey text-white z-[1000] p-2 drop-shadow-2xl h-fit overflow-auto"
           aria-labelledby="menu-button"
           tabIndex={-1}>
-          <div className="py-1 space-y-[5%]" role="none">
+          <div className="py-1 space-y-[5%] " role="none">
             {options.map((option,key)=>
             <div key={key}
                   className={`cursor-pointer inline text-xs sm:text-md font-semibold hover:bg-[#264C4D] hover:text-white flex rounded-2xl`}

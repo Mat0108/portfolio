@@ -1,7 +1,7 @@
 
 import Carousel from "./carousel/carousel.tsx"
 import { Memoire44Card, PortfolioCard, PoSkinCard, SpaceXCard } from "./competence";
-const size = " w-[90vw] lg:w-[calc(50vw - 110px)] 2xl:w-[calc(50vw - 110px)]] h-[180px] lg:h-[290px]"
+const size = " w-[90vw] lg:w-[calc(50vw-110px)] h-[180px] lg:h-[290px]"
 
 
 const Projet = ()=>{

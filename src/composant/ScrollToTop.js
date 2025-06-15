@@ -6,22 +6,28 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     setTimeout(() => { 
-      window.scrollTo(0, 0);
+      const el = document.getElementById('Scrollref')
+      if(el){
+        el.scrollTo(0, 0);
+      }
     }, 10);
   }, [pathname]);
 
   return null;
 }
 export function useScrollToElement() {
+
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
   const scrollToElement = useCallback((ref, url) => {
+
     const scroll = () => {
       if (ref?.current) {
         const yOffset = -80;
         const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        const el = document.getElementById('Scrollref')
+        el.scrollTo({ top: y, behavior: 'smooth' });
       }
     };
 

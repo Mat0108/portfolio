@@ -25,7 +25,7 @@ export const PdfViewer = ({title}) => {
                 renderTextLayer={false}
                 renderAnnotationLayer={true}
                 pageNumber={pageNumber} 
-                scale={isMobile ? 0.6 : 1}/>
+                scale={isMobile ? 0.6 : 0.95}/>
         </Document>
        
     </div>

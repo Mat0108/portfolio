@@ -1,11 +1,11 @@
 
 import { Link } from "react-router-dom"
 import Carousel from "./carousel/carousel.tsx"
-import ExpandingGrid from "./grid/grid2.tsx"
+import ExpandingGrid from "./grid/grid.tsx"
 import { getRandomColor } from "./RandomColor.js"
 const size = "w-[180px] lg:w-[350px] h-[180px] lg:h-[350px] "
 const size2 = "w-[94vw] lg:w-[60vw] 2xl:w-[60vw] h-[180px] lg:h-[350px]"
-const size3 = "w-[80vw] lg:w-[calc(60vw - 110px)] 2xl:w-[calc(60vw - 110px)]] h-[140px] lg:h-[290px]"
+const size3 = "w-[80vw] lg:w-[calc(60vw-110px)] 2xl:w-[calc(60vw-110px)]] h-[140px] lg:h-[290px]"
 const size4 = "w-[80vw] lg:w-[60vw] 2xl:w-[60vw] h-[180px] lg:h-[350px]"
 const isMobile = window.screen.width < 600;
 
@@ -265,7 +265,7 @@ export const Compétence = ()=>{
     
       return (
         <div className="flex flex-row w-fit ">
-            {<ExpandingGrid frontItems={[div,ReactItem,AngularItem,JavaScriptItem,TypeScriptItem,TailwindItem,BootstrapItem,NodeItem,NextItem,MongoDBItem,ReactItem]} backItems={[div,ReactBackItem,AngularBackItem,JavaScriptBackItem,TypeScriptBackItem,TailwindBackItem,BootstrapBackItem,NodeBackItem,NextBackItem,MongoDBBackItem,ReactBackItem]} onlyArrow={[0,1,1,1,1,1,0,0,1,1]} background={"bg-black_grey"} hiddendiv={size} hiddendivgrow={size4} isGrow={[0,1,1,1,1,1,0,1,1,1]}/>}
+            {<ExpandingGrid frontItems={[div,ReactItem,AngularItem,JavaScriptItem,TypeScriptItem,TailwindItem,BootstrapItem,NodeItem,NextItem,MongoDBItem]} backItems={[div,ReactBackItem,AngularBackItem,JavaScriptBackItem,TypeScriptBackItem,TailwindBackItem,BootstrapBackItem,NodeBackItem,NextBackItem,MongoDBBackItem]} onlyArrow={[0,1,1,1,1,1,0,0,1,1]} background={"bg-black_grey"} hiddendiv={size} hiddendivgrow={size4} isGrow={[0,1,1,1,1,1,0,1,1,1]}/>}
             </div>
         
     )

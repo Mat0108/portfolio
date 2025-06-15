@@ -206,3 +206,177 @@ export const getW = (value,bool)=>{
     }
     
 }
+
+export function getGrid(n,bool ){
+  switch (n) {
+    case 1:
+      return bool ? 'col-start-1' : 'row-start-1';
+    case 2:
+      return bool ? 'col-start-2' : 'row-start-2';
+    case 3:
+      return bool ? 'col-start-3' : 'row-start-3';
+    case 4:
+      return bool ? 'col-start-4' : 'row-start-4';
+    case 5:
+      return bool ? 'col-start-5' : 'row-start-5';
+    case 6:
+      return bool ? 'col-start-6' : 'row-start-6';
+    case 7:
+      return bool ? 'col-start-7' : 'row-start-7';
+    case 8:
+      return bool ? 'col-start-8' : 'row-start-8';
+    case 9:
+      return bool ? 'col-start-9' : 'row-start-9';
+    case 10:
+      return bool ? 'col-start-10' : 'row-start-10';
+    case 11:
+      return bool ? 'col-start-11' : 'row-start-11';
+    case 12:
+      return bool ? 'col-start-12' : 'row-start-12';
+    case 13:
+      return bool ? 'col-start-13' : 'row-start-13';
+    case 14:
+      return bool ? 'col-start-14' : 'row-start-14';
+    case 15:
+      return bool ? 'col-start-15' : 'row-start-15';
+    case 16:
+      return bool ? 'col-start-16' : 'row-start-16';
+    case 17:
+      return bool ? 'col-start-17' : 'row-start-17';
+    case 18:
+      return bool ? 'col-start-18' : 'row-start-18';
+    case 19:
+      return bool ? 'col-start-19' : 'row-start-19';
+    case 20:
+      return bool ? 'col-start-20' : 'row-start-20';
+    case 21:
+      return bool ? 'col-start-21' : 'row-start-21';
+    case 22:
+      return bool ? 'col-start-22' : 'row-start-22';
+    case 23:
+      return bool ? 'col-start-23' : 'row-start-23';
+    case 24:
+      return bool ? 'col-start-24' : 'row-start-24';
+    case 25:
+      return bool ? 'col-start-25' : 'row-start-25';
+    case 26:
+      return bool ? 'col-start-26' : 'row-start-26';
+    case 27:
+      return bool ? 'col-start-27' : 'row-start-27';
+    case 28:
+      return bool ? 'col-start-28' : 'row-start-28';
+    case 29:
+      return bool ? 'col-start-29' : 'row-start-29';
+    case 30:
+      return bool ? 'col-start-30' : 'row-start-30';
+    case 31:
+      return bool ? 'col-start-31' : 'row-start-31';
+    case 32:
+      return bool ? 'col-start-32' : 'row-start-32';
+    case 33:
+      return bool ? 'col-start-33' : 'row-start-33';
+    case 34:
+      return bool ? 'col-start-34' : 'row-start-34';
+    case 35:
+      return bool ? 'col-start-35' : 'row-start-35';
+    case 36:
+      return bool ? 'col-start-36' : 'row-start-36';
+    case 37:
+      return bool ? 'col-start-37' : 'row-start-37';
+    case 38:
+      return bool ? 'col-start-38' : 'row-start-38';
+    case 39:
+      return bool ? 'col-start-39' : 'row-start-39';
+    case 40:
+      return bool ? 'col-start-40' : 'row-start-40';
+    default:
+      return '';
+  }
+  
+}
+
+export function getBG(colorName) {
+  switch (colorName) {
+    case "blue":
+      return "bg-blue";
+    case "light-blue":
+      return "bg-light-blue"
+    case "russet":
+      return "bg-russet";
+    case "cyan":
+      return "bg-cyan";
+    case "vivid_tangerine":
+      return "bg-vivid_tangerine";
+    case "white_coffee":
+      return "bg-white_coffee";
+    case "white":
+      return "bg-white";
+    case "white2":
+      return "bg-white2";
+    case "green":
+      return "bg-green";
+    case "red":
+      return "bg-red";
+    default:
+      return ""; 
+  }
+}
+export function getBorder(colorName) {
+  switch (colorName) {
+    case "blue":
+      return "border-blue";
+    case "light-blue":
+      return "border-light-blue";
+    case "russet":
+      return "border-russet";
+    case "cyan":
+      return "border-cyan";
+    case "vivid_tangerine":
+      return "border-vivid_tangerine";
+    case "white_coffee":
+      return "border-white_coffee";
+    case "white":
+      return "border-white";
+    case "white2":
+      return "border-white2";
+    case "green":
+      return "border-green";
+    case "red":
+      return "border-red";
+    default:
+      return "";
+  }
+}
+export function getTextColor(colorName) {
+  switch (colorName) {
+    case "blue":
+      return "text-blue";
+    case "light-blue":
+      return "text-light-blue"
+    case "russet":
+      return "text-russet";
+    case "cyan":
+      return "text-cyan";
+    case "vivid_tangerine":
+      return "text-vivid_tangerine";
+    case "white_coffee":
+      return "text-white_coffee";
+    case "white":
+      return "text-white";
+    case "white2":
+      return "text-white2";
+    case "green":
+      return "text-green";
+    case "red":
+      return "text-red";
+    default:
+      return ""; 
+  }
+}
+export function BG(maincolor,hovercolor){
+  return `${getBG(maincolor)} border-4 ${getBorder(maincolor)} hover:${getBorder(hovercolor)}`
+}
+
+export function BGTEXT(maincolor,hovercolor,textcolor){
+  return `${getBG(maincolor)} border-4 ${getBorder(maincolor)} hover:${getBorder(hovercolor)} ${getTextColor(textcolor)}`
+}

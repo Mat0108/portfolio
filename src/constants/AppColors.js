@@ -31,7 +31,12 @@ const Colors = {
   "red_dark2":"#5e0e0e",
   "red":"#BD2D2D",
   "red_light":"#CC6C66",
-  "rose":"#DCAB9F"
-
+  "rose":"#DCAB9F",
+  "blue_poskin":"#264C4D",
+  "white_coffee":"#E4DDD3",
+  "white_smoke":"#EEE8E4",
+  "cyan":"#83C5BE",
+  "cyan_medium":"#346C6D",
+  "light-blue": "#618CDC",
 }
 module.exports = Colors;
