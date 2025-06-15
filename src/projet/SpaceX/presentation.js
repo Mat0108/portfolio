@@ -15,7 +15,7 @@ const isMobile = window.screen.width < 600;
         <div className="w-full flex gap-2 lg:gap-8">
             <div className="w-[60%] lg:w-[20%] bg-black_darked rounded-[15px] lg:rounded-[30px] p-4 flex flex-col center relative">
                 <p className="p-4 text-xs lg:text-3xl font-mt-bold ">Wiki SpaceX</p>
-                <p className="mt-2 text-justify ">Plateforme d'information permettant d'avoir l'historiques des lancements, leurs details techinques, leurs reutilisations ainsi l'historiques des capsules. </p>
+                <p className="mt-2 text-justify ">Plateforme d'information permettant d'avoir l'historiques des lancements, leurs détails techniques, leurs réutilisations ainsi l'historiques des capsules. </p>
                <p className="absolute bottom-2 lg:bottom-1/3 right-2 ">octobre 2022</p>
             </div>
             <div className="w-[40%] lg:w-[80%] ">
@@ -34,7 +34,7 @@ const isMobile = window.screen.width < 600;
                     <p className="text-justify"> Elle met en avant la gestion d’appels API croisés et l’affichage structuré de données complexes.</p>
                 </div>               
         </div>
-                <div className="w-full h-full flex flex-row gap-2 lg:gap-8 text-3xs lg:text-base">
+                <div className="w-full h-full flex flex-row gap-2 lg:gap-8 text-3xs lg:text-base pb-[100px]">
 
                     <div className="w-[40%] bg-black_grey rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col center relative ">
                         
@@ -44,8 +44,8 @@ const isMobile = window.screen.width < 600;
                         <p className="text-justify"> La page récupère également les détails de leur dernière mission et le patch associé, en combinant plusieurs sources API pour présenter une vue complète et actualisée.</p>
                     </div>     
                     <div className="w-[40%] flex center relative">
-                        <div className="w-full h-full flex center border-2 border-gray rounded-[15px] lg:rounded-[30px] bg-black_darked ">
-                            <img src={"/images/SpaceX/SpaceX_3.png"} alt="spacex" className="" />
+                        <div className="w-full h-full flex center border-2 border-gray rounded-[15px] lg:rounded-[30px]">
+                            <img src={"/images/SpaceX/SpaceX_3.png"} alt="spacex" className="rounded-[15px] lg:rounded-[30px] " />
                     
                         </div>
                     </div>          

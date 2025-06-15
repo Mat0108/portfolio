@@ -94,7 +94,7 @@ export function Memoire44Card(Tag,size){
             </div>
             <div className="w-full flex flex-row pt-2 ">
                 <div className="flex flex-col w-[80%] lg:w-[70%] text-justify text-3xs lg:text-base gap-2">
-                    <p>Suite à l’indisponibilité de la version jeu vidéo du jeu de société original, j’ai développé ma propre adaptation. J’ai recréé fidèlement le jeu de base, en reproduisant tous les cas de figure possibles : plateau en grille hexagonale, algorithme de pathfinding, scénarios jouables et éditeur graphique. Les prochaines étapes incluent l’ajout d’une partie des extensions, avec l’intégration des environnements hivernaux et désertiques, ainsi que de nouvelles unités spéciales.</p>
+                    <p>Suite à l’indisponibilité de la version en ligne du jeu de société original, j’ai développé ma propre adaptation. J’ai recréé fidèlement le jeu de base, en reproduisant tous les cas de figure possibles : plateau en grille hexagonale, algorithme de pathfinding, scénarios jouables et éditeur graphique. Les prochaines étapes incluent l’ajout d’une partie des extensions, avec l’intégration des environnements hivernaux et désertiques, ainsi que de nouvelles unités spéciales.</p>
                 
                 </div>
             </div>
@@ -112,7 +112,7 @@ export function PoSkinCard(Tag,size){
         <div className="relative  w-full h-full flex flex-col p-4 ">
 
        
-        <p className="text-3xs lg:text-lg">Projet d'une plateforme de mise en relation pour soins de peau mineure</p>
+        <p className="text-3xs lg:text-lg">Projet d'une plateforme de mise en relation pour soins mineurs de peau </p>
         <div className="text-3xs lg:text-md flex justify-between">
             <p>Po.</p>
             <p>dec. 2022 - avril 2024</p>
@@ -120,7 +120,7 @@ export function PoSkinCard(Tag,size){
         <div className="w-full flex flex-row pt-2 ">
             <div className="flex flex-col w-[80%] lg:w-[70%] text-justify text-3xs lg:text-base gap-2">
                 <p>
-                PO est une plateforme dédiée à la connexion entre individus confrontés à des problèmes de peau mineurs et des spécialistes qualifiés en soins faciaux. Notre interface utilisateur est conçue pour être intuitive et conviviale, permettant à nos utilisateurs de naviguer facilement à travers les services disponibles.
+                PO est une plateforme dédiée à la connexion entre individus confrontés à des problèmes de peau mineurs et des spécialistes qualifiés en soins faciaux. L'interface utilisateur est conçue pour être intuitive et conviviale, permettant aux utilisateurs de naviguer facilement à travers les services disponibles.
                 </p>
             
             </div>
@@ -147,7 +147,7 @@ export function SpaceXCard(Tag,size){
         <div className="w-full flex flex-row pt-2 ">
             <div className="flex flex-col w-[80%] lg:w-[70%] text-justify gap-2 text-3xs lg:text-base">
                 <p>
-                    Plateforme d'information permettant d'avoir l'historiques des lancements, leurs details techinques, leurs reutilisations ainsi l'historiques des capsules.
+                    Plateforme d'information permettant d'avoir l'historique des lancements, leurs details techniques ainsi que l'historique de vol des capsules.
                 </p>
             
             </div>
@@ -264,9 +264,11 @@ const div = ""
 export const Compétence = ()=>{
     
       return (
-        <div className="flex flex-row w-fit ">
-            {<ExpandingGrid frontItems={[div,ReactItem,AngularItem,JavaScriptItem,TypeScriptItem,TailwindItem,BootstrapItem,NodeItem,NextItem,MongoDBItem]} backItems={[div,ReactBackItem,AngularBackItem,JavaScriptBackItem,TypeScriptBackItem,TailwindBackItem,BootstrapBackItem,NodeBackItem,NextBackItem,MongoDBBackItem]} onlyArrow={[0,1,1,1,1,1,0,0,1,1]} background={"bg-black_grey"} hiddendiv={size} hiddendivgrow={size4} isGrow={[0,1,1,1,1,1,0,1,1,1]}/>}
+        <div className="flex flex-row center">
+            <div className="w-full lg:w-[80%]">
+                {<ExpandingGrid frontItems={[div,ReactItem,AngularItem,JavaScriptItem,TypeScriptItem,TailwindItem,BootstrapItem,NodeItem,NextItem,MongoDBItem]} backItems={[div,ReactBackItem,AngularBackItem,JavaScriptBackItem,TypeScriptBackItem,TailwindBackItem,BootstrapBackItem,NodeBackItem,NextBackItem,MongoDBBackItem]} onlyArrow={[0,1,1,1,1,1,0,0,1,1]} background={"bg-black_grey"} hiddendiv={size} hiddendivgrow={size4} isGrow={[0,1,1,1,1,1,0,1,1,1]}/>}
             </div>
+        </div>
         
     )
         

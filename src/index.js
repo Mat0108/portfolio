@@ -53,7 +53,7 @@ const App = ()=>{
         <div className='sticky top-0 z-50'>
           <Navbar workRef={workRef} projetRef={projetRef} techRef={techRef}/>
         </div>
-        <ScrollToTop />
+        {/* <ScrollToTop /> */}
 
 
           <Routes>

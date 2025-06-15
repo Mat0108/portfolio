@@ -61,11 +61,11 @@ const PoSkinPresentation = ()=>{
                         
                         </div>
                         <div className="w-[30%] lg:w-[60%] relative">
-                            <div className="w-full h-full bg-gray_black rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_03.png"} alt={"poskin"} className="w-full"/></div>
+                            <div className="w-full h-full bg-gray_black rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_03.png"} alt={"poskin"} className="w-full  rounded-[15px] lg:rounded-[30px] "/></div>
                             <div className="absolute bottom-0 w-full text-center text-black font-mt-bold text-3xs lg:text-2xl pb-2"> image provenant du site web Po.</div>
                         </div>
                     </div>
-                    <div className="w-full flex gap-2 lg:gap-8">
+                    <div className="w-full flex gap-2 lg:gap-8 pb-[100px]">
                         <div className="w-[30%] lg:w-[65%] relative">
                             <div className="w-full h-full bg-gray_black rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_04.png"} alt={"poskin"} className="w-full"/></div>
                             <div className="absolute bottom-0 w-full text-center text-black font-mt-bold text-3xs lg:text-2xl pb-2"> image provenant du site web Po.</div>

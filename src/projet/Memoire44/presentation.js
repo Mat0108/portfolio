@@ -6,8 +6,7 @@ const Memoire44Presentation = ()=>{
     return <div className="w-full h-full relative">
             <div className="absolute top-0 right-0 flex flex-row gap-4 z-10 p-4">
                 <Link to="https://github.com/Mat0108/Memoire44/" target="_blank" rel="noopener noreferrer" className="p-2 bg-black_darked rounded-[10px] ">Github</Link>
-                <Link to="/Memoire44/play" className="p-2 bg-black_darked rounded-[10px] ">Parcourir le projet</Link>
-               {!isMobile && <Link to="/Memoire44/play"  className="p-2 bg-black_darked rounded-[10px] ">Parcourir le projet</Link>}
+                {!isMobile && <Link to="/Memoire44/play"  className="p-2 bg-black_darked rounded-[10px] ">Parcourir le projet</Link>}
                 {isMobile && <div className="p-2 bg-black_darked rounded-[10px] " onClick={()=>toast.info("Merci d'utiliser un ordinateur pour parcourir le projet")}>Parcourir le projet</div>}
                         
             </div>
@@ -35,13 +34,13 @@ const Memoire44Presentation = ()=>{
                             </div>}
                             <div className="w-[70%] lg:w-[35%] bg-blue_dark rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
                                 <p className="p-2 lg:p-4 text-xs lg:text-3xl font-mt-bold ">Etape 1</p>
-                                <p className="mt-1 lg:mt-4 ">- <span className="font-mt-bold">génération du plateau de jeu</span> à travers l'ajout des unités (soltat, tank, artillerie ), ajout des différents types de tuiles (forets, villages, collines ...)  </p>
-                                <p className="mt-1 lg:mt-4 ">- Intégration de la <span className="font-mt-bold">phase de deplacement d'une unité</span> :  </p>
+                                <p className="mt-1 lg:mt-4 ">- <span className="font-mt-bold">génération du plateau de jeu</span> à travers l'ajout des unités (soldats, tanks, artilleries ), ajout des différents types de tuiles (forets, villages, collines ...)  </p>
+                                <p className="mt-1 lg:mt-4 ">- Intégration de la <span className="font-mt-bold">phase de déplacement d'une unité</span> :  </p>
                                 <p className="ml-4 text-justify -indent-3"> • Calcul du coût de déplacement avec un dégradé de vert indiquant les possibilités d’attaque après le déplacement. </p>
                                 <p className="ml-4 mt-1 text-justify -indent-3"> • Mise en place d’un système de pathfinding respectant les règles du jeu (par exemple, une unité ne peut pas monter et descendre une colline dans le même tour).</p>
                                 <p className="mt-1 lg:mt-4 ">- Intégration de la <span className="font-mt-bold">phase d'attaque :</span></p>
                                 <p className="ml-8 -indent-3"> • Détermination de la <span className="font-mt-bold">ligne de mire</span> selon les règles du jeu.</p>
-                                <p className="ml-8 -indent-3"> • Calcul du nombre de dés à lancer en fonction de la distance, de la position (ex. : ennemi dans une foret), etc..</p>
+                                <p className="ml-8 -indent-3"> • Calcul du nombre de dés à lancer en fonction de la distance, de la position (ex. : ennemi dans une foret)</p>
                             </div>
                             {!isMobile && <div className="w-[30%] lg:w-[65%] bg-light_gray rounded-[30px] flex center relative p-2 ">
                                 <img src={"/images/memoire44/memoire44_4.png"} alt="memoire 44" className="w-4/5" />
@@ -57,12 +56,12 @@ const Memoire44Presentation = ()=>{
                                 <p className="p-1 lg:p-4 text-2xs lg:text-3xl font-mt-bold ">Etape 2</p>
                                 
                                 <p> - Intégration des différents <span className="font-mt-bold">cartes de commandements</span></p>
-                                <p className="ml-4 ">- Intégration des <span className="font-mt-bold">cartes de commandements basique</span> (fond vert) :</p>
-                                <p className="ml-8 text-justify -indent-3">• Implémentation d’un système de sélection d’unités limité par un nombre maximum défini par la carte.</p>
+                                <p className="ml-4 ">- Intégration des <span className="font-mt-bold">cartes de commandement basique</span> (fond vert) :</p>
+                                <p className="ml-8 text-justify -indent-3">• Implémentation d’un système de sélection d’unités limitée par un nombre maximum défini par la carte.</p>
                                 <p className="ml-8 text-justify -indent-3">• Détermination dynamique de la zone de sélection (ex : flanc gauche, centre, flanc droit) avec validation des unités sélectionnées en fonction de leur position sur la grille.</p>
                                 
                                 
-                                <p className="ml-4 mt-2 text-justify ">- Intégration des <span className="font-mt-bold">cartes de commandements avancé </span>(fond gris) : </p>
+                                <p className="ml-4 mt-2 text-justify ">- Intégration des <span className="font-mt-bold">cartes de commandement avancé </span>(fond gris) : </p>
                                 <p className="ml-8 text-justify -indent-3">• Système modulaire de gestion des effets spécifiques à chaque carte (ex. : bonus de déplacement, attaques supplémentaires, ordres spéciaux).</p>
                                 <p className="ml-8 text-justify -indent-3">• Surcharge des phases standards (sélection, déplacement, attaque) selon les règles propres à chaque carte.</p>
                             
@@ -77,10 +76,10 @@ const Memoire44Presentation = ()=>{
                             </div>}
                             <div className="w-[60%] lg:w-[30%] bg-gray_black rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
                                 <p className="p-1 lg:p-4 text-xs lg:text-3xl font-mt-bold ">Etape 3</p>
-                                <p className="mt-2 text-justify -indent-4"> - Correction de divers bugs liés au placement des unités, au calcul du nombre de dés appliqués à l’ennemi, ainsi qu’à la détection des déplacements possibles, grâce à l’intégration d’un algorithme de pathfinding. </p>
+                                <p className="mt-2 text-justify -indent-4"> - Correction de divers bugs liés au placement des unités, à la phase de calcule des dégats subis, ainsi qu’à la détection des déplacements possibles, grâce à l’intégration d’un algorithme de pathfinding. </p>
                                 <p className="mt-2 text-justify -indent-4"> - <span className="font-mt-bold">Ajout d’un éditeur graphique de scénario </span>permettant de sélectionner, pour chaque case, son type d’hexagone, son item de défense, son unité et sa médaille. </p>
                                 <p className="ml-4 mt-2 text-justify -indent-3"> • Cet éditeur prend en charge les environnements de plaine et hivernal ; il est prévu d’y ajouter ultérieurement les environnements désertique et pacifique. </p>
-                                <p className="ml-4 mt-2 text-justify -indent-3"> • Une refonte complète de l’éditeur est planifiée : au lieu de naviguer hexagone par hexagone pour effectuer des modifications, il sera possible de sélectionner un ensemble d’éléments, puis de cliquer directement sur les hexagones à modifier.  </p>
+                                <p className="ml-4 mt-2 text-justify -indent-3"> • J'ai prévu une  refonte complète de l’éditeur : au lieu de naviguer hexagone par hexagone pour effectuer des modifications, il sera possible de sélectionner un ensemble d’éléments, puis de cliquer directement sur les hexagones à modifier.  </p>
                             </div>
                             {!isMobile && <div className="w-[70%] bg-black_grey rounded-[15px] lg:rounded-[30px] flex center relative p-8 ">
                                 <img src={"/images/memoire44/memoire44_7.png"} alt="memoire 44" className="" />
@@ -91,11 +90,11 @@ const Memoire44Presentation = ()=>{
                                 <img src={"/images/memoire44/memoire44_8.png"} alt="memoire 44" className="" />
                             </div>
                             <div className="w-[40%] bg-blue_dark rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
-                                <p className="p-1 lg:p-4 text-xs lg:text-3xl font-mt-bold ">Les prochaines etapes :</p>
+                                <p className="p-1 lg:p-4 text-xs lg:text-3xl font-mt-bold ">Les prochaines étapes :</p>
                                 <p className="mt-1 lg:mt-2 font-mt-bold">- Nouvelle version de l'editeur graphique </p>
                                 <p className="mt-1 lg:mt-2 font-mt-bold">- Gestion des campagnes : </p>
                                 <p className="ml-2 lg:ml-6 mt-1 lg:mt-2 text-justify -indent-3 "> • Lorsqu’un clan remporte un scénario, il obtient la possibilité d’ajouter une unité supplémentaire lors de la prochaine bataille. Pour cela, il est nécessaire de gérer la modification temporaire d’un scénario ainsi que la sauvegarde de l’état d’un scénario en cours de partie.  </p>    
-                                <p className="mt-1 lg:mt-2 font-mt-bold">- Implémentation des unités spéciales et Implémentation des leurs régles associées </p>
+                                <p className="mt-1 lg:mt-2 font-mt-bold">- Implémentation des unités spéciales et Implémentation de leurs régles associées </p>
                                 <p className="mt-1 lg:mt-2 font-mt-bold">- Implémentation de nouveaux scenarios </p>
                             </div>
                             <div className="w-[30%] bg-blue_grey rounded-[15px] lg:rounded-[30px] flex center relative lg:p-2 ">
