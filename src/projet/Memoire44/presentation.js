@@ -5,9 +5,9 @@ const Memoire44Presentation = ()=>{
     const isMobile = window.screen.width < 600;
     return <div className="w-full h-full relative">
             <div className="absolute top-0 right-0 flex flex-row gap-4 z-10 p-4">
-                <Link to="https://github.com/Mat0108/Memoire44/" target="_blank" rel="noopener noreferrer" className="p-2 bg-black_darked rounded-[10px] ">Github</Link>
-                {!isMobile && <Link to="/Memoire44/play"  className="p-2 bg-black_darked rounded-[10px] ">Parcourir le projet</Link>}
-                {isMobile && <div className="p-2 bg-black_darked rounded-[10px] " onClick={()=>toast.info("Merci d'utiliser un ordinateur pour parcourir le projet")}>Parcourir le projet</div>}
+                <Link to="https://github.com/Mat0108/Memoire44/" target="_blank" rel="noopener noreferrer" className="p-3 bg-black_darked rounded-[10px] ">Github</Link>
+                {!isMobile && <Link to="/Memoire44/play"  className="p-3 bg-black_darked rounded-[10px] ">Découvrir le projet Mémoire 44</Link>}
+                {isMobile && <div className="p-3 bg-black_darked rounded-[10px] " onClick={()=>toast.info("Merci d'utiliser un ordinateur pour parcourir le projet")}>Découvrir le projet Mémoire 44</div>}
                         
             </div>
             <div className="bg-blue_dark relative h-full overflow-y-auto overflow-x-hidden custom-scrollbar" id={"Scrollref"}>
@@ -22,7 +22,7 @@ const Memoire44Presentation = ()=>{
                             <p className="w-full text-right mt-2 text-2xs lg:text-base ">juillet 2022 - auj. </p>
                         </div>
                         <div className="w-[30%] lg:w-[60%] bg-light_gray rounded-[15px] lg:rounded-[30px] flex center relative">
-                            <img src={"/images/memoire44/memoire44_3.png"} alt="memoire 44" className="w-full lg:w-1/2 mb-2" />
+                            <img src={"/images/memoire44/memoire44_3.webp"} alt="memoire 44" className="w-full lg:w-1/2 mb-2" />
                             <div className="w-[80%] absolute bottom-0 mb-2 text-true_white text-3xs lg:text-lg font-mt-bold">Le jeu dans sa version plateau</div>
                         </div>
                     </div>
@@ -30,7 +30,7 @@ const Memoire44Presentation = ()=>{
                         <p className="text-xs lg:text-xl font-mt-bold lg:mb-[-2rem]"> Comment s'est realisé le developpement ? </p>
                         <div className="w-full h-full flex flex-row gap-2 lg:gap-8">
                             {isMobile && <div className="w-[30%] lg:w-[65%] bg-light_gray rounded-[15px] lg:rounded-[30px] flex center relative lg:p-2 ">
-                                <img src={"/images/memoire44/memoire44_4.png"} alt="memoire 44" className="w-full lg:w-4/5" />
+                                <img src={"/images/memoire44/memoire44_4.webp"} alt="memoire 44" className="w-full lg:w-4/5" />
                             </div>}
                             <div className="w-[70%] lg:w-[35%] bg-blue_dark rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
                                 <p className="p-2 lg:p-4 text-xs lg:text-3xl font-mt-bold ">Etape 1</p>
@@ -43,13 +43,13 @@ const Memoire44Presentation = ()=>{
                                 <p className="ml-8 -indent-3"> • Calcul du nombre de dés à lancer en fonction de la distance, de la position (ex. : ennemi dans une foret)</p>
                             </div>
                             {!isMobile && <div className="w-[30%] lg:w-[65%] bg-light_gray rounded-[30px] flex center relative p-2 ">
-                                <img src={"/images/memoire44/memoire44_4.png"} alt="memoire 44" className="w-4/5" />
+                                <img src={"/images/memoire44/memoire44_4.webp"} alt="memoire 44" className="w-4/5" />
                             </div>}
                             
                         </div>
                         <div className="w-full h-full flex flex-row gap-2 lg:gap-8">
                             {!isMobile &&<div className="w-[30%] lg:w-[65%] bg-brown_dark rounded-[15px] lg:rounded-[30px] flex center relative p-1 lg:p-4 ">
-                                <img src={"/images/memoire44/memoire44_6.5.png"} alt="memoire 44" className="" />
+                                <img src={"/images/memoire44/memoire44_6.5.webp"} alt="memoire 44" className="" />
                             </div>}
                             <div className="w-[60%] lg:w-[35%] bg-black_true rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
                                 
@@ -67,12 +67,12 @@ const Memoire44Presentation = ()=>{
                             
                             </div>     
                             {isMobile &&<div className="w-[40%] lg:w-[65%] bg-brown_dark rounded-[15px] lg:rounded-[30px] flex center relative ">
-                                <img src={"/images/memoire44/memoire44_6.5.png"} alt="memoire 44" className="" />
+                                <img src={"/images/memoire44/memoire44_6.5.webp"} alt="memoire 44" className="" />
                             </div>}          
                         </div>
                         <div className="w-full h-full flex flex-row gap-2 lg:gap-8">
                             {isMobile && <div className="w-[40%] lg:w-[70%] bg-black_grey rounded-[15px] lg:rounded-[30px] flex center relative  ">
-                                <img src={"/images/memoire44/memoire44_7.png"} alt="memoire 44" className="" />
+                                <img src={"/images/memoire44/memoire44_7.webp"} alt="memoire 44" className="" />
                             </div>}
                             <div className="w-[60%] lg:w-[30%] bg-gray_black rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
                                 <p className="p-1 lg:p-4 text-xs lg:text-3xl font-mt-bold ">Etape 3</p>
@@ -82,12 +82,12 @@ const Memoire44Presentation = ()=>{
                                 <p className="ml-4 mt-2 text-justify -indent-3"> • J'ai prévu une  refonte complète de l’éditeur : au lieu de naviguer hexagone par hexagone pour effectuer des modifications, il sera possible de sélectionner un ensemble d’éléments, puis de cliquer directement sur les hexagones à modifier.  </p>
                             </div>
                             {!isMobile && <div className="w-[70%] bg-black_grey rounded-[15px] lg:rounded-[30px] flex center relative p-8 ">
-                                <img src={"/images/memoire44/memoire44_7.png"} alt="memoire 44" className="" />
+                                <img src={"/images/memoire44/memoire44_7.webp"} alt="memoire 44" className="" />
                             </div>}
                         </div>
                         <div className="w-full h-full flex flex-row gap-2 lg:gap-8 mb-[0.5rem] lg:mb-[2rem]">
                             <div className="w-[30%] bg-blue_grey rounded-[15px] lg:rounded-[30px] flex center relative lg:p-2 ">
-                                <img src={"/images/memoire44/memoire44_8.png"} alt="memoire 44" className="" />
+                                <img src={"/images/memoire44/memoire44_8.webp"} alt="memoire 44" className="" />
                             </div>
                             <div className="w-[40%] bg-blue_dark rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
                                 <p className="p-1 lg:p-4 text-xs lg:text-3xl font-mt-bold ">Les prochaines étapes :</p>
@@ -98,7 +98,7 @@ const Memoire44Presentation = ()=>{
                                 <p className="mt-1 lg:mt-2 font-mt-bold">- Implémentation de nouveaux scenarios </p>
                             </div>
                             <div className="w-[30%] bg-blue_grey rounded-[15px] lg:rounded-[30px] flex center relative lg:p-2 ">
-                                <img src={"/images/memoire44/memoire44_9.png"} alt="memoire 44" className="" />
+                                <img src={"/images/memoire44/memoire44_9.webp"} alt="memoire 44" className="" />
                             </div>
                         </div>
                     </div>

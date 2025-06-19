@@ -1,6 +1,6 @@
 export let EN_Diagnostic = [
 	{
-		"image":"/images/Diagnostic/diagnostic1.png",
+		"image":"/images/Diagnostic/diagnostic1.webp",
 		"title":"What is your biggest concern?",
 		"reponses":[
 			"Blemishes",
@@ -16,7 +16,7 @@ export let EN_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic2.png",
+		"image":"/images/Diagnostic/diagnostic2.webp",
 		"title":"What are your main skin care concerns?",
 		"reponses":[
 			"Hydration",
@@ -32,7 +32,7 @@ export let EN_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic3.png",
+		"image":"/images/Diagnostic/diagnostic3.webp",
 		"title":"What skin care products do you regularly use?",
 		"reponses":[
 			"Cleanser",
@@ -49,7 +49,7 @@ export let EN_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic4.png",
+		"image":"/images/Diagnostic/diagnostic4.webp",
 		"title":"Help us understand this lack of radiance.",
 		"reponses":[
 			"I smoke and/or live in a polluted environment",
@@ -61,7 +61,7 @@ export let EN_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic5.png",
+		"image":"/images/Diagnostic/diagnostic5.webp",
 		"title":"You define yourself as ...",
 		"reponses":[
 			"A woman",
@@ -74,7 +74,7 @@ export let EN_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic6.png",
+		"image":"/images/Diagnostic/diagnostic6.webp",
 		"title":"To keep track of your skin diagnosis, please provide an email address:",
 		"reponses":[
 		],

@@ -21,9 +21,9 @@ const QuiSommesNous = () =>{
         )
     }
     const itemCarousel=[
-        Item({tag:"QSN-0",titre:"Marie du pont",text:"Je suis totalement bluffé par l'efficacité de Po. En suivant leurs conseils, ma peau a retrouvé son éclat naturel et mes problèmes de peau ont disparu. J'adore l'approche personnalisée de Po, qui s'adapte parfaitement à mes besoins.. ",image:{src:"/images/PoSkin/SkinCare1.png",alt:"skincare"}}),
-        Item({tag:"QSN-1",titre:"Marie ",text:"Après avoir utilisé l'application de solution de soin de peau, je suis impressionné par les résultats obtenus. Ma peau est plus claire, plus lisse et plus radieuse. Les problèmes cutanés que je rencontrais auparavant, tels que l'acné et les rougeurs, se sont considérablement atténués. Je me sens tellement plus confiante et à l'aise dans ma peau.",image:{src:"/images/PoSkin/visage/visage24.png",alt:"v24"}}),
-        Item({tag:"QSN-2",titre:"Matthieu",text:"En tant qu'homme, j'ai toujours été un peu réticent à l'idée d'utiliser des produits de soin de peau. Cependant, après avoir essayé votre solution de soin de peau, je suis agréablement surpris par les résultats. Ma peau est devenue plus nette, plus lisse et plus saine. Je remarque également une diminution des irritations et des imperfections. ",image:{src:"/images/PoSkin/visage/visage25.png",alt:"v25"}})
+        Item({tag:"QSN-0",titre:"Marie du pont",text:"Je suis totalement bluffé par l'efficacité de Po. En suivant leurs conseils, ma peau a retrouvé son éclat naturel et mes problèmes de peau ont disparu. J'adore l'approche personnalisée de Po, qui s'adapte parfaitement à mes besoins.. ",image:{src:"/images/PoSkin/SkinCare1.webp",alt:"skincare"}}),
+        Item({tag:"QSN-1",titre:"Marie ",text:"Après avoir utilisé l'application de solution de soin de peau, je suis impressionné par les résultats obtenus. Ma peau est plus claire, plus lisse et plus radieuse. Les problèmes cutanés que je rencontrais auparavant, tels que l'acné et les rougeurs, se sont considérablement atténués. Je me sens tellement plus confiante et à l'aise dans ma peau.",image:{src:"/images/PoSkin/visage/visage24.webp",alt:"v24"}}),
+        Item({tag:"QSN-2",titre:"Matthieu",text:"En tant qu'homme, j'ai toujours été un peu réticent à l'idée d'utiliser des produits de soin de peau. Cependant, après avoir essayé votre solution de soin de peau, je suis agréablement surpris par les résultats. Ma peau est devenue plus nette, plus lisse et plus saine. Je remarque également une diminution des irritations et des imperfections. ",image:{src:"/images/PoSkin/visage/visage25.webp",alt:"v25"}})
     
     ]
     return (<div className="relative bg-true_white ">
@@ -31,12 +31,12 @@ const QuiSommesNous = () =>{
             <Navbar />
         </div>
         <div className="bg-[#EEE8E4] text-[#000000] relative h-screen overflow-y-auto overflow-x-hidden custom-scrollbar" id={"Scrollref"}>
-    <LayoutFullImage props={{titre:"QUI SOMMES NOUS ?",image1:{url:"/images/PoSkin/quisommesnous.png",alt:"quisommenous"}}}/>
-    <Layout1imageinv props={{col1:switchtext("quisommesnous"),image1:{url:"/images/PoSkin/visage/visage9.png",alt:"visage9"}}} />
+    <LayoutFullImage props={{titre:"QUI SOMMES NOUS ?",image1:{url:"/images/PoSkin/quisommesnous.webp",alt:"quisommenous"}}}/>
+    <Layout1imageinv props={{col1:switchtext("quisommesnous"),image1:{url:"/images/PoSkin/visage/visage9.webp",alt:"visage9"}}} />
     <div className="w-full">
-        <img src={"/images/PoSkin/visage/visage10.png"} alt={"visage10"} className="w-full"/>
+        <img src={"/images/PoSkin/visage/visage10.webp"} alt={"visage10"} className="w-full"/>
     </div>
-    <Layout2col props={{titre:switchtext("quisommesnous2"),col1:switchtext("quisommesnous3"),image1:{url:"/images/PoSkin/visage/visage11.png",alt:"visage11",className:"mt-[60px]"},col2:switchtext("quisommesnous4"),image2:{url:"/images/PoSkin/visage/visage12.png",alt:"visage12",className:"mt-[60px]"}}}/>
+    <Layout2col props={{titre:switchtext("quisommesnous2"),col1:switchtext("quisommesnous3"),image1:{url:"/images/PoSkin/visage/visage11.webp",alt:"visage11",className:"mt-[60px]"},col2:switchtext("quisommesnous4"),image2:{url:"/images/PoSkin/visage/visage12.webp",alt:"visage12",className:"mt-[60px]"}}}/>
     <div className="w-full text-center"><p className="mt-[30px] mb-[10px] text-[50px] font-mt-extra-bold text-blue ">Témoignages</p></div>
     <Carousel elems={itemCarousel} nbShow={1} display={20} showPoint={true} animatedDuration={600} darkPoint={true} tag="QSN" start={0} key={"qsn"} />
     <div className="mb-[80px] w-full h-2"></div>

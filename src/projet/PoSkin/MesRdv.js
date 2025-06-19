@@ -68,7 +68,7 @@ const MesRdv = ()=>{
             <div className="w-full flex flex-col text-black bg-true_white h-fit">
                 <div className="w-fit h-full flex flex-col sm:flex-row  ">
                     <div className="w-full sm:w-[30%] h-fit relative flex center">
-                        <img src={isMobile ? "images/PoSkin/Blog/bienfaitsmasques/bienfaitsmasques1.png":"/images/PoSkin/MesRdv.jpg"} alt={"MesRdv"} className=" h-full"/>
+                        <img src={isMobile ? "images/PoSkin/Blog/bienfaitsmasques/bienfaitsmasques1.webp":"/images/PoSkin/MesRdv.webp"} alt={"MesRdv"} className=" h-full"/>
                         <div className="absolute top-0 left-0 w-full h-full flex center"><div className="text-black text-[24px] sm:text-[48px] font-mt-extra-bold">{dictionnaire.Rdv.mon_suivi}</div></div>
                     </div>
                     <div className="w-full sm:w-[70%] h-fit sm:h-[90%] p-[15px] sm:p-[30px] ">

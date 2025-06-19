@@ -844,7 +844,7 @@ export const Play =()=> {
           className='text-white text-[20px]'
         /></div>}
             
-         <img src={`images/Memoire44/cards/commandement/${card._image}-large.png`} alt={card._titre} className="w-[278px] h-[432px] ml-[20px] "/>
+         <img src={`images/Memoire44/cards/commandement/${card._image}-large.webp`} alt={card._titre} className="w-[278px] h-[432px] ml-[20px] "/>
       </div>
     
     </div>
@@ -876,18 +876,18 @@ export const Play =()=> {
       </div>
       </>:<>
       <div className='w-full flex flex-row'>
-        <div className={`w-[128px] h-[128px] `}>{animation[0] && <img src={`images/Memoire44/dice/die_${animation[0].toLowerCase()}.png`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
-        <div className={`w-[128px] h-[128px] `}>{animation[1] && <img src={`images/Memoire44/dice/die_${animation[1].toLowerCase()}.png`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
+        <div className={`w-[128px] h-[128px] `}>{animation[0] && <img src={`images/Memoire44/dice/die_${animation[0].toLowerCase()}.webp`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
+        <div className={`w-[128px] h-[128px] `}>{animation[1] && <img src={`images/Memoire44/dice/die_${animation[1].toLowerCase()}.webp`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
         
       </div>
       <div className='w-full flex flex-row'>
-        <div className={`w-[128px] h-[128px] `}>{animation[2] && <img src={`images/Memoire44/dice/die_${animation[2].toLowerCase()}.png`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
-        <div className={`w-[128px] h-[128px] `}>{animation[3] && <img src={`images/Memoire44/dice/die_${animation[3].toLowerCase()}.png`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
+        <div className={`w-[128px] h-[128px] `}>{animation[2] && <img src={`images/Memoire44/dice/die_${animation[2].toLowerCase()}.webp`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
+        <div className={`w-[128px] h-[128px] `}>{animation[3] && <img src={`images/Memoire44/dice/die_${animation[3].toLowerCase()}.webp`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
         
       </div>
       <div className='w-full flex flex-row'>
-        <div className={`w-[128px] h-[128px] `}>{animation[4] && <img src={`images/Memoire44/dice/die_${animation[4].toLowerCase()}.png`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
-        <div className={`w-[128px] h-[128px] `}>{animation[5] && <img src={`images/Memoire44/dice/die_${animation[5].toLowerCase()}.png`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
+        <div className={`w-[128px] h-[128px] `}>{animation[4] && <img src={`images/Memoire44/dice/die_${animation[4].toLowerCase()}.webp`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
+        <div className={`w-[128px] h-[128px] `}>{animation[5] && <img src={`images/Memoire44/dice/die_${animation[5].toLowerCase()}.webp`} alt={"dice"} className='w-[128px] h-[128px]'/>}</div>
         
       </div>
       
@@ -912,7 +912,7 @@ export const Play =()=> {
           })}
         </div>
         {debug ? <div className='absolute z-[4100] top-0 left-8 text-vivid_tangerine text-[20px] font-av-bold'><span className='text-white text-[20px] font-av-bold'>posx</span> posy</div>:""}
-        <div key={"terrain"}><img src={`images/Memoire44/${grille.terrain}.png`} alt={"terrain"} className='w-full h-full'/></div>
+        <div key={"terrain"}><img src={`images/Memoire44/${grille.terrain}.webp`} alt={"terrain"} className='w-full h-full'/></div>
         <div className="absolute flex flex-col z-[200] top-[58px] left-[10px]">
           {grille.grille.map((e,pos)=>{
             return <div className={`${pos % 2 === 1 ? "ml-[45px]":""} w-full flex flex-row`} key={`ligne-${pos}`}>{

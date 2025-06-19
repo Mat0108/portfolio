@@ -31,7 +31,7 @@ const Navbar = (props) => {
       <div className={`flex flex-row ${width} ${cmhover}`}>
         <div className="flex center w-fit mr-[10px] ">
           
-          {action ?   <img src={"/images/pointwhite.png"} alt={"pw"} /> : <img src={"/images/pointhidden.png"} alt={"pw"} />}
+          {action ?   <img src={"/images/pointwhite.webp"} alt={"pw"} /> : <img src={"/images/pointhidden.webp"} alt={"pw"} />}
         </div>
         <div>
           {name}
@@ -80,7 +80,7 @@ const Navbar = (props) => {
         <div className="col-start-1 ml-[20px] sm:ml-[35px] mt-[4px] sm:mt-[12px] p-x-2 flex items-start ">
           <a className="w-fit h-full">
             <img
-              src={"/images/PoSkin/PoSkin_logo.png"}
+              src={"/images/PoSkin/PoSkin_logo.webp"}
               alt="logo"
               className="h-10 "
               onClick={() => {

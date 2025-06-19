@@ -7,7 +7,7 @@ const SpaceXHome = () => {
     return(
         
         <div className='text-white flex relative text-white '>
-            <div className='absolute top-0 left-0 w-screen h-screen z-0 '><img src="images/SpaceX/background.png" alt="background" className='w-full h-full'/></div>
+            <div className='absolute top-0 left-0 w-screen h-screen z-0 '><img src="images/SpaceX/background.webp" alt="background" className='w-full h-full'/></div>
             <div className='z-10 w-screen flex flex-col relative'>
                 <h5 className="absolute top-0 left-0 p-2 w-screen flex center text-4xl font-mt-bold "><p>Space X wiki</p></h5>
                 <div className='flex flex-row  '>

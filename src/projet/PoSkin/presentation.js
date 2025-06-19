@@ -20,16 +20,16 @@ const PoSkinPresentation = ()=>{
                             <p className="text-justify mt-4">Le projet a été développé dans le cadre d’un projet scolaire de longue durée (18 mois) réunissant plusieurs classes aux compétences complémentaires (développement, design UX/UI, marketing). Des journées de travail en présentiel, organisées toutes les 4 à 8 semaines selon les rythmes d’alternance, ont permis une réelle coordination interdisciplinaire.</p>
                         </div>
                         <div className="w-[30%] lg:w-[60%] relative">
-                            <img src={"/images/PoSkin/PoSkin_01.png"} alt={"poskin"} className="rounded-[15px] lg:rounded-[30px] w-full h-full"/>
+                            <img src={"/images/PoSkin/PoSkin_01.webp"} alt={"poskin"} className="rounded-[15px] lg:rounded-[30px] w-full h-full"/>
                             <div className="absolute top-0 left-0 w-full h-full flex center">
-                                <img src={"/images/PoSkin/PoSkin_logo.png"} alt={"poskin"} className="w-1/3 lg:w-fit" />
+                                <img src={"/images/PoSkin/PoSkin_logo.webp"} alt={"poskin"} className="w-1/3 lg:w-fit" />
                             </div>
                             
                         </div>
                     </div>
                     <div className="w-full flex gap-2 lg:gap-8">
                         <div className="w-[30%] lg:w-[60%] relative">
-                            <div className="w-full h-full bg-light_gray rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_02.png"} alt={"poskin"} className="w-full "/></div>
+                            <div className="w-full h-full bg-light_gray rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_02.webp"} alt={"poskin"} className="w-full "/></div>
                             <div className="absolute bottom-0 w-full text-center text-black font-mt-bold text-3xs lg:text-2xl pb-2"> image provenant du site web Po.</div>
                         </div>
                         <div className="w-[70%] lg:w-[40%] bg-blue_grey rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col relative text-3xs lg:text-base">
@@ -61,13 +61,13 @@ const PoSkinPresentation = ()=>{
                         
                         </div>
                         <div className="w-[30%] lg:w-[60%] relative">
-                            <div className="w-full h-full bg-gray_black rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_03.png"} alt={"poskin"} className="w-full  rounded-[15px] lg:rounded-[30px] "/></div>
+                            <div className="w-full h-full bg-gray_black rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_03.webp"} alt={"poskin"} className="w-full  rounded-[15px] lg:rounded-[30px] "/></div>
                             <div className="absolute bottom-0 w-full text-center text-black font-mt-bold text-3xs lg:text-2xl pb-2"> image provenant du site web Po.</div>
                         </div>
                     </div>
                     <div className="w-full flex gap-2 lg:gap-8 pb-[100px]">
                         <div className="w-[30%] lg:w-[65%] relative">
-                            <div className="w-full h-full bg-gray_black rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_04.png"} alt={"poskin"} className="w-full"/></div>
+                            <div className="w-full h-full bg-gray_black rounded-[15px] lg:rounded-[30px] flex center"><img src={"/images/PoSkin/PoSkin_04.webp"} alt={"poskin"} className="w-full"/></div>
                             <div className="absolute bottom-0 w-full text-center text-black font-mt-bold text-3xs lg:text-2xl pb-2"> image provenant du site web Po.</div>
                         </div>
                         <div className="w-[70%] lg:w-[35%] bg-black_grey rounded-[30px] p-4 flex flex-col relative text-3xs lg:text-base">

@@ -4,7 +4,7 @@ import { CaseGenerique, test2, test3, test6 } from "../divers/Generique";
 
 export class Mountain extends CaseGenerique{
     constructor(orientation){
-        super(`images/Memoire44/terrain/h_mountain.png`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false,"darker brightness-[0.60] ")
+        super(`images/Memoire44/terrain/h_mountain.webp`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false,"darker brightness-[0.60] ")
     }
 }
 
@@ -82,25 +82,25 @@ export class AirFieldX extends CaseGenerique {
 
 export class Church extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_church.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_church.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 
 export class Barracks extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_barracks.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_barracks.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 
 export class Camp extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_camp.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_camp.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 
 export class Cemetery extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_cemetery.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_cemetery.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 
@@ -133,28 +133,28 @@ export class Pond extends CaseGenerique {
 
 export class Depot extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_depot.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_depot.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 
 export class Factory extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_factory.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_factory.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 export class Fortress extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_fortress.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_fortress.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 export class LightHouse extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_lighthouse.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_lighthouse.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 export class Marshes extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/terrain/h_marshes.png`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
+        super(`images/Memoire44/terrain/h_marshes.webp`,null,false,false,false,false,false,false,false,"brightness-[0.7] ")
     }
 }
 export class TrainRight extends CaseGenerique{
@@ -230,6 +230,6 @@ export class RoadBlock extends CaseGenerique{
 
 export class Casemate extends CaseGenerique{
     constructor(){
-        super(`images/Memoire44/terrain/o_casemate.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/terrain/o_casemate.webp`,null,false,false,false,false,false,false,false,"")
     }
 }

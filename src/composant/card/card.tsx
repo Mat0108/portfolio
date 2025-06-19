@@ -83,7 +83,7 @@ export const Card = ({frontContent,backContent,onlyArrow,onlyArrowHandle,unflipp
         <div className="back absolute top-0 left-0 flex flex-col center w-full h-full " style={{transform: 'rotateY(180deg)',backfaceVisibility:"hidden"}}>
             <div className="relative w-fit">
               <div className="absolute bottom-2 right-5" onClick={()=>handleOnlyArrow()}>
-                    <img src={"/images/retour.png"} alt={"retour"} className="w-4 lg:w-8"/>
+                    <img src={"/images/retour.webp"} alt={"retour"} className="w-4 lg:w-8"/>
               </div>
             {backContent}
             </div>

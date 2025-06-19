@@ -51,7 +51,7 @@ export const SelecteurScenario = ()=>{
     const [image,setImage] = useState("Scenariovide");
     const [url,setUrl] = useState("Scenariovide");
     const LoadImage = useMemo(()=>{
-        return<div className="w-[900px] p-[50px] bg-black rounded-[4rem] shadow"><div className="w-[800px]"><img src={`images/Memoire44/scenario/${image}.png`} alt={"imagescenario"} className="w-[800px] h-[566px]"/></div></div>
+        return<div className="w-[900px] p-[50px] bg-black rounded-[4rem] shadow"><div className="w-[800px]"><img src={`images/Memoire44/scenario/${image}.webp`} alt={"imagescenario"} className="w-[800px] h-[566px]"/></div></div>
     },[image])
     const {debug} = useParams();
     return (

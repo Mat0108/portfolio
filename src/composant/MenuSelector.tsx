@@ -49,7 +49,7 @@ const MenuSelector = ({title,options}:MenuSelectorProps) => {
          <div className="flex center p-0.5">
         
         <div className="font-mt-bold">
-            {title ?? <img src={"/images/menu.png"} alt={"menu"} className="w-6"/>}
+            {title ?? <img src={"/images/menu.webp"} alt={"menu"} className="w-6"/>}
         </div>
         </div>
       </button>

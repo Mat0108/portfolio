@@ -61,7 +61,7 @@ const Compte = (props) =>{
         </div>
     <div className="w-full h-fit sm:h-[870px] flex flex-col sm:flex-row">
         <div className="w-full sm:w-1/3 h-full relative">
-            <img src={isMobile ? "images/PoSkin/Blog/bienfaitsmasques/bienfaitsmasques1.png":"/images/PoSkin/Compte/Compte1.jpg"} alt={"ImageCompte"} className="w-fit h-full"/>
+            <img src={isMobile ? "images/PoSkin/Blog/bienfaitsmasques/bienfaitsmasques1.webp":"/images/PoSkin/Compte/Compte1.webp"} alt={"ImageCompte"} className="w-fit h-full"/>
             <div className="absolute top-0 left-0 w-full h-full flex center"><div className="text-white text-center text-[24px] sm:text-[48px] font-mt-bold ">{dictionnaire.Compte.Compte}</div></div>
         </div>
         <div className="w-full sm:w-2/3 h-[97%] p-[15px] sm:p-[30px] text-black">

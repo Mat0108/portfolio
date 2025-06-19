@@ -77,7 +77,7 @@ const MoreInfo = (props)=>{
             return (
                 <div className="relative flex flex-col p-4 ">
              <div className="absolute top-3 left-3 ">
-                <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={props.back}><img src={"/images/fleche.png"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
+                <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={props.back}><img src={"/images/fleche.webp"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
             </div>
             <div className="col-span-3 text-center text-[12px] sm:text-[24px] mt-[30px]">Nous souhaitons vous connaître un peu plus... </div>
             {Input(user.lastname,dictionnaire.Compte.Nom.toUpperCase(),"lastname","text",dictionnaire.Compte.VNom)}
@@ -116,7 +116,7 @@ const MoreInfo = (props)=>{
             return( 
             <div className="relative grid sm:grid-cols-3 gap-0 sm:gap-4 p-4 ">
                 <div className="absolute top-3 left-3 ">
-                    <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={props.back}><img src={"/images/fleche.png"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
+                    <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={props.back}><img src={"/images/fleche.webp"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
                 </div>
                 <div className="col-span-3 text-center text-[12px] sm:text-[24px] mt-[20px]">Nous souhaitons vous connaître un peu plus... </div>
                 {Input(user.lastname,dictionnaire.Compte.Nom.toUpperCase(),"lastname","text",dictionnaire.Compte.VNom)}

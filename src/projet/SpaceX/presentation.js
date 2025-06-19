@@ -19,12 +19,12 @@ const isMobile = window.screen.width < 600;
                <p className="absolute bottom-2 lg:bottom-1/3 right-2 ">octobre 2022</p>
             </div>
             <div className="w-[40%] lg:w-[80%] ">
-                <div className="w-full h-full flex center rounded-[15px] lg:rounded-[30px] bg-black_grey"><img src={"/images/SpaceX/SpaceX_1.png"} alt="SpaceX" className="" /></div>
+                <div className="w-full h-full flex center rounded-[15px] lg:rounded-[30px] bg-black_grey"><img src={"/images/SpaceX/SpaceX_1.webp"} alt="SpaceX" className="" /></div>
             </div>
         </div>
         <div className="w-full h-full flex flex-row gap-2 lg:gap-8">
                 <div className="w-[65%] flex center relative">
-                  <img src={"/images/SpaceX/SpaceX_2.png"} alt="spacex" className="rounded-[15px] lg:rounded-[30px] border-2 border-gray" />
+                  <img src={"/images/SpaceX/SpaceX_2.webp"} alt="spacex" className="rounded-[15px] lg:rounded-[30px] border-2 border-gray" />
                 </div>
                 <div className="w-[35%] bg-black_true rounded-[15px] lg:rounded-[30px] p-1 lg:p-4 flex flex-col center relative text-3xs lg:text-base">
                     
@@ -45,7 +45,7 @@ const isMobile = window.screen.width < 600;
                     </div>     
                     <div className="w-[40%] flex center relative">
                         <div className="w-full h-full flex center border-2 border-gray rounded-[15px] lg:rounded-[30px]">
-                            <img src={"/images/SpaceX/SpaceX_3.png"} alt="spacex" className="rounded-[15px] lg:rounded-[30px] " />
+                            <img src={"/images/SpaceX/SpaceX_3.webp"} alt="spacex" className="rounded-[15px] lg:rounded-[30px] " />
                     
                         </div>
                     </div>          

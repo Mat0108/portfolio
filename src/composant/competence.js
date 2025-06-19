@@ -23,7 +23,7 @@ function RandstadCard(Tag){
             </div>
         </div>
         <div className="absolute right-5 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/randstad.png"} alt={"randstad"} className="w-8 lg:w-full"/>
+            <img src={"/images/randstad.webp"} alt={"randstad"} className="w-8 lg:w-full"/>
         </div>
     </div>
 }
@@ -41,7 +41,7 @@ function EllisCarCard(Tag){
             </div>
         </div>
         <div className="absolute right-5 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/elliscar.png"} alt={"elliscar"} className="w-8 lg:w-full" />
+            <img src={"/images/elliscar.webp"} alt={"elliscar"} className="w-8 lg:w-full" />
         </div>
     </div>
 }
@@ -59,7 +59,7 @@ function Veolia6(Tag){
             </div>
         </div>
         <div className="absolute right-5 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/veolia.png"} alt={"veolia"} className="w-8 lg:w-20"/>
+            <img src={"/images/veolia.webp"} alt={"veolia"} className="w-8 lg:w-20"/>
         </div>
     </div>
 }
@@ -77,7 +77,7 @@ function Veolia4(Tag){
             </div>
         </div>
         <div className="absolute right-5 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/veolia.png"} alt={"veolia"} className="w-8 lg:w-20"/>
+            <img src={"/images/veolia.webp"} alt={"veolia"} className="w-8 lg:w-20"/>
         </div>
     </div>
 }
@@ -99,7 +99,7 @@ export function Memoire44Card(Tag,size){
                 </div>
             </div>
             <div className="absolute right-1 lg:right-10 top-0 h-full flex center">
-                <img src={"/images/memoire44/memoire44_2.png"} alt={"memoire44"} className="h-3 lg:h-8"/>
+                <img src={"/images/memoire44/memoire44_2.webp"} alt={"memoire44"} className="h-3 lg:h-8"/>
             </div>
             <div className="absolute right-5 lg:right-10 bottom-1 lg:bottom-4 ">
                 <Link to="/Memoire44" className="bg-green_dark rounded-lg lg:rounded-2xl text-3xs lg:text-base p-1 lg:p-2 text-white font-mt-bold hover:cursor-pointer">En savoir plus</Link>
@@ -126,7 +126,7 @@ export function PoSkinCard(Tag,size){
             </div>
         </div>
         <div className="absolute right-5 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/po.png"} alt={"po"} className="h-8 lg:h-16"/>
+            <img src={"/images/po.webp"} alt={"po"} className="h-8 lg:h-16"/>
         </div>
         <div className="absolute right-5 lg:right-10 bottom-2 ">
             <Link to="/PoSkin" className="bg-green_dark rounded-lg lg:rounded-2xl p-1 lg:p-2 text-3xs lg:text-base text-white font-mt-bold hover:cursor-pointer">En savoir plus</Link>
@@ -153,7 +153,7 @@ export function SpaceXCard(Tag,size){
             </div>
         </div>
         <div className="absolute right-5 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/spacex.png"} alt={"spacex"} style={{width: isMobile ? "36px":"72px"}}/>
+            <img src={"/images/spacex.webp"} alt={"spacex"} style={{width: isMobile ? "36px":"72px"}}/>
         </div>
             <div className="absolute right-5 lg:right-10 bottom-4 ">
                 <Link to="/SpaceX" className="bg-green_dark rounded-2xl p-1 lg:p-2 text-2xs lg:text-base text-white font-mt-bold hover:cursor-pointer">En savoir plus</Link>
@@ -173,9 +173,9 @@ export function PortfolioCard(Tag,size){
             <div className="flex flex-col w-full text-justify gap-2 text-2xs lg:text-base">
                 <p>Les technologies que j'ai utilisées :</p>
                 <div className="w-full flex flex-row gap-8">
-                   <img src="/images/tech/r.png" alt="logo_react" className="w-8 lg:w-16"/>
-                   <img src="/images/tech/ta.png" alt="logo_tailwind" className="w-8 lg:w-16"/>
-                   <img src="/images/tech/t.png" alt="logo_typescript" className="w-8 lg:w-16"/>
+                   <img src="/images/tech/r.webp" alt="logo_react" className="w-8 lg:w-16"/>
+                   <img src="/images/tech/ta.webp" alt="logo_tailwind" className="w-8 lg:w-16"/>
+                   <img src="/images/tech/t.webp" alt="logo_typescript" className="w-8 lg:w-16"/>
             
                 </div>
                     
@@ -191,7 +191,7 @@ function BootStapCard(Background){
     return <div className={`relative ${size} flex flex-col gap-0 center ${Background} rounded-[30px] lg:rounded-[40px] text-center`}>
         Dernier projet réalisé avec Bootstrap en 2022 - 2023. Depuis, je privilégie Tailwind CSS pour sa flexibilité et sa compatibilité avec mes projets JavaScript modernes.
         <div className="absolute bottom-2 right-5">
-            <img src={"/images/retour.png"} alt={"retour"} className="w-4 lg:w-8"/>
+            <img src={"/images/retour.webp"} alt={"retour"} className="w-4 lg:w-8"/>
         </div>
     </div>
 }
@@ -204,7 +204,7 @@ function FrontCard(LogoUrl,LogoAlt, Name,Background){
             {Name}
         </div>
         <div className="absolute bottom-2 right-5">
-            <img src={"/images/retour.png"} alt={"retour"} className="w-4 lg:w-8"/>
+            <img src={"/images/retour.webp"} alt={"retour"} className="w-4 lg:w-8"/>
         </div>
     </div>
 }
@@ -224,41 +224,41 @@ function BackCard(experience,Background,tag){
 
 
 let color = getRandomColor();
-const ReactItem = FrontCard("/images/tech/r.png","react","React",color);
+const ReactItem = FrontCard("/images/tech/r.webp","react","React",color);
 const ReactBackItem = BackCard([RandstadCard("Card-React-0"),EllisCarCard("Card-React-1"),Memoire44Card("Card-React-2"),PoSkinCard("Card-React-3",size3),SpaceXCard("Card-React-4"),PortfolioCard("Card-React-5")],color,"Card-React")
 
 color = getRandomColor();
-const AngularItem = FrontCard("/images/tech/a.png","angular","Angular",color);
+const AngularItem = FrontCard("/images/tech/a.webp","angular","Angular",color);
 const AngularBackItem = BackCard([Veolia6("Card-Angular-0"),Veolia4("Card-Angular-1")],color,"Card-React")
 
 
 color = getRandomColor();
-const JavaScriptItem = FrontCard("/images/tech/j.png","javascript","JavaScript",color);
+const JavaScriptItem = FrontCard("/images/tech/j.webp","javascript","JavaScript",color);
 const JavaScriptBackItem = BackCard([RandstadCard("Card-JavaScript-0"),EllisCarCard("Card-JavaScript-1"),Veolia6("Card-JavaScript-2"),Veolia4("Card-JavaScript-3"),Memoire44Card("Card-JavaScript-4"),PoSkinCard("Card-JavaScript-5",size3),SpaceXCard("Card-JavaScript-6")],color,"Card-React")
 
 
 color = getRandomColor();
-const TypeScriptItem = FrontCard('/images/tech/t.png',"typecript","Typescript",color);
+const TypeScriptItem = FrontCard('/images/tech/t.webp',"typecript","Typescript",color);
 const TypeScriptBackItem = BackCard([EllisCarCard("Card-typescript-0"),PortfolioCard("Card-typescript-1")],color,"Card-typescript");
 
 color = getRandomColor();
-const TailwindItem = FrontCard('/images/tech/ta.png',"tailwind","TailwindCss",color);
+const TailwindItem = FrontCard('/images/tech/ta.webp',"tailwind","TailwindCss",color);
 const TailwindBackItem = BackCard([EllisCarCard("Card-tailwind-0"),Memoire44Card("Card-tailwind-1"),PoSkinCard("Card-tailwind-2",size3),SpaceXCard("Card-tailwind-3"),PortfolioCard("Card-tailwind-4")],color,"Card-tailwind")
 
 color = getRandomColor();
-const BootstrapItem = FrontCard('/images/tech/b.png',"bootstrap","Bootstrap",color);
+const BootstrapItem = FrontCard('/images/tech/b.webp',"bootstrap","Bootstrap",color);
 const BootstrapBackItem = BootStapCard(color);
 
 color = getRandomColor();
-const NodeItem = FrontCard("/images/tech/node.png","node","Node",color);
+const NodeItem = FrontCard("/images/tech/node.webp","node","Node",color);
 const NodeBackItem = BackCard([PoSkinCard("Card-node-0","h-[90%]")],color,"Card-node")
 
 color = getRandomColor();
-const NextItem = FrontCard("/images/tech/nx.png","nx","NextJs",color)
+const NextItem = FrontCard("/images/tech/nx.webp","nx","NextJs",color)
 const NextBackItem = BackCard([RandstadCard("Card-Next-0"),EllisCarCard("Card-Next-1")],color,"Card-Next")
 
 color = getRandomColor();
-const MongoDBItem = FrontCard("/images/tech/md.png","MongoDB","MongoDB",color)
+const MongoDBItem = FrontCard("/images/tech/md.webp","MongoDB","MongoDB",color)
 const MongoDBBackItem = BackCard([RandstadCard("Card-MongoDB-0"),EllisCarCard("Card-MongoDB-1")],color,"Card-MongoDB")
 const div = ""
 export const Compétence = ()=>{

@@ -8,7 +8,7 @@ const Valeurs =()=>{
     return (<>
         <div className="relative w-full h-fit p-[10px] grid grid-cols-3 sm:grid-cols-4 bg-blue_poskin">
             {!isMobile && <div className="invisible sm:visible col-start-1">
-                <div className="p-2 sm:p-[40px] w-full h-full flex center"> <div><img src={"./images/PoSkin/visage/visage6.png"} alt={"visage"} /></div></div>  
+                <div className="p-2 sm:p-[40px] w-full h-full flex center"> <div><img src={"./images/PoSkin/visage/visage6.webp"} alt={"visage"} /></div></div>  
             </div>}
             <div className="sm:col-start-2 col-span-3">
                 <p className="mt-[10px] sm:mt-[40px] text-[10px] sm:text-[20px] text-white font-mt-extra-bold">{dictionnaire.Valeur.key0}</p>

@@ -29,17 +29,17 @@ export class SnowStation extends CaseGenerique{
 
 export class SnowForest extends CaseGenerique{
     constructor(orientation){
-        super(`images/Memoire44/snow/h_wforest.png`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
+        super(`images/Memoire44/snow/h_wforest.webp`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
     }
 }
 export class SnowHill extends CaseGenerique{
     constructor(orientation){
-        super(`images/Memoire44/snow/h_whill.png`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
+        super(`images/Memoire44/snow/h_whill.webp`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
     }
 }
 export class SnowVillage extends CaseGenerique{
     constructor(orientation){
-        super(`images/Memoire44/snow/h_wvillage.png`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
+        super(`images/Memoire44/snow/h_wvillage.webp`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
     }
 }
 
@@ -65,7 +65,7 @@ export class SnowRiverBranchRight extends CaseGenerique{
 }
 export class SnowFactory extends CaseGenerique{
     constructor(orientation){
-        super(`images/Memoire44/snow/h_wfactory.png`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
+        super(`images/Memoire44/snow/h_wfactory.webp`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
     }
 }
 
@@ -128,12 +128,12 @@ export class SnowRoadBranchRight extends CaseGenerique{
 }
 export class SnowMountain extends CaseGenerique{
     constructor(orientation){
-        super(`images/Memoire44/snow/h_snowmountain.png`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
+        super(`images/Memoire44/snow/h_snowmountain.webp`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
     }
 }
 export class SnowHedgerow extends CaseGenerique{
     constructor(orientation){
-        super(`images/Memoire44/snow/h_snowhedgerow.png`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
+        super(`images/Memoire44/snow/h_snowhedgerow.webp`,null,{Soldat:-2,Tank:-2},true,false,true,false,false,false," ")
     }
 }
 
@@ -149,46 +149,46 @@ export class SnowRoadHillCurve extends CaseGenerique{
 }
 export class SnowFortress extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowfortress.png`,null,false,false,false,false,false,false,false," ")
+        super(`images/Memoire44/snow/h_snowfortress.webp`,null,false,false,false,false,false,false,false," ")
     }
 }
 export class SnowLightHouse extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowlighthouse.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/snow/h_snowlighthouse.webp`,null,false,false,false,false,false,false,false,"")
     }
 }
 export class SnowMarshes extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowmarshes.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/snow/h_snowmarshes.webp`,null,false,false,false,false,false,false,false,"")
     }
 }
 export class SnowChurch extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowchurch.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/snow/h_snowchurch.webp`,null,false,false,false,false,false,false,false,"")
     }
 }
 
 export class SnowBarracks extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowbarracks.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/snow/h_snowbarracks.webp`,null,false,false,false,false,false,false,false,"")
     }
 }
 
 export class SnowCamp extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowcamp.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/snow/h_snowcamp.webp`,null,false,false,false,false,false,false,false,"")
     }
 }
 
 export class SnowCemetery extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowcemetery.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/snow/h_snowcemetery.webp`,null,false,false,false,false,false,false,false,"")
     }
 }
 
 export class SnowDepot extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/snow/h_snowdepot.png`,null,false,false,false,false,false,false,false,"")
+        super(`images/Memoire44/snow/h_snowdepot.webp`,null,false,false,false,false,false,false,false,"")
     }
 }
 

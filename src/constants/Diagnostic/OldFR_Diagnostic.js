@@ -1,6 +1,6 @@
 export let FR_Diagnostic = [
 	{
-		"image":"/images/Diagnostic/diagnostic1.png",
+		"image":"/images/Diagnostic/diagnostic1.webp",
 		"title":"Quelle est votre plus grande préoccupation ?",
 		"reponses":[
 			"Boutons",
@@ -16,7 +16,7 @@ export let FR_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic2.png",
+		"image":"/images/Diagnostic/diagnostic2.webp",
 		"title":"Quelles sont vos préoccupations principales en matière de soins de la peau ?",
 		"reponses":[
 			"Hydratation",
@@ -32,7 +32,7 @@ export let FR_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic3.png",
+		"image":"/images/Diagnostic/diagnostic3.webp",
 		"title":"Quels produits de soins de la peau utilisez vous régulièrement ?",
 		"reponses":[
 			"Nettoyant",
@@ -49,7 +49,7 @@ export let FR_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic4.png",
+		"image":"/images/Diagnostic/diagnostic4.webp",
 		"title":"Aidez-nous à comprendre ce manque d’éclat.",
 		"reponses":[
 			"Je fume et / ou je vis dans un environnement pollué",
@@ -61,7 +61,7 @@ export let FR_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic5.png",
+		"image":"/images/Diagnostic/diagnostic5.webp",
 		"title":"Vous vous définissez comme ...",
 		"reponses":[
 			"Une femme",
@@ -74,7 +74,7 @@ export let FR_Diagnostic = [
 		"rounded":""
 	},
 	{
-		"image":"/images/Diagnostic/diagnostic6.png",
+		"image":"/images/Diagnostic/diagnostic6.webp",
 		"title":"Pour garder une trace de votre diagnostic de peau,veuillez indiquer une adresse e-mail :",
 		"reponses":[
 		],

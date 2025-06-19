@@ -6,50 +6,50 @@ import { AirField, AirFieldX, Barracks, Camp, Casemate, Cemetery, Church, Dam, D
 
 export class Country extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/base/h_country-1-1.png`,null,{Soldat:-1,Tank:-1},false,true,false,false)
+        super(`images/Memoire44/base/h_country-1-1.webp`,null,{Soldat:-1,Tank:-1},false,true,false,false)
     }
 }
 export class SandBag extends CaseGenerique {
     constructor(orientation){
-        super(`images/Memoire44/base/${orientation ?"o_sand1":"o_sand2"}.png`,orientation,{Soldat:-1,Tank:-1},false,true,false,false,"images/Memoire44/card/base/sandbags-fr.png")
+        super(`images/Memoire44/base/${orientation ?"o_sand1":"o_sand2"}.webp`,orientation,{Soldat:-1,Tank:-1},false,true,false,false,"images/Memoire44/card/base/sandbags-fr.webp")
     }
 }
 export class Wire extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_wire.png",null,{Soldat:-1},false,false,false,{Soldat:true})
+        super("images/Memoire44/base/o_wire.webp",null,{Soldat:-1},false,false,false,{Soldat:true})
     }
 }
 export class Hedgehow extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_hedgehog.png",false,true,false,false,false,{Tank:true})
+        super("images/Memoire44/base/o_hedgehog.webp",false,true,false,false,false,{Tank:true})
     }
 }
 export class Hedgerow extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/h_hedgerow.png",false,true,false,false,false)
+        super("images/Memoire44/base/h_hedgerow.webp",false,true,false,false,false)
     }
 }
 export class Bunker extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_bunker.png",null,{Soldat:-1,Tank:-2},true,true,true)
+        super("images/Memoire44/base/o_bunker.webp",null,{Soldat:-1,Tank:-2},true,true,true)
     }
 }
 
 export class Hills extends CaseGenerique {
     constructor (){
-        super("images/Memoire44/base/h_hills.png",null,{Soldat:-1,Tank:-1},false,false,true,true,"images/Memoire44/card/base/hill-fr.png",false,"brightness-[1.20] saturate-[0.6] ",true)
+        super("images/Memoire44/base/h_hills.webp",null,{Soldat:-1,Tank:-1},false,false,true,true,"images/Memoire44/card/base/hill-fr.webp",false,"brightness-[1.20] saturate-[0.6] ",true)
     }
 }
 
 export class Forest extends CaseGenerique {
     constructor (hover){
-        super("images/Memoire44/base/h_forest.png",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/forest-fr.png",false,"brightness-[1.40] saturate-[0.4]")
+        super("images/Memoire44/base/h_forest.webp",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/forest-fr.webp",false,"brightness-[1.40] saturate-[0.4]")
     }
 }
 
 export class Village extends CaseGenerique{
     constructor() {
-        super("images/Memoire44/base/h_village.png",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/village-fr.png",false,"")
+        super("images/Memoire44/base/h_village.webp",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/village-fr.webp",false,"")
     }
 }
 
@@ -71,7 +71,7 @@ export class RiversCurve extends CaseGenerique{
 }
 export class Mine extends CaseGenerique{
     constructor() {
-        super("images/Memoire44/terrain/mine.png",false,true,false,true,true,"")
+        super("images/Memoire44/terrain/mine.webp",false,true,false,true,true,"")
     }
 }
 export function returnHexagone(text,orientation){

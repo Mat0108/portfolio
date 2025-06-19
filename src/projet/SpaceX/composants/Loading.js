@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const Loading = () =>{
 
     const elem = <div className="w-fit flex flex-col">
-        <img src={"/images/loading.png"} alt={"loading"} className="w-20 loading"/>
+        <img src={"/images/loading.webp"} alt={"loading"} className="w-20 loading"/>
         <p className="text-center font-mt-bold-italic mt-2">Loading</p>
     </div>
     useEffect(()=>{    

@@ -21,13 +21,13 @@ const Home = ({workRef,projetRef,techRef}) => {
                 </div>
                 <div className="w-1/2 flex flex-col  gap-2 center text-white">  
                     <div className="w-[80%] h-[80%]">
-                        <img src="/images/me.jpg" alt="me" className="lg:h-full rounded-[2rem] lg:rounded-[4rem]"/>    
+                        <img src="/images/me.webp" alt="me" className="lg:h-full rounded-[2rem] lg:rounded-[4rem]"/>    
                     </div>  
                 </div>
                 </div>
                 {/* me */}
                 <div className="relative text-white">
-                    <img src={"/images/background1.jpg"} alt={"starsky"} className="w-full h-[120px] lg:h-[75%] z-0"/>
+                    <img src={"/images/background1.webp"} alt={"starsky"} className="w-full h-[120px] lg:h-[75%] z-0"/>
                     <div className="absolute top-1 lg:top-1/3 left-5 lg:left-20 w-3/5 lg:w-1/2 lg:h-[300px] z-10 ">
                         <p className="text-lg lg:text-2xl font-mt-bold">Matthieu Barnabé</p>
                         <p className="text-3xs md:text-md lg:text-base test-justify mt-2 lg:mt-10 font-mt-bold-italic">Développeur frontend React avec 2 ans d’alternance et plusieurs stages. Passionné par l'informatique depuis mon plus jeune âge, j’ai mené des projets ambitieux, dont la digitalisation d’un jeu de société. Solide en React, TypeScript et JS, je maîtrise tout le cycle de développement front, de la compréhension des besoins au déploiement.</p>           
@@ -53,7 +53,7 @@ const Home = ({workRef,projetRef,techRef}) => {
                     </div>
                 </div>
                 <div className="w-full h-fit flex bg-black_grey p-2" ref={techRef}>
-                    <div className="w-full flex flex-col p-2">
+                    <div className="w-full flex flex-col lg:p-2">
                             <p className="ml-[5%] text-base lg:text-4xl font-mt-bold" >Les compétences à l'oeuvre dans mes expériences </p>
                             <div className="w-full h-fit pt-4">
                                 <Compétence />

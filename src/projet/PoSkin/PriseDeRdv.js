@@ -165,7 +165,7 @@ console.log('selectDate : ', selectDate)
                     let dateclass = "w-full h-fit px-1 py-1 sm:px-4 sm:py-2 rounded-full text-[10px] sm:text-[14px] xl:text-[18px] 3xl:text-[24px] text-center text-white font-mt-demi hover:cursor-pointer flex flex-col rounded-[15px] sm:rounded-full"
                     return <div className="relative w-full h-full flex p-4 flex flex-col gap-6">
                         <div className="absolute top-3 left-3 ">
-                         <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={()=>{setGlobal(newRdv.Type === true ? global-2: global-1)}}><img src={"/images/fleche.png"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
+                         <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={()=>{setGlobal(newRdv.Type === true ? global-2: global-1)}}><img src={"/images/fleche.webp"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
                        
                         </div>
   
@@ -230,7 +230,7 @@ console.log('selectDate : ', selectDate)
             case 3:
                 return <div className="relative w-full h-full flex p-4 flex flex-col gap-8">
                     <div className="absolute top-3 left-3 ">
-                         <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={()=>{setGlobal(newRdv.Type === true ? global-2: global-1)}}><img src={"/images/fleche.png"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
+                         <div className={`${BG("cyan","light-blue")} w-[25px] sm:w-[50px] h-[25px] sm:h-[50px] rounded-full text-[12px] sm:text-[24px] text-center text-black font-mt-demi hover:cursor-pointer`} onClick={()=>{setGlobal(newRdv.Type === true ? global-2: global-1)}}><img src={"/images/fleche.webp"} alt={"fleche"} className={"scale-[-0.7] p-[-1px] sm:p-0 scale-[-0.75] w-fit"}/></div>
                        
                         </div>
                         <div className="w-full text-[14px] sm:text-[28px] text-center font-mt-extra-bold mt-[10px]"> {dictionnaire.Rdv.choose_expert}</div>
@@ -277,7 +277,7 @@ console.log('selectDate : ', selectDate)
         </div>
     <div className="w-full h-fit sm:h-[870px] flex flex-col sm:flex-row ">
                     <div className="w-full sm:w-[25%] h-fit sm:h-full relative flex center">
-                        <img src={isMobile ? "/images/PoSkin/Blog/serum/serum1.png":"/images/PoSkin/Diagnostic/diagnostic1.png"} alt={"prise de rdv"} className="h-full"/>
+                        <img src={isMobile ? "/images/PoSkin/Blog/serum/serum1.webp":"/images/PoSkin/Diagnostic/diagnostic1.webp"} alt={"prise de rdv"} className="h-full"/>
                         <div className="absolute top-0 left-0 w-full h-full flex center"><div className={`text-grey sm:text-white text-[12px] sm:text-[24px] sm:text-[48px] font-mt-extra-bold`}>{dictionnaire.Rdv.rdv.toUpperCase()}</div></div>
                     </div>
                     <div className="w-full sm:w-[75%] h-fit sm:h-[800px] p-[30px] ">

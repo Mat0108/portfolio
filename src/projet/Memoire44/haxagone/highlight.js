@@ -2,32 +2,32 @@ import { CaseGenerique, test3, test4 } from "../divers/Generique";
 
 export class SelectHexa extends CaseGenerique {
     constructor(){
-        super("images/Memoire44/divers/activated.png")
+        super("images/Memoire44/divers/activated.webp")
     }
 }
 export class Move extends CaseGenerique {
     constructor(item){
-        super(`images/Memoire44/divers/move_${item ? item : 1}.png`,false,null,false,false,false,false,false,false,false,"opacity-60")
+        super(`images/Memoire44/divers/move_${item ? item : 1}.webp`,false,null,false,false,false,false,false,false,false,"opacity-60")
     }
 }
 export class Attacking extends CaseGenerique {
     constructor(){
-        super("images/Memoire44/divers/attacking.png")
+        super("images/Memoire44/divers/attacking.webp")
     }
 }
 export class Selected extends CaseGenerique {
     constructor(){
-        super("images/Memoire44/divers/attacking_selected.png")
+        super("images/Memoire44/divers/attacking_selected.webp")
     }
 }
 export class Target extends CaseGenerique{
     constructor(nb){
-        super(nb ? test4("divers","target-",nb):"images/Memoire44/divers/target.png",nb)
+        super(nb ? test4("divers","target-",nb):"images/Memoire44/divers/target.webp",nb)
     }
 }
 export class Retreat extends CaseGenerique{
     constructor(nb,nb2){
-        super(nb === 0 ? "images/Memoire44/divers/retreat_0.png" : test3("divers","retreat_",nb),nb)
+        super(nb === 0 ? "images/Memoire44/divers/retreat_0.webp" : test3("divers","retreat_",nb),nb)
         this._nb = nb2;
     }
     render(){
@@ -41,7 +41,7 @@ export class Retreat extends CaseGenerique{
 }
 export class Medal extends CaseGenerique{
     constructor(cond){
-        super(cond ? "images/Memoire44/divers/medalaxis.png" : "images/Memoire44/divers/medalallies.png",cond)
+        super(cond ? "images/Memoire44/divers/medalaxis.webp" : "images/Memoire44/divers/medalallies.webp",cond)
     }
     render(){
       return <div className="relative w-full h-full flex ">

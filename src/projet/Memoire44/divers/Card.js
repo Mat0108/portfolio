@@ -51,11 +51,11 @@ export const CampAffichage = ({camp}) =>{
     return <div className='mt-[20px] w-[276px] h-[50px] relative p-2 flex flex-row bg-light_gray rounded-lg flex flex-row center justify-around'>
         <div className="flex flex-row center">
             <div className={`w-5 h-5 rounded-full  mr-[10px] border-[5px] ${camp === "Allies" ? "border-green":"border-red"}`}></div>
-            <div><img src={"images/Memoire44/divers/medalallies.png"} alt={"medalallies"} className="w-10 h-10"/></div>
+            <div><img src={"images/Memoire44/divers/medalallies.webp"} alt={"medalallies"} className="w-10 h-10"/></div>
         </div>
         <div className="flex flex-row center">
             <div className={`w-5 h-5 rounded-full  mr-[10px] border-[5px] ${camp !== "Allies" ? "border-green":"border-red"}`}></div>
-            <div><img src={"images/Memoire44/divers/medalaxis.png"} alt={"medalaxis"} className="w-10 h-10"/></div>
+            <div><img src={"images/Memoire44/divers/medalaxis.webp"} alt={"medalaxis"} className="w-10 h-10"/></div>
         </div>
     </div>
 }

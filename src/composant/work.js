@@ -21,14 +21,14 @@ export function Randstad(){
             <p className="mt-1 lg:mt-2">- <span className="font-mt-bold text-white_blue">Développement d’un nouveau composant </span> dans la bibliothèque interne de l’équipe permettant la saisie de différents formats de polices de caractères.  Cette fonctionnalité passe par l'ajout du framework <span className="font-mt-bold text-white_blue">Lexical</span> ainsi que la personalisation de l'éditeur de texte pour répondre au design prévu. </p>
         </div>
         <div className="absolute right-1 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/randstad.png"} alt={"randstad"} className="w-10 lg:w-25"/>
+            <img src={"/images/randstad.webp"} alt={"randstad"} className="w-10 lg:w-25"/>
         </div>
         <div className="absolute right-0 w-[50px] lg:w-fit bottom-0 flex flex-wrap justify-evenly p-2 lg:p-4 gap-2 lg:gap-4">
-            <img src="/images/tech/r.png" alt="logo_react" className="w-3 lg:w-8"/>
-            <img src="/images/tech/t.png" alt="logo_typescript" className="w-3 lg:w-8"/>
-            <img src="/images/tech/ne.png" alt="logo_nestjs" className="w-3 lg:w-8"/>
-            <img src="/images/tech/md.png" alt="logo_mongodb" className="w-3 lg:w-8"/>
-            <img src="/images/tech/d.png" alt="logo_docker" className="w-3 lg:w-8"/>
+            <img src="/images/tech/r.webp" alt="logo_react" className="w-3 lg:w-8"/>
+            <img src="/images/tech/t.webp" alt="logo_typescript" className="w-3 lg:w-8"/>
+            <img src="/images/tech/ne.webp" alt="logo_nestjs" className="w-3 lg:w-8"/>
+            <img src="/images/tech/md.webp" alt="logo_mongodb" className="w-3 lg:w-8"/>
+            <img src="/images/tech/d.webp" alt="logo_docker" className="w-3 lg:w-8"/>
             
             
             
@@ -56,15 +56,15 @@ export function EllisCar(){
             <p className="mt-2">- Une page <span className="font-mt-bold text-white_blue"> « conducteur » et une page « véhicule » </span> : chacune permettant d’avoir des informations rendant possible l'association d'un conducteur à un véhicule (et inversement). </p>
         </div>
         <div className="absolute right-1 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/elliscar.png"} alt={"elliscar"} className="w-10 lg:w-25" />
+            <img src={"/images/elliscar.webp"} alt={"elliscar"} className="w-10 lg:w-25" />
         </div>
         <div className="absolute right-0 w-[50px] lg:w-fit bottom-0 flex flex-wrap justify-evenly p-2 lg:p-4 gap-2 lg:gap-4">
-            <img src="/images/tech/r.png" alt="logo_react" className="w-3 lg:w-8"/>
-            <img src="/images/tech/ta.png" alt="logo_tailwind" className="w-3 lg:w-8"/>
-            <img src="/images/tech/t.png" alt="logo_typescript" className="w-3 lg:w-8"/>
-            <img src="/images/tech/ne.png" alt="logo_nestjs" className="w-3 lg:w-8"/>
-            <img src="/images/tech/md.png" alt="logo_mongodb" className="w-3 lg:w-8"/>
-            <img src="/images/tech/d.png" alt="logo_docker" className="w-3 lg:w-8"/>    
+            <img src="/images/tech/r.webp" alt="logo_react" className="w-3 lg:w-8"/>
+            <img src="/images/tech/ta.webp" alt="logo_tailwind" className="w-3 lg:w-8"/>
+            <img src="/images/tech/t.webp" alt="logo_typescript" className="w-3 lg:w-8"/>
+            <img src="/images/tech/ne.webp" alt="logo_nestjs" className="w-3 lg:w-8"/>
+            <img src="/images/tech/md.webp" alt="logo_mongodb" className="w-3 lg:w-8"/>
+            <img src="/images/tech/d.webp" alt="logo_docker" className="w-3 lg:w-8"/>    
         </div>
     </div>
 }
@@ -88,11 +88,11 @@ export function Veolia6(){
            
         </div>
         <div className="absolute right-1 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/veolia.png"} alt={"veolia"} className="w-10 lg:w-25"/>
+            <img src={"/images/veolia.webp"} alt={"veolia"} className="w-10 lg:w-25"/>
         </div>
         <div className="absolute right-0 w-[50px] lg:w-fit bottom-0 flex flex-wrap justify-evenly p-2 lg:p-4 gap-2 lg:gap-4">
-            <img src="/images/tech/a.png" alt="logo_angular" className="w-3 lg:w-8"/>
-            <img src="/images/tech/j.png" alt="logo_javascript" className="w-3 lg:w-8"/>         
+            <img src="/images/tech/a.webp" alt="logo_angular" className="w-3 lg:w-8"/>
+            <img src="/images/tech/j.webp" alt="logo_javascript" className="w-3 lg:w-8"/>         
         </div>
     </div>
 }
@@ -113,11 +113,11 @@ export function Veolia4(){
             <p>J'ai effectué différentes modifications dont la correction des filtres, la refonte graphique ainsi que la correction d'un bug lié au Lambda metrics d'AWS. </p>
         </div>
         <div className="absolute right-1 lg:right-10 top-0 h-full flex center">
-            <img src={"/images/veolia.png"} alt={"veolia"} className="w-10 lg-w-25"/>
+            <img src={"/images/veolia.webp"} alt={"veolia"} className="w-10 lg-w-25"/>
         </div>
         <div className="absolute right-0 w-[50px] lg:w-fit bottom-0 flex flex-wrap justify-evenly p-2 lg:p-4 gap-2 lg:gap-4">
-            <img src="/images/tech/a.png" alt="logo_angular" className="w-3 lg:w-8"/>
-            <img src="/images/tech/j.png" alt="logo_javascript" className="w-3 lg:w-8"/>         
+            <img src="/images/tech/a.webp" alt="logo_angular" className="w-3 lg:w-8"/>
+            <img src="/images/tech/j.webp" alt="logo_javascript" className="w-3 lg:w-8"/>         
         </div>
     </div>
 }

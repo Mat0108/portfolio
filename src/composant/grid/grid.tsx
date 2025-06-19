@@ -1,5 +1,4 @@
 import React,{ useState, useRef, useEffect, ReactNode, useMemo } from "react";
-import  {  createTimeline } from "animejs";
 import { Card } from "../card/card.tsx";
 
 

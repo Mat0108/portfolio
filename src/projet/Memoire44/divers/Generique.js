@@ -140,16 +140,16 @@ export class CardGenerique {
 } 
 export function test6(path,name,orientation){
     return `images/Memoire44/${path}/${orientation === 6 ? `${name}6`:orientation === 5 ? `${name}5` : orientation === 4 ?
-    `${name}4`:orientation === 3 ? `${name}3`:orientation === 2 ? `${name}2`:`${name}1`}.png`
+    `${name}4`:orientation === 3 ? `${name}3`:orientation === 2 ? `${name}2`:`${name}1`}.webp`
 }
 export function test4(path,name,orientation){
-    return `images/Memoire44/${path}/${orientation === 4 ? `${name}4`:orientation === 3 ? `${name}3`:orientation === 2 ? `${name}2` : `${name}1`}.png`
+    return `images/Memoire44/${path}/${orientation === 4 ? `${name}4`:orientation === 3 ? `${name}3`:orientation === 2 ? `${name}2` : `${name}1`}.webp`
 }
 export function test3(path,name,orientation){
-    return `images/Memoire44/${path}/${orientation === 3 ? `${name}3`:orientation === 2 ? `${name}2` : `${name}1`}.png`
+    return `images/Memoire44/${path}/${orientation === 3 ? `${name}3`:orientation === 2 ? `${name}2` : `${name}1`}.webp`
 }
 export function test2(path,name,orientation){
-    return `images/Memoire44/${path}/${orientation === 2 ? `${name}2` : `${name}1`}.png`
+    return `images/Memoire44/${path}/${orientation === 2 ? `${name}2` : `${name}1`}.webp`
 }
 export function calculDistance(x,y,x2,y2){
     return Math.abs(Math.sqrt(Math.pow(x-x2,2)+Math.pow(y-y2,2)))

@@ -15,7 +15,7 @@ const Diagnostic = ()=>{
         <div className="">
             <div className="w-full h-fit sm:h-[870px] flex flex-col sm:flex-row">
                 <div className="w-full sm:w-1/3 h-full relative">
-                    <img src={isMobile ? "/images/Blog/serum/serum2.png":"/images/PoSkin/visage/visage21.png"} alt={"visage21"} className="w-full h-full"/>
+                    <img src={isMobile ? "/images/Blog/serum/serum2.webp":"/images/PoSkin/visage/visage21.webp"} alt={"visage21"} className="w-full h-full"/>
                 </div>
                 <div className="w-full sm:w-2/3 h-full bg-[#264C4D]">
                     <div><p className="mt-[20px] sm:mt-[160px] text-white text-[30px] sm:text-[50px] font-mt-extra-bold text-center">{dictionnaire.Diagnostic.Diagnostic.toUpperCase()}</p></div>

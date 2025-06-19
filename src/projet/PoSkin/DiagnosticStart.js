@@ -108,7 +108,7 @@ const DiagnosticStart = (props)=>{
             
             <div className="w-full h-full flex flex-row">
                 <div className="invisible sm:visible w-0 sm:w-1/3 h-full relative">
-                    <img src={"/images/PoSkin/Diagnostic/diagnostic5.png"} alt={"diagnostic"} className="w-full h-full"/>
+                    <img src={"/images/PoSkin/Diagnostic/diagnostic5.webp"} alt={"diagnostic"} className="w-full h-full"/>
                 </div>
                 <div className="w-full sm:w-2/3 h-full bg-[#EEE8E4] relative">
                     <div className="w-full h-3 bg-gray">

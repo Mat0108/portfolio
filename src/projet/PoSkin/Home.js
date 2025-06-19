@@ -60,9 +60,9 @@ const PoSkinHome = (props)=>{
         </div>
         <div className="relative bg-[#EEE8E4] text-[#000000] relative h-full overflow-y-auto overflow-x-hidden custom-scrollbar" id={"Scrollref"}>
         
-        <LayoutFullImage props={{titre:dictionnaire.Home.Title,button:buttondiv,image1:{url:"/images/PoSkin/visage/fullvisage.png",alt:"fullvisage"}}}/>
-        <Layout1image props={{col1:switchtext("presentation",props.scroll),image1:{url:"/images/PoSkin/visage/visage2.png",alt:"visage2"}}} />
-        <Layout2image props={{col1:switchtext("apropos"),col2:switchtext("apropos2"),image1:{url:"/images/PoSkin/visage/visage7.png",alt:"visage7"},image2:{url:"/images/PoSkin/visage/visage8.png",alt:"visage8"}}} />
+        <LayoutFullImage props={{titre:dictionnaire.Home.Title,button:buttondiv,image1:{url:"/images/PoSkin/visage/fullvisage.webp",alt:"fullvisage"}}}/>
+        <Layout1image props={{col1:switchtext("presentation",props.scroll),image1:{url:"/images/PoSkin/visage/visage2.webp",alt:"visage2"}}} />
+        <Layout2image props={{col1:switchtext("apropos"),col2:switchtext("apropos2"),image1:{url:"/images/PoSkin/visage/visage7.webp",alt:"visage7"},image2:{url:"/images/PoSkin/visage/visage8.webp",alt:"visage8"}}} />
         <div><p className="mt-[30px] text-[12px] sm:text-[60px] text-center font-mt-bold text-blue_poskin ">{dictionnaire.Home.Conseil} </p></div>
         {BlogCarousel}
         <div className='mt-[20px]'></div>
