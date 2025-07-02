@@ -9,6 +9,8 @@
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.17",
     "@react-pdf/renderer": "^3.1.14",
+    "ajv": "^8.17.1",
+    "ajv-keywords": "^5.1.0",
     "animejs": "^4.0.2",
     "axios": "^1.9.0",
     "file-saver": "^2.0.5",

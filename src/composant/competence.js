@@ -173,10 +173,10 @@ export function PortfolioCard(Tag,size){
             <div className="flex flex-col w-full text-justify gap-2 text-2xs lg:text-base">
                 <p>Les technologies que j'ai utilisées :</p>
                 <div className="w-full flex flex-row gap-8">
-                   <img src="/images/tech/r.webp" alt="logo_react" className="w-8 lg:w-16"/>
-                   <img src="/images/tech/ta.webp" alt="logo_tailwind" className="w-8 lg:w-16"/>
-                   <img src="/images/tech/t.webp" alt="logo_typescript" className="w-8 lg:w-16"/>
-            
+                    <img src="/images/tech/r.webp" alt="logo_react" className="w-8 lg:w-16"/>
+                    <img src="/images/tech/ta.webp" alt="logo_tailwind" className="w-8 lg:w-16"/>
+                    <img src="/images/tech/t.webp" alt="logo_typescript" className="w-8 lg:w-16"/>
+                    <img src="/images/tech/animejs.webp" alt="logo_animejs" className="w-[60px] lg:w-[120px]"/>
                 </div>
                     
             </div>

@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 type MenuSelectorProps = {
   title:string,
   options:Array<React.JSX.Element> 
+  boutonStyle?:string,
+  elementStyle?:string,
+  menuPosition?:string
 }
-const MenuSelector = ({title,options}:MenuSelectorProps) => {
+const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition}:MenuSelectorProps) => {
   const [showOptions, setShowOptions] = useState(false);
   const [isButtonHovering, setIsButtonHovered] = useState(false);
   const [isMenuHovering, setIsMenuHovered] = useState(false);
@@ -41,7 +44,7 @@ const MenuSelector = ({title,options}:MenuSelectorProps) => {
         onClick={handleClick}
         onMouseEnter={onMouseEnterButton}
         onMouseLeave={onMouseLeaveButton}
-        className={`flex flex-row w-fit ${showOptions ? "bg-[#264C4D] text-white cursor-pointer":""} ${cmhover}`}
+        className={`flex flex-row w-fit ${showOptions ? "bg-[#264C4D] text-white cursor-pointer":`${boutonStyle}`} ${cmhover}`}
         id="menu-button"
         aria-expanded="true"
         aria-haspopup="true"
@@ -59,10 +62,10 @@ const MenuSelector = ({title,options}:MenuSelectorProps) => {
         <div
           onMouseEnter={onMouseEnterMenu}
           onMouseLeave={onMouseLeaveMenu}
-          className="absolute right-0 rounded-2xl bg-black_grey text-white z-[1000] p-2 drop-shadow-2xl h-fit overflow-auto"
+          className={`absolute ${menuPosition ?? "right-0"} rounded-2xl bg-black_grey text-white z-[1000] p-2 drop-shadow-2xl h-fit overflow-auto `}
           aria-labelledby="menu-button"
           tabIndex={-1}>
-          <div className="py-1 space-y-[5%] " role="none">
+          <div className={`py-1 space-y-[5%] ${elementStyle} `} role="none">
             {options.map((option,key)=>
             <div key={key}
                   className={`cursor-pointer inline text-xs sm:text-md font-semibold hover:bg-[#264C4D] hover:text-white flex rounded-2xl`}

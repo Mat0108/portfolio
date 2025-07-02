@@ -6,10 +6,10 @@ const PoSkinPresentation = ()=>{
     const isMobile = window.screen.width < 600;
     return <div className="w-full h-full relative">
                 <div className="absolute top-0 right-0 flex flex-row gap-4 z-10 p-4">
-                    <Link to="https://github.com/Coumbadiankha/PoSkin" target="_blank" rel="noopener noreferrer" className="p-2 bg-black_darked rounded-[10px] ">Github front</Link>
-                    <Link to="https://github.com/Coumbadiankha/Po-Skin-Back" target="_blank" rel="noopener noreferrer" className="p-2 bg-black_darked rounded-[10px] ">Github back</Link>
-                    {!isMobile && <Link to="/PoSkin/Home"  className="p-2 bg-black_darked rounded-[10px] ">Parcourir le projet</Link>}
-                    {isMobile && <div className="p-2 bg-black_darked rounded-[10px] " onClick={()=>toast.info("Merci d'utiliser un ordinateur pour parcourir le projet")}>Parcourir le projet</div>}
+                    <Link to="https://github.com/Coumbadiankha/PoSkin" target="_blank" rel="noopener noreferrer" className="p-3 bg-black_darked rounded-[10px] ">Github front</Link>
+                    <Link to="https://github.com/Coumbadiankha/Po-Skin-Back" target="_blank" rel="noopener noreferrer" className="p-3 bg-black_darked rounded-[10px] ">Github back</Link>
+                    {!isMobile && <Link to="/PoSkin/Home"  className="p-3 bg-black_darked rounded-[10px] ">Découvrir le projet PoSkin</Link>}
+                    {isMobile && <div className="p-3 bg-black_darked rounded-[10px] " onClick={()=>toast.info("Merci d'utiliser un ordinateur pour parcourir le projet")}>Découvrir le projet PoSkin</div>}
                 </div>
                 <div className="bg-blue_dark relative h-full overflow-y-auto overflow-x-hidden custom-scrollbar" id={"Scrollref"}>
                 <div className="flex flex-col h-full bg-blue_dark p-2 lg:p-8 gap-2 lg:gap-8 lg:gap-16 text-xs lg:text-md">

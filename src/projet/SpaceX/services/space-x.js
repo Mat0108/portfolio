@@ -4,7 +4,7 @@ export const getCapsules = async () => {
     return res.data;
 }
 export const getLaunches = async () => {
-    const res = await axios.get(`https://api.spacexdata.com/v4/launches`);
+    const res = await axios.get(`https://api.spacexdata.co/v4/launches`);
     return res.data;
 }
 

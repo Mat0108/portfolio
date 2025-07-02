@@ -17,8 +17,8 @@ const SpaceXPresentation = lazy(() => import('./projet/SpaceX/presentation'));
 const Contact = lazy(() => import('./Contact'));
 const CVDisplay = lazy(() => import('./composant/cv'));
 const SelecteurScenario = lazy(() => import('./projet/Memoire44/scenario'));
-const Play = lazy(() => import('./projet/Memoire44/play/play'));
-const CreateScenario = lazy(() => import('./projet/Memoire44/scenario/createScenario'));
+const Play = lazy(() => import('./projet/Memoire44/play/play.js'));
+const CreateScenario = lazy(() => import('./projet/Memoire44/CreateScenarioTool/CreateScenario.tsx'));
 const About = lazy(() => import('./projet/Memoire44/About'));
 const Progress = lazy(() => import('./projet/Memoire44/Progress'));
 const Tuto = lazy(() => import('./projet/Memoire44/scenario/tuto'));
@@ -59,7 +59,7 @@ const App = ()=>{
         </div>
         <ScrollToTop />
 
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<div className='w-full h-full flex center'><Loading /></div>}>
             <Routes>
               <Route path="/" element={<Home workRef={workRef} projetRef={projetRef} techRef={techRef}/>}></Route>
               <Route path="/Contact" element={<Contact />}></Route>
@@ -70,7 +70,7 @@ const App = ()=>{
               <Route path="/Memoire44/play" element={<SelecteurScenario/>}></Route>
               <Route path="/Memoire44/play/:debug" element={<SelecteurScenario/>}></Route> 
               <Route path="/Memoire44/scenario/:name/" element={<Play />}></Route>
-              <Route path="/Memoire44§scenario/:name/:debug" element={<Play />}></Route>
+              <Route path="/Memoire44/scenario/:name/:debug" element={<Play />}></Route>
               <Route path="/Memoire44/create" element={<CreateScenario/>}></Route>
               <Route path="/Memoire44/about" element={<About/>}></Route>
               <Route path="/Memoire44/progress" element={<Progress/>}></Route>
