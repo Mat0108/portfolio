@@ -1,3 +1,4 @@
+import { CaseGenerique } from "../divers/Generique";
 import { Country } from "../haxagone/base";
 import { ArtillerieAllies, CharAllies, SoldatAllies } from "./allies";
 import { ArtillerieAxis, CharAxis, SoldatAxis } from "./axis";
@@ -61,5 +62,11 @@ export function ReturnArmy(unit, nb) {
         return { hexagone: new ArtillerieAllies(nb), orientation: 2, max: 4 };
     } else {
         return { hexagone: new SoldatAxis(4),orientation: 4, max: 4 }; // default case
+    }
+}
+
+export class Bullet extends CaseGenerique{
+    constructor(orientation,state){
+        super(`images/Memoire44/base/bullet-0${state ?? 3}.webp`,null,null,true,false,true,false,false,false,`${orientation} w-8 h-8 `)
     }
 }

@@ -47,7 +47,7 @@ const listScenario = [
     {name:"Deplacement",url:"Deplacement",image:"/test/Deplacement"},
     
 ]
-export const SelecteurScenario = ()=>{
+const SelecteurScenario = ()=>{
     const [image,setImage] = useState("Scenariovide");
     const [url,setUrl] = useState("Scenariovide");
     const LoadImage = useMemo(()=>{
@@ -60,9 +60,9 @@ export const SelecteurScenario = ()=>{
             return <div key={pos} onMouseEnter={()=>{setImage(e.image);setUrl(e.url)}}  className={`text-left p-2 w-full  h-[50px] text-2xl ${e.image === "Scenariovide" ? "text-center":"bg-black_grey px-8"}`}>{e.name}</div>})}
           
             {process.env.NODE_ENV !=="production" && <> <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-dark_grey  h-[50px] text-2xl text-center`}>Createur de scenario</div>
-            <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-lightgrey h-[50px] text-2xl px-8 text-center`}><Link to={"/create"}>Go</Link></div></>}
+            <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-lightgrey h-[50px] text-2xl px-8 text-center`}><Link to={"/Memoire44/create"}>Go</Link></div></>}
         
-            <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-gray  h-[50px] text-2xl px-8 text-center`}><Link to={"/about"}>A propos</Link></div>
+            <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-gray  h-[50px] text-2xl px-8 text-center`}><Link to={"/Memoire44/about"}>A propos</Link></div>
             </div>
             <div className="relative w-[1200px] h-full bg-gray px-4  flex flex-col center space-2">
                 <div className="absolute w-full h-fit top-0 h-[60px] flex center gap-2  ">
@@ -78,7 +78,7 @@ export const SelecteurScenario = ()=>{
             
         </div>)
 }
-
+export default SelecteurScenario;
 export function ReturnScenario(scenarioname){
     switch(scenarioname){
         case "Assaultsurvassieuxenvercours":

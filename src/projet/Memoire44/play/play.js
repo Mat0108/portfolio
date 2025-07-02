@@ -13,9 +13,10 @@ import { FormControlLabel, Switch } from '@mui/material';
 import { RoadRight, RoadCurve, RoadHillRight, RoadHillCurve, RoadBranchRight,RoadBranchLeft,RoadX,RoadY  } from '../haxagone/terrain';
 import { Link } from 'react-router-dom';
 import { object } from 'motion/react-client';
+import { AnimationFigurine } from '../animation/animation';
 
 
-export const Play =()=> {
+const Play =()=> {
   const [card, setCard] = useState(new CardGenerique("Choisir une carte","back-fr"))
     // new CardGenerique("Attaque centre","attack-center-fr",3,2,"ALL"),);
   const { name , debug: enabledebug} = useParams();
@@ -45,6 +46,12 @@ export const Play =()=> {
   function StateButton(text,textvalider,status,action,showvalider){
     return <div className='mt-[20px] w-[276px] h-[50px] relative p-2 flex flex-row bg-light_gray rounded-lg'><div className={`w-5 h-5 rounded-full mt-[6px] mr-[10px] border-[5px] ${status ? "border-green":"border-red"}`}></div><div className='text-white text-[18px] '>{text}</div>{showvalider ? <div className="absolute right-2 top-[7px] text-white ml-[30px] text-[16px] border-2 border-black hover:bg-lightgrey rounded-lg p-1"  onClick={action}>{textvalider}</div>:""}</div>
   } 
+  function RemoveHighlightAtPos(x,y){
+    let f = grille.grille[x][y]
+    let localgrille = {...grille};
+    localgrille.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:f.action,highlight:null,select:null}
+    setGrille(localgrille)        
+  }
   //fonction pour retirer les highlight 
   function RemoveHighlight(){
     let localgrille = {...grille};
@@ -302,7 +309,7 @@ export const Play =()=> {
     
     setGrille(localgrille)
   }
-
+  
   //function pour deplacer une unité 
   function MoveAction(oldposx,oldposy,posx,posy,action){
     let localgrille = {...grille};
@@ -311,6 +318,7 @@ export const Play =()=> {
     
 
     let f = localgrille.grille[oldposx][oldposy]
+    
     let list = showPortee(grille,Object.keys(f.unité._portée).length,posx,posy,f.unité._portée,null)
 
     localgrille2.grille[oldposx][oldposy] = {case:f.case,bunker:f.bunker,defense:null,unité:null,action:null,highlight:null,select:null}
@@ -324,7 +332,6 @@ export const Play =()=> {
         }
       }
     })
-    console.log(posx,posy,cond)
     localgrille2.grille[posx][posy] = {case:localgrille2.grille[posx][posy].case,defense:null,unité:f.unité,action:null,highlight: null,select:action === 1 ? (cond ? new Attacking():null ):null}
     setGrille(localgrille2)
   }
@@ -338,41 +345,55 @@ export const Play =()=> {
     grille.grille[item.x][item.y].case instanceof RoadX || 
     grille.grille[item.x][item.y].case instanceof RoadY
   }
+  function AllPathIsRoad(list,updateList,deplacement){
+    list.map((item,pos)=>{
+      let cond = true;
+      if(item.path){
+      item.path.map(item=>{
+        if(!isRoad(item)){
+          cond = false
+        }
+      })
+    }
+    if(cond && item.path.length-1 >= deplacement){
+      
+      
+      let pts = pointproche(item.item.x,item.item.y);
+      pts.forEach(pt=>{
+        let lpath = [...item.path]
+        let cond2 = true;
+        list.forEach(item2 => {
+          if(item2.item.x === pt.x && item2.item.y === pt.y){
+            cond2 = false
+          }
+        })
+
+        if(cond2){ 
+          if(pt.x !== item.x && pt.y !== item.y ){
+              if(isRoad(pt)){
+                lpath.push(pt)
+                
+                updateList.push({item:{x:pt.x,y:pt.y,dés:null,deplacement:item.item.deplacement === 2 ? 2 : 1},path:lpath})
+              }
+          } 
+        }
+
+      })
+      if(item.item.deplacement === 2){
+        updateList[pos].item.deplacement = 1;
+      }
+    }    
+  })
+
+}
   //function pour montrée la portée de deplacmeent
   function ShowPortéeUnit(posx,posy,unité){
     RemoveHighlight();
     
-    let list = showPortee(grille,Object.keys(unité._deplacement).length,posx,posy,null,unité._deplacement,true)
+    let list = showPortee(grille,Object.keys(unité._deplacement).length,posx,posy,null,unité._deplacement,true,isRoad)
     let updatedList = [...list]
-    
-    console.log(updatedList)
-    let roadPosition = [{x:posx,y:posy}]
-    
-    unité._deplacement.forEach((e,pos)=>{
-      let pts = pointproche(roadPosition.at(-1).x,roadPosition.at(-1).y)
-      pts.forEach(pt=>{
-        let exist = Object.keys(roadPosition.filter(f=>f.x === pt.x && f.y === pt.y)).length === 1
-        if(isRoad(pt) && !exist ){
-          roadPosition.push(pt);
-          if(pos === Object.keys( unité._deplacement).length-1){
-            console.log(roadPosition)
-            let Index = list.findIndex(f=>f.x === roadPosition.at(-1).x && f.y === roadPosition.at(-1).y)
-            console.log(Index)
-            console.log(updatedList[Index])
-            updatedList[Index].deplacement = 1;
-            let finalpts = pointproche(pt.x,pt.y);
-            finalpts.forEach(fpt=>{
-              let cond = Object.keys(list.filter(f=>f.x === fpt.x && f.y === fpt.y)).length === 1
-              if (!cond) {
-                  updatedList.push({x:fpt.x,y:fpt.y,dés:0,deplacement:2});
-              }
-            })
-          }
-
-        }
-      })
-    })
-
+    AllPathIsRoad(list,updatedList,Object.keys(unité._deplacement).length)
+  
     let localgrille = {...grille};
     let localgrille2 = {...grille};
 
@@ -380,8 +401,8 @@ export const Play =()=> {
     localgrille.grille.forEach((e,pos)=>{
       e.forEach((f,pos2)=>{
         updatedList.forEach(item=>{
-          if(item.x === pos && item.y === pos2 && !debug ? !f.unité :item.x === pos && item.y === pos2 && !f.unité){  
-            localgrille2.grille[pos][pos2] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{MoveAction(posx,posy,pos,pos2,item.deplacement)},highlight: new Move(item.deplacement),select:f.select}
+          if(item.item.x === pos && item.item.y === pos2 && !debug ? !f.unité :item.item.x === pos && item.item.y === pos2 && !f.unité){  
+            localgrille2.grille[pos][pos2] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{AnimationFigurine(item.path,800,()=>MoveAction(posx,posy,pos,pos2,item.item.deplacement),()=>{RemoveHighlight();setTimeout(()=>RemoveHighlightAtPos(posx,posy),10)})},highlight: new Move(item.item.deplacement),select:f.select}
             
           }
           
@@ -922,7 +943,7 @@ export const Play =()=> {
                         <div className='absolute z-10 w-full h-full'>{f.case ? f.case.render(): ""}</div>
                         <div className='absolute z-20 w-full h-full'>{f.defense ? f.defense.render(): ""}</div>
                         <div className='absolute z-30 w-full h-full'>{f.bunker ? f.bunker.render(): ""}</div>
-                        <div className='absolute z-40 w-full h-full'>{f.unité ? f.unité.render(): ""}</div>
+                        <div className={`pion-${pos}-${pos2} absolute z-40 w-full h-full`}>{f.unité ? f.unité.render(): ""}</div>
                         <div className='absolute z-[50] w-full h-full'>{f.medal ? f.medal.render(): ""}</div>
                         <div className={`absolute z-[60] w-full h-full ${f.highlight && (f.highlight instanceof Target || f.highlight instanceof Move ) ? "opacity-50":""}`}>{f.highlight ? f.highlight.render(): ""}</div>
                         <div className='absolute z-[70] w-full h-full '>{f.select ? f.select.render(): ""}</div>
@@ -952,3 +973,5 @@ export const Play =()=> {
           
       </div>)
   }
+
+  export default Play;

@@ -1,5 +1,6 @@
 import { SoldatAllies } from "../../army/allies";
-import { SoldatAxis } from "../../army/axis";
+import { Bullet } from "../../army/army";
+import { CharAxis, SoldatAxis } from "../../army/axis";
 import { Forest, Hills, SandBag, Village } from "../../haxagone/base";
 import { Mountain, RoadCurve, RoadHillCurve, RoadRight } from "../../haxagone/terrain";
 

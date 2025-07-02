@@ -9,6 +9,12 @@ export class Country extends CaseGenerique {
         super(`images/Memoire44/base/h_country-1-1.webp`,null,{Soldat:-1,Tank:-1},false,true,false,false)
     }
 }
+
+export class CountryVide extends CaseGenerique {
+    constructor(){
+        super(`images/Memoire44/base/h_countryvide.webp`,null,{Soldat:-1,Tank:-1},false,true,false,false)
+    }
+}
 export class SandBag extends CaseGenerique {
     constructor(orientation){
         super(`images/Memoire44/base/${orientation ?"o_sand1":"o_sand2"}.webp`,orientation,{Soldat:-1,Tank:-1},false,true,false,false,"images/Memoire44/card/base/sandbags-fr.webp")
@@ -37,13 +43,13 @@ export class Bunker extends CaseGenerique{
 
 export class Hills extends CaseGenerique {
     constructor (){
-        super("images/Memoire44/base/h_hills.webp",null,{Soldat:-1,Tank:-1},false,false,true,true,"images/Memoire44/card/base/hill-fr.webp",false,"brightness-[1.20] saturate-[0.6] ",true)
+        super("images/Memoire44/base/h_hills.webp",null,{Soldat:-1,Tank:-1},false,false,true,true,"images/Memoire44/card/base/hill-fr.webp",false," ",true)
     }
 }
 
 export class Forest extends CaseGenerique {
     constructor (hover){
-        super("images/Memoire44/base/h_forest.webp",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/forest-fr.webp",false,"brightness-[1.40] saturate-[0.4]")
+        super("images/Memoire44/base/h_forest.webp",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/forest-fr.webp",false,"")
     }
 }
 

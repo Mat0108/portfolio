@@ -1,0 +1,50 @@
+import { CountryVide, Forest, Hedgerow, Hills, RiversCurve, RiversRight, Village } from "../haxagone/base"
+import { AirField, AirFieldX, Barracks, Camp, Cemetery, Church, Dam, Depot, Factory, Fortress, LakeA, LakeB, LakeC, LightHouse, Marshes, Mountain, Pond, RiverBranchLeft, RiverBranchRight, RiverY, RoadBranchLeft, RoadBranchRight, RoadCurve, RoadHillCurve, RoadHillRight, RoadRight, RoadX, RoadY, Station, TrainBranchLeft, TrainBranchRight, TrainCurve, TrainRight, TrainX, TrainXRoad } from "../haxagone/terrain"
+
+const HexagonePlaine = ()=>{
+    return [
+        new CountryVide(),
+        new Hills(),
+        new Mountain(),
+        new Forest(),
+        new Hedgerow(),
+        new RiversRight(),
+        new RiversCurve(),
+        new RiverBranchLeft(),
+        new RiverBranchRight(),
+        new RiverY(),
+        new Dam(),
+        new Pond(),
+        new LakeA(),
+        new LakeB(),
+        new LakeC(),
+        new RoadRight(),
+        new RoadCurve(),
+        new RoadBranchLeft(),
+        new RoadBranchRight(),
+        new RoadX(),
+        new RoadY(),
+        new RoadHillRight(),
+        new RoadHillCurve(),
+        new AirField(),
+        new AirFieldX(),
+        new Village(),
+        new Church(),
+        new Barracks(),
+        new Camp(),
+        new Cemetery(),
+        new Depot(),
+        new Factory(),
+        new Fortress(),
+        new LightHouse(),
+        new Marshes(),
+        new TrainRight(),
+        new TrainCurve(),
+        new TrainBranchLeft(),
+        new TrainBranchRight(),
+        new TrainX(),
+        new TrainXRoad(),
+        new Station() 
+    ]
+}
+export default HexagonePlaine;

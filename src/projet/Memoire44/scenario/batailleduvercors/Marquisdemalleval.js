@@ -22,6 +22,7 @@ export const Marquisdemalleval = {
         {x:0,y:11,contenu:{case:new Forest(),defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
         {x:0,y:12,contenu:{case:null,defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
         {x:1,y:0,contenu:{case:new Village(),defense:null,unité:null,action:null,highlight:null,select:null}},
+        {x:1,y:1,contenu:{case:null,defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
         {x:1,y:3,contenu:{case:new Forest(),defense:null,unité:null,action:null,highlight:null,select:null}},
         {x:1,y:6,contenu:{case:new Hills(),defense:null,unité:null,action:null,highlight:null,select:null}},
         {x:1,y:11,contenu:{case:new Forest(),defense:null,unité:null,action:null,highlight:null,select:null}},

@@ -175,7 +175,7 @@ export function isCombatRapproche(x,y,x2,y2){
     return cond;
 }
 
-export function showPortee(grille,portée,posx,posy,dés,deplacement,pathFinding){
+export function showPortee(grille,portée,posx,posy,dés,deplacement,pathFinding,testingRoad){
     
     let list = [
         {x:posx-1,y: posx %2  === 1 ? posy : posy-1,dés: dés ? dés[0] : 0,deplacement:deplacement ? deplacement[0]:null}, //partie haut gauche
@@ -362,12 +362,13 @@ export function showPortee(grille,portée,posx,posy,dés,deplacement,pathFinding
     let list2 = []
     VerList(list).forEach(item=>{
         
-        let path = jkstraPathFinding(grille.grille,{x:posx,y:posy},item)
-        if(path !== null && path.length <= portée){
-            list2.push(item)
+        let path = jkstraPathFinding(grille.grille,{x:posx,y:posy},item,testingRoad)
+
+        if(path !== null && path.item.length <= portée){
+            list2.push({item:item, path:path.path})
         }
     }) 
-    return VerList(list2);
+    return list2;
 }
 
 

@@ -1,5 +1,10 @@
 import { CaseGenerique, test2, test3, test6 } from "../divers/Generique";
 
+export class SnowCountry extends CaseGenerique{
+    constructor(){
+        super(`images/Memoire44/snow/h_wintervide.webp`,null,false,true,false,true,false,false,false," ")
+    }
+}
 export class SnowTrainRight extends CaseGenerique{
     constructor(orientation){
         super(test3("snow","h_snowrail",orientation),orientation,false,false,false,false,false,false,false," ")

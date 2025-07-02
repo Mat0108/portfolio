@@ -2,7 +2,7 @@
 import { algos,Graph } from 'jkstra'
 
 
-export function jkstraPathFinding(grille, start, end) {
+export function jkstraPathFinding(grille, start, end,testingRoad) {
     
     const graph = new Graph()
     const allNodes = new Array(9).fill(null).map(() => []);
@@ -17,7 +17,7 @@ export function jkstraPathFinding(grille, start, end) {
         if(grille[x][y].defense && typeof grille[x][y].defense._byentering === 'object') {
             isArmyBlockingCase =  (grille[x][y].defense && grille[x][y].defense._byentering )?  grille[x][y].defense._byentering[soldatType] : false;
         }
-        //isArmyBlockingCase si la case bloque ce type d'unité.
+
 
 
         let isBlockingCase = grille[x][y].case ? grille[x][y].case._byentering ? true : false : false; //case qui stop le mouvement
@@ -25,9 +25,7 @@ export function jkstraPathFinding(grille, start, end) {
         let isUpperCaseStart = grille[start.x][start.y].case ? grille[start.x][start.y].case?._isUpperCase : false; //Le start est une case en hauteur
         let isUpperCase = grille[x][y].case ? grille[x][y].case?._isUpperCase : false; // case en hauteur
 
-        let simpleCond = isBlockingCase || isSoldatCase;
-
-
+   
         let complexCond = (isArmyBlockingCase ? isArmyBlockingCase : (isUpperCaseStart ? !isUpperCase :  isBlockingCase)) || isSoldatCase ;
 
 
@@ -55,7 +53,9 @@ export function jkstraPathFinding(grille, start, end) {
              [x+1, x % 2 === 1 ? y : y-1], [x+1, x % 2 === 1 ? y+1 : y]].forEach(([nx, ny]) => {
                 const neighbor = getNode(nx, ny);
                 if (neighbor) {
-                    graph.addEdge(current, neighbor);
+                    const preferRoad = testingRoad({x:nx,y:ny});                 
+                    const weight = preferRoad ? 0.8 : 1; // favorise route
+                    graph.addEdge(current, neighbor, weight );
                 }
             });
         }
@@ -68,15 +68,23 @@ export function jkstraPathFinding(grille, start, end) {
         isArmyBlockingCase =  (grille[end.x][end.y].defense && grille[end.x][end.y].defense._byentering )?  grille[end.x][end.y].defense._byentering[soldatType] : false;
     }
     if(soldatType === "Tank" && isArmyBlockingCase) return null
-
-    let path = dijkstra.shortestPath(getNode(start.x, start.y), getNode(end.x, end.y));
-    if(end.x === 3 && end.y === 6){console.log(path)}
+    let path = dijkstra.shortestPath(getNode(start.x, start.y), getNode(end.x, end.y),{
+    edgeCost: function (e) {
+        return e.data;
+    },
+    });
+    if(end.x === 2 && end.y === 7){console.log('path: ',path)}
     
     if(path === null || path.length === 0) return null
-    path.map(node => {
-        return node.from.data;
+    let chemin = [] 
+    path.forEach(node => {
+        
+        chemin.push(node.from.data);
     })
-    return path
+    chemin.push(end)
+    if(end.x === 2 && end.y === 7){console.log('chemin: ',chemin)}
+    
+    return {item:path,path:chemin}
     
     
 }

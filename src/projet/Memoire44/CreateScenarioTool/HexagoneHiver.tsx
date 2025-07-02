@@ -1,0 +1,50 @@
+import { SnowAirField, SnowAirFieldX, SnowBarracks, SnowCamp, SnowCemetery, SnowChurch, SnowCountry, SnowDam, SnowDepot, SnowFactory, SnowForest, SnowFortress, SnowHedgerow, SnowHill, SnowLakeA, SnowLakeB, SnowLakeC, SnowLightHouse, SnowMarshes, SnowMountain, SnowPond, SnowRiverBranchLeft, SnowRiverBranchRight, SnowRiversCurve, SnowRiversRight, SnowRiverY, SnowRoadBranchLeft, SnowRoadBranchRight, SnowRoadCurve, SnowRoadHillCurve, SnowRoadHillRight, SnowRoadRight, SnowRoadX, SnowRoadY, SnowStation, SnowTrainBranchLeft, SnowTrainBranchRight, SnowTrainCurve, SnowTrainRight, SnowTrainX, SnowTrainXRoad, SnowVillage } from "../haxagone/snow"
+
+const HexagoneHiver = ()=>{
+    return [
+        new SnowCountry(),
+        new SnowHill(),
+        new SnowMountain(),
+        new SnowForest(),
+        new SnowHedgerow(),
+        new SnowRiversRight(),
+        new SnowRiversCurve(),
+        new SnowRiverBranchLeft(),
+        new SnowRiverBranchRight(),
+        new SnowRiverY(),
+        new SnowDam(),
+        new SnowPond(),
+        new SnowLakeA(),
+        new SnowLakeB(),
+        new SnowLakeC(),
+        new SnowRoadRight(),
+        new SnowRoadCurve(),
+        new SnowRoadBranchLeft(),
+        new SnowRoadBranchRight(),
+        new SnowRoadX(),
+        new SnowRoadY(),
+        new SnowRoadHillRight(),
+        new SnowRoadHillCurve(),
+        new SnowAirField(),
+        new SnowAirFieldX(),
+        new SnowVillage(),
+        new SnowChurch(),
+        new SnowBarracks(),
+        new SnowCamp(),
+        new SnowCemetery(),
+        new SnowDepot(),
+        new SnowFactory(),
+        new SnowFortress(),
+        new SnowLightHouse(),
+        new SnowMarshes(),
+        new SnowTrainRight(),
+        new SnowTrainCurve(),
+        new SnowTrainBranchLeft(),
+        new SnowTrainBranchRight(),
+        new SnowTrainX(),
+        new SnowTrainXRoad(),
+        new SnowStation()
+
+    ]
+}
+export default HexagoneHiver

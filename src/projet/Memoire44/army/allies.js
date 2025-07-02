@@ -10,7 +10,7 @@ export class SoldatAllies extends SoldatGenerique {
 export class CharAllies extends SoldatGenerique {
     constructor(nb,portée,deplacement){
         let orientation = false;
-        super(`images/Memoire44/base/${orientation ? "u_ustank_top":"u_ustank_bottom"}.webp`,nb ? nb : 3,portée ? portée:[3,6,6],deplacement ? deplacement:[1,1,1],"w-[40%]","Tank","Allies")
+        super(`images/Memoire44/base/${orientation ? "u_ustank_top":"u_ustank_bottom"}.webp`,nb ? nb : 3,portée ? portée:[3,3,3],deplacement ? deplacement:[1,1,1],"w-[40%]","Tank","Allies")
     }
 }
 
