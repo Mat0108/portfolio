@@ -23,8 +23,8 @@ function save(){
       saveAs(file, `${textvar}.js`);
     }
     return (
-        <div className='relative w-screen h-screen flex center z-[350] '>
-        <div className='absolute w-[400px] h-fit rounded-3xl flex flex-col bg-black_grey z-[350] p-4'>
+        <div className='relative w-screen h-screen flex center z-[350] text-white font-mt-bold'>
+        <div className='absolute w-[500px] h-fit rounded-3xl flex flex-col bg-black_grey z-[350] p-4'>
           <div className='text-center w-full h-1/2 p-4'>Voulez vous sauvegarder ? </div>
           <div className="w-full relative flex flex-row">
           <div className="w-4/5 flex flex-col">
@@ -36,39 +36,39 @@ function save(){
             <div className="text-[17px] mr-[30px]">Nombre de cartes Axe: </div>
             
           </div>
-            <div className="w-fit flex flex-col" >
-              <select id={"medal"} className="h-[27px]">
+            <div className="w-fit flex flex-col bg-grey" >
+              <select id={"medal"} className="h-[27px] bg-grey">
                 {modal.map(item=>{return item === 6 ? <option value={item} selected >{item}</option> : <option value={item} >{item}</option>})}
               </select>
-              <select id={"medalAxe"} className="h-[27px]">
+              <select id={"medalAxe"} className="h-[27px] bg-dark_grey">
                 {modal.map(item=>{return item === 6 ? <option value={item} selected >{item}</option> : <option value={item} >{item}</option>})}
               </select>
 
-              <select id={"camp"} className="h-[27px]">
+              <select id={"camp"} className="h-[27px] bg-grey">
                 <option value={"Allies"} selected >{"Allies"}</option>
                 <option value={"Axis"}  >{"Axe"}</option>
               </select>
-              <select id={"terrain"} className="h-[27px]">
+              <select id={"terrain"} className="h-[27px] bg-dark_grey">
                 <option value={"terrain0"} >{"Plaines"}</option>
                 <option value={"terrain1"} >{"Plage"}</option>
                 <option value={"terrain2"} >{"Desert"}</option>
                 <option value={"terrain3"} >{"Toundra"}</option>
               </select>
-              <select id={"allies"} className="h-[27px]">
+              <select id={"allies"} className="h-[27px] bg-grey">
                 {card.map(item=>{return item === 6 ? <option value={item} selected >{item}</option> : <option value={item} >{item}</option>})}
               </select>
-              <select id={"axe"} className="h-[27px]">
+              <select id={"axe"} className="h-[27px] bg-dark_grey">
                 {card.map(item=>{return item === 6 ? <option value={item} selected >{item}</option> : <option value={item} >{item}</option>})}
               </select>
             </div>
           </div>
-          <div className="w-full flex flex-col gap-1">
+          <div className="w-full flex flex-col gap-1 ">
             <label>Nom du scenario :</label>
-            <input className=""  onChange={(e)=>{setText(e.target.value)}} />
+            <input className="bg-dark_grey"  onChange={(e)=>{setText(e.target.value)}} />
           </div>
             <div className="w-full flex flex-col gap-1">
             <label>Nom du fichier :</label>
-            <input className=""  onChange={(e)=>{setTextvar(e.target.value)}} />
+            <input className="bg-dark_grey"  onChange={(e)=>{setTextvar(e.target.value)}} />
           </div>
           
           <div className='w-full h-1/2 mt-[20px] flex justify-around'>

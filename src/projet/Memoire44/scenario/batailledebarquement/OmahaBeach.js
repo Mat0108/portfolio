@@ -1,6 +1,6 @@
 import { CharAllies, SoldatAllies } from "../../army/army";
 import { ArtillerieAxis, CharAxis, SoldatAxis } from "../../army/army";
-import { Bunker, Hedgehow, Hills, SandBag, Village, Wire } from "../../haxagone/base";
+import { Bunker, Hedgehog, Hills, SandBag, Village, Wire } from "../../haxagone/base";
 import { Medal } from "../../haxagone/highlight";
 
 export const OmahaBeach= {
@@ -57,7 +57,7 @@ export const OmahaBeach= {
        {x:3,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:1,contenu:{case: new Hills(),bunker: new Bunker(),defense: null, unité:new ArtillerieAxis(2),medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:2,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:3,y:3,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:3,y:3,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:4,contenu:{case: new Hills(),bunker: new Bunker(),defense: null, unité:new SoldatAxis(4),medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:5,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:6,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
@@ -83,12 +83,12 @@ export const OmahaBeach= {
        {x:4,y:12,contenu:{case: new Hills(),bunker: new Bunker(),defense: new Wire(), unité:new ArtillerieAxis(2),medal:null,action:null,highlight:null,select:null}}, 
     
        {x:5,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:5,y:1,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:5,y:1,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:5,y:2,contenu:{case: null,bunker: null,defense: new Wire(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:5,y:3,contenu:{case: null,bunker: null,defense: new Wire(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:5,y:4,contenu:{case: null,bunker: null,defense: new Wire(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:5,y:5,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:5,y:6,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:5,y:5,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:5,y:6,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:5,y:7,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:5,y:8,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:5,y:9,contenu:{case: null,bunker: null,defense: new SandBag(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
@@ -99,15 +99,15 @@ export const OmahaBeach= {
        {x:6,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:6,y:1,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:6,y:2,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:6,y:3,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:6,y:4,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:6,y:3,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:6,y:4,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:6,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:6,y:6,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:6,y:7,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:6,y:8,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:6,y:9,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:6,y:8,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:6,y:9,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:6,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:6,y:11,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:6,y:11,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:6,y:12,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
     
        {x:7,y:0,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4),medal:null,action:null,highlight:null,select:null}}, 

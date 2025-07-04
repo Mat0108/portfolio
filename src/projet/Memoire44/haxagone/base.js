@@ -17,7 +17,7 @@ export class CountryVide extends CaseGenerique {
 
 export class SandBag extends CaseGenerique {
     constructor(orientation){
-        super(`images/Memoire44/base/${orientation ?"o_sand1":"o_sand2"}.webp`, 2, {Soldat:-1,Tank:-1}, false, true, false, false, "images/Memoire44/card/base/sandbags-fr.webp", undefined, undefined, undefined, `new SandBag(`);
+        super(`images/Memoire44/base/${orientation === 1 ?"o_sand1":"o_sand2"}.webp`, 2, {Soldat:-1,Tank:-1}, false, true, false, false, "images/Memoire44/card/base/sandbags-fr.webp", undefined, undefined, undefined, `new SandBag(`);
     }
 }
 
@@ -27,21 +27,21 @@ export class Wire extends CaseGenerique{
     }
 }
 
-export class Hedgehow extends CaseGenerique{
+export class Hedgehog extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_hedgehog.webp", 1, true, false, false, false, {Tank:true}, undefined, undefined, undefined, undefined, `new Hedgehow(`);
+        super("images/Memoire44/base/o_hedgehog.webp", 1, true, false, false, false, {Tank:true}, undefined, undefined, undefined, undefined, `new Hedgehog(`);
     }
 }
 
 export class Hedgerow extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/h_hedgerow.webp", 1, true, false, false, false, undefined, undefined, undefined, undefined, `new Hedgerow(`);
+        super("images/Memoire44/base/h_hedgerow.webp", 1, true, false, false, false, undefined, undefined, undefined, undefined,undefined, `new Hedgerow(`);
     }
 }
 
 export class Bunker extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_bunker.webp", 1, {Soldat:-1,Tank:-2}, true, true, true, undefined, undefined, undefined, undefined, `new Bunker(`);
+        super("images/Memoire44/base/o_bunker.webp", 1, {Soldat:-1,Tank:-2}, true, true, true, undefined, undefined, undefined,undefined,undefined, `new Bunker(`);
     }
 }
 
@@ -111,8 +111,8 @@ export function returnHexagone(text,orientation){
             return {hexagone: new Bunker(orientation),orientation:6}
         case "SandBag":
             return {hexagone: new SandBag(orientation),orientation:2}
-        case "Hedgehow":
-            return {hexagone: new Hedgehow(),orientation:0}
+        case "Hedgehog":
+            return {hexagone: new Hedgehog(),orientation:0}
         case "Wire":
             return {hexagone: new Wire(),orientation:0}
         case "RoadRight":

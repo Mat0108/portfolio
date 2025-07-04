@@ -121,6 +121,16 @@ const CreateScenario = () => {
         setGrille(grilleCopy(oldgrille));
     }
 
+    function ResetSelection(){
+        setSelection({
+            case: null,
+            bunker: null ,
+            defense: null ,
+            unité: null ,
+            medal: null ,
+        })
+    }
+
     keyboardJS.bind('ctrl + z', function(e) {
         // Prevent the default browser undo action
         e?.preventDefault();
@@ -233,7 +243,7 @@ const CreateScenario = () => {
                         <div className='absolute z-20 w-full h-full'>{f.defense ? f.defense.render(): ""}</div>
                         <div className='absolute z-30 w-full h-full'>{f.bunker ? f.bunker.render(): ""}</div>
                         <div className={`pion-${pos}-${pos2} absolute z-40 w-full h-full`}>{f.unité ? f.unité.render(): ""}</div>
-                        <div className='absolute z-[50] w-full h-full'>{f.medal ? f.medal.render(): ""}</div>
+                        <div className='absolute z-[50] w-full h-full'>{f.medal ? f.medal.medal(): ""}</div>
                     </div>
                   
               })
@@ -272,6 +282,7 @@ const CreateScenario = () => {
                         <CaseRenderer instance={selection.bunker} className="z-30" />
                         <div className={`absolute z-40 w-full h-full`}>{selection.unité ? selection.unité.render(): ""}</div>
                     </div>
+                    <div className="h-[105px] flex center"><div className="font-mt-bold  p-2 text-white bg-grey rounded-3xl hover:cursor-pointer" onClick={()=>{ResetSelection()}}>reset Selection</div></div>
                 </div>
                 <div className="mt-20 flex flex-row gap-8">
                     <div className="bg-grey rounded-3xl p-2 text-white font-mt-bold w-fit hover:cursor-pointer" onClick={()=>{setModal(<SaveScenario close={()=>{setModal(<></>)}} grille={grille.grille}/>)}} >Sauvegarder le scenario</div>

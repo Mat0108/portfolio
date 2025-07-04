@@ -1,5 +1,5 @@
 import { CharAxis, SoldatAxis } from "../../army/army";
-import { Forest, Hedgehow, Hills, Wire } from "../../haxagone/base";
+import { Forest, Hedgehog, Hills, Wire } from "../../haxagone/base";
 
 export const Deplacement = {
     name:"Deplacement",
@@ -83,9 +83,9 @@ export const Deplacement = {
         {x:5,y:5,contenu:{case:null,defense:null,unité:null,action:null,highlight:null,select:null}},
         {x:5,y:6,contenu:{case:null,defense:null,unité:null,action:null,highlight:null,select:null}},
         {x:5,y:7,contenu:{case:null,defense:null,unité:null,action:null,highlight:null,select:null}},
-        {x:5,y:8,contenu:{case:null,defense:new Hedgehow(),unité:null,action:null,highlight:null,select:null}},
-        {x:5,y:9,contenu:{case:null,defense:new Hedgehow(),unité:null,action:null,highlight:null,select:null}},
-        {x:5,y:10,contenu:{case:null,defense:new Hedgehow(),unité:null,action:null,highlight:null,select:null}},
+        {x:5,y:8,contenu:{case:null,defense:new Hedgehog(),unité:null,action:null,highlight:null,select:null}},
+        {x:5,y:9,contenu:{case:null,defense:new Hedgehog(),unité:null,action:null,highlight:null,select:null}},
+        {x:5,y:10,contenu:{case:null,defense:new Hedgehog(),unité:null,action:null,highlight:null,select:null}},
         {x:5,y:11,contenu:{case:null,defense:null,unité:null,action:null,highlight:null,select:null}},
 
         {x:6,y:0,contenu:{case:null,defense:null,unité:null,action:null,highlight:null,select:null}},

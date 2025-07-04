@@ -12,6 +12,12 @@ import { Deplacement } from "./Testing/Deplacement";
 import { LigneDeMire3 } from "./Testing/LigneDeMire3";
 import '../../../index.css'
 import { ligne_san_fratello } from "./campagned'audiemurphy/ligne_san_fratello";
+import { mignato_monte_lungo } from "./campagned'audiemurphy/mignato_monte_lungo";
+import { alpha_yellow } from "./campagned'audiemurphy/alpha_yellow";
+import { carrière_cleurie } from "./campagned'audiemurphy/carrière_cleurie";
+import { contre_attaque_holtzwihr } from "./campagned'audiemurphy/contre_attaque_holtzwihr";
+import { prise_biesheim } from "./campagned'audiemurphy/prise_biesheim";
+import { citerna_di_littoria } from "./campagned'audiemurphy/citerna_di_littoria";
 
 export function loadScenario(scenario){
     let x = 13;
@@ -42,6 +48,13 @@ const listScenario = [
     {name:"Mount Mouchet",url:"MontMouchet",image:"batailledebarquement/montmouchet"},
     {name:'Campagne Audie Murphy',url:"Scenariovide",image:"Scenariovide"},
     {name:'La ligne de San Fratello',url:'San_Fratello',image:"campagneAudieMurphy/SanFratello"},
+    {name:'Le volturno',url:'volturno',image:"campagneAudieMurphy/volturno"},
+    {name:'Mignano Monte Lungo',url:'mignano',image:"campagneAudieMurphy/mignano"},
+    {name:'Cisterna Di Littorio',url:'citerna_di_littoria',image:"campagneAudieMurphy/cisterna_di_littoria"},
+    {name:'Alpha Yellow',url:'alpha_yellow',image:"campagneAudieMurphy/alpha_yellow"},
+    {name:'La carrière de Cleurie',url:'carriere_cleurie',image:"campagneAudieMurphy/carriere_cleurie"},
+    {name:'Contre-attaque à Holtzwihr',url:'contre_attaque_holtzwihr',image:"campagneAudieMurphy/contre_attaque_holtzwihr"},
+    {name:'La prise de Beisheim',url:'prise_biesheiem',image:"campagneAudieMurphy/prise_biesheiem"},
     {name:" Testing ",url:"Scenariotest",image:"Scenariovide"},
     {name:"Scenario de test",url:"Scenariotest",image:"/test/Scenariotest"},
     {name:"Ligne de Mire",url:"LigneDeMire",image:"/test/LigneDeMire"},
@@ -62,7 +75,7 @@ const SelecteurScenario = ()=>{
             <div className="w-[500px] h-full bg-dark_grey  border-black overflow-y-auto overflow-x-hidden custom-scrollbar" >{listScenario.map((e,pos)=>{
             return <div key={pos} onMouseEnter={()=>{setImage(e.image);setUrl(e.url)}}  className={`text-left p-2 w-full  h-[50px] text-2xl ${e.image === "Scenariovide" ? "text-center":"bg-black_grey px-8"}`}>{e.name}</div>})}
           
-            {process.env.NODE_ENV !=="production" && <> <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-dark_grey  h-[50px] text-2xl text-center`}>Createur de scenario</div>
+            {process.env.NODE_ENV !=="testproduction" && <> <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-dark_grey  h-[50px] text-2xl text-center`}>Createur de scenario</div>
             <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-lightgrey h-[50px] text-2xl px-8 text-center`}><Link to={"/Memoire44/create"}>Go</Link></div></>}
         
             <div onMouseEnter={()=>{setImage("Scenariovide")}} className={`text-left p-2 w-full bg-gray  h-[50px] text-2xl px-8 text-center`}><Link to={"/Memoire44/about"}>A propos</Link></div>
@@ -110,6 +123,18 @@ export function ReturnScenario(scenarioname){
             return MontMouchet;
         case "San_Fratello":
             return ligne_san_fratello;
+        case "mignano":
+            return mignato_monte_lungo;
+        case 'citerna_di_littoria':
+            return citerna_di_littoria;
+        case 'alpha_yellow':
+            return alpha_yellow;
+        case 'carriere_cleurie':
+            return carrière_cleurie;
+        case 'contre_attaque_holtzwihr':
+            return contre_attaque_holtzwihr;
+        case 'prise_biesheim':
+            return prise_biesheim;
         case "LigneDeMire":
             return LigneDeMire;
         case "LigneDeMire2":

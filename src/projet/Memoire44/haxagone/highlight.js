@@ -41,7 +41,7 @@ export class Retreat extends CaseGenerique{
 }
 export class Medal extends CaseGenerique{
     constructor(cond){
-        super(cond ? "images/Memoire44/divers/medalaxis.webp" : "images/Memoire44/divers/medalallies.webp",cond)
+        super(cond ? "images/Memoire44/divers/medalaxis.webp" : "images/Memoire44/divers/medalallies.webp",cond,null,null,null,null,null,null,null,null,null,"new Medal(",cond)
     }
     render(){
       return <div className="relative w-full h-full flex ">

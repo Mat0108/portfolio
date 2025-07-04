@@ -1,6 +1,6 @@
 import { SoldatAllies } from "../../army/army";
 import { ArtillerieAxis, SoldatAxis } from "../../army/army";
-import { Bunker, Forest, Hedgehow, Hills, SandBag, Wire } from "../../haxagone/base";
+import { Bunker, Forest, Hedgehog, Hills, SandBag, Wire } from "../../haxagone/base";
 import { Medal } from "../../haxagone/highlight";
 
 export const PointeDuHoc= {
@@ -42,7 +42,7 @@ export const PointeDuHoc= {
     
        {x:2,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:1,contenu:{case: null,bunker: null,defense: new Wire(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:2,y:2,contenu:{case: null,bunker: new Bunker(),defense: new Hedgehow(), unité:new SoldatAxis(4),medal:null,action:null,highlight:null,select:null}}, 
+       {x:2,y:2,contenu:{case: null,bunker: new Bunker(),defense: new Hedgehog(), unité:new SoldatAxis(4),medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 

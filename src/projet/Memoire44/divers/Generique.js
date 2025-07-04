@@ -144,6 +144,13 @@ export class CaseGenerique {
     render(){
         return <div onMouseEnter={()=>this._hover ? this._hover({card:this._imageexplicatif,showing:true}):""} onMouseLeave={()=>this._hover ? this._hover({card:"",showing:false}):""} ><img src={this._image} alt={"Case"} className={this._className}/></div>
     }
+    medal(){
+      return <div className="relative w-full h-full flex ">
+        <div className="absolute top-2 left-0 ml-[70px] w-[45%]  ">{this.render()}</div>
+        
+      </div>  
+    }
+
     mount(domElement) {
         this._mountTarget = domElement;
         ReactDOM.render(this.render(), domElement);

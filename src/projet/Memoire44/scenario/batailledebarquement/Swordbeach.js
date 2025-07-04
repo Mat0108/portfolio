@@ -1,6 +1,6 @@
 import { CharAllies, SoldatAllies } from "../../army/army";
 import { ArtillerieAxis, CharAxis, SoldatAxis } from "../../army/army";
-import { Bunker, Forest, Hedgehow, Village, Wire } from "../../haxagone/base";
+import { Bunker, Forest, Hedgehog, Village, Wire } from "../../haxagone/base";
 import { Medal } from "../../haxagone/highlight";
 
 export const SwordBearch= {
@@ -84,29 +84,29 @@ export const SwordBearch= {
    
       {x:5,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:1,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-      {x:5,y:2,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
-      {x:5,y:3,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+      {x:5,y:2,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+      {x:5,y:3,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:6,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-      {x:5,y:7,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
-      {x:5,y:8,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+      {x:5,y:7,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+      {x:5,y:8,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:9,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:11,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:5,y:12,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    
       {x:6,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-      {x:6,y:1,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+      {x:6,y:1,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:2,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-      {x:6,y:5,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+      {x:6,y:5,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:6,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:7,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:8,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:9,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-      {x:6,y:10,contenu:{case: null,bunker: null,defense: new Hedgehow(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
+      {x:6,y:10,contenu:{case: null,bunker: null,defense: new Hedgehog(), unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:11,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
       {x:6,y:12,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    

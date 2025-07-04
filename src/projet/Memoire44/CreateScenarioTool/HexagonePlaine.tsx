@@ -1,6 +1,6 @@
 
 import { ArtillerieAllies, ArtillerieAxis, ArtillerieEastern, CharAllies, CharAxis, CharEastern, SoldatAllies, SoldatAxis, SoldatEastern } from "../army/army"
-import { Bridge, Bunker, CountryVide, Forest, Hedgehow, Hedgerow, Hills, Mine, RiversCurve, RiversRight, SandBag, Village, Wire } from "../haxagone/base"
+import { Bridge, Bunker, CountryVide, Forest, Hedgehog, Hedgerow, Hills, Mine, RiversCurve, RiversRight, SandBag, Village, Wire } from "../haxagone/base"
 import { Medal } from "../haxagone/highlight"
 import { AirField, AirFieldX, Barracks, Camp, Casemate, Cemetery, Church, Dam, Depot, Factory, Ford, Fortress, LakeA, LakeB, LakeC, LightHouse, Loco, Marshes, Mountain, Pond, Pontoon, RailBridge, RiverBranchLeft, RiverBranchRight, RiverY, RoadBlock, RoadBranchLeft, RoadBranchRight, RoadCurve, RoadHillCurve, RoadHillRight, RoadRight, RoadX, RoadY, Station, TrainBranchLeft, TrainBranchRight, TrainCurve, TrainRight, TrainX, TrainXRoad, Wagon } from "../haxagone/terrain"
 
@@ -69,7 +69,7 @@ export const HexaDefense = () =>{
     return [
         new CountryVide(),
         new SandBag(),
-        new Hedgehow(),
+        new Hedgehog(),
         new Wire()
     ]
 }

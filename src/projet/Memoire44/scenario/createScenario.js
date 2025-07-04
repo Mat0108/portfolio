@@ -33,7 +33,7 @@ export const CreateScenario = () =>{
   let listDefense = [
     "Country",
     "SandBag",
-    "Hedgehow",
+    "Hedgehog",
     "Wire",
     "Country"
   ]
