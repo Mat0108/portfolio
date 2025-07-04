@@ -4,6 +4,8 @@ import { Scenariotest } from './Testing/scenariotest';
 
 import {Assaultsurvassieuxenvercours,Batailledesaintnizier,Marquisdemalleval,SacrificeaValchevrière,Défensedespas} from "./batailleduvercors/index"
 import {PegasusBridge,PointeDuHoc,SainteMereEglise,SwordBearch,OmahaBeach,MontMouchet } from "./batailledebarquement/index"
+import {alpha_yellow,carrière_cleurie,citerna_di_littoria, contre_attaque_holtzwihr,ligne_san_fratello,mignato_monte_lungo,prise_biesheim,volturno} from './campagnedaudiemurphy/index'
+
 
 import { Link, useParams } from 'react-router-dom';
 import { LigneDeMire } from "./Testing/LigneDeMire";
@@ -11,13 +13,6 @@ import { LigneDeMire2 } from "./Testing/LigneDeMire2";
 import { Deplacement } from "./Testing/Deplacement";
 import { LigneDeMire3 } from "./Testing/LigneDeMire3";
 import '../../../index.css'
-import { ligne_san_fratello } from "./campagned'audiemurphy/ligne_san_fratello";
-import { mignato_monte_lungo } from "./campagned'audiemurphy/mignato_monte_lungo";
-import { alpha_yellow } from "./campagned'audiemurphy/alpha_yellow";
-import { carrière_cleurie } from "./campagned'audiemurphy/carrière_cleurie";
-import { contre_attaque_holtzwihr } from "./campagned'audiemurphy/contre_attaque_holtzwihr";
-import { prise_biesheim } from "./campagned'audiemurphy/prise_biesheim";
-import { citerna_di_littoria } from "./campagned'audiemurphy/citerna_di_littoria";
 
 export function loadScenario(scenario){
     let x = 13;
@@ -54,7 +49,7 @@ const listScenario = [
     {name:'Alpha Yellow',url:'alpha_yellow',image:"campagneAudieMurphy/alpha_yellow"},
     {name:'La carrière de Cleurie',url:'carriere_cleurie',image:"campagneAudieMurphy/carriere_cleurie"},
     {name:'Contre-attaque à Holtzwihr',url:'contre_attaque_holtzwihr',image:"campagneAudieMurphy/contre_attaque_holtzwihr"},
-    {name:'La prise de Beisheim',url:'prise_biesheiem',image:"campagneAudieMurphy/prise_biesheiem"},
+    {name:'La prise de Beisheim',url:'prise_biesheiem',image:"campagneAudieMurphy/prise_biesheim"},
     {name:" Testing ",url:"Scenariotest",image:"Scenariovide"},
     {name:"Scenario de test",url:"Scenariotest",image:"/test/Scenariotest"},
     {name:"Ligne de Mire",url:"LigneDeMire",image:"/test/LigneDeMire"},
@@ -127,6 +122,8 @@ export function ReturnScenario(scenarioname){
             return mignato_monte_lungo;
         case 'citerna_di_littoria':
             return citerna_di_littoria;
+        case 'volturno':
+            return volturno;
         case 'alpha_yellow':
             return alpha_yellow;
         case 'carriere_cleurie':
