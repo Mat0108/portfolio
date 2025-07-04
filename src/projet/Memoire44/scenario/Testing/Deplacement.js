@@ -1,4 +1,4 @@
-import { CharAxis, SoldatAxis } from "../../army/axis";
+import { CharAxis, SoldatAxis } from "../../army/army";
 import { Forest, Hedgehow, Hills, Wire } from "../../haxagone/base";
 
 export const Deplacement = {

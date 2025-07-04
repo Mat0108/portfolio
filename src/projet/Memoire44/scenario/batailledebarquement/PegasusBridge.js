@@ -1,5 +1,5 @@
-import { SoldatAllies } from "../../army/allies";
-import { SoldatAxis } from "../../army/axis";
+import { SoldatAllies } from "../../army/army";
+import { SoldatAxis } from "../../army/army";
 import { Bridge, Forest, Mine, RiversCurve, RiversRight, SandBag, Village, Wire } from "../../haxagone/base";
 export const PegasusBridge= {
       name:"Pegasus Bridge",

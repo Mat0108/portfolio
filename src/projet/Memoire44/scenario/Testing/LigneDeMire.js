@@ -1,6 +1,7 @@
-import { SoldatAllies } from "../../army/allies";
-import { SoldatAxis } from "../../army/axis";
-import { Hills } from "../../haxagone/base";
+import { SoldatAllies } from "../../army/army";
+import { SoldatAxis } from "../../army/army";
+import { Hills, RiversRight } from "../../haxagone/base";
+import { Mountain, RiverBranchLeft, RoadCurve, RoadHillCurve } from "../../haxagone/terrain";
 
 export const LigneDeMire= {
     name:"Test de ligne de mire",
@@ -32,8 +33,8 @@ export const LigneDeMire= {
        {x:1,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:1,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:1,y:6,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:1,y:7,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:1,y:8,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:1,y:7,contenu:{case: new RoadCurve(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:1,y:8,contenu:{case: new RoadHillCurve(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:1,y:9,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:1,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:1,y:11,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
@@ -45,20 +46,20 @@ export const LigneDeMire= {
        {x:2,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:2,y:6,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:2,y:6,contenu:{case: new Mountain(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:7,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:8,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:9,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:2,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:2,y:11,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-       {x:2,y:12,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:2,y:11,contenu:{case: new RiversRight(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:2,y:12,contenu:{case: new RiverBranchLeft(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
     
        {x:3,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:1,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:2,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:4,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4),medal:null,action:null,highlight:null,select:null}}, 
-       {x:3,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
+       {x:3,y:5,contenu:{case: new RoadHillCurve(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:6,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:7,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4),medal:null,action:null,highlight:null,select:null}}, 
        {x:3,y:8,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 

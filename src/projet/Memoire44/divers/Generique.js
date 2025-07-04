@@ -24,7 +24,7 @@ export class Position{
 
 }
 export class SoldatGenerique  {
-    constructor(image,nombre,portée,deplacement,taille,type,camp){
+    constructor(image,nombre,portée,deplacement,taille,type,camp,path){
         this._nombre = nombre;
         this._portée = portée;
         this._deplacement = deplacement;
@@ -32,6 +32,7 @@ export class SoldatGenerique  {
         this._taille = taille ? taille : "w-1/2"
         this._type = type ? type : "1"
         this._camp = camp ? camp : "Axis"
+        this._path = path;
     }
     render(medal,nb,css,cssimage){
         let elem = <img src={this._image} alt={"Soldat"} className={cssimage ?? (medal ?? this._taille)}/>
@@ -97,22 +98,32 @@ export class SoldatGenerique  {
 }
         return <div></div>
     }
-    clone() {
+    getPortée(){
+        return this._portée;
+    }
+    getDeplacement(){
+        return this._deplacement;
+    }
+    getPath() {
+        return `${this._path}${this._nombre},${this._portée ? `[${this._portée}]`:""},${this._deplacement ? `[${this._deplacement}]`:""})`;
+    }
+    clone(number) {
         return new SoldatGenerique(
             this._image,
-            this._nombre,
+            number ?? this._nombre,
             this._portée,
             this._deplacement,
             this._taille,
             this._type,
-            this._camp
+            this._camp,
+            this._path
         );
 }
 
 }
 
 export class CaseGenerique {
-    constructor(image,orientation,malus,deplacmentmax,ignoreflag,lineofsight,byentering,imageexplicatif,hover,className,isUpperCase ) {
+    constructor(image,orientation,malus,deplacmentmax,ignoreflag,lineofsight,byentering,imageexplicatif,hover,className,isUpperCase,path,currentOrientation ) {
         this._orientation = orientation;
         this._image = image;
         this._malus = malus ? malus :null;
@@ -125,6 +136,8 @@ export class CaseGenerique {
         this._className = className ? className : null; 
         this._isUpperCase = isUpperCase ? isUpperCase : false;
         this._mountTarget = null; 
+        this._path = path;
+        this._currentOrientation = currentOrientation;
 
     }
 
@@ -149,12 +162,15 @@ export class CaseGenerique {
         if(!currentOrientation || parseInt(currentOrientation[0]) === (chiffre > this._orientation ? chiffre - this._orientation : chiffre)){
             return false;
         }else {
-            
+            this._currentOrientation = chiffre;
             this._image = this._image.replace(/(\d)(?=\.webp)/g, (match) =>
                 chiffre > this._orientation ? chiffre - this._orientation : chiffre
             );
             return true;
         }
+    }
+    getPath() {
+        return `${this._path}${this._currentOrientation ?? ""})`;
     }
     clone() {
         return new CaseGenerique(
@@ -168,7 +184,9 @@ export class CaseGenerique {
             this._imageexplicatif,
             this._hover,
             this._className,
-            this._isUpperCase
+            this._isUpperCase,
+            this._path,
+            this._currentOrientation
         );
     }
 

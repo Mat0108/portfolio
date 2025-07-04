@@ -1,5 +1,5 @@
-import { SoldatAllies } from "../../army/allies";
-import { CharAxis, SoldatAxis } from "../../army/axis";
+import { SoldatAllies } from "../../army/army";
+import { CharAxis, SoldatAxis } from "../../army/army";
 import { Forest, Hedgerow, Hills, SandBag, Village } from "../../haxagone/base";
 
 export const SainteMereEglise= {

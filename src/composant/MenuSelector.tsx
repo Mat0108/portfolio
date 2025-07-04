@@ -15,6 +15,7 @@ const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition,displ
   const [isMenuHovering, setIsMenuHovered] = useState(false);
   const isMobile = window.screen.width < 600;
   const handleClick = () => {
+    
     setShowOptions(!showOptions);
   };
 
@@ -64,7 +65,6 @@ const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition,displ
           onMouseEnter={onMouseEnterMenu}
           onMouseLeave={onMouseLeaveMenu}
           className={`absolute ${menuPosition ?? "right-0"} rounded-2xl bg-black_grey text-white z-[1000] p-2 drop-shadow-2xl h-fit overflow-auto `}
-          aria-labelledby="menu-button"
           tabIndex={-1}>
           <div className={`py-1 space-y-[5%] ${elementStyle} `} role="none">
             {options.map((option,key)=>

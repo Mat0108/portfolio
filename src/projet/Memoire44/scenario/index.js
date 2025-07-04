@@ -11,6 +11,7 @@ import { LigneDeMire2 } from "./Testing/LigneDeMire2";
 import { Deplacement } from "./Testing/Deplacement";
 import { LigneDeMire3 } from "./Testing/LigneDeMire3";
 import '../../../index.css'
+import { ligne_san_fratello } from "./campagned'audiemurphy/ligne_san_fratello";
 
 export function loadScenario(scenario){
     let x = 13;
@@ -39,6 +40,8 @@ const listScenario = [
     {name:"Pointe du hoc",url:"Pointeduhoc",image:"batailledebarquement/Pointeduhoc"},
     {name:"Omaha Beach",url:"OmahaBeach",image:"batailledebarquement/omahabeach"},
     {name:"Mount Mouchet",url:"MontMouchet",image:"batailledebarquement/montmouchet"},
+    {name:'Campagne Audie Murphy',url:"Scenariovide",image:"Scenariovide"},
+    {name:'La ligne de San Fratello',url:'San_Fratello',image:"campagneAudieMurphy/SanFratello"},
     {name:" Testing ",url:"Scenariotest",image:"Scenariovide"},
     {name:"Scenario de test",url:"Scenariotest",image:"/test/Scenariotest"},
     {name:"Ligne de Mire",url:"LigneDeMire",image:"/test/LigneDeMire"},
@@ -105,6 +108,8 @@ export function ReturnScenario(scenarioname){
             return OmahaBeach;
         case "MontMouchet":
             return MontMouchet;
+        case "San_Fratello":
+            return ligne_san_fratello;
         case "LigneDeMire":
             return LigneDeMire;
         case "LigneDeMire2":

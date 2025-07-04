@@ -3,26 +3,28 @@ import { saveAs } from 'file-saver';
 export const SaveScenario = (props)=>{
     let modal = [4,5,6,7,8,9,10,11,12];
     let card = [3,4,5,6,7,8];
-    const [text,setText] = useState("test");
+    const [text,setText] = useState("");
+    const [textvar,setTextvar] = useState('')
     
 //{x:0,y:0,contenu:{case:new Hills(),defense:null,unité:null,action:null,highlight:null,select:null}},
 
 
 function save(){
-      let data=[`export const ${text}= {\n`,`name:"${text}",\n`,`terrain:"${document.getElementById("terrain").value}",\n`,`medalAllies:${document.getElementById("medal").value},\n`,`medalAxe:${document.getElementById("medalAxe").value},\n`,`camp:"${document.getElementById("camp").value}",\n`,`cardAxis:${document.getElementById("allies").value},\n`,`cardAllies:${document.getElementById("axe").value},\n`,"hexa:[\n"]
+      let data=[`export const ${textvar}= {\n`,`name:"${text}",\n`,`terrain:"${document.getElementById("terrain").value}",\n`,`medalAllies:${document.getElementById("medal").value},\n`,`medalAxe:${document.getElementById("medalAxe").value},\n`,`camp:"${document.getElementById("camp").value}",\n`,`cardAxis:${document.getElementById("allies").value},\n`,`cardAllies:${document.getElementById("axe").value},\n`,"hexa:[\n"]
       props.grille.forEach((e,pos)=>{
         e.forEach((f,pos2)=>{
-          data.push(`   {x:${pos},y:${pos2},contenu:{case: ${f.case ? `new ${f.case.constructor.name}(${f.case._orientation?f.case._orientation:""})`:null},bunker: ${f.bunker ? `new ${f.bunker.constructor.name}(${f.bunker._orientation ? f.bunker._orientation : "" })`:null},defense: ${f.defense ? `new ${f.defense.constructor.name}(${f.defense._orientation?f.defense._orientation:""})`:null}, unité:${f.unité ? `new ${f.unité.constructor.name}(${f.unité._nombre?f.unité._nombre:""})`:null},medal:${f.medal ? `new ${f.medal.constructor.name}(${f.medal._nombre?f.medal._nombre:""})`:null},action:null,highlight:null,select:null}}, \n`)
+          console.log(f.case)
+          data.push(`   {x:${pos},y:${pos2},contenu:{case: ${f.case ? f.case.getPath() : null},bunker: ${f.bunker ? f.bunker.getPath() :null},defense: ${f.defense ? f.defense.getPath():null}, unité:${f.unité ? f.unité.getPath() :null},medal:${f.medal ? f.medal.getPath() :null},action:null,highlight:null,select:null}}, \n`)
         })
         data.push('\n')
       })
       data.push("   ]\n}\n")
       const file = new Blob(data, { type: 'text/plain;charset=utf-8' });
-      saveAs(file, 'data.txt');
+      saveAs(file, `${textvar}.js`);
     }
     return (
         <div className='relative w-screen h-screen flex center z-[350] '>
-        <div className='absolute w-[400px] h-fit rounded-3xl flex flex-col bg-gray z-[350] p-4'>
+        <div className='absolute w-[400px] h-fit rounded-3xl flex flex-col bg-black_grey z-[350] p-4'>
           <div className='text-center w-full h-1/2 p-4'>Voulez vous sauvegarder ? </div>
           <div className="w-full relative flex flex-row">
           <div className="w-4/5 flex flex-col">
@@ -63,6 +65,10 @@ function save(){
           <div className="w-full flex flex-col gap-1">
             <label>Nom du scenario :</label>
             <input className=""  onChange={(e)=>{setText(e.target.value)}} />
+          </div>
+            <div className="w-full flex flex-col gap-1">
+            <label>Nom du fichier :</label>
+            <input className=""  onChange={(e)=>{setTextvar(e.target.value)}} />
           </div>
           
           <div className='w-full h-1/2 mt-[20px] flex justify-around'>

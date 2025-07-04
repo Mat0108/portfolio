@@ -1,5 +1,5 @@
-import { SoldatAllies } from "../../army/allies";
-import { SoldatAxis } from "../../army/axis";
+import { SoldatAllies } from "../../army/army";
+import { SoldatAxis } from "../../army/army";
 import { Hills } from "../../haxagone/base";
 
 export const LigneDeMire2= {

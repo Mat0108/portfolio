@@ -1,5 +1,5 @@
-import { SoldatAllies } from "../../army/allies";
-import { SoldatAxis } from "../../army/axis";
+import { SoldatAllies } from "../../army/army";
+import { SoldatAxis } from "../../army/army";
 import { Forest, Hills, Mine, RiversCurve, RiversRight, SandBag, Village } from "../../haxagone/base";
 import { Medal } from "../../haxagone/highlight";
 import { Church, Mountain } from "../../haxagone/terrain";

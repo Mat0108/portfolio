@@ -8,8 +8,8 @@ import { ReturnArmy } from "../army/army";
 import { SaveScenario } from './saveScenario';
 import keyboardjs from "keyboardjs";
 import { ListeDivers, ListeHexagone } from "./listeHexagone";
-import { ArtillerieAxis, CharAxis, SoldatAxis } from "../army/axis";
-import { ArtillerieAllies, CharAllies, SoldatAllies } from "../army/allies";
+import { ArtillerieAxis, CharAxis, SoldatAxis } from "../army/army";
+import { ArtillerieAllies, CharAllies, SoldatAllies } from "../army/army";
 
 export const CreateScenario = () =>{
 
