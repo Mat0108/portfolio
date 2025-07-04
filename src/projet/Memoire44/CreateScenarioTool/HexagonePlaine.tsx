@@ -1,7 +1,10 @@
-import { CountryVide, Forest, Hedgerow, Hills, RiversCurve, RiversRight, Village } from "../haxagone/base"
-import { AirField, AirFieldX, Barracks, Camp, Cemetery, Church, Dam, Depot, Factory, Fortress, LakeA, LakeB, LakeC, LightHouse, Marshes, Mountain, Pond, RiverBranchLeft, RiverBranchRight, RiverY, RoadBranchLeft, RoadBranchRight, RoadCurve, RoadHillCurve, RoadHillRight, RoadRight, RoadX, RoadY, Station, TrainBranchLeft, TrainBranchRight, TrainCurve, TrainRight, TrainX, TrainXRoad } from "../haxagone/terrain"
+import { ArtillerieAllies, CharAllies, SoldatAllies } from "../army/allies"
+import { ArtillerieAxis, CharAxis, SoldatAxis } from "../army/axis"
+import { Bridge, Bunker, CountryVide, Forest, Hedgehow, Hedgerow, Hills, Mine, RiversCurve, RiversRight, SandBag, Village, Wire } from "../haxagone/base"
+import { Medal } from "../haxagone/highlight"
+import { AirField, AirFieldX, Barracks, Camp, Casemate, Cemetery, Church, Dam, Depot, Factory, Ford, Fortress, LakeA, LakeB, LakeC, LightHouse, Loco, Marshes, Mountain, Pond, Pontoon, RailBridge, RiverBranchLeft, RiverBranchRight, RiverY, RoadBlock, RoadBranchLeft, RoadBranchRight, RoadCurve, RoadHillCurve, RoadHillRight, RoadRight, RoadX, RoadY, Station, TrainBranchLeft, TrainBranchRight, TrainCurve, TrainRight, TrainX, TrainXRoad, Wagon } from "../haxagone/terrain"
 
-const HexagonePlaine = ()=>{
+export const HexagonePlaine = ()=>{
     return [
         new CountryVide(),
         new Hills(),
@@ -47,4 +50,46 @@ const HexagonePlaine = ()=>{
         new Station() 
     ]
 }
-export default HexagonePlaine;
+export const DiversPlaine = () => {
+    return [
+        new CountryVide(),
+        new Bunker(),
+        new Casemate(),
+        new Bridge(),
+        new Ford(),
+        new RoadBlock(),
+        new Pontoon(),
+        new RailBridge(),
+        new Loco(),
+        new Wagon(),
+        new Mine()   
+    ]
+}
+export const HexaDefense = () =>{
+    return [
+        new CountryVide(),
+        new SandBag(),
+        new Hedgehow(),
+        new Wire()
+    ]
+}
+
+export const HexaUnité = () => {
+    return [
+        new CountryVide(),
+        new SoldatAxis(),
+        new CharAxis(),
+        new ArtillerieAxis(),
+        new CountryVide(),
+        new SoldatAllies(),
+        new CharAllies(),
+        new ArtillerieAllies()
+    ]
+}
+export const HexaMedal = ()=>{
+    return [
+        new CountryVide(),
+        new Medal(true),
+        new Medal(false)
+    ]
+}

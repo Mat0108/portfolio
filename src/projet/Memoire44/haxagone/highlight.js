@@ -50,3 +50,8 @@ export class Medal extends CaseGenerique{
       </div>  
     }
 }
+export class HexaVide extends CaseGenerique {
+    constructor(){
+        super("images/Memoire44/divers/vide.webp")
+    }
+}

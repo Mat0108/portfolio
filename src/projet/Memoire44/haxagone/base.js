@@ -3,81 +3,87 @@ import { Medal } from "./highlight";
 import { SnowAirField, SnowAirFieldX, SnowBarracks, SnowBunker, SnowCamp, SnowCemetery, SnowChurch, SnowDam, SnowDepot, SnowDragonTeeth, SnowFactory, SnowForest, SnowFortress, SnowHedgerow, SnowHill, SnowLakeA, SnowLakeB, SnowLakeC, SnowLightHouse, SnowMarshes, SnowMountain, SnowPond, SnowRiverBranchLeft, SnowRiverBranchRight, SnowRiverY, SnowRiversCurve, SnowRiversRight, SnowRoadBranchLeft, SnowRoadBranchRight, SnowRoadCurve, SnowRoadHillCurve, SnowRoadHillRight, SnowRoadRight, SnowRoadX, SnowRoadY, SnowStation, SnowTrainBranchLeft, SnowTrainBranchRight, SnowTrainCurve, SnowTrainRight, SnowTrainX, SnowTrainXRoad, SnowVillage } from "./snow";
 import { AirField, AirFieldX, Barracks, Camp, Casemate, Cemetery, Church, Dam, Depot, Factory, Ford, Fortress, LakeA, LakeB, LakeC, LightHouse, Loco, Marshes, Mountain, Pond, Pontoon, RailBridge, RiverBranchLeft, RiverBranchRight, RiverY, RoadBlock, RoadBranchLeft, RoadBranchRight, RoadCurve, RoadHillCurve, RoadHillRight, RoadRight, RoadX, RoadY, Station, TrainBranchLeft, TrainBranchRight, TrainCurve, TrainRight, TrainX, TrainXRoad, Wagon } from "./terrain";
 
-
 export class Country extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/base/h_country-1-1.webp`,null,{Soldat:-1,Tank:-1},false,true,false,false)
+        super(`images/Memoire44/base/h_country-1-1.webp`, 1, {Soldat:-1,Tank:-1}, false, true, false, false);
     }
 }
 
 export class CountryVide extends CaseGenerique {
     constructor(){
-        super(`images/Memoire44/base/h_countryvide.webp`,null,{Soldat:-1,Tank:-1},false,true,false,false)
+        super(`images/Memoire44/base/h_countryvide.webp`, 1, {Soldat:-1,Tank:-1}, false, true, false, false);
     }
 }
+
 export class SandBag extends CaseGenerique {
     constructor(orientation){
-        super(`images/Memoire44/base/${orientation ?"o_sand1":"o_sand2"}.webp`,orientation,{Soldat:-1,Tank:-1},false,true,false,false,"images/Memoire44/card/base/sandbags-fr.webp")
+        super(`images/Memoire44/base/${orientation ?"o_sand1":"o_sand2"}.webp`, 2, {Soldat:-1,Tank:-1}, false, true, false, false, "images/Memoire44/card/base/sandbags-fr.webp");
     }
 }
+
 export class Wire extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_wire.webp",null,{Soldat:-1},false,false,false,{Soldat:true})
+        super("images/Memoire44/base/o_wire.webp", 1, {Soldat:-1}, false, false, false, {Soldat:true});
     }
 }
+
 export class Hedgehow extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_hedgehog.webp",false,true,false,false,false,{Tank:true})
+        super("images/Memoire44/base/o_hedgehog.webp", 1, true, false, false, false, {Tank:true});
     }
 }
+
 export class Hedgerow extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/h_hedgerow.webp",false,true,false,false,false)
+        super("images/Memoire44/base/h_hedgerow.webp", 1, true, false, false, false);
     }
 }
+
 export class Bunker extends CaseGenerique{
     constructor (){
-        super("images/Memoire44/base/o_bunker.webp",null,{Soldat:-1,Tank:-2},true,true,true)
+        super("images/Memoire44/base/o_bunker.webp", 1, {Soldat:-1,Tank:-2}, true, true, true);
     }
 }
 
 export class Hills extends CaseGenerique {
     constructor (){
-        super("images/Memoire44/base/h_hills.webp",null,{Soldat:-1,Tank:-1},false,false,true,true,"images/Memoire44/card/base/hill-fr.webp",false," ",true)
+        super("images/Memoire44/base/h_hills.webp", 1, {Soldat:-1,Tank:-1}, false, false, true, true, "images/Memoire44/card/base/hill-fr.webp", false, " ", true);
     }
 }
 
 export class Forest extends CaseGenerique {
     constructor (hover){
-        super("images/Memoire44/base/h_forest.webp",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/forest-fr.webp",false,"")
+        super("images/Memoire44/base/h_forest.webp", 1, {Soldat:-1,Tank:-2}, true, false, true, true, "images/Memoire44/card/base/forest-fr.webp", false, "");
     }
 }
 
 export class Village extends CaseGenerique{
     constructor() {
-        super("images/Memoire44/base/h_village.webp",null,{Soldat:-1,Tank:-2},true,false,true,true,"images/Memoire44/card/base/village-fr.webp",false,"")
+        super("images/Memoire44/base/h_village.webp", 1, {Soldat:-1,Tank:-2}, true, false, true, true, "images/Memoire44/card/base/village-fr.webp", false, "");
     }
 }
 
 export class Bridge extends CaseGenerique{
     constructor(orientation){
-        super(test6("base","o_bridge",orientation),orientation)
+        super(test6("base","o_bridge",orientation), 6);
     }
 }
 
 export class RiversRight extends CaseGenerique{
     constructor(orientation){
-        super(test3("base","h_river",orientation),orientation,false,false,false,false,false,false,false,"")   
+        super(test3("base","h_river",orientation), 3, false, false, false, false, false, false, false, "");   
     }
 }
+
 export class RiversCurve extends CaseGenerique{
     constructor(orientation){
-        super(test6("base","h_curve",orientation),orientation,false,false,false,false,false,false,false," ")
-           }
+        super(test6("base","h_curve",orientation), 6, false, false, false, false, false, false, false, " ");
+    }
 }
+
 export class Mine extends CaseGenerique{
     constructor() {
-        super("images/Memoire44/terrain/mine.webp",false,true,false,true,true,"")
+        super("images/Memoire44/terrain/mine.webp", 1, true, false, true, true, "");
     }
 }
 export function returnHexagone(text,orientation){

@@ -1,5 +1,6 @@
 import React from "react";
 import { jkstraPathFinding } from "../PathFinding/jkstraPathFinding";
+import ReactDOM from 'react-dom';
 export class Position{
     constructor(posx,posy){
         this._posx = posx;
@@ -32,11 +33,10 @@ export class SoldatGenerique  {
         this._type = type ? type : "1"
         this._camp = camp ? camp : "Axis"
     }
-
-    render(medal){
-        let elem = <img src={this._image} alt={"Soldat"} className={medal ? medal : this._taille}/>
-            
-        if(this._nombre === 4){ 
+    render(medal,nb,css,cssimage){
+        let elem = <img src={this._image} alt={"Soldat"} className={cssimage ?? (medal ?? this._taille)}/>
+        
+        if((nb ?? this._nombre) === 4){ 
             return (
             <div className="flex  w-full">
                 <div className={`absolute ${this._type === "Tank"?"top-2":"top-0"} w-full`}>
@@ -53,7 +53,7 @@ export class SoldatGenerique  {
                 </div>
             </div>)
         }
-        if(this._nombre === 3){
+        if((nb ?? this._nombre) === 3){
                         
             return (
             <div className="flex  w-full">
@@ -70,7 +70,7 @@ export class SoldatGenerique  {
                 </div>
             </div>)
         }
-        if(this._nombre === 2){
+        if((nb ?? this._nombre) === 2){
                         
             return (
             <div className="flex w-full">
@@ -83,10 +83,10 @@ export class SoldatGenerique  {
             </div>)
         
        }
-        if(this._nombre === 1){
+        if((nb ?? this._nombre) === 1){
                         
         return (
-        <div className="flex w-full">
+        <div className={`${css ?? "flex w-full"} `}>
             <div className="absolute top-7 z-[40]">
                 <div className="flex flex-row center">                    
                     {elem}
@@ -97,7 +97,17 @@ export class SoldatGenerique  {
 }
         return <div></div>
     }
-    
+    clone() {
+        return new SoldatGenerique(
+            this._image,
+            this._nombre,
+            this._portée,
+            this._deplacement,
+            this._taille,
+            this._type,
+            this._camp
+        );
+}
 
 }
 
@@ -114,12 +124,54 @@ export class CaseGenerique {
         this._hover = hover ? hover : null;
         this._className = className ? className : null; 
         this._isUpperCase = isUpperCase ? isUpperCase : false;
+        this._mountTarget = null; 
 
     }
 
     render(){
         return <div onMouseEnter={()=>this._hover ? this._hover({card:this._imageexplicatif,showing:true}):""} onMouseLeave={()=>this._hover ? this._hover({card:"",showing:false}):""} ><img src={this._image} alt={"Case"} className={this._className}/></div>
     }
+    mount(domElement) {
+        this._mountTarget = domElement;
+        ReactDOM.render(this.render(), domElement);
+    }
+    
+    rerender() {
+        if (this._mountTarget) {
+            ReactDOM.render(this.render(), this._mountTarget);
+        } else {
+            console.warn("rerender() called but no mountTarget set.");
+        }
+    }
+
+    updateImageRotation(chiffre) {
+        let currentOrientation = this._image.match(/(\d)(?=\.webp)/);
+        if(!currentOrientation || parseInt(currentOrientation[0]) === (chiffre > this._orientation ? chiffre - this._orientation : chiffre)){
+            return false;
+        }else {
+            
+            this._image = this._image.replace(/(\d)(?=\.webp)/g, (match) =>
+                chiffre > this._orientation ? chiffre - this._orientation : chiffre
+            );
+            return true;
+        }
+    }
+    clone() {
+        return new CaseGenerique(
+            this._image,
+            this._orientation,
+            this._malus,
+            this._deplacmentmax,
+            this._ignoreflag,
+            this._lineofsight,
+            this._byentering,
+            this._imageexplicatif,
+            this._hover,
+            this._className,
+            this._isUpperCase
+        );
+    }
+
 }
 
 export class CardGenerique {

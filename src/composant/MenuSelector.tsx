@@ -6,9 +6,10 @@ type MenuSelectorProps = {
   options:Array<React.JSX.Element> 
   boutonStyle?:string,
   elementStyle?:string,
-  menuPosition?:string
+  menuPosition?:string,
+  display?: boolean
 }
-const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition}:MenuSelectorProps) => {
+const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition,display}:MenuSelectorProps) => {
   const [showOptions, setShowOptions] = useState(false);
   const [isButtonHovering, setIsButtonHovered] = useState(false);
   const [isMenuHovering, setIsMenuHovered] = useState(false);

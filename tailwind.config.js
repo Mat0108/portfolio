@@ -49,7 +49,9 @@ module.exports = {
       // CUSTOM
       '2md': '1040px',
       '1.5xl':'1380px',
-      '3xl': '1635px',
+
+      'm44':'1600px',
+      'm44_2': '1800px',
 
       'h-md': { 'raw': '(min-height: 700px)' },
       'h-lg':{ 'raw': '(min-height: 900px)' },
