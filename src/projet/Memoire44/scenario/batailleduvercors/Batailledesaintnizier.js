@@ -1,4 +1,4 @@
-import { SoldatAllies } from "../../army/army";
+import { Mortar, SoldatAllies } from "../../army/army";
 import { Bullet } from "../../army/army";
 import { CharAxis, SoldatAxis } from "../../army/army";
 import { Forest, Hills, SandBag, Village } from "../../haxagone/base";
@@ -17,7 +17,7 @@ export const Batailledesaintnizier = {
         {x:0,y:2,contenu:{case:new Forest(),defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
         {x:0,y:3,contenu:{case:null,defense:null,unité:null,action:null,highlight:null,select:null}},
         {x:0,y:4,contenu:{case:null,defense:null,unité:null,action:new SoldatAxis(),highlight:null,select:null}},
-        {x:0,y:5,contenu:{case:new Forest(),defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
+        {x:0,y:5,contenu:{case:new Forest(),defense:null,unité:new Mortar(4,null,null,"Axis",true),action:null,highlight:null,select:null}},
         {x:0,y:6,contenu:{case:null,defense:null,unité:null,action:new SoldatAxis(),highlight:null,select:null}},
         {x:0,y:7,contenu:{case:new Forest(),defense:null,unité:null,action:new SoldatAxis(),highlight:null,select:null}},
         {x:0,y:8,contenu:{case:null,defense:null,unité:null,action:null,highlight:null,select:null}},

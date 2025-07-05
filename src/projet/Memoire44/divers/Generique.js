@@ -24,7 +24,7 @@ export class Position{
 
 }
 export class SoldatGenerique  {
-    constructor(image,nombre,portée,deplacement,taille,type,camp,path){
+    constructor(image,nombre,portée,deplacement,taille,type,camp,path,weapon = null,cssweapon,badge,cssbadge){
         this._nombre = nombre;
         this._portée = portée;
         this._deplacement = deplacement;
@@ -33,20 +33,31 @@ export class SoldatGenerique  {
         this._type = type ? type : "1"
         this._camp = camp ? camp : "Axis"
         this._path = path;
+        this._weapon = weapon ?? null
+        this._cssweapon = cssweapon ?? ""
+        this._badge = badge
+        this._cssbadge = cssbadge;
     }
     render(medal,nb,css,cssimage){
         let elem = <img src={this._image} alt={"Soldat"} className={cssimage ?? (medal ?? this._taille)}/>
-        
+        let elemWeapon = <img src={this._weapon} alt={"weapon"} className={this._cssweapon}/>
+        let elemBadge = <img src={this._badge} alt={"badge"} className={this._cssbadge} />
         if((nb ?? this._nombre) === 4){ 
             return (
             <div className="flex  w-full">
-                <div className={`absolute ${this._type === "Tank"?"top-2":"top-0"} w-full`}>
+                <div className={`absolute ${this._type === "Tank"?"top-2":"top-0" } z-[20] w-full`}>
                     <div className="flex flex-row center">
                         {elem}
                         {elem}
                     </div>
                 </div>
-                <div className={`absolute ${this._type === "Tank"?"top-11":"top-9"}  z-[40]`}>
+                {this._weapon ? <div className={`absolute w-[90px] h-[90px] flex center z-[30]`}>
+                    {elemWeapon}
+                </div>:""}
+                {this._badge ? <div className={`absolute -top-6 -left-6 flex center z-[10]`}>
+                    {elemBadge}
+                </div>:""}
+                <div className={`absolute ${this._weapon ? "mt-2":""} ${this._type === "Tank"?"top-11":"top-9"}  z-[40]`}>
                     <div className="flex flex-row center">                    
                         {elem}
                         {elem}
@@ -63,6 +74,12 @@ export class SoldatGenerique  {
                         {elem}
                     </div>
                 </div>
+                {this._weapon ? <div className={`absolute w-[90px] h-[90px] flex center z-[20]`}>
+                    {elemWeapon}
+                </div>:""}
+                {this._badge ? <div className={`absolute -top-6 -left-6 flex center z-[10]`}>
+                    {elemBadge}
+                </div>:""}
                 <div className="absolute top-12 z-[40]">
                     <div className="flex flex-row center">                    
                         {elem}
@@ -81,6 +98,12 @@ export class SoldatGenerique  {
                         {elem}
                     </div>
                 </div>
+                {this._weapon ? <div className={`absolute w-[90px] h-[90px] flex center z-[20]`}>
+                    {elemWeapon}
+                </div>:""}
+                {this._badge ? <div className={`absolute -top-6 -left-6 flex center z-[10]`}>
+                    {elemBadge}
+                </div>:""}
             </div>)
         
        }
@@ -93,6 +116,12 @@ export class SoldatGenerique  {
                     {elem}
                 </div>
             </div>
+            {this._weapon ? <div className={`absolute w-[90px] h-[90px] flex center z-[20]`}>
+                {elemWeapon}
+            </div>:""}
+            {this._badge ? <div className={`absolute -top-6 -left-6 flex center z-[10]`}>
+                {elemBadge}
+            </div>:""}
         </div>)
     
 }
@@ -108,6 +137,7 @@ export class SoldatGenerique  {
         return `${this._path}${this._nombre},${this._portée ? `[${this._portée}]`:""},${this._deplacement ? `[${this._deplacement}]`:""})`;
     }
     clone(number) {
+        
         return new SoldatGenerique(
             this._image,
             number ?? this._nombre,
@@ -116,7 +146,11 @@ export class SoldatGenerique  {
             this._taille,
             this._type,
             this._camp,
-            this._path
+            this._path,
+            this._weapon,
+            this._cssweapon,
+            this._badge,
+            this._cssbadge
         );
 }
 
@@ -179,6 +213,7 @@ export class CaseGenerique {
     getPath() {
         return `${this._path}${this._currentOrientation ?? ""})`;
     }
+    
     clone() {
         return new CaseGenerique(
             this._image,
@@ -193,7 +228,7 @@ export class CaseGenerique {
             this._className,
             this._isUpperCase,
             this._path,
-            this._currentOrientation
+            this._currentOrientation,
         );
     }
 

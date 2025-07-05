@@ -1,5 +1,5 @@
-import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis } from "../../army/army"
-import { Forest, Hills, Mine, RiversCurve, RiversRight, SandBag, Village, Wire } from "../../haxagone/base"
+import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis, UnitEliteAxis } from "../../army/army"
+import { Bunker, Forest, Hills, Mine, RiversCurve, RiversRight, SandBag, Village, Wire } from "../../haxagone/base"
 import { Medal } from "../../haxagone/highlight"
 import { LakeC, Mountain } from "../../haxagone/terrain"
 
@@ -8,11 +8,12 @@ name:"La ligne de san fratello",
 terrain:"terrain0",
 medalAllies:6,
 medalAxe:6,
-camp:"Allies",
+camp:"Axis",
 cardAxis:6,
 cardAllies:6,
+campMine:"Axis",
 hexa:[
-   {x:0,y:0,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:new Medal(),action:null,highlight:null,select:null}}, 
+   {x:0,y:0,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new UnitEliteAxis(4),medal:new Medal(),action:null,highlight:null,select:null}}, 
    {x:0,y:1,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:2,contenu:{case: new Forest(),bunker: null,defense: null, unité:new CharAxis(3,[3,3,3],[1,1,1]),medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
@@ -34,9 +35,9 @@ hexa:[
    {x:1,y:5,contenu:{case: new Hills(),bunker: null,defense: null, unité:new ArtillerieAxis(2,[3,3,2,2,1,1],[2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:6,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:7,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-   {x:1,y:8,contenu:{case: new Village(),bunker: null,defense: null, unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:new Medal(),action:null,highlight:null,select:null}}, 
+   {x:1,y:8,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new UnitEliteAxis(),medal:new Medal(),action:null,highlight:null,select:null}}, 
    {x:1,y:9,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-   {x:1,y:10,contenu:{case: new Hills(),bunker: undefined,defense: null, unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:1,y:10,contenu:{case: new Hills(),bunker: new Bunker(),defense: null, unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:11,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:12,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
 
@@ -47,7 +48,7 @@ hexa:[
    {x:2,y:4,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:2,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:2,y:6,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-   {x:2,y:7,contenu:{case: new Hills(),bunker: new Mine(),defense: null, unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:2,y:7,contenu:{case: new Hills(),bunker: new Bunker(),defense: null, unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:2,y:8,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:2,y:9,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:2,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 

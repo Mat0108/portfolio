@@ -1,4 +1,4 @@
-import { SoldatAllies } from "../../army/army";
+import { Mortar, SoldatAllies } from "../../army/army";
 import { SoldatAxis } from "../../army/army";
 
 import { Forest, Hills, Mine, SandBag, Village } from "../../haxagone/base";
@@ -14,7 +14,7 @@ export const Défensedespas= {
     cardAllies:6,
     hexa:[
     {x:0,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,action:null,highlight:null,select:null,medal:null}}, 
-    {x:0,y:1,contenu:{case: new Village(),bunker: null,defense: null, unité:new SoldatAxis(4),action:null,highlight:null,select:null,medal:null}}, 
+    {x:0,y:1,contenu:{case: new Village(),bunker: null,defense: null, unité:new Mortar(4,null,null,"Axis",true),action:null,highlight:null,select:null,medal:null}}, 
     {x:0,y:2,contenu:{case: new Forest(),bunker: null,defense: null, unité:new SoldatAxis(4),action:null,highlight:null,select:null,medal:null}}, 
     {x:0,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,action:null,highlight:null,select:null,medal:null}}, 
     {x:0,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,action:null,highlight:null,select:null,medal:null}}, 

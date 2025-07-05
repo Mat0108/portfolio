@@ -1,4 +1,4 @@
-import { SoldatAllies } from "../../army/army";
+import { Mortar, SoldatAllies } from "../../army/army";
 import { SoldatAxis } from "../../army/army";
 import { Forest, Hills, Village } from "../../haxagone/base";
 import { Mountain } from "../../haxagone/terrain";
@@ -13,7 +13,7 @@ export const Marquisdemalleval = {
     hexa:[
         {x:0,y:0,contenu:{case:null,defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
         {x:0,y:2,contenu:{case:null,defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
-        {x:0,y:3,contenu:{case:new Forest(),defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
+        {x:0,y:3,contenu:{case:new Forest(),defense:null,unité:new Mortar(4,null,null,"Axis",true),action:null,highlight:null,select:null}},
         {x:0,y:5,contenu:{case:null,defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
         {x:0,y:6,contenu:{case:new Hills(),defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},
         {x:0,y:7,contenu:{case:null,defense:null,unité:new SoldatAxis(),action:null,highlight:null,select:null}},

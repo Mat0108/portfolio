@@ -1,4 +1,4 @@
-import { ArtillerieAllies, CharAllies, SoldatAllies, SoldatAxis } from "../../army/army";
+import { ArtillerieAllies, CharAllies, SoldatAllies, SoldatAxis, UnitEliteAxis } from "../../army/army";
 import { Forest, Hills, Mine, RiversCurve, RiversRight, SandBag, Village, Wire } from "../../haxagone/base";
 import { Medal } from "../../haxagone/highlight";
 
@@ -14,7 +14,7 @@ cardAllies:5,
 hexa:[
    {x:0,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:1,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-   {x:0,y:2,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:0,y:2,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new UnitEliteAxis(),medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:4,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:5,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:new Medal(),action:null,highlight:null,select:null}}, 
@@ -23,7 +23,7 @@ hexa:[
    {x:0,y:8,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:9,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-   {x:0,y:11,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:0,y:11,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new UnitEliteAxis(),medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:12,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
 
    {x:1,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
@@ -33,7 +33,7 @@ hexa:[
    {x:1,y:4,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:5,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:6,contenu:{case: new Hills(),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-   {x:1,y:7,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:1,y:7,contenu:{case: new Village(),bunker: null,defense: new SandBag(1), unité:new UnitEliteAxis(),medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:8,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:9,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:1,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 

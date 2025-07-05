@@ -82,8 +82,17 @@ export class RiversCurve extends CaseGenerique{
 }
 
 export class Mine extends CaseGenerique{
-    constructor() {
-        super("images/Memoire44/terrain/mine.webp", 1, true, false, true, true, "", undefined, undefined, undefined,undefined, `new Mine(`);
+    constructor(orientation) {
+        super(orientation >= 0 ? orientation === 0 ? "images/Memoire44/terrain/mine_0.webp" : test3("terrain","mine_",orientation):"images/Memoire44/terrain/mine.webp", 1, true, false, true, true, "", undefined, undefined, undefined,undefined, `new Mine(`);
+        this._nb = null;
+    }
+    reveal(){
+        let nb = Math.floor(Math.random()*4)
+        this._nb = nb;
+        return {bunker:new Mine(nb),nb:nb}
+    }
+    getNb(){
+        return this._nb;
     }
 }
 

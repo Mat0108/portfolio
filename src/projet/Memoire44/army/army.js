@@ -47,10 +47,21 @@ export function ArtillerieVariation(variation,orientation){
         
     }
 }
-
+function returnTypeCamp(variation){
+        switch(variation){
+        case "Axis": 
+            return 'Axis'
+        case "Allies":
+        case 'Esatern':
+            return "Allies"
+        default:
+            return `Allies`
+        
+    }
+}
 export class SoldatType extends SoldatGenerique {
     constructor(nb,portée,deplacement,variation,orientation,taille,path){        
-        super(SoldatVariation(variation,orientation),nb ? nb : 4,portée ? portée : [3,2,1],deplacement ? deplacement:[1,2],taille ?? "w-[38%]","Soldat","Axis",path)
+        super(SoldatVariation(variation,orientation),nb ? nb : 4,portée ? portée : [3,2,1],deplacement ? deplacement:[1,2],taille ?? "w-[38%]","Soldat",returnTypeCamp(variation),path)
         this._variation = variation;
         this._orientation = orientation;
     }
@@ -63,7 +74,7 @@ export class SoldatType extends SoldatGenerique {
 }
 export class CharType extends SoldatGenerique {
     constructor(nb,portée,deplacement,variation,orientation,taille,path){
-        super(CharVariation(variation,orientation),nb ? nb : 3,portée ? portée : [3,3,3],deplacement ? deplacement:[1,1,1],taille ?? "w-[40%]","Tank","Axis",path)
+        super(CharVariation(variation,orientation),nb ? nb : 3,portée ? portée : [3,3,3],deplacement ? deplacement:[1,1,1],taille ?? "w-[40%]","Tank",returnTypeCamp(variation),path)
         this._variation = variation;
         this._orientation = orientation;
     }
@@ -76,7 +87,7 @@ export class CharType extends SoldatGenerique {
 }
 export class ArtillerieType extends SoldatGenerique {
     constructor(nb,portée,deplacement,variation,orientation,taille,path){
-        super(ArtillerieVariation(variation,orientation),nb ? nb : 2,portée ? portée:[3,3,2,2,1,1],deplacement ? deplacement:[2],taille ?? null,"Artillerie","Allies",path)
+        super(ArtillerieVariation(variation,orientation),nb ? nb : 2,portée ? portée:[3,3,2,2,1,1],deplacement ? deplacement:[2],taille ?? null,"Artillerie",returnTypeCamp(variation),path)
         this._variation = variation;
         this._orientation = orientation;
     }
@@ -205,3 +216,29 @@ export function ReturnArmy(unit, nb) {
     }
 }
 
+export class Mortar extends SoldatGenerique {
+        constructor(nb,portée,deplacement,variation,orientation,taille,before1942){        
+            super(SoldatVariation(variation,orientation),nb ? nb : 4,portée ? portée : [3,2,1],before1942 ? [2,2]:[1,2],taille ?? "w-[38%]","Soldat",returnTypeCamp(variation),'new Mortar(',`images/Memoire44/army/mortar_${!orientation ? "top":"bottom"}.webp`,"w-14")
+        this._variation = variation;
+        this._orientation = orientation;
+    }
+    getVariation(){
+        return this._variation;
+    }
+    getOrientation(){
+        return this._orientation;
+    }
+
+}
+
+export class UnitEliteAxis extends SoldatGenerique {
+    constructor(nb,portée,deplacement,taille){        
+        super(SoldatVariation("Axis",true),nb ? nb : 4,portée ? portée : [3,2,1],deplacement ?? [1,1],taille ?? "w-[38%]","Soldat",returnTypeCamp('Axis'),'new UnitEliteAxis(',null,null,"images/Memoire44/badge/badge4.webp")
+    }
+
+}
+export class UnitGenieAllies extends SoldatGenerique {
+    constructor(badge = "badge12",nb,portée,deplacement,taille){        
+            super(SoldatVariation("Allies",false),nb ? nb : 4,portée ? portée : [3,2,1],deplacement ?? [1,1],taille ?? "w-[38%]","Soldat",returnTypeCamp('Axis'),'new UnitEliteAxis(',null,null,`images/Memoire44/badge/${badge}.webp`)
+    }
+}

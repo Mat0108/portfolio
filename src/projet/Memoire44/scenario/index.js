@@ -23,7 +23,7 @@ export function loadScenario(scenario){
         grille[hex.x][hex.y] = hex.contenu
     })
 }
-    return {terrain:scenario.terrain,grille:grille}
+    return {terrain:scenario.terrain,grille:grille,campMine:scenario.campMine}
 }
 
 const listScenario = [
@@ -49,7 +49,7 @@ const listScenario = [
     {name:'Alpha Yellow',url:'alpha_yellow',image:"campagneAudieMurphy/alpha_yellow"},
     {name:'La carrière de Cleurie',url:'carriere_cleurie',image:"campagneAudieMurphy/carriere_cleurie"},
     {name:'Contre-attaque à Holtzwihr',url:'contre_attaque_holtzwihr',image:"campagneAudieMurphy/contre_attaque_holtzwihr"},
-    {name:'La prise de Beisheim',url:'prise_biesheiem',image:"campagneAudieMurphy/prise_biesheim"},
+    {name:'La prise de Beisheim',url:'prise_biesheim',image:"campagneAudieMurphy/prise_biesheim"},
     {name:" Testing ",url:"Scenariotest",image:"Scenariovide"},
     {name:"Scenario de test",url:"Scenariotest",image:"/test/Scenariotest"},
     {name:"Ligne de Mire",url:"LigneDeMire",image:"/test/LigneDeMire"},

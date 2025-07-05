@@ -3,12 +3,12 @@ import React, { useEffect, useMemo, useState } from 'react';
 import {CardGenerique, Dice, Flag, LogList, VerificationLineOfSight, isCombatRapproche, pointproche, showPortee} from '../divers/Generique'
 import { ReturnScenario, loadScenario } from '../scenario';
 import { Attacking, Selected, Move, Retreat, SelectHexa, Target } from '../haxagone/highlight';
-import { AddDice, HitUnit } from '../army/army';
+import { AddDice, HitUnit, UnitGenieAllies } from '../army/army';
 import { AirPower, Barrage, CampAffichage, CardSelect} from '../divers/Card';
 
 
 import { useParams } from 'react-router';
-import { Hills, SandBag } from '../haxagone/base';
+import { Hills, Mine, SandBag, Wire } from '../haxagone/base';
 import { FormControlLabel, Switch } from '@mui/material';
 import { RoadRight, RoadCurve, RoadHillRight, RoadHillCurve, RoadBranchRight,RoadBranchLeft,RoadX,RoadY  } from '../haxagone/terrain';
 import { Link } from 'react-router-dom';
@@ -175,18 +175,23 @@ const Play =()=> {
     RemoveHighlight()
     let localgrille = {...grille};
     let localgrille2 = {...grille};
-
-    let list = showPortee(grille,Object.keys(unité._portée).length,x,y,unité._portée,null)
+    let portée = unité._portée
+    let wire = localgrille.grille[x][y].defense instanceof Wire  
+    if(wire && unité instanceof UnitGenieAllies){
+      portée = unité.portée.map(item=>item-1)
+    }
+    let list = showPortee(grille,Object.keys(unité._portée).length,x,y,portée,null)
     
     list.forEach(item=>{
       if(localgrille.grille[item.x][item.y].unité && localgrille.grille[item.x][item.y].unité._camp === camp2 ){
         if( VerificationLineOfSight(x,y,item.x,item.y,grille)){
         let malus = 0;
-        if(localgrille.grille[item.x][item.y].case && localgrille.grille[item.x][item.y].case._malus){
+        
+        if(!(unité instanceof UnitGenieAllies) && localgrille.grille[item.x][item.y].case && localgrille.grille[item.x][item.y].case._malus){
           if(unité._type === "Soldat"){malus = localgrille.grille[item.x][item.y].case._malus.Soldat}
           else if(unité._type === "Tank"){malus = localgrille.grille[item.x][item.y].case._malus.Tank}
         }
-        if(localgrille.grille[item.x][item.y].defense && localgrille.grille[item.x][item.y].defense._malus){
+        if(!(unité instanceof UnitGenieAllies) && localgrille.grille[item.x][item.y].defense && localgrille.grille[item.x][item.y].defense._malus){
           if(unité._type === "Soldat"){malus = localgrille.grille[item.x][item.y].case._malus.Soldat+malus}
           else if(unité._type === "Tank"){malus = localgrille.grille[item.x][item.y].case._malus.Tank+malus}
         }
@@ -201,7 +206,8 @@ const Play =()=> {
           } 
           let dice = cond ? item.dés+malus+1 : item.dés+malus
           localgrille2.grille[item.x][item.y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{updateAttackUnit(item.x,item.y,x,y,f.unité,dice,false,refire)},highlight:new Target(dice),select:null}
-       
+          
+
         }
 
       }
@@ -212,7 +218,7 @@ const Play =()=> {
           localgrille2.grille[pos][pos2] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{calculDés(pos,pos2,f.unité,card._image === "artillery-bombard-fr" ? true:false)},highlight:f.highlight,select:new Attacking()}
         }})})
     let g = localgrille.grille[x][y]; 
-    localgrille.grille[x][y] = {case:g.case,defense:g.defense,unité:g.unité,action:g.action,highlight:null,select:new Selected()};
+    localgrille.grille[x][y] = {case:g.case,defense:wire && unité instanceof UnitGenieAllies ? null : g.defense,unité:g.unité,action:g.action,highlight:null,select:new Selected()};
     setGrille(localgrille2)
   }
   //fonction pour montrer les unités pouvant attacker une untié adverse
@@ -273,9 +279,11 @@ const Play =()=> {
     let localgrille = {...grille};
     let f = localgrille.grille[x][y];
     let f2 = localgrille.grille[x2][y2];
-    localgrille.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:null,action:null,highlight:null,select:null}
-    localgrille.grille[x2][y2] = {case:f2.case,defense:f2.defense,unité:HitUnit(f.unité,nbunit),action:null,highlight:null,select:null}
     if(x !== x2 || y !== y2){
+
+      localgrille.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:null,action:null,highlight:null,select:null}
+      localgrille.grille[x2][y2] = {case:f2.case,defense:f2.defense,unité:HitUnit(f.unité,nbunit),action:null,highlight:null,select:null}
+        
       if(localgrille.grille[originx][originy].unité && isCombatRapproche(x,y,originx,originy) ){
         if(localgrille.grille[originx][originy].unité._type === "Soldat"){
           setModal(
@@ -309,6 +317,37 @@ const Play =()=> {
     
     setGrille(localgrille)
   }
+  function HitMine(nbDés,unit,x,y){
+    let localgrille = {...grille}
+    let localgrille2 = {...grille}
+    let dice = Dice(nbDés,unit,setAnimation,false,true)
+    let result = dice.LoseLife;
+    setAnimationShow(true)
+    setTimeout(() => {
+      setAnimationShow(false)
+    }, 2100);
+    //soldat 
+    setTimeout(() => {
+      setAnimation([])
+    }, 6000);
+    setTimeout(()=>{
+      if(unit._nombre - result <= 0){
+        if(camp === "Allies"){
+          let medal = medalAlliésList.map(object => ({ ...object}))
+          medal.push(HitUnit(unit,1));
+          setMedalAlliésList(medal);
+        }else{
+          let medal = medalAxisList.map(object => ({ ...object}))
+          modal.push(HitUnit(unit,1));
+          setMedalAxisList(medal+1);
+        } 
+      }
+      let f = localgrille.grille[x][y] 
+      localgrille2.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:unit._nombre - result <= 0 ? null : HitUnit(unit,unit._nombre-result),action:null,highlight:null,select:null}
+      setGrille(localgrille2)
+    },2100)
+    
+  }
   
   //function pour deplacer une unité 
   function MoveAction(oldposx,oldposy,posx,posy,action){
@@ -332,7 +371,26 @@ const Play =()=> {
         }
       }
     })
-    localgrille2.grille[posx][posy] = {case:localgrille2.grille[posx][posy].case,defense:null,unité:f.unité,action:null,highlight: null,select:action === 1 ? (cond ? new Attacking():null ):null}
+
+    //gestion des mines
+    let newPos = localgrille2.grille[posx][posy]
+    let removeMine = newPos.bunker instanceof Mine && f.unité instanceof UnitGenieAllies
+
+    if(newPos.bunker instanceof Mine && !removeMine){
+      if(f.unité._camp !== grille.campMine){
+        let nb = 0;
+        if(!newPos.bunker.getNb()){
+          let newMine = newPos.bunker.reveal()  
+          newPos.bunker = newMine.bunker;
+          nb = 3 //newMine.nb;
+        }else{  
+          nb = newPos.bunker.getNb()
+        }
+        
+        HitMine(nb,f.unité,posx,posy)
+      }
+    }
+    localgrille2.grille[posx][posy] = {case:newPos.case,bunker:removeMine ? null:newPos.bunker,defense:null,unité:f.unité,action:null,highlight: null,select: removeMine ? null : action === 1 ? (cond ? new Attacking():null ):null}
     setGrille(localgrille2)
   }
   function isRoad(item){
@@ -487,6 +545,8 @@ const Play =()=> {
             
         if((pos2 >= filtrecol.min2 && pos2 <=filtrecol.max2 )||(pos2 >= filtrecol.min && pos2 <=filtrecol.max)){
           if(card._nbunit === "ALL"){
+
+             
             if(f.unité && (card._type === "ALL" || f.unité._type === card._type) && f.unité._camp === camp){
               localgrille2.grille[pos][pos2] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:null,highlight:f.highlight,select:new SelectHexa()}
               cond = false;

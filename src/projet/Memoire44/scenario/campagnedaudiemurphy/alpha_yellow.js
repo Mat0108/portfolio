@@ -1,4 +1,4 @@
-import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis } from "../../army/army";
+import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis, UnitGenieAllies } from "../../army/army";
 import { Bunker, Forest, Hills, Mine, SandBag, Village, Wire } from "../../haxagone/base";
 import { Medal } from "../../haxagone/highlight";
 
@@ -111,13 +111,13 @@ hexa:[
 
    {x:7,y:0,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:1,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
-   {x:7,y:2,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:7,y:2,contenu:{case: null,bunker: null,defense: null, unité:new UnitGenieAllies(),medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:3,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:5,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:6,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:7,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
-   {x:7,y:8,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:7,y:8,contenu:{case: null,bunker: null,defense: null, unité:new UnitGenieAllies(),medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:9,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:7,y:11,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 

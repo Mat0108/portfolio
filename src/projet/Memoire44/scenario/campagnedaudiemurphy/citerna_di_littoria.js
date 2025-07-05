@@ -1,4 +1,4 @@
-import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis } from "../../army/army"
+import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis, UnitGenieAllies } from "../../army/army"
 import { Forest,  Mine, RiversRight, SandBag, Village, Wire } from "../../haxagone/base"
 import { Medal } from "../../haxagone/highlight"
 import { Casemate, Church, RailBridge, Station, TrainRight } from "../../haxagone/terrain"
@@ -110,7 +110,7 @@ export const citerna_di_littoria= {
     {x:6,y:12,contenu:{case: new Forest(),bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
 
     {x:7,y:0,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
-    {x:7,y:1,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+    {x:7,y:1,contenu:{case: null,bunker: null,defense: null, unité:new UnitGenieAllies(),medal:null,action:null,highlight:null,select:null}}, 
     {x:7,y:2,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
     {x:7,y:3,contenu:{case: new Village(),bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
     {x:7,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
@@ -128,7 +128,7 @@ export const citerna_di_littoria= {
     {x:8,y:2,contenu:{case: null,bunker: null,defense: null, unité:new CharAllies(3,[3,3,3],[1,1,1]),medal:null,action:null,highlight:null,select:null}}, 
     {x:8,y:3,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
     {x:8,y:4,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
-    {x:8,y:5,contenu:{case: null,bunker: null,defense: null, unité:new SoldatAllies(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+    {x:8,y:5,contenu:{case: null,bunker: null,defense: null, unité:new UnitGenieAllies(),medal:null,action:null,highlight:null,select:null}}, 
     {x:8,y:6,contenu:{case: null,bunker: null,defense: null, unité:new CharAllies(3,[3,3,3],[1,1,1]),medal:null,action:null,highlight:null,select:null}}, 
     {x:8,y:7,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
     {x:8,y:8,contenu:{case: new RiversRight(2),bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 

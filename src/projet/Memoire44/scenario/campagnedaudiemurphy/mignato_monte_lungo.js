@@ -1,4 +1,4 @@
-import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis } from "../../army/army";
+import { ArtillerieAllies, ArtillerieAxis, CharAllies, CharAxis, SoldatAllies, SoldatAxis, UnitEliteAxis } from "../../army/army";
 import { Forest, Hills, SandBag, Village, Wire } from "../../haxagone/base";
 import { Medal } from "../../haxagone/highlight";
 
@@ -18,7 +18,7 @@ hexa:[
    {x:0,y:4,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:5,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:6,contenu:{case: new Forest(),bunker: null,defense: null, unité:new CharAxis(3,[3,3,3],[1,1,1]),medal:null,action:null,highlight:null,select:null}}, 
-   {x:0,y:7,contenu:{case: new Forest(),bunker: null,defense: null, unité:new SoldatAxis(4,[3,2,1],[1,2]),medal:null,action:null,highlight:null,select:null}}, 
+   {x:0,y:7,contenu:{case: new Forest(),bunker: null,defense: null, unité:new UnitEliteAxis(),medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:8,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:9,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
    {x:0,y:10,contenu:{case: null,bunker: null,defense: null, unité:null,medal:null,action:null,highlight:null,select:null}}, 
