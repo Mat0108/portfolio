@@ -125,7 +125,32 @@
 /* css class for Memoire44 projet */
 :root{
     --DiceAnim: diceX 0.5s steps(8) infinite, diceY 2s steps(4) infinite;
+    --RocketAnim: RocketX 2.5s steps(20) infinite, RocketY 12.5s steps(5) infinite ;
 }
+
+@keyframes diceX {
+  from {background-position-x: 0px;}
+  to {background-position-x: -1024px;}
+}
+@keyframes diceY {
+  from {background-position-y: 0px;}
+  to {background-position-y: -512px;}
+}
+@keyframes RocketX {
+  from {background-position-x: 0px;}
+  to {background-position-x: -4648px;}
+}
+@keyframes RocketY {
+  from {background-position-y: 0px;}
+  to {background-position-y: -5376px;}
+}
+.RocketAnim {
+    height: 1075px;
+    width: 232px;
+    background-image: url("../public/images/Rocket.webp"); /* width: 2048px; height: 512px; */
+    animation: var(--RocketAnim);
+}
+
 .DiceSoldat {
     height: 128px;
     width: 128px;
@@ -158,11 +183,4 @@
     animation: var(--DiceAnim);
 
 }
-@keyframes diceX {
-  from {background-position-x: 0px;}
-  to {background-position-x: -1024px;}
-}
-@keyframes diceY {
-  from {background-position-y: 0px;}
-  to {background-position-y: -512px;}
-}
+

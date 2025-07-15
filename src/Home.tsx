@@ -3,24 +3,34 @@ import { EllisCar, Randstad, Veolia4, Veolia6 } from "./composant/work.js";
 import Carousel from "./composant/carousel/carousel.tsx";
 import { Compétence } from "./composant/competence.js";
 import Projet from "./composant/projet.js";
-const Home = ({workRef,projetRef,techRef}) => {
-    
+type HomeType = {
+    workRef: React.RefObject<HTMLDivElement>;
+    projetRef: React.RefObject<HTMLDivElement>;
+    techRef:React.RefObject<HTMLDivElement>;
+    scrollRef:React.RefObject<HTMLDivElement>;
+
+}
+const Home = ({workRef,projetRef,techRef,scrollRef}:HomeType) => {
+
+
     const isMobile = window.screen.width < 600;
-    return <div className="bg-blue_dark relative h-full overflow-y-auto overflow-x-hidden custom-scrollbar" id={"Scrollref"}>
+    return <div className="relative bg-blue_dark relative h-full overflow-y overflow-x-hidden " ref={scrollRef}>
         <div>
+
             {/* main */}
             <div className="w-full h-full flex flex-row bg-dark-blue">
-    
+
                 <div className="w-1/2 flex flex-col gap-2 center text-lg lg:text-6xl text-white font-mt-bold">
-                    <div className="mt-10 lg:mt-0 ml-[5%] w-[90%] sm:w-[70%] flex"><p className="w-1/2 text-left">Frontend</p></div>
-                    <div className="ml-[5%] w-[90%] sm:w-[70%] flex -mt-2 lg:-mt-8"><p className="w-1/2">Developper</p></div>
-                    <p className={`ml-[5%] w-[90%] sm:w-[70%] text-sm lg:text-lg font-mt ${isMobile ? 'text-left':'text-justify'}`}>Créer des expériences web esthétiques et fonctionnelles à l'aide de technologies modernes.</p>
+                    <div className="mt-10 lg:mt-0 ml-[5%] w-[90%] sm:w-[80%] flex"><p className="w-1/2 text-left">Frontend</p></div>
+                    <div className="ml-[5%] w-[90%] sm:w-[80%] flex -mt-2 lg:-mt-8"><p className="w-1/2">Developper</p></div>
+                    <p className={`ml-[5%] w-[90%] sm:w-[80%] text-3xs lg:text-lg font-mt ${false ? 'text-left':'text-justify'}`}>Développeur Frontend React avec 2 ans d'expérience en alternance, je transforme les besoins utilisateurs en interfaces intuitives et performantes. Chez Randstad et Ellis Car, j'ai livré des fonctionnalités clés, du matching de compétences à la refonte graphique, toujours avec un focus sur l'impact métier et l'expérience utilisateur. Mes projets personnels, comme la digitalisation de 'Mémoire 44', démontrent ma capacité à innover et à concrétiser des idées.</p>
+                    
                     <div className="ml-[5%] w-[90%] sm:w-[70%] flex mt-4">
-                        <Link to="/contact" className="text-sm lg:text-lg font-mt px-2 lg:px-8 py-1 lg:py-4 rounded-2xl bg-brown_dark text-white border-2 border-blue_dark hover:text-blue hover:border-blue hover:cursor-pointer mb-4">Get in touch</Link>
+                        <Link to="/contact" className="text-sm lg:text-lg font-mt px-2 lg:px-8 py-1 lg:py-4 rounded-2xl bg-brown_dark text-white border-2 border-blue_dark hover:text-blue hover:border-blue hover:cursor-pointer mb-4">Prendre contract</Link>
                     </div>
                 </div>
                 <div className="w-1/2 flex flex-col  gap-2 center text-white">  
-                    <div className="w-[80%] h-[80%]">
+                    <div className="w-[80%] h-[80%] flex center">
                         <img src="/images/me.webp" alt="me" className="lg:h-full rounded-[2rem] lg:rounded-[4rem]"/>    
                     </div>  
                 </div>

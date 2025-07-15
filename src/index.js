@@ -1,15 +1,16 @@
-import React, { lazy, Suspense, useRef } from 'react';
+import React, { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import {Route,Routes} from 'react-router';
 import { ToastContainer } from 'react-toastify';
 
 import "./index.css"
-import Home from './Home';
+import Home from './Home.tsx';
 import Navbar from './Navbar';
 import { LanguageProvider } from './languages';
 import ScrollToTop from './composant/ScrollToTop';
 import Loading from './projet/SpaceX/composants/Loading';
+import RocketAnimation from './composant/RocketAnimation.tsx';
 
 const Memoire44Presentation = lazy(() => import('./projet/Memoire44/presentation'));
 const PoSkinPresentation = lazy(() => import('./projet/PoSkin/presentation'));
@@ -43,6 +44,9 @@ const App = ()=>{
     const projetRef = useRef(null);
     const techRef = useRef(null);
     const newsletterRef = useRef(null);
+    
+    const scrollRef = useRef(null);
+  
     function ScrollNewsletter() {
       if (newsletterRef.current) {
         newsletterRef.current.scrollIntoView({
@@ -51,17 +55,20 @@ const App = ()=>{
         });
       }
     }
+   
     return (
     <div className="fixed w-screen h-screen bg-blue_dark font-mt text-white_blue " key="main" >
-      <LanguageProvider>      <Router>
+      <LanguageProvider>     
+        <Router>
         <div className='sticky top-0 z-50'>
           <Navbar workRef={workRef} projetRef={projetRef} techRef={techRef}/>
         </div>
         <ScrollToTop />
-
+        
         <Suspense fallback={<div className='w-full h-full flex center'><Loading /></div>}>
+            {/* <RocketAnimation scrollRef={scrollRef}/> */}
             <Routes>
-              <Route path="/" element={<Home workRef={workRef} projetRef={projetRef} techRef={techRef}/>}></Route>
+              <Route path="/" element={<Home workRef={workRef} projetRef={projetRef} techRef={techRef} scrollRef={scrollRef}/>}></Route>
               <Route path="/Contact" element={<Contact />}></Route>
               <Route path="/Cv" element={<CVDisplay/>}></Route>
               

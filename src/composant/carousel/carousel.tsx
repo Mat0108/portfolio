@@ -8,13 +8,13 @@ type CarouselProps = {
   nbShow: number;
   display: number;
   showPoint:boolean;
-  updateShow:Function;
+  updateShow?:Function;
   start:number;
   tag:string;
   hiddendiv:ReactNode;
   animatedDuration: number;
-  disableClic: boolean;
-  darkPoint:boolean;
+  disableClic?: boolean;
+  darkPoint?:boolean;
 
 }
 const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,animatedDuration,disableClic,darkPoint}:CarouselProps)=>{

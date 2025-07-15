@@ -941,7 +941,7 @@ const Play =()=> {
     return <div className='flex flex-col gap-4 w-[276px] h-[418px] p-2 bg-light_gray ml-8 rounded-xl'>
       {animationShow ? <>
       <div className='w-full flex flex-row'>
-        <div className={`w-[128px] h-[128px]  ${`Dice${animation[0]}`}`}></div>
+        <div className={`w-[128px] h-[128px]  ${`s${animation[0]}`}`}></div>
         <div className={`w-[128px] h-[128px]  ${`Dice${animation[1]}`}`}></div>
         
       </div>
