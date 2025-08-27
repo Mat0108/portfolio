@@ -7,9 +7,10 @@ type MenuSelectorProps = {
   boutonStyle?:string,
   elementStyle?:string,
   menuPosition?:string,
-  display?: boolean
+  display?: boolean,
+  fixedWidth?:string,
 }
-const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition,display}:MenuSelectorProps) => {
+const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition,display,fixedWidth}:MenuSelectorProps) => {
   const [showOptions, setShowOptions] = useState(false);
   const [isButtonHovering, setIsButtonHovered] = useState(false);
   const [isMenuHovering, setIsMenuHovered] = useState(false);
@@ -46,7 +47,7 @@ const MenuSelector = ({title,options,boutonStyle,elementStyle,menuPosition,displ
         onClick={handleClick}
         onMouseEnter={onMouseEnterButton}
         onMouseLeave={onMouseLeaveButton}
-        className={`flex flex-row w-fit ${showOptions ? "bg-[#264C4D] text-white cursor-pointer":`${boutonStyle}`} ${cmhover}`}
+        className={`flex flex-row ${fixedWidth ?? "w-fit"} ${showOptions ? "bg-[#264C4D] text-white cursor-pointer":`${boutonStyle}`} ${cmhover}`}
         id="menu-button"
         aria-expanded="true"
         aria-haspopup="true"

@@ -23,7 +23,8 @@ const CreateScenario = lazy(() => import('./projet/Memoire44/CreateScenarioTool/
 const About = lazy(() => import('./projet/Memoire44/About'));
 const Progress = lazy(() => import('./projet/Memoire44/Progress'));
 const Tuto = lazy(() => import('./projet/Memoire44/scenario/tuto'));
-
+const Card = lazy(() => import('./projet/Memoire44/CardApp/CardApp'));
+const CardPC = lazy(() => import('./projet/Memoire44/CardApp/CardPC'));
 const Capsules = lazy(() => import('./projet/SpaceX/pages/Capsules'));
 const Launches = lazy(() => import('./projet/SpaceX/pages/Launches'));
 const SpaceXHome = lazy(() => import('./projet/SpaceX/pages/Home'));
@@ -82,6 +83,8 @@ const App = ()=>{
               <Route path="/Memoire44/about" element={<About/>}></Route>
               <Route path="/Memoire44/progress" element={<Progress/>}></Route>
               <Route path="/Memoire44/tuto" element={<Tuto/>}></Route>
+              <Route path="/memoire44/Cards" element={<Card />} ></Route>
+              <Route path="/memoire44/CardsPC" element={<CardPC />} ></Route>
 
               {/* Route dedié pour le projet PoSkin */}
               <Route path="/PoSkin" element={<PoSkinPresentation/>}></Route>

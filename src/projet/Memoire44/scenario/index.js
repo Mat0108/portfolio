@@ -78,9 +78,11 @@ const SelecteurScenario = ()=>{
             <div className="relative w-[1200px] h-full bg-gray px-4  flex flex-col center space-2">
                 <div className="absolute w-full h-fit top-0 h-[60px] flex center gap-2  ">
                     <Link  to={`/Memoire44/about`} className="w-[180px] h-fit mt-[10px] py-1 px-2 rounded-xl text-white bg-blue text-2xl text-center">A propos</Link>
+                    <Link  to={`/Memoire44/CardsPC`} className="w-[200px] h-fit mt-[10px] py-1 px-2 rounded-xl text-white bg-blue text-2xl text-center">Hand Manager</Link>
+                    
                     <Link  to={`/Memoire44/progress`} className="w-fit h-fit mt-[10px] py-1 px-5 rounded-xl text-white bg-blue text-2xl text-center">Progression du dévellopement</Link>
                     <Link  to={`/Memoire44/tuto`} className="w-fit h-fit mt-[10px] py-1 px-5 rounded-xl text-white bg-blue text-2xl text-center">Comment jouer ? </Link>
-                
+                    
                 </div>
                 {LoadImage}  
                 {image === "Scenariovide" ? <div className="w-[180px] h-[60px] mt-[30px]"></div> : <Link  to={`/Memoire44/scenario/${url}/${debug ?? ""}`} className="w-[180px] h-[60px] mt-[30px] p-2 rounded-3xl text-white bg-green text-2xl text-center">Play</Link>}
