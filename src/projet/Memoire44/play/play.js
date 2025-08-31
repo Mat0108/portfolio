@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
 import {CardGenerique, CaseGenerique, Dice, Flag, LogList, VerificationLineOfSight, isCombatRapproche, pointproche, showPortee} from '../divers/Generique'
-import { Game, ReturnScenario, loadScenario } from '../scenario';
+import { ReturnScenario, loadScenario } from '../scenario';
 import { Attacking, Selected, Move, Retreat, SelectHexa, Target } from '../haxagone/highlight';
 import { AddDice, HitUnit, SoldatAllies, UnitGenieAllies } from '../army/army';
 import { AirPower, Barrage, CampAffichage, CardSelect} from '../divers/Card';
@@ -14,19 +14,21 @@ import { RoadRight, RoadCurve, RoadHillRight, RoadHillCurve, RoadBranchRight,Roa
 import { Link } from 'react-router-dom';
 import { AnimationFigurine } from '../animation/animation';
 import { deserialize, serialize } from 'serializr';
+import { Game } from '../divers/game';
 
 
 const Play =()=> {
   
-  const [card, setCard] = useState(new CardGenerique("Choisir une carte","back-fr"))
+  const [card, setCard] = useState(
+new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
     // new CardGenerique("Attaque centre","attack-center-fr",3,2,"ALL"),);
   const { name , debug: enabledebug} = useParams();
   
   const selectedScenerio = ReturnScenario(name);
   const [status,setStatus ] = useState(1)
-  // let scenario = loadScenario(ReturnScenario(name))
   const [grille, setGrille ] = useState();
-  const [game,setGame] = useState<Game>(loadScenario(ReturnScenario(name)))
+
+  const [game,setGame] = useState(loadScenario(ReturnScenario(name))  )
   
   const [animation,setAnimation] = useState(new Array(6))
   const [animationShow,setAnimationShow] = useState(false)
@@ -36,15 +38,23 @@ const Play =()=> {
   const [medalAxisList,setMedalAxisList]  = useState([])
   const [modal, setModal] = useState(<></>)
   const [debug, setDebug] = useState(enabledebug === "debug" ? true : false);
-  
+  const [tick, setTick] = useState(0);
+
+  useEffect(() => {
+    const unsub = game.subscribe(g => {
+      setTick(t => t + 1);
+    });
+    return unsub;
+  }, [game]);
+
   let x = 13;
   let zone1 = {min:0,max:3,min2:0,max2:3}
   let zone2 = {min:4,max:8,min2:3,max2:8}
   let zone3 =  {min:9,max:12,min2:8,max2:11}
 
-  useEffect(() => {
-    setGame(loadScenario(selectedScenerio));
-}, [selectedScenerio])
+//   useEffect(() => {
+//     setGame(loadScenario(selectedScenerio));
+// }, [selectedScenerio])
 
 
   function StateButton(text,textvalider,status,action,showvalider){
@@ -101,7 +111,7 @@ const Play =()=> {
       setAnimation([])
     }, 6000);
     setTimeout(() => {
-      RemoveHighlight()
+      game.RemoveHighlight()
       let f = game.getCell(x,y)
       if(f.unité._nombre - result <= 0){
         if(camp === "Allies"){
@@ -184,14 +194,15 @@ const Play =()=> {
     if(wire && unité instanceof UnitGenieAllies){
       portée = unité.portée.map(item=>item-1)
     }
-    let list = showPortee(game,Object.keys(unité._portée).length,x,y,portée,null)
+    let list = showPortee(game,Object.keys(unité._portée).length,x,y,portée,null,null)
+    console.log('list : ', list)
     
     list.forEach(item=>{
       let cell = game.getItemCell(item)
-      if(cell.unité && cell._camp === camp2 ){
+      if(cell.unité && cell.unité._camp === camp2 ){
+        
         if( VerificationLineOfSight(x,y,item.x,item.y,game)){
         let malus = 0;
-        
         if(!(unité instanceof UnitGenieAllies) && cell.case && cell.case._malus){
           if(unité._type === "Soldat"){malus = cell.case._malus.Soldat}
           else if(unité._type === "Tank"){malus = cell.case._malus.Tank}
@@ -217,34 +228,38 @@ const Play =()=> {
 
       }
     }})
-    game.getGrille().forEach((e,pos)=>{
-      e.forEach((f,pos2)=>{
-        if(f.select && (f.select instanceof Selected )){
-          game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{calculDés(pos,pos2,f.unité,card._image === "artillery-bombard-fr" ? true:false)},highlight:f.highlight,select:new Attacking()})
-        }})})
-    let g = game.getCell(x,y)
-    game.updateCell(x,y,{case:g.case,defense:wire && unité instanceof UnitGenieAllies ? null : g.defense,unité:g.unité,action:g.action,highlight:null,select:new Selected()});
+    // game.getGrille().forEach((e,pos)=>{
+    //   e.forEach((f,pos2)=>{
+    //     if(f.select && (f.select instanceof Selected )){
+    //       game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{calculDés(pos,pos2,f.unité,card._image === "artillery-bombard-fr" ? true:false)},highlight:f.highlight,select:new Attacking()})
+    //     }})})
+    // let g = game.getCell(x,y)
+    // game.updateCell(x,y,{case:g.case,defense:wire && unité instanceof UnitGenieAllies ? null : g.defense,unité:g.unité,action:g.action,highlight:null,select:new Selected()});
     game.notify();
   }
   //fonction pour montrer les unités pouvant attacker une untié adverse
   function selectedAttackUnit(){
-    game.RemoveHighlight()
+    game.clearTerrain(false,true,false)
+    game.notify()
     game.getGrille().forEach((e,pos)=>{
       e.forEach((f,pos2)=>{
         if(f.select && (f.select instanceof SelectHexa || f.select instanceof Attacking)){
-          let list = showPortee(game,Object.keys(f.unité._portée).length,pos,pos2,f.unité._portée,null)
+          let list = showPortee(game,Object.keys(f.unité._portée).length,pos,pos2,f.unité._portée,null,null)
           let cond = false;
           list.forEach(item=>{
             let cell = game.getItemCell(item)
             if(cell.unité && cell.unité._camp === camp2 ){
-              if(f.unité._type === "Artillerie" ? cell.unité  : VerificationLineOfSight(pos,pos2,item.x,item.y,game)){
+              if(f.unité._type === "Artillerie" ? cell.unité  : VerificationLineOfSight(pos,pos2,item.x,item.y,game)){      
                 cond = true;
               }
             }
-            
           })
-          game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{calculDés(pos,pos2,f.unité,card._image === "artillery-bombard-fr" ? true:false)},highlight:f.highlight,select:cond ? new Attacking():null})
-       
+
+          if(cond){
+            game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{calculDés(pos,pos2,f.unité,card._image === "artillery-bombard-fr" ? true:false)},highlight:f.highlight,select:new Attacking()})
+          }else{
+            game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:null,highlight:f.highlight,select:null})
+          }
         
         }    
       })})
@@ -280,12 +295,13 @@ const Play =()=> {
     game.RemoveHighlight();
     let f = game.getCell(x,y)
     let origin = game.getCell(originx,originy)
+    console.log('origin : ', origin)
     if(x !== x2 || y !== y2){
       game.updateUnit(x2,y2,HitUnit(f.unité,nbunit))
       game.clearCell(x,y,true,true,true,true,true)
       game.clearCell(x2,y2,false,false,true,true,true)
       game.notify();
-      if(origin.unité && isCombatRapproche(x,y,originx,originy) ){
+      if(origin && origin.unité && isCombatRapproche(x,y,originx,originy) ){
         if(origin.unité._type === "Soldat"){
           setModal(
             <div className='relative w-screen h-screen flex center z-[350] '>
@@ -347,7 +363,7 @@ const Play =()=> {
   
   //function pour deplacer une unité 
   function MoveAction(oldposx,oldposy,posx,posy,action){
-    RemoveHighlight()
+    game.RemoveHighlight()
     
 
     let f = game.getCell(oldposx,oldposy)
@@ -436,10 +452,11 @@ const Play =()=> {
 }
   //function pour montrée la portée de deplacmeent
   function ShowPortéeUnit(posx,posy,unité){
-    game.RemoveHighlight()
+    game.clearTerrain(false,true,false)
     
     let list = showPortee(game,Object.keys(unité._deplacement).length,posx,posy,null,unité._deplacement,true,isRoad)
     let updatedList = [...list]
+    console.log('updatedList : ', updatedList)
     AllPathIsRoad(list,updatedList,Object.keys(unité._deplacement).length)
   
   
@@ -448,7 +465,7 @@ const Play =()=> {
       e.forEach((f,pos2)=>{
         updatedList.forEach(item=>{
           if(item.item.x === pos && item.item.y === pos2 && !debug ? !f.unité :item.item.x === pos && item.item.y === pos2 && !f.unité){  
-            game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{AnimationFigurine(item.path,800,()=>MoveAction(posx,posy,pos,pos2,item.item.deplacement),()=>{RemoveHighlight();setTimeout(()=>RemoveHighlightAtPos(posx,posy),10)})},highlight: new Move(item.item.deplacement),select:f.select})
+            game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{AnimationFigurine(item.path,800,()=>MoveAction(posx,posy,pos,pos2,item.item.deplacement),()=>{game.RemoveHighlight();setTimeout(()=>game.clearHighlightAtPos(posx,posy),10)})},highlight: new Move(item.item.deplacement),select:f.select})
           }
           
         })
@@ -457,16 +474,19 @@ const Play =()=> {
   }
 
   function updateSelectedUnit(x,y,isSelected,selectOther){
+    
     let f = game.getCell(x,y)
     let nb = 0;
     let cond = true;
     let zone1 = {min:0,max:3,min2:0,max2:3}
     let zone2 = {min:4,max:8,min2:3,max2:8}
     let zone3 =  {min:9,max:12,min2:8,max2:11} //min 1 pair, min2 impair
+    console.log('isSelected : ', isSelected)
     if(isSelected){
-
+      
       game.getGrille().forEach((e,pos)=>{
         e.forEach((f,pos2)=>{
+          
           if(card._image === "general-advance-fr" || card._image === "pincer-move-fr"){
             if(y >= zone1.min && y <= zone1.max && pos2 >= zone1.min && pos2 <= zone1.max){
               if(f.select && f.select instanceof SelectHexa){
@@ -491,13 +511,15 @@ const Play =()=> {
           }
         });
       });
+      console.log('nb < card._nbunit : ', nb < card._nbunit)
       if(selectOther ? nb < 1 : nb < card._nbunit && cond){
         game.updateCell(x,y,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{updateSelectedUnit(x,y,false)},highlight:f.highlight,select:new SelectHexa()})   
       } 
     }else{
       game.updateCell(x,y,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{updateSelectedUnit(x,y,true)},highlight:f.highlight,select:null})      
     }
-    game.notify();
+    game.notify()
+    
   }
 
   //function pour selectionner les unités 
@@ -542,8 +564,10 @@ const Play =()=> {
               cond = false;
             }
           }else{
+
             if(f.unité && (card._type === "ALL" || f.unité._type === card._type) && f.unité._camp === camp){
               game.updateCell(pos,pos2,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{updateSelectedUnit(pos,pos2,true,false)},highlight:f.highlight,select:null})
+              
               cond = false
             }
 
@@ -561,8 +585,9 @@ const Play =()=> {
             }
           }
         })})
-
-    game.notify();      }
+   }
+   
+    game.notify();   
   }
   function showPortéeALL(){
     game.getGrille().forEach((e,pos)=>{
@@ -618,6 +643,8 @@ const Play =()=> {
 
   }
   function selectCard(){
+    console.log('selectCard : ')
+    
     switch(card._image){
       case "air-power-fr":
         game.getGrille().forEach((e,pos)=>{
@@ -752,6 +779,7 @@ const Play =()=> {
         game.notify()
         break;
       default:
+        game.notify()
         selectedUnit();
         break;
     }
@@ -775,6 +803,7 @@ const Play =()=> {
       setStatus(5);
       break;
     default:
+        game.notify()
         showPortéeALL()
     }
   }
@@ -867,43 +896,36 @@ const Play =()=> {
         } 
         
       })})
-      notify();
+      game.notify();
   }
   function exportGame() {
-    const serialized = serialize(game);
-    // const data = new CaseGenerique(`images/Memoire44/terrain/h_mountain.webp`, 1, {Soldat:-2,Tank:-2}, true, false, true, false, false, false, "brightness-[90%]", undefined, `new Mountain(`)
-    // const forest = new CaseGenerique("images/Memoire44/base/h_forest.webp", 1, {Soldat:-1,Tank:-2}, true, false, true, true, "images/Memoire44/card/base/forest-fr.webp", false, "", undefined, `new Forest(`,)
-    // const forestbrut = new Forest();
-    // const soldat = new SoldatAllies();
-    // const test = serialize(game)
-    // console.log(' serialized : ',  test)
+    // const serialized = serialize(game);
+    // const tmpGame = deserialize(Game, serialized);
 
-    const tmpGame = deserialize(Game, serialized);
+    // // 2️⃣ Sérialisation finale en JSON pur
+    // const jsonString = JSON.stringify(serialize(tmpGame), null, 2);
 
-    // 2️⃣ Sérialisation finale en JSON pur
-    const jsonString = JSON.stringify(serialize(tmpGame), null, 2);
+    // // 3️⃣ Création du Blob et téléchargement
+    // const blob = new Blob([jsonString], { type: "application/json" });
+    // const url = URL.createObjectURL(blob);
 
-    // 3️⃣ Création du Blob et téléchargement
-    const blob = new Blob([jsonString], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
+    // const a = document.createElement("a");
+    // a.href = url;
+    // a.download = "game_export.json";
+    // a.click();
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "game_export.json";
-    a.click();
-
-    // 4️⃣ Libération de l'URL
-    URL.revokeObjectURL(url);
+    // // 4️⃣ Libération de l'URL
+    // URL.revokeObjectURL(url);
   }
 
   function importGame(file, callback) {
-    const reader = new FileReader();
-    reader.onload = () => {
-      const data = JSON.parse(reader.result);   // JSON → objet brut
-      const game = deserialize(Game, data);     // objet brut → classe Game
-      callback(game);
-    };
-    reader.readAsText(file);
+    // const reader = new FileReader();
+    // reader.onload = () => {
+    //   const data = JSON.parse(reader.result);   // JSON → objet brut
+    //   const game = deserialize(Game, data);     // objet brut → classe Game
+    //   callback(game);
+    // };
+    // reader.readAsText(file);
   }
 
   const showingCard = useMemo(() => {
@@ -1013,9 +1035,9 @@ const Play =()=> {
           })}
         </div>
         {debug ? <div className='absolute z-[4100] top-0 left-8 text-vivid_tangerine text-[20px] font-av-bold'><span className='text-white text-[20px] font-av-bold'>posx</span> posy</div>:""}
-        <div key={"terrain"}><img src={`images/Memoire44/${grille.terrain}.webp`} alt={"terrain"} className='w-full h-full'/></div>
+        <div key={"terrain"}><img src={`images/Memoire44/${game.getTerrain()}.webp`} alt={"terrain"} className='w-full h-full'/></div>
         <div className="absolute flex flex-col z-[200] top-[58px] left-[10px]">
-          {grille.grille.map((e,pos)=>{
+          {game && game.getGrille().map((e,pos)=>{
             return <div className={`${pos % 2 === 1 ? "ml-[45px]":""} w-full flex flex-row`} key={`ligne-${pos}`}>{
               e.map((f,pos2)=>{
                       return <div className={`relative w-[91px] h-[78px] border-0 border-white ${f.action ? "hover:cursor-pointer":""}`} onClick={f.action}  key={`${pos}${pos2}`} id={`${pos}${pos2}`} >
@@ -1034,7 +1056,7 @@ const Play =()=> {
         })}
         </div>
       </div>)
-     },[medalAxisList, medalAlliésList, debug, grille])
+     },[medalAxisList, medalAlliésList, debug, game,tick])
 
      const Modal = useMemo(() => <div className='absolute top-0 '>{modal}</div>, [modal])
      return (

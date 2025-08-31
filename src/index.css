@@ -154,32 +154,32 @@
 .DiceSoldat {
     height: 128px;
     width: 128px;
-    background-image: url("../public/images/memoire44/dice/dice_soldat_anim.webp"); /* width: 2048px; height: 512px; */
+    background-image: url("../public/images/Memoire44/dice/dice_soldat_anim.webp"); /* width: 2048px; height: 512px; */
     animation: var(--DiceAnim);
 }
 
 .DiceGrenade {
     height: 128px;
     width: 128px;
-    background-image: url("../public/images/memoire44/dice/dice_grenade_anim.webp"); /* width: 2048px; height: 512px; */
+    background-image: url("../public/images/Memoire44/dice/dice_grenade_anim.webp"); /* width: 2048px; height: 512px; */
     animation: var(--DiceAnim);
 }
 .DiceTank {
     height: 128px;
     width: 128px;
-    background-image: url("../public/images/memoire44/dice/dice_char_anim.webp"); /* width: 2048px; height: 512px; */
+    background-image: url("../public/images/Memoire44/dice/dice_char_anim.webp"); /* width: 2048px; height: 512px; */
     animation: var(--DiceAnim);
 }
 .DiceFlag {
     height: 128px;
     width: 128px;
-    background-image: url("../public/images/memoire44/dice/dice_flag_anim.webp"); /* width: 2048px; height: 512px; */
+    background-image: url("../public/images/Memoire44/dice/dice_flag_anim.webp"); /* width: 2048px; height: 512px; */
     animation: var(--DiceAnim);
  }
 .DiceStar {
     height: 128px;
     width: 128px;
-    background-image: url("../public/images/memoire44/dice/dice_star_anim.webp"); /* width: 2048px; height: 512px; */
+    background-image: url("../public/images/Memoire44/dice/dice_star_anim.webp"); /* width: 2048px; height: 512px; */
     animation: var(--DiceAnim);
 
 }

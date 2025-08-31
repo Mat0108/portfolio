@@ -327,6 +327,25 @@ export function isCombatRapproche(x,y,x2,y2){
     })
     return cond;
 }
+function VerifCanAttackAfterMalus(x,y,list,game){
+    let newlist = []
+    let origin = game.getCell(x,y)
+    list.map(item=>{
+        let cell =  game.getCell(item.x,item.y)
+        let malus = 0;
+        if(cell.case && cell.case._malus){
+            if(origin.unité._type === "Soldat"){malus = cell.case._malus.Soldat}
+            else if(origin.unité._type === "Tank"){malus = cell.case._malus.Tank}
+        }
+        if(cell.defense && cell.defense._malus){
+            if(origin.unité._type === "Soldat"){malus = cell.case._malus.Soldat+malus}
+            else if(origin.unité._type === "Tank"){malus = cell.case._malus.Tank+malus}
+        }
+        if(item.dés + malus  > 0){ newlist.push(item)}
+
+    })
+    return newlist;
+}
 
 export function showPortee(game,portée,posx,posy,dés,deplacement,pathFinding,testingRoad){
     
@@ -510,7 +529,7 @@ export function showPortee(game,portée,posx,posy,dés,deplacement,pathFinding,t
         betterPush(posx-4,posy+4,5);
         betterPush(posx+4,posy+4,5);
     }
-    if(!pathFinding){return VerList(list)}
+    if(!pathFinding){return VerifCanAttackAfterMalus(posx,posy,VerList(list),game)}
     
     let list2 = []
     VerList(list).forEach(item=>{
@@ -535,6 +554,7 @@ export function VerList(list){
     return newlist;
 }
 export function VerificationLineOfSight(x,y,x2,y2,game){
+    console.log('x,y,x2,y2 : ', x,y,x2,y2)
     let angle0 = [{x:x,y:y-1},{x:x,y:y-2},{x:x,y:y-3},{x:x,y:y-4},{x:x,y:y-5},{x:x,y:y-6}]
     let angle60 = [{x:x-1,y:x%2 === 1 ? y : y-1},{x:x-2,y:y-1},{x:x-3,y:x%2 === 1 ? y-1:y-2},{x:x-4,y:y-2},{x:x-5,y:x%2 === 1 ? y-2:y-3},{x:x-6,y:y-3}]
     let angle120 = [{x:x-1,y:x%2 === 1 ? y+1 : y},{x:x-2,y:y+1},{x:x-3,y:x%2 === 1 ? y+2:y+1},{x:x-4,y:y+2},{x:x-5,y:x%2 === 1 ? y+3:y+2},{x:x-6,y:y+3}]
@@ -610,7 +630,8 @@ export function VerificationLineOfSight(x,y,x2,y2,game){
                 cond2 = [{x:x2-1,y:y2-1},{x:x2-1,y:y2}]
             } 
         }
-        
+
+        console.log(x,y,x2,y2)
         let case1 = game.getItemCell(cond2[0])
         let blockedbycase1 = (case1 && case1.case && case1.case._lineofsight ) || (case1 && !!case1.unité);
         let case2 = game.getItemCell(cond2[1])
