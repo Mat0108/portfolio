@@ -30,7 +30,9 @@
     "react-slider": "^2.0.6",
     "react-toastify": "^11.0.5",
     "react-world-flags": "^1.6.0",
+    "serializr": "^3.0.5",
     "source-map-explorer": "^2.5.3",
+    "superjson": "^2.2.2",
     "swiper": "^11.2.6"
   },
   "devDependencies": {

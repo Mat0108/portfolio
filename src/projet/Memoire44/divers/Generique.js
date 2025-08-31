@@ -1,6 +1,7 @@
 import React from "react";
 import { jkstraPathFinding } from "../PathFinding/jkstraPathFinding";
 import ReactDOM from 'react-dom';
+import { createModelSchema, optional, primitive, raw, serialize, setDefaultModelSchema } from "serializr";
 export class Position{
     constructor(posx,posy){
         this._posx = posx;
@@ -136,6 +137,10 @@ export class SoldatGenerique  {
     getPath() {
         return `${this._path}${this._nombre},${this._portée ? `[${this._portée}]`:""},${this._deplacement ? `[${this._deplacement}]`:""})`;
     }
+    toJSON() {
+        // Serialize avec serializr
+        return serialize(this);
+    }
     clone(number) {
         
         return new SoldatGenerique(
@@ -155,6 +160,20 @@ export class SoldatGenerique  {
 }
 
 }
+createModelSchema(SoldatGenerique, {
+  _image: optional(primitive()),
+  _nombre: optional(primitive()),
+  _portée: optional(raw()),
+  _deplacement: optional(raw()),
+  _taille: optional(primitive()),
+  _type: optional(primitive()),
+  _camp: optional(primitive()),
+  _path: optional(primitive()),
+  _weapon: optional(primitive()),     // ou object(Weapon) si weapon est une classe
+  _cssweapon: optional(primitive()),
+  _badge: optional(primitive()),
+  _cssbadge: optional(primitive())
+});
 
 export class CaseGenerique {
     constructor(image,orientation,malus,deplacmentmax,ignoreflag,lineofsight,byentering,imageexplicatif,hover,className,isUpperCase,path,currentOrientation ) {
@@ -213,7 +232,13 @@ export class CaseGenerique {
     getPath() {
         return `${this._path}${this._currentOrientation ?? ""})`;
     }
+
+    toJSON() {
+        // Serialize avec serializr
+        return serialize(this);
+    }
     
+
     clone() {
         return new CaseGenerique(
             this._image,
@@ -227,13 +252,29 @@ export class CaseGenerique {
             this._hover,
             this._className,
             this._isUpperCase,
+            this._mountTarget,
             this._path,
             this._currentOrientation,
         );
     }
-
 }
 
+createModelSchema(CaseGenerique, {
+        _orientation: optional(primitive()),
+        _image: optional(primitive()),
+        _malus: optional(raw()),
+        _deplacmentmax: optional(primitive()),
+        _ignoreflag: optional(primitive()),
+        _lineofsight: optional(primitive()),
+        _byentering: optional(primitive()),
+        _imageexplicatif: optional(primitive()),
+        _hover:optional(primitive()),
+        _className: optional(primitive()), 
+        _isUpperCase: optional(primitive()),
+        _mountTarget:optional(primitive()),
+        _path:optional(primitive()),
+        _currentOrientation:optional(primitive())
+});
 export class CardGenerique {
     // {card:"",img:"",nbunit:1,zone:2,type:"ALL",showing:false}
     constructor(titre,image,nbunit,zone,type,type2,ignoreterrain,countstar,extradice){
@@ -248,8 +289,8 @@ export class CardGenerique {
         this._extradice = extradice ? extradice : false; 
         
     }
-
 } 
+
 export function test6(path,name,orientation){
     return `images/Memoire44/${path}/${orientation === 6 ? `${name}6`:orientation === 5 ? `${name}5` : orientation === 4 ?
     `${name}4`:orientation === 3 ? `${name}3`:orientation === 2 ? `${name}2`:`${name}1`}.webp`
@@ -287,7 +328,7 @@ export function isCombatRapproche(x,y,x2,y2){
     return cond;
 }
 
-export function showPortee(grille,portée,posx,posy,dés,deplacement,pathFinding,testingRoad){
+export function showPortee(game,portée,posx,posy,dés,deplacement,pathFinding,testingRoad){
     
     let list = [
         {x:posx-1,y: posx %2  === 1 ? posy : posy-1,dés: dés ? dés[0] : 0,deplacement:deplacement ? deplacement[0]:null}, //partie haut gauche
@@ -474,7 +515,7 @@ export function showPortee(grille,portée,posx,posy,dés,deplacement,pathFinding
     let list2 = []
     VerList(list).forEach(item=>{
         
-        let path = jkstraPathFinding(grille.grille,{x:posx,y:posy},item,testingRoad)
+        let path = jkstraPathFinding(game.getGrille(),{x:posx,y:posy},item,testingRoad)
 
         if(path !== null && path.item.length <= portée){
             list2.push({item:item, path:path.path})
@@ -493,7 +534,7 @@ export function VerList(list){
     })
     return newlist;
 }
-export function VerificationLineOfSight(x,y,x2,y2,grille){
+export function VerificationLineOfSight(x,y,x2,y2,game){
     let angle0 = [{x:x,y:y-1},{x:x,y:y-2},{x:x,y:y-3},{x:x,y:y-4},{x:x,y:y-5},{x:x,y:y-6}]
     let angle60 = [{x:x-1,y:x%2 === 1 ? y : y-1},{x:x-2,y:y-1},{x:x-3,y:x%2 === 1 ? y-1:y-2},{x:x-4,y:y-2},{x:x-5,y:x%2 === 1 ? y-2:y-3},{x:x-6,y:y-3}]
     let angle120 = [{x:x-1,y:x%2 === 1 ? y+1 : y},{x:x-2,y:y+1},{x:x-3,y:x%2 === 1 ? y+2:y+1},{x:x-4,y:y+2},{x:x-5,y:x%2 === 1 ? y+3:y+2},{x:x-6,y:y+3}]
@@ -522,7 +563,8 @@ export function VerificationLineOfSight(x,y,x2,y2,grille){
     if(Object.keys(cond1).length>0){
         let cond = true;
         cond1.forEach(item=>{
-            if((grille.grille[item.x][item.y].case && grille.grille[item.x][item.y].case._lineofsight) || grille.grille[item.x][item.y].unité){
+            let cell = game.getItemCell(item)
+            if((cell.case && cell.case._lineofsight) || cell.unité){
                 cond = false
             } 
         })
@@ -569,9 +611,9 @@ export function VerificationLineOfSight(x,y,x2,y2,grille){
             } 
         }
         
-        let case1 = grille.grille[cond2[0].x][cond2[0].y]
+        let case1 = game.getItemCell(cond2[0])
         let blockedbycase1 = (case1 && case1.case && case1.case._lineofsight ) || (case1 && !!case1.unité);
-        let case2 = grille.grille[cond2[1].x][cond2[1].y]
+        let case2 = game.getItemCell(cond2[1])
         let blockedbycase2 = (case2 && case2.case && case2.case._lineofsight ) || (case2 && !!case2.unité);
 
         if(blockedbycase1 && blockedbycase2){

@@ -13,19 +13,132 @@ import { LigneDeMire2 } from "./Testing/LigneDeMire2";
 import { Deplacement } from "./Testing/Deplacement";
 import { LigneDeMire3 } from "./Testing/LigneDeMire3";
 import '../../../index.css'
+import { createModelSchema, list, object, optional, primitive, raw } from "serializr";
+import { CaseGenerique, SoldatGenerique } from "../divers/Generique";
+import { Attacking, Move, Retreat, Selected, SelectHexa, Target } from "../haxagone/highlight";
+
+
+class GridCell {
+  constructor(case1, bunker,defense,unité,medal,action = null,highlight = null,select = null) {
+    this._case = case1;
+    this._bunker = bunker;
+    this._defense = defense;
+    this._unité = unité;
+    this._medal = medal;
+    this._action = action;
+    this._highlight = highlight;
+    this._select = select;
+  }
+}
+
+createModelSchema(GridCell, {
+  _case: optional(object(CaseGenerique)),
+  _bunker: optional(object(CaseGenerique)),
+  _defense: optional(object(CaseGenerique)),
+  _unité: optional(object(SoldatGenerique)),
+  _medal: optional(object(CaseGenerique)),
+  _action: optional(raw()),
+  _highlight:optional(object(CaseGenerique)),
+  _select:optional(object(CaseGenerique))
+});
+export class Game {
+    constructor(width = 15, height = 13,grille,terrain,campMine) {
+        this._width = width;
+        this._height = height;
+        this._terrain = terrain;
+        this._campMine = campMine;
+        this._grille = grille
+        this._listeners = new Set();
+    }
+
+    subscribe(listener) {
+        this._listeners.add(listener);
+        return () => this._listeners.delete(listener);
+    }
+
+    notify() {
+        this._listeners.forEach(l => l(this));
+    }
+
+    getGrille() {
+        return this.grille;
+    }
+    getInfo(){
+        return {terrain:this.terrain,grille:this.grid,campMine:this.campMine}
+    }
+    getCell(x,y){
+        return this.grille[x][y]
+    }
+    getItemCell(item){
+        return this.grille[item.x][item.y]   
+    }
+
+    updateCell(x, y, newCell) {
+        this._grille[x][y] = newCell;
+    }
+    updateItemCell(item,newCell){
+        this._grille[item.x][item.y] = newCell;
+    }
+    clearHighlightAtPos(x,y){
+        this._grille[x][y].highlight = null;
+        this._grille[x][y].select = null; 
+        this.notify();
+    }
+    clearTerrain(clearAction,clearHightlight,clearSelect,clearUnit){
+        this._grille.forEach((e,pos)=>{
+            e.forEach((f,pos2)=>{
+                if(clearAction && f.action){
+                    f.action = null;
+                }
+                if(clearHightlight && f.highlight && (f.highlight instanceof Move  || f.highlight instanceof Target || f.highlight instanceof Retreat)){
+                f.highlight = null;
+                }
+                if(clearSelect && f.select && (f.select instanceof Selected || f.select instanceof SelectHexa || f.select instanceof Attacking)){
+                    f.select = null;
+                }
+            })
+        })
+        this.notify();
+    }
+    clearCell(x,y,clearDefense,clearUnit,clearAction,clearHightlight,clearSelect){
+        let cell = this._grille[x][y]
+        if(clearDefense) cell._defense = null;
+        if(clearUnit) cell._unité = null;
+        if(clearAction) cell._action = null;
+        if(clearHightlight) cell._highlight = null;
+        if(clearSelect) cell._select = null
+        this.notify()
+    }
+    updateUnit(x,y,unité){
+        this._grille[x][y]._unité = unité
+        this.notify()    
+    }
+}
+
+// Schéma pour Serializr
+createModelSchema(Game, {
+  _width: primitive(),
+  _height: primitive(),
+  _terrain: primitive(),
+  _campMine: primitive(),
+  _grille: list(list(new GridCell())),
+});
+
 
 export function loadScenario(scenario){
     let x = 13;
     let y = 9;
     let grille = new Array(y).fill(0).map(() => new Array(x).fill({case:null,defense:null,unité:null,action:null,highlight:null}));   
     if(scenario){
+        //case: null,bunker: null,defense: null, unité:null,medal:null
         scenario.hexa.forEach(hex=>{
-        grille[hex.x][hex.y] = hex.contenu
+        grille[hex.x][hex.y] = new GridCell(hex.contenu.case,hex.contenu.bunker,hex.contenu.defense,hex.contenu.unité,hex.contenu.medal)  //hex.contenu
     })
-}
-    return {terrain:scenario.terrain,grille:grille,campMine:scenario.campMine}
-}
+    }
+    return new Game(x,y,grille,scenario.terrain,scenario.campMine)
 
+    // return {terrain:scenario.terrain,grille:grille,campMine:scenario.campMine}
+}
 const listScenario = [
     {name:"Merci de choisir un scénario ",url:"Scenariovide",image:"Scenariovide"},
     {name:"Bataille du Vercors",url:"Scenariovide",image:"Scenariovide"},
