@@ -367,7 +367,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
     
 
     let f = game.getCell(oldposx,oldposy)
-    let list = showPortee(grille,Object.keys(f.unité._portée).length,posx,posy,f.unité._portée,null)
+    let list = showPortee(game,Object.keys(f.unité._portée).length,posx,posy,f.unité._portée,null)
     game.clearCell(oldposx,oldposy,true,true,true,true,true)
     
     let cond = false;
@@ -385,7 +385,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
     let removeMine = newPos.bunker instanceof Mine && f.unité instanceof UnitGenieAllies
 
     if(newPos.bunker instanceof Mine && !removeMine){
-      if(f.unité._camp !== grille.campMine){
+      if(f.unité._camp !== game.getCampMine){
         let nb = 0;
         if(!newPos.bunker.getNb()){
           let newMine = newPos.bunker.reveal()  

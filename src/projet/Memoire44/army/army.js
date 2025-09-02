@@ -1,4 +1,4 @@
-import { setDefaultModelSchema, getDefaultModelSchema, optional, primitive, createModelSchema } from "serializr";
+import { setDefaultModelSchema, getDefaultModelSchema, optional, primitive, createModelSchema, raw } from "serializr";
 import { CaseGenerique, SoldatGenerique } from "../divers/Generique";
 import { Country } from "../haxagone/base";
 
@@ -171,23 +171,16 @@ export function AddDice(unit, nb, portée, deplacement) {
 // --- Mortar ---
 export class Mortar extends SoldatGenerique {
     constructor(nb, portée, deplacement, variation, orientation, taille, before1942){
-        super(SoldatVariation(variation, orientation), nb ?? 4, portée ?? [3,2,1], before1942 ? [2,2] : [1,2], taille ?? "w-[38%]", "Soldat", returnTypeCamp(variation), 'new Mortar(', `images/Memoire44/army/mortar_${!orientation ? "top":"bottom"}.webp`, "w-14");
+        super(SoldatVariation(variation, orientation), nb ?? 4, portée ?? [3,2,1], before1942 ? [2,2] : [1,2], taille ?? "w-[38%]", "Soldat", returnTypeCamp(variation), 'new Mortar(', `images/memoire44/army/mortar_${!orientation ? "top":"bottom"}.webp`, "w-14");
+        this._before1942 = before1942;
         this._variation = variation;
         this._orientation = orientation;
     }
     getVariation(){ return this._variation; }
     getOrientation(){ return this._orientation; }
 }
-createModelSchema(Mortar, {
-    nb: optional(primitive()),
-    portée: optional(primitive()),
-    deplacement: optional(primitive()),
-    variation: optional(primitive()),
-    orientation: optional(primitive()),
-    taille: optional(primitive()),
-    before1942: optional(primitive())
-});
 
+setDefaultModelSchema(Mortar, getDefaultModelSchema(SoldatGenerique));
 // --- Units d'élite ---
 export class UnitEliteAxis extends SoldatGenerique {
     constructor(nb, portée, deplacement, taille){

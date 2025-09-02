@@ -65,7 +65,9 @@ export class Game {
     getTerrain(){
         return this._terrain;
     }
-
+    getCampMine(){
+        return this._campMine;
+    }
     updateCell(x, y, newCell) {
         this._grille[x][y] = newCell;
         this.notify()
