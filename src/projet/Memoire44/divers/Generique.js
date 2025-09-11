@@ -327,7 +327,7 @@ export function isCombatRapproche(x,y,x2,y2){
     })
     return cond;
 }
-function VerifCanAttackAfterMalus(x,y,list,game){
+export function VerifCanAttackAfterMalus(x,y,list,game){
     let newlist = []
     let origin = game.getCell(x,y)
     list.map(item=>{
@@ -529,7 +529,7 @@ export function showPortee(game,portée,posx,posy,dés,deplacement,pathFinding,t
         betterPush(posx-4,posy+4,5);
         betterPush(posx+4,posy+4,5);
     }
-    if(!pathFinding){return VerifCanAttackAfterMalus(posx,posy,VerList(list),game)}
+    if(!pathFinding){return VerList(list)}
     
     let list2 = []
     VerList(list).forEach(item=>{

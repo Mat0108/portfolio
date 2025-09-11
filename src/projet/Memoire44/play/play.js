@@ -8,7 +8,7 @@ import { AirPower, Barrage, CampAffichage, CardSelect} from '../divers/Card';
 
 
 import { useParams } from 'react-router';
-import { Forest, Hills, Mine, SandBag, Wire } from '../haxagone/base';
+import { Forest, Hedgehog, Hills, Mine, SandBag, Wire } from '../haxagone/base';
 import { FormControlLabel, Switch } from '@mui/material';
 import { RoadRight, RoadCurve, RoadHillRight, RoadHillCurve, RoadBranchRight,RoadBranchLeft,RoadX,RoadY  } from '../haxagone/terrain';
 import { Link } from 'react-router-dom';
@@ -37,7 +37,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
   const [medalAlliésList,setMedalAlliésList] = useState([])
   const [medalAxisList,setMedalAxisList]  = useState([])
   const [modal, setModal] = useState(<></>)
-  const [debug, setDebug] = useState(enabledebug === "debug" ? true : false);
+  const [debug, setDebug] = useState(false);
   const [tick, setTick] = useState(0);
 
   useEffect(() => {
@@ -101,18 +101,22 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
   }
   function updateAttackUnit(x,y,x2,y2,unité,dicenb,star,refire,ambuscade){
     let dice = Dice(dicenb,unité,setAnimation,star ? true:false,true)
+    console.log('dice : ', dice)
     let result = dice.LoseLife;
+    console.log('result : ', result)
     setAnimationShow(true)
     setTimeout(() => {
       setAnimationShow(false)
     }, 2100);
 
     setTimeout(() => {
-      setAnimation([])
+//      setAnimation([])
     }, 6000);
     setTimeout(() => {
       game.RemoveHighlight()
       let f = game.getCell(x,y)
+
+      //if plus de vie
       if(f.unité._nombre - result <= 0){
         if(camp === "Allies"){
           let medal = medalAlliésList.map(object => ({ ...object}))
@@ -120,18 +124,18 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
           setMedalAlliésList(medal);
         }else{
           let medal = medalAxisList.map(object => ({ ...object}))
-          modal.push(HitUnit(f.unité,1));
+          medal.push(HitUnit(f.unité,1));
           setMedalAxisList(medal+1);
         }
         game.clearUnit(x,y)
         // localgrille.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:null,action:null,highlight:null,select:null}
-        
-      }else if(dice.nbflag > 0 && game.getCell(x,y).case._ignoreflag ? dice.nbflag > 1 : true){
+      }else if(dice.nbFlag === 0){
+        game.updateUnit(x,y,HitUnit(f.unité,f.unité._nombre - result))
+        game.notify();
+      //encore de la vie, mais etat de retraite strategique
+      }else if(dice.nbflag > 0 && (f.case && f.case._ignoreflag) ? dice.nbflag > 1 : true){
         let flaglist = Flag(x,y,dice.nbflag,camp2);
-        if(!Object.keys(flaglist).length ){
-          game.updateUnit(x,y,f.unit._nombre - result > 0 ? HitUnit(f.unité,f.unité._nombre - result ):null)
-          // localgrille.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unit._nombre - result > 0 ? HitUnit(f.unité,f.unité._nombre - result ):null,action:ambuscade ? ()=>{calculDés(x,y,grille.grille[x][y].unité,false)}:null,highlight:null,select:ambuscade ? new Attacking() : null}
-        }else{
+
           let chooseflag = 0
           flaglist.forEach(item=>{
             if(game.getItemCell(item).unité){
@@ -151,21 +155,22 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
                 game.updateCell(item.x,item.y,{case:f.case,bunker:f.bunker,defense:f.defense,unité:null,action:null,highlight:null,select:null})
                 // localgrille.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:null,action:null,highlight:null,select:null}
       
+                game.clearUnit(x,y)
               }
             })
-          
+          //Choix de l'endroit pour la retraite strategique
           }else{
-            game.updateCell(x,y,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{moveUnit(x,y,x,y,f.unité._nombre - result -dice.nbflag,x2,y2);UpdateMedal(f,f.unité._nombre - result -dice.nbflag)},highlight:new Retreat(0,-1*dice.nbflag),select:null})
+            game.updateCell(x,y,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{game.updateUnit(x,y,HitUnit(f.unité,f.unité._nombre - result - dice.nbflag));game.RemoveHighlight();UpdateMedal(f,f.unité._nombre - result -dice.nbflag)},highlight:new Retreat(0,-1*dice.nbflag),select:null})
             // localgrille.grille[x][y] = {case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{moveUnit(x,y,x,y,f.unité._nombre - result -dice.nbflag,x2,y2);UpdateMedal(f,f.unité._nombre - result -dice.nbflag)},highlight:new Retreat(0,-1*dice.nbflag),select:null}
             flaglist.forEach(item=>{
               let cell = game.getItemCell(item)
-              if(!cell.unité){
+              if(!cell.unité && !(cell.defense instanceof Wire || cell.defense instanceof Hedgehog)){
                 let g = cell;
                 game.updateItemCell(item,{case:g.case,defense:g.defense,unité:g.unité,action:()=>{moveUnit(x,y,item.x,item.y,f.unité._nombre - result+(item.flag-dice.nbflag),x2,y2);UpdateMedal(f,f.unité._nombre - result+(item.flag-dice.nbflag))},highlight:new Retreat(item.flag,item.flag-dice.nbflag),select:null})
                 // localgrille.grille[item.x][item.y] = {case:g.case,defense:g.defense,unité:g.unité,action:()=>{moveUnit(x,y,item.x,item.y,f.unité._nombre - result+(item.flag-dice.nbflag),x2,y2);UpdateMedal(f,f.unité._nombre - result+(item.flag-dice.nbflag))},highlight:new Retreat(item.flag,item.flag-dice.nbflag),select:null}
               }  
             })
-          }
+          
         }
         
       }
@@ -189,6 +194,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
 
   function calculDés(x,y,unité,refire){
     game.RemoveHighlight();
+    console.log('unité : ', unité)
     let portée = unité._portée
     let wire = game.getCell(x,y).defense instanceof Wire  
     if(wire && unité instanceof UnitGenieAllies){
@@ -199,6 +205,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
     
     list.forEach(item=>{
       let cell = game.getItemCell(item)
+      console.log('cell : ', cell)
       if(cell.unité && cell.unité._camp === camp2 ){
         
         if( VerificationLineOfSight(x,y,item.x,item.y,game)){
@@ -208,9 +215,10 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
           else if(unité._type === "Tank"){malus = cell.case._malus.Tank}
         }
         if(!(unité instanceof UnitGenieAllies) && cell.defense && cell.defense._malus){
-          if(unité._type === "Soldat"){malus = cell.case._malus.Soldat+malus}
-          else if(unité._type === "Tank"){malus = cell.case._malus.Tank+malus}
+          if(unité._type === "Soldat"){malus = cell.defense._malus.Soldat+malus}
+          else if(unité._type === "Tank"){malus = cell.defense._malus.Tank+malus}
         }
+        
         if(item.dés + malus > 0){
           let f = game.getItemCell(item)
           let cond = false;
@@ -221,6 +229,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
             })
           } 
           let dice = cond ? item.dés+malus+1 : item.dés+malus
+          console.log('dice : ', item.dés)
           game.updateItemCell(item,{case:f.case,bunker:f.bunker,defense:f.defense,unité:f.unité,action:()=>{updateAttackUnit(item.x,item.y,x,y,f.unité,dice,false,refire)},highlight:new Target(dice),select:null})
           
 
@@ -268,8 +277,10 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
 
 
   function persée(x,y,x2,y2,Refire){
+    setModal(null)
     let f = game.getCell(x,y)
     let f2 = game.getCell(x2,y2)
+    console.log('f.unité : ', f.unité)
     let list = showPortee(game,Object.keys(f.unité._portée).length,x2,y2,f.unité._portée,null)
     let cond = false;
     if(Refire){
@@ -300,12 +311,13 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
       game.updateUnit(x2,y2,HitUnit(f.unité,nbunit))
       game.clearCell(x,y,true,true,true,true,true)
       game.clearCell(x2,y2,false,false,true,true,true)
+      
       game.notify();
       if(origin && origin.unité && isCombatRapproche(x,y,originx,originy) ){
         if(origin.unité._type === "Soldat"){
           setModal(
-            <div className='relative w-screen h-screen flex center z-[350] '>
-            <div className='absolute w-[400px] h-[100px] rounded-3xl flex flex-col bg-gray z-[350]'>
+            <div className='relative w-screen h-[850px] flex center z-[350] '>
+            <div className='absolute w-[400px] h-[100px] rounded-3xl flex flex-col bg-grey z-[350]'>
               <div className='text-center w-full h-1/2 p-4'>Voulez vous faire une prise de terrain ? </div>
               <div className='w-full h-1/2 flex justify-around'>
                 <div className='w-[80px] h-10 p-2 bg-red text-white rounded-2xl text-center hover:cursor-pointer' onClick={()=>{setModal(<></>)}}>Annuler</div>  
@@ -317,8 +329,8 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
           )
         }else if(origin.unité._type === "Tank"){
           setModal(
-            <div className='relative w-screen h-screen flex center z-[350] '>
-            <div className='absolute w-[400px] h-[100px] rounded-3xl flex flex-col bg-gray z-[350]'>
+            <div className='relative w-screen h-[850px] flex center z-[350] '>
+            <div className='absolute w-[400px] h-[100px] rounded-3xl flex flex-col bg-grey z-[350]'>
               <div className='text-center w-full h-1/2 p-4'>Voulez vous faire une persée de blindés ? </div>
               <div className='w-full h-1/2 flex justify-around'>
                 <div className='w-[80px] h-10 p-2 bg-red text-white rounded-2xl text-center hover:cursor-pointer' onClick={()=>{setModal(<></>)}}>Annuler</div>  
@@ -362,14 +374,13 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
   }
   
   //function pour deplacer une unité 
-  function MoveAction(oldposx,oldposy,posx,posy,action){
+  function MoveAction(oldposx,oldposy,posx,posy,isAction){
     game.RemoveHighlight()
     
 
     let f = game.getCell(oldposx,oldposy)
     let list = showPortee(game,Object.keys(f.unité._portée).length,posx,posy,f.unité._portée,null)
-    game.clearCell(oldposx,oldposy,true,true,true,true,true)
-    
+  
     let cond = false;
     list.forEach(item=>{
       let cell = game.getItemCell(item)
@@ -398,7 +409,9 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
         HitMine(nb,f.unité,posx,posy)
       }
     }
-    game.updateCell(posx,posy,{case:newPos.case,bunker:removeMine ? null:newPos.bunker,defense:null,unité:f.unité,action:null,highlight: null,select: removeMine ? null : action === 1 ? (cond ? new Attacking():null ):null})
+
+    game.updateCell(posx,posy,{case:newPos.case,bunker:removeMine ? null:newPos.bunker,defense:null,unité:f.unité,action:null,highlight: null,select: removeMine ? null : isAction === 1 ? (cond ? new Attacking():null ):null})
+    game.clearCell(oldposx,oldposy,true,false,true,true,true)
     game.notify();
   }
   function isRoad(item){
@@ -983,7 +996,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
     return <div className='flex flex-col gap-4 w-[276px] h-[418px] p-2 bg-light_gray ml-8 rounded-xl'>
       {animationShow ? <>
       <div className='w-full flex flex-row'>
-        <div className={`w-[128px] h-[128px]  ${`s${animation[0]}`}`}></div>
+        <div className={`w-[128px] h-[128px]  ${`Dice${animation[0]}`}`}></div>
         <div className={`w-[128px] h-[128px]  ${`Dice${animation[1]}`}`}></div>
         
       </div>
@@ -1025,14 +1038,14 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
       return (
       <div className="relative w-fit h-fit">
         <div className='absolute -top-2 mr-[50px] right-0 z-[10] w-[550px] h-[54px] flex flex-row'>
-          {medalAxisList.length > 0 && medalAxisList.map((medal,pos)=>{
+          {/* {medalAxisList.length > 0 && medalAxisList.map((medal,pos)=>{
             return <div className='w-1/6 h-full flex center' key={`axis-${pos}`}>{medal.render("w-[38%]")}</div>
-          })}
+          })} */}
         </div>
         <div className='absolute mb-[38px]  ml-[50px] bottom-0 left-0 z-[10] w-[550px] h-[54px] flex flex-row'>
-        {medalAlliésList.length > 0 && medalAlliésList.map((medal,pos)=>{
+        {/* {medalAlliésList.length > 0 && medalAlliésList.map((medal,pos)=>{
             return <div className='w-1/6 h-full flex center' key={`allies-${pos}`}>{medal.render("w-[38%]")}</div>
-          })}
+          })} */}
         </div>
         {debug ? <div className='absolute z-[4100] top-0 left-8 text-vivid_tangerine text-[20px] font-av-bold'><span className='text-white text-[20px] font-av-bold'>posx</span> posy</div>:""}
         <div key={"terrain"}><img src={`images/Memoire44/${game.getTerrain()}.webp`} alt={"terrain"} className='w-full h-full'/></div>
@@ -1047,7 +1060,7 @@ new CardGenerique("Assaut centre","assault-center-fr","ALL",2,"ALL"))
                         <div className='absolute z-30 w-full h-full'>{f.bunker ? f.bunker.render(): ""}</div>
                         <div className={`pion-${pos}-${pos2} absolute z-40 w-full h-full`}>{f.unité ? f.unité.render(): ""}</div>
                         <div className='absolute z-[50] w-full h-full'>{f.medal ? f.medal.render(): ""}</div>
-                        <div className={`absolute z-[60] w-full h-full ${f.highlight && (f.highlight instanceof Target || f.highlight instanceof Move ) ? "opacity-50":""}`}>{f.highlight ? f.highlight.render(): ""}</div>
+                        <div className={`absolute z-[60] w-full h-full ${f.highlight && (f.highlight instanceof Move ) ? "opacity-50": f.highlight instanceof Target ? "opacity-70":""}`}>{f.highlight ? f.highlight.render(): ""}</div>
                         <div className='absolute z-[70] w-full h-full '>{f.select ? f.select.render(): ""}</div>
                         </div>
                   

@@ -89,6 +89,7 @@ export class Game {
                 }
                 if(clearHightlight && f.highlight && (f.highlight instanceof Move  || f.highlight instanceof Target || f.highlight instanceof Retreat)){
                 f.highlight = null;
+                f.action = null
                 }
                 if(clearSelect && f.select && (f.select instanceof Selected || f.select instanceof SelectHexa || f.select instanceof Attacking)){
                     f.select = null;
@@ -99,19 +100,21 @@ export class Game {
     }
     clearCell(x,y,clearDefense,clearUnit,clearAction,clearHightlight,clearSelect){
         let cell = this._grille[x][y]
-        if(clearDefense) cell._defense = null;
-        if(clearUnit) cell._unité = null;
-        if(clearAction) cell._action = null;
-        if(clearHightlight) cell._highlight = null;
-        if(clearSelect) cell._select = null
-        this.notify()
+        if(clearDefense) cell.defense = null;
+        if(clearUnit) cell.unité = null;
+        if(clearAction) cell.action = null;
+        if(clearHightlight) cell.highlight = null;
+        if(clearSelect) cell.select = null
     }
     RemoveHighlight(){
         this.clearTerrain(false,true,false,false)    
     }
     updateUnit(x,y,unité){
-        this._grille[x][y]._unité = unité
+        this._grille[x][y].unité = unité
         this.notify()    
+    }
+    clearUnit(x,y){
+        this._grille[x][y].unité = null;
     }
 }
 

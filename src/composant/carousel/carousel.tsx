@@ -200,7 +200,7 @@ const Carousel =({elems,nbShow,display,showPoint,updateShow,start,tag,hiddendiv,
         }
         setAnimatedItems(list);
     }
-    if (isMobile) {
+    if (!isMobile) {
     let startX = 0;
     let endX = 0;
     const swipeThreshold = 50; // distance minimale en px pour valider un slide

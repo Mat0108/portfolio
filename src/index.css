@@ -167,7 +167,7 @@
 .DiceTank {
     height: 128px;
     width: 128px;
-    background-image: url("../public/images/Memoire44/dice/dice_char_anim.webp"); /* width: 2048px; height: 512px; */
+    background-image: url("../public/images/Memoire44/dice/dice_tank_anim.webp"); /* width: 2048px; height: 512px; */
     animation: var(--DiceAnim);
 }
 .DiceFlag {
