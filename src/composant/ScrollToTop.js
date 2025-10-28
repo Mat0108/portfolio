@@ -27,7 +27,7 @@ export function useScrollToElement() {
         const yOffset = -80;
         const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
         const el = document.getElementById('Scrollref')
-        el.scrollTo({ top: y, behavior: 'smooth' });
+        if(el){el.scrollTo({ top: y, behavior: 'smooth' });}
       }
     };
 

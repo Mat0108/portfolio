@@ -1,4 +1,4 @@
-export const Contact = ()=>{
+const Contact = ()=>{
     const isMobile = window.screen.width < 600;
     return <div className="w-full h-full flex flex-col  bg-dark-blue"><div className="flex flex-row">
      
@@ -24,3 +24,5 @@ export const Contact = ()=>{
                </>}
         </div>
 }
+
+export default Contact;

@@ -14,7 +14,7 @@ const Home = ({workRef,projetRef,techRef,scrollRef}:HomeType) => {
 
 
     const isMobile = window.screen.width < 600;
-    return <div className="relative bg-blue_dark relative h-full overflow-y overflow-x-hidden " ref={scrollRef}>
+    return <div className="relative bg-blue_dark relative h-full overflow-y overflow-x-hidden " ref={scrollRef} id="Scrollref">
         <div>
 
             {/* main */}

@@ -15,7 +15,7 @@ import RocketAnimation from './composant/RocketAnimation.tsx';
 const Memoire44Presentation = lazy(() => import('./projet/Memoire44/presentation'));
 const PoSkinPresentation = lazy(() => import('./projet/PoSkin/presentation'));
 const SpaceXPresentation = lazy(() => import('./projet/SpaceX/presentation'));
-const Contact = lazy(() => import('./Contact'));
+const Contact = lazy(() => import('./Contact.js'));
 const CVDisplay = lazy(() => import('./composant/cv'));
 const SelecteurScenario = lazy(() => import('./projet/Memoire44/scenario'));
 const Play = lazy(() => import('./projet/Memoire44/play/play.js'));
